@@ -1,0 +1,13 @@
+<ns2:findPOAsByFileNumbersResponse xmlns:ns2="http://org.services.vetsnet.vba.va.gov/">
+    <return>
+        <fileNumber>753476542</fileNumber>
+        <powerOfAttorney>
+            <authznPoaAccessInd>Y</authznPoaAccessInd>
+            <legacyPoaCd>083</legacyPoaCd>
+            <nm>DISABLED AMERICAN VETERANS</nm>
+            <orgTypeNm>POA National Organization</orgTypeNm>
+            <ptcpntId>10003</ptcpntId>
+        </powerOfAttorney>
+        <ptcpntId>32423626</ptcpntId>
+    </return>
+</ns2:findPOAsByFileNumbersResponse>

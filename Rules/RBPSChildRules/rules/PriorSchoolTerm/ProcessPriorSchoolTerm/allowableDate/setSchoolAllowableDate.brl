@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>setSchoolAllowableDate</name>
+  <uuid>1a35595f-5d1b-4c89-9976-3c5171a0affc</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if  the child type of 'the Child' is STEPCHILD and
+   the marriage date of 'the Veteran' is not null and
+    the marriage date of 'the Veteran' is after  the allowable date of  'the Veteran' 
+ then 
+      set 'School Allowable date' to   the marriage date of 'the Veteran' ; 
+      add " School Allowable date is set to   the marriage date of veteran: " to the list of LogMessage ; 
+  
+ else
+  set 'School Allowable date' to the allowable date of 'the Veteran'  ; 
+   add " School Allowable date is set to   to the allowable date of veteran " to the list of LogMessage ; 
+  
+ ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

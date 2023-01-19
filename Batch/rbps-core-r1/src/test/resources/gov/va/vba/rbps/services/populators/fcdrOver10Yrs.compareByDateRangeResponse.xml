@@ -1,0 +1,152 @@
+<ns3:compareByDateRangeResponse xmlns:ns3='http://session.ejb.awards.benefits.vba.va.gov/' xmlns:ns2='http://gov.va.vba.benefits.awards/data'>
+    <return>
+        <errorLevel>0</errorLevel>
+        <anyRatingsWithinRangeFlag>Y</anyRatingsWithinRangeFlag>
+        <combinedPercentCompareList>
+            <combinedPercentCompare>
+                <beneficiaryParticipantID>600049701</beneficiaryParticipantID>
+                <combinedPctWithoutRECA>40</combinedPctWithoutRECA>
+                <combinedPctWithoutSeverance>40</combinedPctWithoutSeverance>
+                <combinedPctWithoutTort>40</combinedPctWithoutTort>
+                <combinedPctWithoutWorkersComp>40</combinedPctWithoutWorkersComp>
+                <compensationServicePeriodType>4</compensationServicePeriodType>
+                <effectiveDate>2012-07-01T00:00:00-05:00</effectiveDate>
+                <notServiceConnBilateralValue>0.0</notServiceConnBilateralValue>
+                <notServiceConnCombinedPct>40</notServiceConnCombinedPct>
+                <recaWithholdingPct>0</recaWithholdingPct>
+                <serviceConnBilateralPercent>0.0</serviceConnBilateralPercent>
+                <serviceConnCombinedPct>40</serviceConnCombinedPct>
+                <severanceWithholdingPct>0</severanceWithholdingPct>
+                <tortWithholdingPct>0</tortWithholdingPct>
+                <veteranParticipantID>600049701</veteranParticipantID>
+                <workersCompWithholdingPct>0</workersCompWithholdingPct>
+            </combinedPercentCompare>
+        </combinedPercentCompareList>
+        <combinedPercentCurrentList>
+            <combinedPercentCurrent>
+                <beneficiaryParticipantID>600049701</beneficiaryParticipantID>
+                <combinedPctWithoutRECA>40</combinedPctWithoutRECA>
+                <combinedPctWithoutSeverance>40</combinedPctWithoutSeverance>
+                <combinedPctWithoutTort>40</combinedPctWithoutTort>
+                <combinedPctWithoutWorkersComp>40</combinedPctWithoutWorkersComp>
+                <compensationServicePeriodType>4</compensationServicePeriodType>
+                <effectiveDate>2012-07-01T00:00:00-05:00</effectiveDate>
+                <notServiceConnBilateralValue>0.0</notServiceConnBilateralValue>
+                <notServiceConnCombinedPct>40</notServiceConnCombinedPct>
+                <recaWithholdingPct>0</recaWithholdingPct>
+                <serviceConnBilateralPercent>0.0</serviceConnBilateralPercent>
+                <serviceConnCombinedPct>40</serviceConnCombinedPct>
+                <severanceWithholdingPct>0</severanceWithholdingPct>
+                <tortWithholdingPct>0</tortWithholdingPct>
+                <veteranParticipantID>600049701</veteranParticipantID>
+                <workersCompWithholdingPct>0</workersCompWithholdingPct>
+            </combinedPercentCurrent>
+        </combinedPercentCurrentList>
+        <differencesFound>N</differencesFound>
+        <multipleRatingsFlag>N</multipleRatingsFlag>
+        <PrfilDt>2012-12-20T08:47:42-06:00</PrfilDt>
+        <promulgationDt>2012-12-01T00:00:00-06:00</promulgationDt>
+        <ptcpntVetID>600049701</ptcpntVetID>
+        <RatingDetails>
+            <errorLevel>0</errorLevel>
+            <EffectiveDt>2012-07-01T00:00:00-05:00</EffectiveDt>
+            <scPercent>40</scPercent>
+        </RatingDetails>
+        <ratingProfileList>
+            <ratingProfile>
+                <cdshtDcmntId>559294</cdshtDcmntId>
+                <clientRatingDt>2012-12-01T00:00:00-06:00</clientRatingDt>
+                <compId>
+                    <prfilDt>2012-12-20T08:47:42-06:00</prfilDt>
+                    <ptcpntVetId>600049701</ptcpntVetId>
+                </compId>
+                <dcmntTitleTxt>Rating Decision</dcmntTitleTxt>
+                <jrnDt>2013-02-27T08:50:11-06:00</jrnDt>
+                <jrnLctnId>335</jrnLctnId>
+                <jrnObjId>SQL Update RBPS</jrnObjId>
+                <jrnStatusTypeCd>U</jrnStatusTypeCd>
+                <jrnUserId>s281sxr</jrnUserId>
+                <jrsdtnTxt>Original Disability Claim Received</jrsdtnTxt>
+                <lockedInd>N</lockedInd>
+                <narrtvDcmntId>559295</narrtvDcmntId>
+                <prmlgnDt>2012-12-01T00:00:00-06:00</prmlgnDt>
+                <prmlngClaimId>250886</prmlngClaimId>
+                <ratingDt>2012-12-01T00:00:00-06:00</ratingDt>
+                <rbaUserId>OBPGSILV</rbaUserId>
+                <rcvdDt>2012-06-15T00:00:00-05:00</rcvdDt>
+                <systemTypeCd>C</systemTypeCd>
+            </ratingProfile>
+            <ratingProfile>
+                <cdshtDcmntId>559507</cdshtDcmntId>
+                <clientRatingDt>2012-01-03T00:00:00-06:00</clientRatingDt>
+                <compId>
+                    <prfilDt>2012-12-27T10:39:03-06:00</prfilDt>
+                    <ptcpntVetId>600049701</ptcpntVetId>
+                </compId>
+                <dcmntTitleTxt>Rating Decision</dcmntTitleTxt>
+                <jrnDt>2013-06-12T17:15:56-05:00</jrnDt>
+                <jrnLctnId>335</jrnLctnId>
+                <jrnObjId>SQL Update RBPS</jrnObjId>
+                <jrnStatusTypeCd>U</jrnStatusTypeCd>
+                <jrnUserId>s281sxr</jrnUserId>
+                <jrsdtnTxt>Original Disability Claim Received</jrsdtnTxt>
+                <lockedInd>N</lockedInd>
+                <narrtvDcmntId>559508</narrtvDcmntId>
+                <prmlgnDt>2012-01-03T00:00:00-06:00</prmlgnDt>
+                <prmlngClaimId>251073</prmlngClaimId>
+                <ratingDt>2012-01-03T00:00:00-06:00</ratingDt>
+                <rbaUserId>VAFSCRANIS</rbaUserId>
+                <rcvdDt>2012-12-01T00:00:00-06:00</rcvdDt>
+                <systemTypeCd>C</systemTypeCd>
+            </ratingProfile>
+            <ratingProfile>
+                <cdshtDcmntId>563468</cdshtDcmntId>
+                <clientRatingDt>2012-04-20T00:00:00-05:00</clientRatingDt>
+                <compId>
+                    <prfilDt>2013-02-19T09:41:46-06:00</prfilDt>
+                    <ptcpntVetId>600049701</ptcpntVetId>
+                </compId>
+                <dcmntTitleTxt>Rating Decision</dcmntTitleTxt>
+                <jrnDt>2013-05-09T10:47:08-05:00</jrnDt>
+                <jrnLctnId>335</jrnLctnId>
+                <jrnObjId>SQL Update RBPS</jrnObjId>
+                <jrnStatusTypeCd>U</jrnStatusTypeCd>
+                <jrnUserId>s281sxr</jrnUserId>
+                <jrsdtnTxt>Original Disability Claim Received</jrsdtnTxt>
+                <lockedInd>N</lockedInd>
+                <narrtvDcmntId>563469</narrtvDcmntId>
+                <prmlgnDt>2012-04-20T00:00:00-05:00</prmlgnDt>
+                <prmlngClaimId>253570</prmlngClaimId>
+                <ptcpntPoaId>46028</ptcpntPoaId>
+                <ratingDt>2012-04-20T00:00:00-05:00</ratingDt>
+                <rbaUserId>VAFSCRANIS</rbaUserId>
+                <rcvdDt>2013-02-10T00:00:00-06:00</rcvdDt>
+                <systemTypeCd>C</systemTypeCd>
+            </ratingProfile>
+            <ratingProfile>
+                <cdshtDcmntId>563609</cdshtDcmntId>
+                <clientRatingDt>2012-03-01T00:00:00-06:00</clientRatingDt>
+                <compId>
+                    <prfilDt>2013-02-22T16:09:34-06:00</prfilDt>
+                    <ptcpntVetId>600049701</ptcpntVetId>
+                </compId>
+                <dcmntTitleTxt>Rating Decision</dcmntTitleTxt>
+                <jrnDt>2013-06-12T17:15:06-05:00</jrnDt>
+                <jrnLctnId>335</jrnLctnId>
+                <jrnObjId>SQL Update RBPS</jrnObjId>
+                <jrnStatusTypeCd>U</jrnStatusTypeCd>
+                <jrnUserId>s281sxr</jrnUserId>
+                <jrsdtnTxt>Original Disability Claim Received</jrsdtnTxt>
+                <lockedInd>N</lockedInd>
+                <narrtvDcmntId>563610</narrtvDcmntId>
+                <prmlgnDt>2012-03-01T00:00:00-06:00</prmlgnDt>
+                <prmlngClaimId>254746</prmlngClaimId>
+                <ptcpntPoaId>46028</ptcpntPoaId>
+                <ratingDt>2012-03-01T00:00:00-06:00</ratingDt>
+                <rbaUserId>VAFSCRANIS</rbaUserId>
+                <rcvdDt>2013-02-01T00:00:00-06:00</rcvdDt>
+                <systemTypeCd>C</systemTypeCd>
+            </ratingProfile>
+        </ratingProfileList>
+    </return>
+</ns3:compareByDateRangeResponse>

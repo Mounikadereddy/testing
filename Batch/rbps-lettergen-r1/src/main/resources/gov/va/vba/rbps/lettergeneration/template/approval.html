@@ -1,0 +1,102 @@
+#parse
+(
+ 
+"gov/va/vba/rbps/lettergeneration/template/header.html"
+ 
+)
+
+
+	<p>
+        We made a decision on your claim for additional benefits for
+		your dependents received on $date.format( "MMM dd, yyyy", $letterFields.claimDate ).
+    </p>
+
+
+	<p>
+        This letter tells you what we decided, how we made our decision
+		and the evidence used to decide your claim. We have also included
+		information about what to do if you disagree with our decision, and
+		who to contact if you have questions or need assistance.
+    </p>
+
+	<span class="section"> 
+        Your Award Amount and Payment Change Date
+	</span>
+
+	<p class="subparagraph">Your monthly payment amount is shown below:</p>
+
+
+	<table class="info">
+		<thead>
+			<tr>
+				<th align="center">Monthly Award Amount</th>
+				<th align="center">Payment Change Date</th>
+				<th>Reason For Change</th>
+			</tr>
+		</thead>
+        #foreach( $awardLine in $letterFields.awardLines )
+            <tr>
+    			<td align="center" rowspan="$awardLine.rowspan" >$awardLine.formattedAwardAmount</td>
+    			<td align="center" rowspan="$awardLine.rowspan" >$date.format( "MMM dd, yyyy", $awardLine.paymentChangeDate )</td>
+                <td>${awardLine.formattedReasons.get(0)}</td>
+            </tr>
+
+            #if( "$!awardLine.restOfFormattedReasons" != "" )
+                #foreach( $reason in $awardLine.restOfFormattedReasons )
+                    <tr>
+                        <td>
+                            $reason
+                        </td>
+                    </tr>
+                #end
+            #end
+
+        #end
+	</table>
+
+	<h2>You Can Expect Payment</h2>
+    
+	<p class="subparagraph">
+        Your payment begins the first day of the month following your
+		effective date. You will receive a payment covering the initial amount
+		due under this award, minus any withholdings, in approximately 15
+		days. Payment will then be made at the beginning of each month for the
+		prior month. For example, benefits due for May are paid on or about
+		June 1.
+    </p>
+	
+    <h2 class="section'">What We Decided</h2>
+	
+    <p class="subparagraph">
+        We are paying you as a veteran with $letterFields.totalDependents dependent(s). Your
+		payment includes an additional amount for 
+        
+        #if( "$!letterFields.spouseName" != "" )
+            your spouse $letterFields.spouseName
+        #end
+		
+        #if( "$!letterFields.spouseName" != "" && $letterFields.childrenNames.size() > 0 )
+            and
+        #end
+        
+        #if( $letterFields.childrenNames.size() > 0 )
+            your $letterFields.joinedChildrenNames
+        #end
+         
+        .
+        <span class="italic" >
+            Let us know
+            right away if there is any change in the status of your dependents.
+        </span>
+    </p>
+    
+    <br />
+#parse
+(
+ 
+"gov/va/vba/rbps/lettergeneration/template/bottom.html"
+ 
+)
+
+</body>
+</html>

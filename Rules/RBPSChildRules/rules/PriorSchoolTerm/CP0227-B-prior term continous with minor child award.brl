@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0227-B-prior term continous with minor child award</name>
+  <uuid>dcf38c1c-02b2-4ec4-8ba1-114e2204b399</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if  'the Child'  is on award as minor child and 
+      'the Child' is terminated on18th birthday and 
+       the birth date of 'the Child' plus 18 Year ( s ) plus 5  months is after  or the same as 
+      the event date of 'PriorSchoolChild'
+ then
+  set the event date of 'PriorSchoolChild' to the birth date of 'the Child' plus 18 Year ( s ) ;
+  
+ ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

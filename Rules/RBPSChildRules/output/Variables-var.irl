@@ -1,0 +1,16 @@
+variables {
+  boolean Completed;
+  int ChildAgeOnEffectiveDate;
+  java.util.Date RatingPlus1Year;
+  java.util.Date Child18BirthDay;
+  java.util.Date RatingPlus1Year30Days;
+  java.util.Date Child19BrithDay;
+  java.util.Date DOBPlus1Year;
+  int ChildAgeOnDateOfClaim;
+  java.util.Date RatingPlus1Year7Days;
+  boolean priorSchoolTermValid = false;
+  java.util.Date Today = new java.util.Date();
+  boolean ConditionSatisfied = false;
+  java.util.Date schollallowableDate;
+  boolean PriorConditionSatisfied = false;
+}

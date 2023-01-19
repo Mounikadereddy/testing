@@ -1,0 +1,11 @@
+package Finalize_Rules {
+rule Remove_Award_incase_of_Denial {
+property status = "new";
+ when {
+         gov.va.vba.rbps.coreframework.xom.Award() from Award;
+         evaluate (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Award.dependencyStatusType));
+} then {
+       Award = null;
+}
+}
+}

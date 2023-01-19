@@ -1,0 +1,160 @@
+    <h2 class="section">Evidence Used to Decide Your Claim</h2>
+    
+    <p class="subparagraph">
+        In making our decision, we considered:
+        
+        <ul>
+            #foreach( $formType in $letterFields.decisionFormTypes )
+                <li>VA Form $formType.value</li>
+            #end
+        </ul>
+    </p>
+    
+    <h2 class="section">What You Should Do If You Disagree With Our Decision</h2>
+    
+    <p class="subparagraph">
+        If you do not agree with our decision, you should write and tell
+        us why. You have 
+
+        <span class="italic">
+            one year from the date of this letter to appeal the
+            decision. 
+        </span>
+        
+        The enclosed 
+        <span class="italic">
+            VA Form 4107, "Your Rights to Appeal Our Decision,"
+        </span>
+        explains your right to appeal.
+    </p>
+    
+    <h2 class="pagebreak section">If You Have Questions or Need Assistance</h2>
+    
+    <p class="subparagraph">
+        If you have any questions or need assistance with this claim, you may
+        contact us by telephone, e-mail, or letter. 
+    </p>
+    
+    #set ($usa = "USA")
+    #if(${letterFields.country} == $usa )
+
+    <table class="info" >
+        <thead>
+            <tr>
+                <th>If you</th>
+                <th>Here is what to do.</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Telephone</td>
+                <td>
+                    Call us at 1-800-827-1000. If you use a Telecommunications Device for the Deaf (TDD), the Federal number is 711. 
+                </td>
+            </tr>
+            <tr>
+                <td>Use the Internet</td>
+                <td>
+                    Send electronic inquiries through the Internet at
+                    https://iris.va.gov.
+                </td>
+            </tr>
+            <tr>
+                <td>Write</td>
+                <td>
+                    Put your full name and VA file number on the letter. Please
+                    send all correspondence to the address at the top of this letter.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    #else
+
+    <table class="info">
+        <thead>
+            <tr>
+                <th>If you</th>
+                <th>Here is what to do.</th>
+            </tr>
+        </thead>
+
+        <tr>
+            <td>Telephone</td>
+            <td>
+                Call or visit the nearest American Embassy or Consulate for
+                assistance. In Canada, call or visit the local office of Veterans
+                Affairs Canada. From Guam, call us by dialing toll free, 475 8387.
+                From American Samoa and N. Marianas, call us at 1 800 844 7928.
+            </td>
+        </tr>
+        <tr>
+            <td>Use the Internet</td>
+            <td>
+                Send electronic inquires through the Internet at
+                https://iris.va.gov.
+            </td>
+        </tr>
+        <tr>
+            <td>Write</td>
+            <td>
+                Put your full name and VA file number on the letter. Please
+                send all correspondence to the address at the top of this letter.
+            </td>
+        </tr>
+    </table>
+
+    #end 
+        
+    <br /> 
+        
+    <p class="subparagraph">
+        In all cases, be sure to refer to your VA file number
+        ${letterFields.fileNumber}. <br /> <br /> If you are looking for general
+        information about benefits and eligibility, you should visit our
+        web site at https://www.va.gov, or search the Frequently Asked
+        Questions (FAQs) at https://iris.va.gov.
+    </p>
+    <p class="subparagraph">
+<!--
+        <strong> 
+-->
+            #if($letterFields.hasPOA)
+                We sent a copy of this letter to your
+                representative, $letterFields.poaName, whom you can also contact if you have
+                questions or need assistance. 
+            #else 
+                We have no
+                record of you appointing a service organization or representative to
+                assist you with your claim. You can contact us for a listing of the
+                recognized Veterans' service organizations and/or representatives.
+                Veterans' service organizations, which are recognized or approved to
+                provide services to the Veteran community, can also help you with any
+                questions. 
+        #end
+<!--
+        </strong> 
+-->
+    </p>
+
+    <p class="paragraph">
+        Sincerely yours,
+    </p>
+    <p class="fontsignature">
+        $letterFields.senderName
+    </p>  
+          
+    <p class="paragraph">
+        $letterFields.senderName
+        <br/>
+        $letterFields.senderTitle
+    </p>
+    
+    <p class="paragraph">Enclosure(s):</p>
+    <ul>
+        <li class="paragraph">VA Form 4107</li>
+        <!--
+        <li>VA Form 21-8764</li>
+        -->
+    </ul>

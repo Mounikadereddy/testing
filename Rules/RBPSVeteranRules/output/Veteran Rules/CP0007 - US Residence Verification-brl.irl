@@ -1,0 +1,14 @@
+package Veteran_Rules {
+   rule CP0007_$45$_US_Residence_Verification {
+      property ilog.rules.business_name = "CP0007 - US Residence Verification";
+      property ilog.rules.package_name = "Veteran Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Veteran() from Veteran;
+         evaluate (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Veteran.mailingAddress));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - Veteran address is not provided. Please review.");
+      }
+   }
+}
+

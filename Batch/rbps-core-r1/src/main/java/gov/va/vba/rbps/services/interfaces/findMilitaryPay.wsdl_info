@@ -1,0 +1,222 @@
+<definitions xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://session.ejb.cp.benefits.vba.va.gov/' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns='http://schemas.xmlsoap.org/wsdl/' targetNamespace='http://session.ejb.cp.benefits.vba.va.gov/' name='ReadMilitaryPayService'>
+    <types>
+        <xsd:schema>
+            <xsd:import namespace='http://session.ejb.cp.benefits.vba.va.gov/' schemaLocation='http://bepdev.vba.va.gov:80/ReadMilitaryPayEJB/ReadMilitaryPayService?xsd=1'/>
+        </xsd:schema>
+    </types>
+    <message name='findMilitaryPay'>
+        <part name='parameters' element='tns:findMilitaryPay'/>
+    </message>
+    <message name='findMilitaryPayResponse'>
+        <part name='parameters' element='tns:findMilitaryPayResponse'/>
+    </message>
+    <message name='BenefitsException'>
+        <part name='fault' element='tns:BenefitsException'/>
+    </message>
+    <portType name='ReadMilitaryPay'>
+        <operation name='findMilitaryPay'>
+            <input message='tns:findMilitaryPay'/>
+            <output message='tns:findMilitaryPayResponse'/>
+            <fault message='tns:BenefitsException' name='BenefitsException'/>
+        </operation>
+    </portType>
+    <binding name='ReadMilitaryPayPortBinding' type='tns:ReadMilitaryPay'>
+        <soap:binding transport='http://schemas.xmlsoap.org/soap/http' style='document'/>
+        <operation name='findMilitaryPay'>
+            <soap:operation soapAction=''/>
+            <input>
+                <soap:body use='literal'/>
+            </input>
+            <output>
+                <soap:body use='literal'/>
+            </output>
+            <fault name='BenefitsException'>
+                <soap:fault name='BenefitsException' use='literal'/>
+            </fault>
+        </operation>
+    </binding>
+    <service name='ReadMilitaryPayService'>
+        <port name='ReadMilitaryPayPort' binding='tns:ReadMilitaryPayPortBinding'>
+            <soap:address location='http://bepdev.vba.va.gov:80/ReadMilitaryPayEJB/ReadMilitaryPayService'/>
+        </port>
+    </service>
+</definitions>
+
+
+<xs:schema xmlns:tns='http://session.ejb.cp.benefits.vba.va.gov/' xmlns:xs='http://www.w3.org/2001/XMLSchema' version='1.0' targetNamespace='http://session.ejb.cp.benefits.vba.va.gov/'>
+    <xs:element name='BenefitsException' nillable='true' type='tns:benefitsExceptionBean'/>
+    <xs:element name='DischargePay' type='tns:dischargePayVO'/>
+    <xs:element name='Message' type='tns:messageVO'/>
+    <xs:element name='RetirementPay' type='tns:retirementPayVO'/>
+    <xs:element name='findMilitaryPay' type='tns:findMilitaryPay'/>
+    <xs:element name='findMilitaryPayResponse' type='tns:findMilitaryPayResponse'/>
+    <xs:complexType name='findMilitaryPay'>
+        <xs:sequence>
+            <xs:element name='veteranID' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='findMilitaryPayResponse'>
+        <xs:sequence>
+            <xs:element name='return' type='tns:readMilitaryPayServiceReturnVO' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='readMilitaryPayServiceReturnVO'>
+        <xs:complexContent>
+            <xs:extension base='tns:voReturnBase'>
+                <xs:sequence>
+                    <xs:element name='dschrgPayVOList' type='tns:dischargePayVO' nillable='true' minOccurs='0' maxOccurs='unbounded'/>
+                    <xs:element name='rtrmntPayVOList' type='tns:retirementPayVO' nillable='true' minOccurs='0' maxOccurs='unbounded'/>
+                    <xs:element name='vnErrorsVOList' type='tns:vnErrorsVO' nillable='true' minOccurs='0' maxOccurs='unbounded'/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name='voReturnBase' abstract='true'>
+        <xs:sequence>
+            <xs:element name='errorLevel' type='xs:int'/>
+            <xs:element name='MessageList' minOccurs='0'>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name='Message' type='tns:messageVO' minOccurs='0' maxOccurs='unbounded'/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='dischargePayVO'>
+        <xs:complexContent>
+            <xs:extension base='tns:voBase'>
+                <xs:sequence>
+                    <xs:element name='afterTaxAmount' type='xs:decimal' minOccurs='0'/>
+                    <xs:element name='applicationCode' type='xs:string' minOccurs='0'/>
+                    <xs:element name='disabilityText' type='xs:string' minOccurs='0'/>
+                    <xs:element name='dischargePayType' type='xs:string' minOccurs='0'/>
+                    <xs:element name='dischargePayTypeDescription' type='xs:string' minOccurs='0'/>
+                    <xs:element name='grossAmount' type='xs:decimal' minOccurs='0'/>
+                    <xs:element name='insertDate' type='xs:dateTime' minOccurs='0'/>
+                    <xs:element name='lineItemNumber' type='xs:int' minOccurs='0'/>
+                    <xs:element name='modifiedAction' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedBy' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedDate' type='xs:dateTime' minOccurs='0'/>
+                    <xs:element name='modifiedLocation' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedProcess' type='xs:string' minOccurs='0'/>
+                    <xs:element name='participantID' type='xs:long' minOccurs='0'/>
+                    <xs:element name='receiptDate' type='xs:dateTime' minOccurs='0'/>
+                    <xs:element name='verifiedIndicator' type='xs:string' minOccurs='0'/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name='voBase' abstract='true'>
+        <xs:sequence/>
+    </xs:complexType>
+    <xs:complexType name='retirementPayVO'>
+        <xs:complexContent>
+            <xs:extension base='tns:voBase'>
+                <xs:sequence>
+                    <xs:element name='afterTaxAmount' type='xs:decimal' minOccurs='0'/>
+                    <xs:element name='applicationCode' type='xs:string' minOccurs='0'/>
+                    <xs:element name='effectiveDate' type='xs:dateTime' minOccurs='0'/>
+                    <xs:element name='fullWaiverIndicator' type='xs:string' minOccurs='0'/>
+                    <xs:element name='grossMonthlyAmount' type='xs:decimal' minOccurs='0'/>
+                    <xs:element name='insertDate' type='xs:dateTime' minOccurs='0'/>
+                    <xs:element name='lineItemNumber' type='xs:int' minOccurs='0'/>
+                    <xs:element name='modifiedAction' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedBy' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedDate' type='xs:dateTime' minOccurs='0'/>
+                    <xs:element name='modifiedLocation' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedProcess' type='xs:string' minOccurs='0'/>
+                    <xs:element name='participantID' type='xs:long' minOccurs='0'/>
+                    <xs:element name='retirementPayType' type='xs:string' minOccurs='0'/>
+                    <xs:element name='retirementPayTypeDescription' type='xs:string' minOccurs='0'/>
+                    <xs:element name='retirementWaivedDate' type='xs:dateTime' minOccurs='0'/>
+                    <xs:element name='survivorBenefitPlanOverpaymentAmount' type='xs:decimal' minOccurs='0'/>
+                    <xs:element name='verifiedIndicator' type='xs:string' minOccurs='0'/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name='vnErrorsVO'>
+        <xs:sequence>
+            <xs:element name='code' type='xs:string' minOccurs='0'/>
+            <xs:element name='datasource' type='xs:string' minOccurs='0'/>
+            <xs:element name='fieldNm' type='xs:string' minOccurs='0'/>
+            <xs:element name='jrnDt' type='xs:string' minOccurs='0'/>
+            <xs:element name='jrnLctnId' type='xs:string' minOccurs='0'/>
+            <xs:element name='jrnObjId' type='xs:string' minOccurs='0'/>
+            <xs:element name='jrnStatusTypeCd' type='xs:string' minOccurs='0'/>
+            <xs:element name='jrnUserId' type='xs:string' minOccurs='0'/>
+            <xs:element name='log' type='xs:string' minOccurs='0'/>
+            <xs:element name='message' type='xs:string' minOccurs='0'/>
+            <xs:element name='object' type='xs:string' minOccurs='0'/>
+            <xs:element name='oraMsg' type='xs:string' minOccurs='0'/>
+            <xs:element name='rowNum' type='xs:int' minOccurs='0'/>
+            <xs:element name='vnError' type='xs:int' minOccurs='0'/>
+            <xs:element name='vnMsg' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='messageVO'>
+        <xs:complexContent>
+            <xs:extension base='tns:voBase'>
+                <xs:sequence>
+                    <xs:element name='databaseMessage' type='xs:string' minOccurs='0'/>
+                    <xs:element name='fieldName' type='xs:string' minOccurs='0'/>
+                    <xs:element name='logIt' type='xs:string' minOccurs='0'/>
+                    <xs:element name='message' type='xs:string' minOccurs='0'/>
+                    <xs:element name='messageID' type='xs:int' minOccurs='0'/>
+                    <xs:element name='modifiedAction' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedBy' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedDate' type='xs:dateTime' minOccurs='0'/>
+                    <xs:element name='modifiedLocation' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedProcess' type='xs:string' minOccurs='0'/>
+                    <xs:element name='object' type='xs:string' minOccurs='0'/>
+                    <xs:element name='rowIdentifier' type='xs:long' minOccurs='0'/>
+                    <xs:element name='source' type='xs:string' minOccurs='0'/>
+                    <xs:element name='sourceErrorID' type='xs:string' minOccurs='0'/>
+                    <xs:element name='sourceMessage' type='xs:string' minOccurs='0'/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name='benefitsExceptionBean'>
+        <xs:complexContent>
+            <xs:extension base='tns:faultInfoBean'>
+                <xs:sequence>
+                    <xs:element name='CALL_ID' type='xs:int' minOccurs='0'/>
+                    <xs:element name='DATASOURCE' type='xs:string' minOccurs='0'/>
+                    <xs:element name='DS_ERROR' type='xs:string' minOccurs='0'/>
+                    <xs:element name='DS_MESSAGE' type='xs:string' minOccurs='0'/>
+                    <xs:element name='FIELD_NAME' type='xs:string' minOccurs='0'/>
+                    <xs:element name='JRN_DT' type='xs:string' minOccurs='0'/>
+                    <xs:element name='JRN_LCTN_ID' type='xs:string' minOccurs='0'/>
+                    <xs:element name='JRN_OBJ_ID' type='xs:string' minOccurs='0'/>
+                    <xs:element name='JRN_STT_TC' type='xs:string' minOccurs='0'/>
+                    <xs:element name='JRN_USER_ID' type='xs:string' minOccurs='0'/>
+                    <xs:element name='LOG' type='xs:string' minOccurs='0'/>
+                    <xs:element name='ORA_MSG' type='xs:string' minOccurs='0'/>
+                    <xs:element name='PARENT_ID' type='xs:int' minOccurs='0'/>
+                    <xs:element name='PARENT_NAME' type='xs:string' minOccurs='0'/>
+                    <xs:element name='ROW_CNT' type='xs:int' minOccurs='0'/>
+                    <xs:element name='ROW_ID' type='xs:int' minOccurs='0'/>
+                    <xs:element name='ROW_NUM' type='xs:int' minOccurs='0'/>
+                    <xs:element name='TABLE_NAME' type='xs:string' minOccurs='0'/>
+                    <xs:element name='VN_ERROR' type='xs:int' minOccurs='0'/>
+                    <xs:element name='VN_MSG' type='xs:string' minOccurs='0'/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name='faultInfoBean'>
+        <xs:sequence>
+            <xs:element name='message' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+
+
+namespace:     http://session.ejb.cp.benefits.vba.va.gov/
+endpoint:      http://bepdev.vba.va.gov/ReadMilitaryPayEJB/ReadMilitaryPayService
+
+soap actions
+========
+find_military_pay

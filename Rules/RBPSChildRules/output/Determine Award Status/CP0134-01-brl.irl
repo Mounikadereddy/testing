@@ -1,0 +1,17 @@
+package Determine_Award_Status {
+   rule CP0134$45$01 {
+      property ilog.rules.business_name = "CP0134-01";
+      property ilog.rules.package_name = "Determine Award Status";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.firstChangedDateofRating)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.getAgeOn(Child, Veteran.firstChangedDateofRating) < 18));
+      } then {
+         Award.dependencyStatusType = gov.va.vba.rbps.coreframework.xom.DependentStatusType.MINOR_CHILD;
+         Award.dependencyDecisionType = gov.va.vba.rbps.coreframework.xom.DependentDecisionType.ELIGIBLE_MINOR_CHILD;
+      }
+   }
+}
+

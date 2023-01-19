@@ -1,0 +1,45 @@
+<BFI>
+    <jobList>
+        <job>
+            <name>MES:07-MAY-11</name>
+            <jobid>49321</jobid>
+            <createdate>2011-05-07 08:09:46.0</createdate>
+            <lastmodified>2011-05-07 08:10:00.0</lastmodified>
+            <phasecode>P</phasecode>
+            <statuscode>S</statuscode>
+            <stepcode>S</stepcode>
+            <docs>
+                <doc>
+                    <originalFilename>459_2661772911016419-00GEN_S.pdf</originalFilename>
+                    <hpiiBatchNm>110507081443731</hpiiBatchNm>
+                    <documentId>15080004</documentId>
+                    <fnDcmntNbr>287105001</fnDcmntNbr>
+                    <rcvdDt>2011-05-06 00:00:00.0</rcvdDt>
+                    <phasecode>I</phasecode>
+                    <stepcode>I</stepcode>
+                    <statuscode>F</statuscode>
+                </doc>
+                <doc>
+                    <originalFilename>459_2914561911014364-00PSC_S.pdf</originalFilename>
+                    <hpiiBatchNm>110507081443731</hpiiBatchNm>
+                    <documentId>15080006</documentId>
+                    <fnDcmntNbr>287105002</fnDcmntNbr>
+                    <rcvdDt>2011-05-06 00:00:00.0</rcvdDt>
+                    <phasecode>I</phasecode>
+                    <stepcode>I</stepcode>
+                    <statuscode>S</statuscode>
+                </doc>
+                <doc>
+                    <originalFilename>459_2953114411013411-00PSY_S.pdf</originalFilename>
+                    <hpiiBatchNm>110507081443731</hpiiBatchNm>
+                    <documentId>15080008</documentId>
+                    <fnDcmntNbr>287105003</fnDcmntNbr>
+                    <rcvdDt>2011-05-06 00:00:00.0</rcvdDt>
+                    <phasecode>I</phasecode>
+                    <stepcode>I</stepcode>
+                    <statuscode>F</statuscode>
+                </doc>
+            </docs>
+        </job>
+    </jobList>
+</BFI>

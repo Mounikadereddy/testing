@@ -1,0 +1,18 @@
+package PriorSchoolTerm.allowableDate {
+   use schollallowableDate;
+   use Child18BirthDay;
+   rule setSchoolAllowableDateTo18thBirday {
+      property ilog.rules.business_name = "setSchoolAllowableDateTo18thBirday";
+      property ilog.rules.package_name = "PriorSchoolTerm.allowableDate";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (schollallowableDate.compareTo(Child18BirthDay) < 0);
+      } then {
+         schollallowableDate = Child18BirthDay;
+         ?context.updateContext();
+         LogMessage.addException("School allowable date set to 18th birthday.");
+      }
+   }
+}
+

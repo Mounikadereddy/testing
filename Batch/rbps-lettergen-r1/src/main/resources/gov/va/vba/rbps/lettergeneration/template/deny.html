@@ -1,0 +1,78 @@
+#parse
+(
+ 
+"gov/va/vba/rbps/lettergeneration/template/header.html"
+ 
+)
+
+
+    <p>
+        We made a decision on your claim to add an additional
+        dependent(s) to your award received on
+        $date.format( "MMM dd, yyyy", $letterFields.claimDate ).
+    </p>
+
+
+    <p>
+        This letter tells you what we decided, how we made our decision
+        and the evidence used to decide your claim. We have also included
+        information about what to do if you disagree with our decision, and
+        who to contact if you have questions or need assistance.
+    </p>
+
+    <span class="section"> 
+        Your Award Amount
+    </span>
+
+    <p class="subparagraph">
+        Your monthly payment remains unchanged. You will continue to receive 
+        “currently monthly amount.”
+    </p>
+    
+    <h2 class="section'">What We Decided</h2>
+    
+    <p class="subparagraph">
+        We have denied your claim to add your dependent(s) to your award. We cannot add “dependent
+        name” due to the following reason
+    </p>
+
+    <p class="subparagraph">
+        Text string #1
+        “dependent name" was reported as being between the ages of 18 and 23 and currently not
+        pursuing a course of instruction at an approved educational institution”
+    </p>
+
+    <p class="subparagraph">
+        Text string #2
+        “dependent name" was reported as being 18 years of age or older and not reported as being
+        seriously disabled.
+    </p>
+
+    <p class="subparagraph">
+        Text string #3
+        “dependent name" was reported as being 23 years of age or older and not reported as being
+        seriously disabled.”
+    </p>
+
+    <p class="subparagraph">
+        Text string #4
+        “dependent name" was reported as being married”
+    </p>
+
+    <p class="subparagraph">
+        Text string #5
+        “Currently your combined service-connected rating is less than 30 percent. By law VA cannot pay an
+        increase in monetary benefits unless a Veteran has a combined service-connected rating of 30 percent or
+        greater.”
+    </p>
+    
+    <br />
+#parse
+(
+ 
+"gov/va/vba/rbps/lettergeneration/template/bottom.html"
+ 
+)
+
+</body>
+</html>

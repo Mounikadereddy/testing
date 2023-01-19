@@ -1,0 +1,19 @@
+package Denials_Or_Adopted {
+   use RatingPlus1Year;
+   use Completed;
+   rule CP0115A_$45$_Child_Age_And_SD_Check {
+      property ilog.rules.business_name = "CP0115A - Child Age And SD Check";
+      property ilog.rules.package_name = "Denials Or Adopted";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (((Veteran.claimDate.compareTo(RatingPlus1Year) <= 0) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.getAgeOn(Child, Veteran.firstChangedDateofRating) >= 18) && (Child.seriouslyDisabled)));
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Child : " + Child.lastName) + ", ") + Child.firstName) + " is reported as seriously disabled. Please review."));
+      }
+   }
+}
+

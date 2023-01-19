@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0118 Prior End Date before Prior Start Date Check</name>
+  <uuid>16ebd935-c519-4d2e-b80d-23540144f9f8</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	the course end date of the last term of 'the Child'  is before or the same as 
+	the course start date of the last term of 'the Child' 
+then 
+	set priorSchoolTermValid to false;
+	 set PriorSchoolTermStatus to "ignore";
+ 	add "last term  not valid" to the list of 'LogMessage' ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

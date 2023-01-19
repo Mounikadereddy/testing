@@ -1,0 +1,11 @@
+package Finalize_Rules {
+rule Remove_Minor_to_School_Child_Award {
+property status = "new";
+when {
+	gov.va.vba.rbps.coreframework.xom.Award() from MinorSchoolChildAward;	
+}
+then {
+ 	MinorSchoolChildAward = null;
+}
+}
+}

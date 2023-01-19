@@ -1,0 +1,18 @@
+package PriorSchoolTerm {
+   use PriorConditionSatisfied;
+   rule CP0226$45$B$45$difference_between_the_end_date_of_the_last_term_on_the_award__GT_5m {
+      property ilog.rules.business_name = "CP0226-B-difference between the end date of the last term on the award  GT 5m";
+      property ilog.rules.package_name = "PriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((Child.lastTermInCorpEndDate != null
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addMonthsToDate(5, Child.lastTermInCorpEndDate).compareTo(Child.lastTerm.courseStudentStartDate) < 0));
+      } then {
+         PriorSchoolChild.eventDate = Child.lastTerm.courseStudentStartDate;
+         PriorConditionSatisfied = true;
+         ?context.updateContext();
+      }
+   }
+}
+

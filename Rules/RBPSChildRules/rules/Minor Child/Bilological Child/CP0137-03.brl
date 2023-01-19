@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0137-03</name>
+  <uuid>31c45d3d-c6f2-4d26-8512-1d4dbaf19db2</uuid>
+  <documentation><![CDATA[DOB > (after) FCDR]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the child type of 'the Child' is BIOLOGICAL_CHILD
+            - it is not true that 'the Child'  is on award as minor child
+            - the FCDR of 'the Veteran' is present
+            - the birth date of 'the Child' is after the FCDR of 'the Veteran'
+then
+    set the event date of 'the Award' to the birth date of 'the Child' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

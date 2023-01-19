@@ -1,0 +1,628 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+
+<!-- ======================================================================= -->
+<!-- Build RBPS project -->
+<!-- Author: Omar GAYE -->
+<!-- Created on: April 25 2011-->
+<!-- version 1.0 -->
+<!-- Last updated on: June 05 2011-->
+<!-- Last updated by: OG - Customizing for BEP build and deploy-->
+<!-- Oct. 10 2018                                                            -->
+<!-- Updated by Robert D. to build the RBPS in Hudson 3 platform. The ear    -->
+<!-- file and rule jar files will be published to Nexus						 -->
+<!-- ======================================================================= -->
+
+<!-- RBPS project build info -->
+<project name="RBPS" default="rbps-build-hudson" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+
+	<!-- added properties and targets for ivy -->
+	<property name="ivy.install.version" value="2.2.0" />
+	<condition property="ivy.home" value="${env.IVY_HOME}">
+		<isset property="env.IVY_HOME" />
+	</condition>
+	<property name="ivy.home" value="${user.home}/.ant" />
+	<property name="ivy.jar.dir" value="${ivy.home}/lib" />
+	<property name="ivy.jar.file" value="${ivy.jar.dir}/ivy.jar" />
+
+	<target name="download-ivy" unless="offline">
+		<mkdir dir="${ivy.jar.dir}" />
+		<!-- download Ivy from web site so that it can be used even without any special installation -->
+		<get src="http://vbawbtappdev2.vba.va.gov:8081/nexus/content/repositories/central/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar" dest="${ivy.jar.file}" usetimestamp="true" />
+	</target>
+	
+	<target name="init-ivy" depends="download-ivy">
+			<!--  <ivy:settings file="ivysettings.xml" /> -->
+			<!-- try to load ivy here from ivy home, in case the user has not already dropped
+				              it into ant's lib dir (note that the latter copy will always take precedence).
+				              We will not fail as long as local lib dir exists (it may be empty) and
+				              ivy is in at least one of ant's lib dir or the local lib dir. -->
+			<echo> ivy.jar.dir is: ${ivy.jar.dir} </echo>
+			<path id="ivy.lib.path">
+				<fileset dir="${ivy.jar.dir}" includes="*.jar" />
+			</path>
+			<taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant" classpathref="ivy.lib.path" />
+	</target>
+	
+    <property name="project.name" value="RBPS" />
+
+    <property name="stage.dir"                  value="${basedir}/stage"/>
+    <property name="dist.dir"                   value="${basedir}/dist"/>
+    <property name="bin.dir"                    value="${stage.dir}/bin"/>
+    <property name="src.dir"                    value="${stage.dir}/src"/>
+    <property name="resources.dir"              value="${stage.dir}/resources"/>
+    <property name="lib.dir"                    value="${stage.dir}/lib"/>
+    <property name="scripts.dir"                value="${dist.dir}/scripts"/>
+    <property name="conf.dir"                   value="${dist.dir}/conf"/>
+    <property name="dist.lib.dir"               value="${dist.dir}/lib"/>
+
+
+    <!-- RBPS archive distribution name -->
+    <property name="rbps-core-jar.name"         value="rbps-core.jar"/>
+    <property name="rbps-web-war.name"          value="rbps-web-r1.war"/>
+    <property name="rbps-rule-session-jar.name" value="rbps-rule-session.jar"/>
+    <property name="rbps-lettergen-jar.name"    value="rbps-lettergen.jar"/>
+    <property name="rbps-common-jar.name"       value="rbps-common.jar"/>
+    <property name="rbps-rules-engine.name"     value="rbps-rules-engine.jar"/>
+    <property name="rbps-ear.name"              value="rbps.ear"/>
+    <property name="rbps-client.name"           value="RbpsClient.jar"/>
+    <property name="rbps-ruleapp.name"          value="RBPSRuleApp.jar"/>
+    <property name="rbps-client-script.name"    value="rbpsClient.sh"/>
+	<property name="rbps-batch-script.name"     value="RBPSBatch.sh"/>
+	
+    <!-- RBPS project src location-->
+    <property name="rbps-client.dir"            value="${basedir}/../rbps-client"/>
+    <property name="rbps-core.dir"              value="${basedir}/../rbps-core-r1"/>
+    <property name="rbps-web.dir"               value="${basedir}/../rbps-web-r1"/>
+    <property name="rbps-rule-session.dir"      value="${basedir}/../rbps-rule-session-r1"/>
+    <property name="rbps-lettergen.dir"         value="${basedir}/../rbps-lettergen-r1"/>
+    <property name="rbps-common.dir"            value="${basedir}/../rbps-common-r1"/>
+    <property name="rbps-rules-engine.dir"      value="${basedir}/../rbps-rules-engine"/>
+    <property name="rbps-ear.dir"               value="${basedir}/../rbps-ear-r1"/>
+
+	<!-- set default bep framework jar version. The bep.fw.ver could be setup in the hudson config page -->
+	<condition property="bep.fw.ver" else="5.1.0-6">
+		     <isset property="bep.fw.ver"/>
+	</condition>
+
+  <!-- =================================================================== -->
+  <!-- Classpath Import the jar nedded to build the project -->
+  <!-- =================================================================== -->
+  <!-- Make sure to remove whatever is not ultimately needed -->
+    <path id="rbps.classpath">
+        <!-- JAXB -->
+        <pathelement path="${lib.dir}/jaxb-impl.jar"/>
+        <pathelement path="${lib.dir}/jaxb1-impl.jar"/>
+        <pathelement path="${lib.dir}/jaxb-api.jar"/>
+        <pathelement path="${lib.dir}/jaxb-xjc.jar"/> <!-- remove? -->
+        <pathelement path="${lib.dir}/jsr173_1.o_api.jar"/>
+        <pathelement path="${lib.dir}/javax.mail-1.3.3.01.jar"/>
+        <pathelement path="${lib.dir}/antlr-2.7.6.jar"/>
+        <pathelement path="${lib.dir}/jta-1.1.jar"/>
+        <!-- Oracle -->
+        <pathelement path="${lib.dir}/ojdbc5.jar"/> <!-- REMOVE ?? -->
+        <!-- Spring, AOP, etc -->
+        <pathelement path="${lib.dir}/org.springframework.aop-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.asm-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.beans-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.context-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.context.support-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.core-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.expression-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.instrument-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.instrument.tomcat-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.oxm-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.transaction-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.web-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.web.portlet-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.web.servlet-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/org.springframework.web.struts-3.1.0.M1.jar"/>
+        <pathelement path="${lib.dir}/aopalliance-1.0.jar"/>
+        <pathelement path="${lib.dir}/aopalliance-alpha1.jar"/>
+        <pathelement path="${lib.dir}/apache-axiom-impl-1.2.7.jar"/>
+        <pathelement path="${lib.dir}/axiom-api-1.2.8.jar"/>
+        <pathelement path="${lib.dir}/commons-codec.jar"/>
+        <pathelement path="${lib.dir}/commons-collections-3.1.jar"/>
+        <pathelement path="${lib.dir}/commons-dbcp-1.4.jar"/>
+        <pathelement path="${lib.dir}/commons-httpclient-3.0.1.jar"/>
+        <pathelement path="${lib.dir}/commons-logging-1.1.jar"/>
+        <pathelement path="${lib.dir}/commons-pool-1.5.5.jar"/>
+        <pathelement path="${lib.dir}/dom4j-1.6.1.jar"/>
+        <pathelement path="${lib.dir}/javassist-3.15.0-GA.jar"/>
+        <!-- Spring WS -->
+        <pathelement path="${lib.dir}/spring-ws-core-1.5.3.jar"/>
+        <pathelement path="${lib.dir}/spring-ws-security-1.5.7.jar"/>
+        <pathelement path="${lib.dir}/spring-xml-1.0.0.jar"/>
+        <pathelement path="${lib.dir}/wss4j-1.5.1.jar"/>
+        <pathelement path="${lib.dir}/xmlsec-1.3.0.jar"/>
+        <!-- SAAJ -->
+        <pathelement path="${lib.dir}/saaj-impl-1.3.jar"/>
+        <pathelement path="${lib.dir}/saaj-api-1.3.jar"/>
+        <!-- CXF WS -->
+        <!-- pathelement path="${lib.dir}/cxf-2.4.0.jar"/ -->
+        <!-- pathelement path="${lib.dir}/neethi-3.0.0.jar"/ -->
+        <!-- pathelement path="${lib.dir}/xmlschema-core-2.0.jar"/ -->
+        <!-- pathelement path="${lib.dir}/wsdl4j-1.6.2.jar"/ -->
+        <!-- JAXWS - Spring integration-->
+        <pathelement path="${lib.dir}/jaxws-spring-1.8.jar"/>
+        <pathelement path="${lib.dir}/xbean-spring-3.6.jar"/>
+        <!-- JRules -->
+        <!--<pathelement path="${lib.dir}/jrules-res-session-ejb3-WL10.jar"/>-->
+        <!-- JUnit -->
+        <pathelement path="${lib.dir}/junit-4.9b1.jar"/>
+        <!-- BEP -->
+        <!-- BEP Logging framework. No log4J.jar in Prod server, just add it to your WL path -->
+        <pathelement path="${lib.dir}/framework-${bep.fw.ver}.jar"/>
+        <pathelement path="${lib.dir}/framework-web-${bep.fw.ver}.jar"/>
+	    <pathelement path="${lib.dir}/bep-domain-${bep.fw.ver}.jar"/>
+	    <pathelement path="${lib.dir}/bep-app-client-${bep.fw.ver}.jar"/>
+         
+        <pathelement path="${lib.dir}/slf4j-api-1.6.1.jar"/>
+		<!-- docGen -->
+		<pathelement path="${lib.dir}/bip-docgen-client-core-1.0.2-RC1.jar"/>
+		<pathelement path="${lib.dir}/bip-docgen-plugin-rbps-1.2.2-SNAPSHOT.jar"/>
+    	<pathelement path="${lib.dir}/bip-docgen-plugin-awards-api-1.1.8.jar"/>
+    	<pathelement path="${lib.dir}/gson-2.8.8.jar"/>
+		<pathelement path="${lib.dir}/bip-docgen-svc-api-1.0.3.jar"/>
+		<pathelement path="${lib.dir}/jackson-core-asl-1.9.13.jar"/>
+		<pathelement path="${lib.dir}/jackson-mapper-asl-1.9.13.jar"/>
+
+        <!-- BEP web services handler chain -->
+        <!-- pathelement path="${lib.dir}/framework-services.jar"/ -->
+        <!-- pathelement path="${lib.dir}/ws-framework.jar"/ -->
+        <!-- End BEP -->
+        
+        <pathelement path="${lib.dir}/commons-io-2.0.1.jar"/>
+        <pathelement path="${lib.dir}/commons-lang-2.4.jar"/>
+        <pathelement path="${lib.dir}/commons-exec-1.0-cs-01.jar"/>
+        <pathelement path="${lib.dir}/velocity-1.7.jar"/>
+        <pathelement path="${lib.dir}/commons-beanutils-1.7.0.jar.jar"/>
+        <pathelement path="${lib.dir}/velocity-tools-generic-2.0.jar"/>
+
+		<!-- X Stream-->
+		<pathelement path="${lib.dir}/xstream-1.4.3.jar"/>
+
+        <!-- sftp to upload to Louay's machine -->
+        <pathelement path="${lib.dir}/bcprov-jdk15-1.43.jar"/>
+        <pathelement path="${lib.dir}/commons-vfs-2.0.jar"/>
+        <pathelement path="${lib.dir}/commons-net-2.0.jar"/>
+        <pathelement path="${lib.dir}/jsch-0.1.41.jar"/>
+        <pathelement path="${lib.dir}/zehon_file_transfer-1.1.6.jar"/>
+
+        <!-- For Rules-Engine testing -->
+        <pathelement path="${lib.dir}/jackson-annotations-2.9.8.jar"/>
+        <pathelement path="${lib.dir}/jackson-core-2.9.8.jar"/>
+        <pathelement path="${lib.dir}/jackson-databind-2.9.8.jar"/>
+        <pathelement path="${lib.dir}/jackson-dataformat-yaml-2.9.8.jar"/>
+        <pathelement path="${lib.dir}/snakeyaml-1.9.jar"/>
+
+        <!-- Testing -->
+        <pathelement path="${lib.dir}/powermock-api-support-2.0.5.jar"/>
+        <pathelement path="${lib.dir}/powermock-reflect-2.0.5.jar"/>
+        <pathelement path="${lib.dir}/powermock-module-junit4-common-2.0.5.jar"/>
+        <pathelement path="${lib.dir}/powermock-api-mockito2-2.0.5.jar"/>
+        <pathelement path="${lib.dir}/powermock-module-junit4-2.0.5.jar"/>
+        <pathelement path="${lib.dir}/powermock-core-2.0.5.jar"/>
+        <pathelement path="${lib.dir}/mockito-core-2.28.2.jar"/>
+
+         <!-- Json Mapping -->
+        <pathelement path="${lib.dir}/objenesis-2.6.jar"/>
+        <pathelement path="${lib.dir}/byte-buddy-1.9.10.jar"/>
+    </path>
+
+
+    <target name="rbps-init" depends="rbps-clean" description="Init operations...">
+        <tstamp />
+        <echo message="${project.name} ANT Build started..." />
+        <echo message="BUILDING FROM: ${basedir}" />
+        <echo message="Creating build directories" />
+
+        <mkdir dir="${stage.dir}" />
+        <mkdir dir="${bin.dir}" />
+        <mkdir dir="${src.dir}" />
+        <mkdir dir="${resources.dir}" />
+        <mkdir dir="${dist.dir}" />
+        <mkdir dir="${lib.dir}" />
+        <mkdir dir="${scripts.dir}" />
+        <mkdir dir="${conf.dir}" />
+
+        <mkdir dir="${dist.dir}/APP-INF" />
+        <mkdir dir="${dist.dir}/APP-INF/lib" />
+        <mkdir dir="${dist.dir}/META-INF" />
+        <mkdir dir="${dist.lib.dir}" />
+	
+        <echo message="Copying lib files..." />
+        <copy todir="${lib.dir}">
+            <fileset dir="${rbps-ear.dir}/EarContent/APP-INF/lib/">
+                <include name="**/*.jar"/>
+            	<exclude name="**/bep-*-4.8.0-4.jar"/>
+            	<exclude name="**/framework*-4.8.0-4.jar"/>
+            </fileset>
+        </copy>
+    </target>
+
+
+    <target name="rbps-clean" description="Removes tmp files used to create archives.">
+        <delete includeEmptyDirs="true" quiet="true" >
+            <fileset dir="${stage.dir}" defaultexcludes="no"/>
+            <fileset dir="${dist.dir}" defaultexcludes="no"/>
+        </delete>
+    </target>
+
+
+
+    <target name="build-rbps-common" depends="rbps-init" description="Build rbps-commom project">
+        <echo message="--- Copying rbps-common sources files..."></echo>
+
+        <copy todir="${src.dir}">
+           <fileset dir="${rbps-common.dir}/src/main/java">
+              <include name="**/*.java"/>
+           </fileset>
+        </copy>
+
+        <javac
+          destdir="${bin.dir}"
+          debug="true">
+          <classpath refid="rbps.classpath"></classpath>
+          <src path="${src.dir}"></src>
+        </javac>
+
+        <jar destfile="${dist.dir}/APP-INF/lib/${rbps-common-jar.name}" basedir="${bin.dir}" includes="**/*.class"/>
+
+        <echo message="--- Building rbps-xom.jar ..."></echo>
+        <jar destfile="${dist.lib.dir}/rbps-xom.jar" >
+            <fileset dir="${bin.dir}">
+                <include name="**/xom/**/*.class"/>
+                <exclude name="**/*meta*"/>
+            </fileset>
+        </jar>
+
+        <delete includeEmptyDirs="true" quiet="true" >
+            <fileset dir="${src.dir}/gov" defaultexcludes="no"/>
+            <fileset dir="${bin.dir}/gov" defaultexcludes="no"/>
+        </delete>
+    </target>
+
+    <target name="build-rbps-rules-engine" depends="rbps-init" description="Build rbps-rules-engine project">
+        <echo message="--- Copying rbps-rules-engine sources files..."></echo>
+        <copy todir="${src.dir}">
+            <fileset dir="${rbps-rules-engine.dir}/src/main/java">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <javac
+                destdir="${bin.dir}"
+                debug="true">
+            <classpath>
+                <path>
+                    <path refid="rbps.classpath"></path>
+                    <pathelement path="${dist.dir}/APP-INF/lib/${rbps-common-jar.name}"/>
+                </path>
+            </classpath>
+            <src path="${src.dir}"></src>
+        </javac>
+
+        <jar destfile="${dist.dir}/APP-INF/lib/rbps-rules-engine.jar" basedir="${bin.dir}" includes="**/**" />
+
+        <delete includeEmptyDirs="true" quiet="true" >
+            <fileset dir="${src.dir}/gov" defaultexcludes="no"/>
+            <fileset dir="${bin.dir}/gov" defaultexcludes="no"/>
+        </delete>
+    </target>
+
+    <target name="build-rbps-rule-session" depends="build-rbps-common, build-rbps-rules-engine" description="Build rbps-rule-session project">
+        <echo message="--- Copying rbps-rule-session sources files..."></echo>
+
+        <copy todir="${src.dir}">
+            <fileset dir="${rbps-rule-session.dir}/src/main/java">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <javac
+          destdir="${bin.dir}"
+          debug="true">
+            <classpath>
+                <path>
+                  <path refid="rbps.classpath"></path>
+                  <pathelement path="${dist.dir}/APP-INF/lib/${rbps-common-jar.name}"/>
+                  <pathelement path="${dist.dir}/APP-INF/lib/${rbps-rules-engine.name}"/>
+                </path>
+            </classpath>
+            <src path="${src.dir}"></src>
+        </javac>
+
+        <jar destfile="${dist.dir}/APP-INF/lib/${rbps-rule-session-jar.name}" basedir="${bin.dir}" includes="**/*.class"/>
+
+        <delete includeEmptyDirs="true" quiet="true" >
+            <fileset dir="${src.dir}/gov" defaultexcludes="no"/>
+            <fileset dir="${bin.dir}/gov" defaultexcludes="no"/>
+        </delete>
+    </target>
+
+    <target name="build-rbps-core" depends="rbps-init, build-rbps-rule-session, build-rbps-lettergen, build-rbps-rules-engine" description="Build rbps-core project">
+        <echo message="--- Copying rbps-core sources files..."></echo>
+        <copy todir="${src.dir}">
+            <fileset dir="${rbps-core.dir}/src/main/java">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <javac
+            destdir="${bin.dir}"
+            debug="true">
+            <classpath>
+                <path>
+                    <path refid="rbps.classpath"></path>
+                    <pathelement path="${dist.dir}/APP-INF/lib/${rbps-common-jar.name}"/>
+                    <pathelement path="${dist.dir}/APP-INF/lib/${rbps-rule-session-jar.name}"/>
+                    <pathelement path="${dist.dir}/APP-INF/lib/${rbps-lettergen-jar.name}"/>
+                    <pathelement path="${dist.dir}/APP-INF/lib/${rbps-rules-engine.name}"/>
+                </path>
+            </classpath>
+            <src path="${src.dir}"></src>
+        </javac>
+
+        <copy todir="${bin.dir}/gov/va/vba/rbps/services/ws/interfaces">
+            <fileset dir="${rbps-web.dir}/src/main/resources">
+            <!-- include name="rbps-ws-handler-chain-conf.xml"/ -->
+            </fileset>
+        </copy>
+
+        <copy todir="${bin.dir}/gov/va/vba/rbps/services/ws/impl">
+            <fileset dir="${rbps-web.dir}/src/main/resources">
+            <!-- include name="rbps-ws-handler-chain-conf.xml"/ -->
+            </fileset>
+        </copy>
+
+        <jar destfile="${dist.dir}/APP-INF/lib/rbps-core.jar" basedir="${bin.dir}" includes="**/**" />
+
+        <delete includeEmptyDirs="true" quiet="true" >
+            <fileset dir="${src.dir}/gov" defaultexcludes="no"/>
+            <fileset dir="${bin.dir}/gov" defaultexcludes="no"/>
+        </delete>
+    </target>
+
+
+    <target name="build-rbps-lettergen" depends="rbps-init, build-rbps-common" description="Build rbps-lettergen project">
+        <echo message="--- Copying rbps-lettergen sources files..."></echo>
+        <copy todir="${src.dir}">
+            <fileset dir="${rbps-lettergen.dir}/src/main/java">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+
+        <echo message="--- Copying rbps-lettergen resource files..."></echo>
+        <copy todir="${resources.dir}">
+            <fileset dir="${rbps-lettergen.dir}/src/main/resources">
+                <include name="**/*"/>
+                <exclude name="**/*meta*"/>
+                <exclude name="**/*scripts*/*"/>
+                <exclude name="**/scripts"/>
+            </fileset>
+        </copy>
+
+
+        <javac
+              destdir="${bin.dir}"
+              debug="true">
+            <classpath>
+                <path>
+                    <path refid="rbps.classpath"></path>
+                    <pathelement path="${dist.dir}/APP-INF/lib/rbps-common.jar"/>
+                </path>
+            </classpath>
+            <src path="${src.dir}"></src>
+        </javac>
+
+
+        <jar destfile="${dist.dir}/APP-INF/lib/${rbps-lettergen-jar.name}" >
+            <fileset dir="${bin.dir}">
+                <include name="**/*.class"/>
+                <exclude name="**/*meta*"/>
+            </fileset>
+            <fileset dir="${resources.dir}">
+                <include name="**/*"/>
+                <exclude name="**/*meta*"/>
+            </fileset>
+        </jar>
+
+
+        <echo message="Copying letter generation jar to scripts folder" />
+
+        <copy todir="${scripts.dir}">
+            <fileset dir="${dist.dir}/APP-INF/lib/">
+                <include name="${rbps-lettergen-jar.name}"/>
+            </fileset>
+        </copy>
+
+
+        <echo message="Copying script files to scripts folder" />
+        <copy todir="${scripts.dir}">
+            <fileset dir="${rbps-lettergen.dir}/src/main/resources/scripts">
+                <include name="**"/>
+                <exclude name=".metadata/" />
+            </fileset>
+        </copy>
+
+        <delete includeEmptyDirs="true" quiet="true" >
+            <fileset dir="${src.dir}/gov" defaultexcludes="no"/>
+            <fileset dir="${bin.dir}/gov" defaultexcludes="no"/>
+        </delete>
+    </target>
+
+
+
+ <target name="build-rbps-web" depends="build-rbps-core" description="Build rbps-web project">
+    <mkdir dir="${src.dir}/WEB-INF"></mkdir>
+      <echo message="--- Copying rbps-web sources files..."></echo>
+      <copy todir="${src.dir}/WEB-INF/classes">
+         <fileset dir="${rbps-web.dir}/src/main/resources">
+            <include name="**/*.xml"/>
+          <!-- include name="jndi.properties"/ -->
+         </fileset>
+      </copy>
+
+      <copy todir="${conf.dir}">
+               <fileset dir="${rbps-web.dir}/src/main/resources">
+                  <include name="**/*.properties"/>
+                  <exclude name="BEP.properties"/>
+                  <exclude name="BEPlog4j.properties"/>
+                  <exclude name="jndi.properties"/>
+               </fileset>
+      </copy>
+
+      <copy todir="${src.dir}/WEB-INF">
+               <fileset dir="${basedir}/template">
+                  <include name="web.xml"/>
+                  <include name="weblogic.xml"/>
+                  <!-- include name="rbps-test-harness.jsp"/ -->
+               </fileset>
+    </copy>
+
+    <copy todir="${src.dir}">
+       <fileset dir="${rbps-web.dir}/WebContent/WEB-INF">
+        <include name="*.jsp"/>
+        <include name="*.html"/>
+        <include name="*.jpg"/>
+        <!-- include name="rbps-ws-handler-chain-conf.xml"/ -->
+       </fileset>
+    </copy>
+      <javac
+        destdir="${bin.dir}"
+        debug="true">
+        <classpath>
+    <path>
+       <path refid="rbps.classpath"></path>
+       <pathelement path="${dist.dir}/APP-INF/lib/${rbps-core.name}"/>
+    </path>
+        </classpath>
+        <src path="${src.dir}"></src>
+      </javac>
+
+      <zip destfile="${dist.dir}/${rbps-web-war.name}" basedir="${src.dir}" includes="**/**" encoding="UTF8" whenempty="create"/>
+
+      <delete includeEmptyDirs="true" quiet="true" >
+        <fileset dir="${src.dir}/gov" defaultexcludes="no"/>
+        <fileset dir="${bin.dir}/gov" defaultexcludes="no"/>
+      </delete>
+</target>
+
+  <target name="build-rbps-ear" description="Building the rbps ear file">
+    <echo message="--- Copying lib files..."></echo>
+    <copy todir="${dist.dir}/APP-INF/lib">
+        <fileset dir="${rbps-ear.dir}/EarContent/APP-INF/lib/">
+          <include name="**/*.jar"/>
+          <exclude name="org.springframework.test-3.1.0.M1.jar"/>
+  		  <exclude name="**/bep-*-4.8.0-4.jar"/>
+      	  <exclude name="**/framework*-4.8.0-4.jar"/>
+        </fileset>
+    </copy>
+    <copy todir="${dist.dir}/META-INF">
+          <fileset dir="${basedir}/template">
+            <include name="application.xml"/>
+            <include name="weblogic-application.xml"/>
+          </fileset>
+    </copy>
+    <zip destfile="${dist.dir}/${rbps-ear.name}" basedir="${dist.dir}" encoding="UTF8" whenempty="create">
+      <include name="META-INF/"/>
+  <include name="APP-INF/"/>
+        <include name="${rbps-web-war.name}"/>
+    </zip>
+
+    <echo message="--- Cleaning up the distribution directory..."></echo>
+    <delete includeEmptyDirs="true" quiet="true">
+        <!-- fileset dir="${dist.dir}" defaultexcludes="no">
+          <exclude name="${rbps-ear.name}" />
+          <exclude name="${scripts.dir}/" />
+        </fileset -->
+        <fileset dir="${dist.dir}/META-INF" defaultexcludes="no"></fileset>
+        <fileset dir="${dist.dir}/APP-INF" defaultexcludes="no"></fileset>
+        <fileset dir="${dist.dir}">
+          <include name="${rbps-web-war.name}"/>
+        </fileset>
+
+        <fileset dir="${bin.dir}" defaultexcludes="no"></fileset>
+        <fileset dir="${lib.dir}" defaultexcludes="no"></fileset>
+        <fileset dir="${src.dir}" defaultexcludes="no"></fileset>
+    </delete>
+
+    <echo message="--- Cleaning up the staging directory..."></echo>
+    <delete includeEmptyDirs="true" quiet="true" >
+            <fileset dir="${stage.dir}" defaultexcludes="no" />
+    </delete>
+    </target>
+
+    <target name="build-rbps-ruleapp" description="Copying the ruleapp jar file">
+        <echo message="Copying RBPSRuleApp jar file to scripts folder" />
+              <copy todir="${scripts.dir}">
+                <fileset dir="${rbps-web.dir}/src/main/resources">
+                <include name="${rbps-ruleapp.name}"/>
+                  </fileset>
+            </copy>
+    </target>
+
+	 <target name="build-rbps-client" description="Copying the client script and jar files">
+	  	<echo message="Copying Rbps Client jar and scripts to scripts folder" />
+	  		    <copy todir="${scripts.dir}">
+	  		    	<fileset dir="${rbps-web.dir}/src/main/resources">
+	  					<include name="${rbps-client.name}"/>
+	  		    		<include name="${rbps-client-script.name}"/>
+	  		    		<include name="${rbps-batch-script.name}"/>
+	  		      	</fileset>
+	  			</copy>
+	  </target>
+	
+    <target name="rbps-all" depends="rbps-init, build-rbps-client, build-rbps-web, build-rbps-core, build-rbps-ear, build-rbps-ruleapp" description="Default target, build all.">
+        <tstamp />
+        <echo message="--- All done."></echo>
+    </target>
+
+	<target name="rbps-build-hudson" depends="rbps-all, publish" />
+	<target name="rbps-build-local" depends="rbps-all" />
+	<target name="rbps-build-hudson-snapshots" depends="rbps-all, publishsnapshots" />
+	
+	<!-- set default rbps.ear.ver -->
+	<condition property="rbps.ear.ver" else="5.7.160">
+		     <isset property="rbps.ear.ver"/>
+	</condition>
+
+	<!-- ================================ PUBLISH TO NEXUS =============================== -->
+	<!-- publish to Nexus release -->
+	<target name="publish" depends="resolve, copyoverjars">
+		<echo>publish RBPS ear file to Nexus. the version is ${rbps.ear.ver} </echo>
+		<ivy:deliver deliverpattern="${basedir}/ivy.xml" pubrevision="${rbps.ear.ver}" status="release" />
+		<ivy:makepom ivyfile="${basedir}/ivy.xml" pomfile="${basedir}/dist/pom.xml" />
+		<ivy:resolve />
+		<ivy:publish resolver="nexus-releases" revision="${rbps.ear.ver}" overwrite="true" publishivy="false">
+			<artifacts pattern="dist/[artifact].[ext]" />
+		</ivy:publish>
+	</target>
+
+	<!-- publish has to call the resolve to make it works For rbps build, no dependency needed-->
+	<target name="resolve" description="retreive award ejb needed dependencies via ivy">
+		<ivy:retrieve pattern="lib/[artifact]-[revision].[ext]" />
+	</target>
+
+	<target name="copyoverjars" description="copy two jar files to ear file dir">
+        <copy todir="${dist.dir}">
+            <fileset dir="${scripts.dir}/">
+                <include name="**/RBPSRuleApp.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${dist.dir}">
+            <fileset dir="${dist.lib.dir}/">
+                <include name="**/rbps-xom.jar"/>
+            </fileset>
+        </copy>
+	</target>
+
+	<!-- publish to Nexus snapshots -->
+	<target name="publishsnapshots" depends="resolve, copyoverjars">
+		<echo>publish RBPS ear file to Nexus. the version is ${rbps.ear.ver} </echo>
+		<ivy:deliver deliverpattern="${basedir}/ivy.xml" pubrevision="${rbps.ear.ver}" status="release" />
+		<ivy:makepom ivyfile="${basedir}/ivy.xml" pomfile="${basedir}/dist/pom.xml" />
+		<ivy:resolve />
+		<ivy:publish resolver="nexus-snapshots" revision="${rbps.ear.ver}" overwrite="true" publishivy="false">
+			<artifacts pattern="dist/[artifact].[ext]" />
+		</ivy:publish>
+	</target>
+	
+</project>

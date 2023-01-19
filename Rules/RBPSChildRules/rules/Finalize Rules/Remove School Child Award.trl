@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.irl:IRLRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.irl="http://ilog.rules.studio/model/irl.ecore">
+  <name>Remove School Child Award</name>
+  <uuid>ec10ca4c-5977-445e-b84e-5a83cbb4d030</uuid>
+  <definition><![CDATA[ when {
+         gov.va.vba.rbps.coreframework.xom.Award() from Award;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award.dependencyStatusType)
+         	&& (Award.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.SCHOOL_CHILD))));
+} then {
+        Award = null;
+}]]></definition>
+</ilog.rules.studio.model.irl:IRLRule>

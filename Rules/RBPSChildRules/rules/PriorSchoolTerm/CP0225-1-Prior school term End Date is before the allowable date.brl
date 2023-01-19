@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0225-1-Prior school term End Date is before the allowable date</name>
+  <uuid>94e38b49-dd79-4001-845d-8fbce6c44dd3</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if  the course end date of the last term of 'the Child' is before 'School Allowable date' 
+then
+ set PriorSchoolTermStatus to "ignore" ;
+  set priorSchoolTermValid to false ; 
+  set 'PriorConditionSatisfied' to true ; 
+  ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

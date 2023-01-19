@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>PriorSchoolTermValidationFlow</name>
+  <uuid>2e097bb8-74c7-4c72-9acf-eeccc6650904</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+    <Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+      <Body>
+        <TaskList>
+          <StartTask Identifier="task_0"/>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="PriorSchoolTermPersent" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="82658344-6d48-4b3a-be32-328ddd67bcba"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0118 - Child School Name Verification" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="0cd26b7d-c710-4c13-8570-be2596b7896e"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0119 - Tution Feed Paid By Govt Check" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="1991bd83-a0e4-4ecd-a49e-0169e25ce545"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0118 - Child School Address Verification" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="036ef934-c02e-49b2-a951-974d1abdb607"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="Prior Course Start-future date Check" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="bf421d0b-fc51-4e1e-8402-336d6dec7d05"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0129 - Prior Course End before current term Check" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="55c5f257-7410-4acd-a019-3c5597a0da67"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0129 - Course Start-End Date Check" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="01038456-5864-45ae-912e-d394e57c0723"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP235-Prior Term included  in award" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="da12e390-2aad-4ad5-ba57-06e1264d76ca"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0118 Prior End Date before Prior Start Date Check" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="16ebd935-c519-4d2e-b80d-23540144f9f8"/>
+            </RuleList>
+          </RuleTask>
+          <StopTask Identifier="task_1"/>
+        </TaskList>
+        <NodeList>
+          <TaskNode Identifier="node_0" Task="task_0"/>
+          <TaskNode Identifier="node_1" Task="task_1"/>
+          <TaskNode Identifier="node_2" Task="PriorSchoolTermPersent"/>
+          <TaskNode Identifier="node_6" Task="CP0118 - Child School Name Verification"/>
+          <TaskNode Identifier="node_9" Task="CP0119 - Tution Feed Paid By Govt Check"/>
+          <TaskNode Identifier="node_10" Task="CP0118 - Child School Address Verification"/>
+          <TaskNode Identifier="node_12" Task="Prior Course Start-future date Check"/>
+          <TaskNode Identifier="node_13" Task="CP0129 - Prior Course End before current term Check"/>
+          <TaskNode Identifier="node_15" Task="CP0129 - Course Start-End Date Check"/>
+          <TaskNode Identifier="node_16" Task="CP235-Prior Term included  in award"/>
+          <TaskNode Identifier="node_3" Task="CP0118 Prior End Date before Prior Start Date Check"/>
+        </NodeList>
+        <TransitionList>
+          <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+          <Transition Identifier="transition_3" Source="node_2" Target="node_15">
+            <Conditions Language="bal"><![CDATA[priorSchoolTermValid]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_4" Source="node_2" Target="node_1"/>
+          <Transition Identifier="transition_7" Source="node_15" Target="node_3">
+            <Conditions Language="bal"><![CDATA[priorSchoolTermValid]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_8" Source="node_15" Target="node_1"/>
+          <Transition Identifier="transition_15" Source="node_9" Target="node_6">
+            <Conditions Language="bal"><![CDATA[priorSchoolTermValid]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_16" Source="node_9" Target="node_1"/>
+          <Transition Identifier="transition_17" Source="node_6" Target="node_10">
+            <Conditions Language="bal"><![CDATA[priorSchoolTermValid]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_18" Source="node_6" Target="node_1"/>
+          <Transition Identifier="transition_19" Source="node_10" Target="node_16">
+            <Conditions Language="bal"><![CDATA[ priorSchoolTermValid]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_20" Source="node_10" Target="node_1"/>
+          <Transition Identifier="transition_21" Source="node_16" Target="node_1">
+            <Conditions Language="bal"><![CDATA[ priorSchoolTermValid]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_22" Source="node_12" Target="node_13">
+            <Conditions Language="bal"><![CDATA[priorSchoolTermValid]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_23" Source="node_12" Target="node_1"/>
+          <Transition Identifier="transition_24" Source="node_13" Target="node_9">
+            <Conditions Language="bal"><![CDATA[priorSchoolTermValid]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_25" Source="node_13" Target="node_1"/>
+          <Transition Identifier="transition_13" Source="node_16" Target="node_1"/>
+          <Transition Identifier="transition_1" Source="node_3" Target="node_12">
+            <Conditions Language="bal"><![CDATA[priorSchoolTermValid]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_2" Source="node_3" Target="node_1"/>
+        </TransitionList>
+      </Body>
+      <Resources>
+        <ResourceSet Locale="en_US">
+          <Data Name="transition_17#label">Prior Term Valid</Data>
+          <Data Name="node_12#width">238.97726</Data>
+          <Data Name="transition_19#label">Prior Term Valid</Data>
+          <Data Name="node_16#width">195.98102</Data>
+          <Data Name="node_10#height">77.073</Data>
+          <Data Name="node_13#name">node_13</Data>
+          <Data Name="node_3#height">97.50586</Data>
+          <Data Name="node_6#name">node_6</Data>
+          <Data Name="node_2#name">node_2</Data>
+          <Data Name="transition_22#label">Prior Term Valid</Data>
+          <Data Name="transition_24#label">Prior Term Valid</Data>
+          <Data Name="node_0#x">80.0</Data>
+          <Data Name="node_0#y">-73.0</Data>
+          <Data Name="node_2#x">81.0</Data>
+          <Data Name="node_2#y">14.0</Data>
+          <Data Name="node_13#height">77.52368</Data>
+          <Data Name="node_6#x">117.00072</Data>
+          <Data Name="node_6#y">808.9462</Data>
+          <Data Name="node_6#height">69.892456</Data>
+          <Data Name="node_10#x">131.98657</Data>
+          <Data Name="node_10#name">node_10</Data>
+          <Data Name="node_10#y">972.4142</Data>
+          <Data Name="node_12#x">58.48871</Data>
+          <Data Name="node_12#y">382.45593</Data>
+          <Data Name="node_2#height">40.0</Data>
+          <Data Name="node_1#width">23.0</Data>
+          <Data Name="node_16#x">155.99048</Data>
+          <Data Name="transition_1#label">Prior Term Valid</Data>
+          <Data Name="node_16#y">1115.4</Data>
+          <Data Name="node_3#width">139.98927</Data>
+          <Data Name="transition_3#label">Prior TermValid</Data>
+          <Data Name="transition_7#label">Prior Term valid</Data>
+          <Data Name="node_9#width">296.97388</Data>
+          <Data Name="transition_16#label">else</Data>
+          <Data Name="transition_18#label">else</Data>
+          <Data Name="node_13#width">304.97354</Data>
+          <Data Name="node_15#width">196.9809</Data>
+          <Data Name="node_16#height">53.402344</Data>
+          <Data Name="node_12#height">77.1189</Data>
+          <Data Name="node_15#name">node_15</Data>
+          <Data Name="node_9#height">53.530396</Data>
+          <Data Name="node_1#height">23.0</Data>
+          <Data Name="transition_21#label">Prior Term valid</Data>
+          <Data Name="node_0#name">node_0</Data>
+          <Data Name="transition_23#label">else</Data>
+          <Data Name="transition_25#label">else</Data>
+          <Data Name="node_1#x">103.0</Data>
+          <Data Name="node_15#height">74.12097</Data>
+          <Data Name="node_1#y">1310.0</Data>
+          <Data Name="node_3#x">123.99459</Data>
+          <Data Name="node_3#y">230.19617</Data>
+          <Data Name="node_16#name">node_16</Data>
+          <Data Name="node_12#name">node_12</Data>
+          <Data Name="node_9#x">109.48686</Data>
+          <Data Name="node_9#name">node_9</Data>
+          <Data Name="node_9#y">653.7652</Data>
+          <Data Name="node_13#x">51.486755</Data>
+          <Data Name="node_13#y">517.76184</Data>
+          <Data Name="node_0#width">21.0</Data>
+          <Data Name="node_15#x">188.49048</Data>
+          <Data Name="node_0#height">21.0</Data>
+          <Data Name="node_15#y">98.95697</Data>
+          <Data Name="node_2#width">173.3789</Data>
+          <Data Name="node_1#name">node_2</Data>
+          <Data Name="transition_4#label">else</Data>
+          <Data Name="node_6#width">320.0014</Data>
+          <Data Name="transition_13#label">else</Data>
+          <Data Name="transition_15#label">Valid</Data>
+          <Data Name="transition_8#label">else</Data>
+          <Data Name="node_10#width">315.97308</Data>
+        </ResourceSet>
+      </Resources>
+      <Properties/>
+    </Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

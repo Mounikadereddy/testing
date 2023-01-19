@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>allowableDate</name>
+  <uuid>a7462fc1-1d09-4c0b-bcea-34db1b216774</uuid>
+</ilog.rules.studio.model.base:RulePackage>

@@ -1,0 +1,1133 @@
+<ns2:processAwardDependentResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <errorLevel>0</errorLevel>
+        <AwardSummary>
+            <errorLevel>0</errorLevel>
+            <awardEventSummary>
+                <awardEventID>92176</awardEventID>
+                <awardEventType>S</awardEventType>
+                <awardGenerationDate>2013-05-28T17:15:36-05:00</awardGenerationDate>
+                <awardOverrideIndicator>N</awardOverrideIndicator>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <concurrentRetirementDisabilityPayIndicator>N</concurrentRetirementDisabilityPayIndicator>
+                <firstChangedDate>2013-02-14T00:00:00-06:00</firstChangedDate>
+                <generationProcessType>G</generationProcessType>
+                <processingStationLocationID>372</processingStationLocationID>
+                <ratingAwardSummaryID>61362</ratingAwardSummaryID>
+                <stationOfJurisdictionLocationID>372</stationOfJurisdictionLocationID>
+                <totalNetAmountDue>627.73</totalNetAmountDue>
+                <veteranID>600049701</veteranID>
+                <associatedClaimIDs>
+                    <awardEventID>92176</awardEventID>
+                    <claimID>258302</claimID>
+                    <modifiedAction>I</modifiedAction>
+                    <modifiedBy>281RBPS</modifiedBy>
+                    <modifiedDate>2013-05-28T17:15:38-05:00</modifiedDate>
+                    <modifiedLocation>344</modifiedLocation>
+                    <modifiedProcess>cp_awd_claim_pkg.do_create</modifiedProcess>
+                </associatedClaimIDs>
+                <authorizedDate>2013-05-28T17:15:42-05:00</authorizedDate>
+                <awardLineSummary>
+                    <awardLineReportID>332601</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>030</disabilityPercent>
+                    <effectiveDate>2010-11-01T00:00:00-05:00</effectiveDate>
+                    <grossAmount>516</grossAmount>
+                    <netAmount>516</netAmount>
+                    <numberOfMinorChildren>6</numberOfMinorChildren>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>00</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Original Award</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>0</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332602</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>030</disabilityPercent>
+                    <effectiveDate>2011-12-01T00:00:00-06:00</effectiveDate>
+                    <grossAmount>584</grossAmount>
+                    <netAmount>584</netAmount>
+                    <numberOfMinorChildren>6</numberOfMinorChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>23</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Change in Spouse Status</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>1</reasonSequenceNumber>
+                    </awardLineReasons>
+                    <awardLineReasons>
+                        <awardLineReasonType>02</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Cost of Living Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>2</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332596</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>060</disabilityPercent>
+                    <effectiveDate>2012-07-01T00:00:00-05:00</effectiveDate>
+                    <grossAmount>1491</grossAmount>
+                    <netAmount>1491</netAmount>
+                    <numberOfMinorChildren>8</numberOfMinorChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>3</reasonSequenceNumber>
+                    </awardLineReasons>
+                    <awardLineReasons>
+                        <awardLineReasonType>31</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Compensation Rating Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>4</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332593</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>060</disabilityPercent>
+                    <effectiveDate>2012-08-20T00:00:00-05:00</effectiveDate>
+                    <grossAmount>1593</grossAmount>
+                    <netAmount>1593</netAmount>
+                    <numberOfMinorChildren>7</numberOfMinorChildren>
+                    <numberOfSchoolChildren>1</numberOfSchoolChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>22</awardLineReasonType>
+                        <awardLineReasonTypeDescription>School Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>5</reasonSequenceNumber>
+                    </awardLineReasons>
+                    <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>6</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332603</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>070</disabilityPercent>
+                    <effectiveDate>2012-09-01T00:00:00-05:00</effectiveDate>
+                    <grossAmount>2123</grossAmount>
+                    <netAmount>2123</netAmount>
+                    <numberOfMinorChildren>7</numberOfMinorChildren>
+                    <numberOfSchoolChildren>2</numberOfSchoolChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>22</awardLineReasonType>
+                        <awardLineReasonTypeDescription>School Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>7</reasonSequenceNumber>
+                    </awardLineReasons>
+                    <awardLineReasons>
+                        <awardLineReasonType>31</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Compensation Rating Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>8</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332604</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>070</disabilityPercent>
+                    <effectiveDate>2012-12-01T00:00:00-06:00</effectiveDate>
+                    <grossAmount>2159</grossAmount>
+                    <netAmount>2159</netAmount>
+                    <numberOfMinorChildren>7</numberOfMinorChildren>
+                    <numberOfSchoolChildren>2</numberOfSchoolChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>02</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Cost of Living Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>9</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332597</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>070</disabilityPercent>
+                    <effectiveDate>2013-01-01T00:00:00-06:00</effectiveDate>
+                    <grossAmount>1807</grossAmount>
+                    <netAmount>1807</netAmount>
+                    <numberOfMinorChildren>7</numberOfMinorChildren>
+                    <numberOfSchoolChildren>0</numberOfSchoolChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>22</awardLineReasonType>
+                        <awardLineReasonTypeDescription>School Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>10</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332598</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>070</disabilityPercent>
+                    <effectiveDate>2013-02-01T00:00:00-06:00</effectiveDate>
+                    <grossAmount>1983</grossAmount>
+                    <netAmount>1983</netAmount>
+                    <numberOfMinorChildren>7</numberOfMinorChildren>
+                    <numberOfSchoolChildren>1</numberOfSchoolChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>22</awardLineReasonType>
+                        <awardLineReasonTypeDescription>School Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>11</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332594</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>070</disabilityPercent>
+                    <effectiveDate>2013-02-14T00:00:00-06:00</effectiveDate>
+                    <grossAmount>2105</grossAmount>
+                    <netAmount>2105</netAmount>
+                    <numberOfMinorChildren>6</numberOfMinorChildren>
+                    <numberOfSchoolChildren>2</numberOfSchoolChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>12</reasonSequenceNumber>
+                    </awardLineReasons>
+                    <awardLineReasons>
+                        <awardLineReasonType>22</awardLineReasonType>
+                        <awardLineReasonTypeDescription>School Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>13</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332605</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>070</disabilityPercent>
+                    <effectiveDate>2014-01-01T00:00:00-06:00</effectiveDate>
+                    <grossAmount>1753</grossAmount>
+                    <netAmount>1753</netAmount>
+                    <numberOfMinorChildren>6</numberOfMinorChildren>
+                    <numberOfSchoolChildren>0</numberOfSchoolChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>22</awardLineReasonType>
+                        <awardLineReasonTypeDescription>School Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>14</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332606</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>070</disabilityPercent>
+                    <effectiveDate>2018-01-01T00:00:00-06:00</effectiveDate>
+                    <grossAmount>1699</grossAmount>
+                    <netAmount>1699</netAmount>
+                    <numberOfMinorChildren>5</numberOfMinorChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>15</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332599</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>070</disabilityPercent>
+                    <effectiveDate>2020-01-02T00:00:00-06:00</effectiveDate>
+                    <grossAmount>1645</grossAmount>
+                    <netAmount>1645</netAmount>
+                    <numberOfMinorChildren>4</numberOfMinorChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>16</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332600</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>070</disabilityPercent>
+                    <effectiveDate>2024-06-06T00:00:00-05:00</effectiveDate>
+                    <grossAmount>1483</grossAmount>
+                    <netAmount>1483</netAmount>
+                    <numberOfMinorChildren>1</numberOfMinorChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>17</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+                <awardLineSummary>
+                    <awardLineReportID>332595</awardLineReportID>
+                    <awardLineType>C</awardLineType>
+                    <awardOverrideIndicator>N</awardOverrideIndicator>
+                    <disabilityPercent>070</disabilityPercent>
+                    <effectiveDate>2025-05-03T00:00:00-05:00</effectiveDate>
+                    <grossAmount>1402</grossAmount>
+                    <netAmount>1402</netAmount>
+                    <numberOfMinorChildren>0</numberOfMinorChildren>
+                    <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                    <veteranID>600049701</veteranID>
+                    <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>18</reasonSequenceNumber>
+                    </awardLineReasons>
+                </awardLineSummary>
+            </awardEventSummary>
+            <awardType>CPL</awardType>
+            <beneficiaryID>600049701</beneficiaryID>
+            <dependencySummary>
+                <awardEffectiveDate>2018-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2000-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-15T15:15:20-05:00</decisionDate>
+                <dependencyDecisionID>38741</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2018-01-01T00:00:00-06:00</eventDate>
+                <firstName>martha</firstName>
+                <fullName>martha fleming</fullName>
+                <lastName>fleming</lastName>
+                <personID>600053480</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>792322422</socialSecurityNumber>
+                <sortDate>2013-04-15T15:15:20-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>15</alReasonSequenceNumber>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2024-06-06T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2006-06-06T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-12T11:30:29-05:00</decisionDate>
+                <dependencyDecisionID>38703</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2024-06-06T00:00:00-05:00</eventDate>
+                <firstName>Pony</firstName>
+                <fullName>Pony fleming</fullName>
+                <lastName>fleming</lastName>
+                <personID>600053428</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>784332223</socialSecurityNumber>
+                <sortDate>2013-04-12T11:30:29-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>17</alReasonSequenceNumber>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-04-16T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1999-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-16T12:00:25-05:00</decisionDate>
+                <dependencyDecisionID>38765</dependencyDecisionID>
+                <dependencyDecisionType>MARR</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Marriage</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2013-04-16T00:00:00-05:00</eventDate>
+                <firstName>Kayla</firstName>
+                <fullName>Kayla Mary</fullName>
+                <lastName>Mary</lastName>
+                <personID>600053509</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>783720022</socialSecurityNumber>
+                <sortDate>2013-04-16T12:00:25-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2010-11-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2000-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-15T15:15:21-05:00</decisionDate>
+                <dependencyDecisionID>38742</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-11-01T00:00:00-05:00</eventDate>
+                <firstName>martha</firstName>
+                <fullName>martha fleming</fullName>
+                <lastName>fleming</lastName>
+                <personID>600053480</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>792322422</socialSecurityNumber>
+                <sortDate>2013-04-15T15:15:21-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>0</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-04-11T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1990-02-02T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T14:16:14-05:00</decisionDate>
+                <dependencyDecisionID>38680</dependencyDecisionID>
+                <dependencyDecisionType>O18NISOH</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Over 18-Not in School or Helpless</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2013-04-11T00:00:00-05:00</eventDate>
+                <firstName>Champ</firstName>
+                <fullName>Champ Champion</fullName>
+                <lastName>Champion</lastName>
+                <personID>600053396</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>791342702</socialSecurityNumber>
+                <sortDate>2013-04-11T14:16:14-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-04-11T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1991-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T14:15:20-05:00</decisionDate>
+                <dependencyDecisionID>38679</dependencyDecisionID>
+                <dependencyDecisionType>MARR</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Marriage</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2013-04-11T00:00:00-05:00</eventDate>
+                <firstName>Emma</firstName>
+                <fullName>Emma Emma</fullName>
+                <lastName>Emma</lastName>
+                <personID>600053395</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>797342702</socialSecurityNumber>
+                <sortDate>2013-04-11T14:15:20-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1992-05-20T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-11T14:30:19-05:00</decisionDate>
+                <dependencyDecisionID>38684</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2013-05-20T00:00:00-05:00</eventDate>
+                <firstName>Darryl</firstName>
+                <fullName>Darryl Hank</fullName>
+                <lastName>Hank</lastName>
+                <personID>600053398</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>792342702</socialSecurityNumber>
+                <sortDate>2013-04-11T14:30:19-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-02-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1992-05-20T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-11T14:30:18-05:00</decisionDate>
+                <dependencyDecisionID>38683</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2013-01-05T00:00:00-06:00</eventDate>
+                <firstName>Darryl</firstName>
+                <fullName>Darryl Hank</fullName>
+                <lastName>Hank</lastName>
+                <personID>600053398</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>792342702</socialSecurityNumber>
+                <sortDate>2013-04-11T14:30:18-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>11</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2010-11-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2006-06-06T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-12T11:30:28-05:00</decisionDate>
+                <dependencyDecisionID>38702</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-11-01T00:00:00-05:00</eventDate>
+                <firstName>Pony</firstName>
+                <fullName>Pony fleming</fullName>
+                <lastName>fleming</lastName>
+                <personID>600053428</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>784332223</socialSecurityNumber>
+                <sortDate>2013-04-12T11:30:28-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>0</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-04-11T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2001-05-20T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-11T15:45:23-05:00</decisionDate>
+                <dependencyDecisionID>38687</dependencyDecisionID>
+                <dependencyDecisionType>MARR</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Marriage</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2013-04-11T00:00:00-05:00</eventDate>
+                <firstName>Lauren</firstName>
+                <fullName>Lauren Jenna</fullName>
+                <lastName>Jenna</lastName>
+                <personID>600053404</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>793347033</socialSecurityNumber>
+                <sortDate>2013-04-11T15:45:23-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2012-09-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1991-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-05-22T16:15:26-05:00</decisionDate>
+                <dependencyDecisionID>39319</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2012-08-15T00:00:00-05:00</eventDate>
+                <firstName>Eric</firstName>
+                <fullName>Eric M</fullName>
+                <lastName>M</lastName>
+                <personID>600054289</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>790342342</socialSecurityNumber>
+                <sortDate>2013-05-22T16:15:26-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>7</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1991-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-05-22T16:15:27-05:00</decisionDate>
+                <dependencyDecisionID>39320</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2012-12-12T00:00:00-06:00</eventDate>
+                <firstName>Eric</firstName>
+                <fullName>Eric M</fullName>
+                <lastName>M</lastName>
+                <personID>600054289</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>790342342</socialSecurityNumber>
+                <sortDate>2013-05-22T16:15:27-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>10</alReasonSequenceNumber>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1991-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-05-23T10:00:33-05:00</decisionDate>
+                <dependencyDecisionID>39335</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2013-05-10T00:00:00-05:00</eventDate>
+                <firstName>Chloe</firstName>
+                <fullName>Chloe Williams</fullName>
+                <lastName>Williams</lastName>
+                <personID>600053314</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>734332222</socialSecurityNumber>
+                <sortDate>2013-05-23T10:00:33-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2014-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1991-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-05-23T10:00:34-05:00</decisionDate>
+                <dependencyDecisionID>39336</dependencyDecisionID>
+                <dependencyDecisionType>T23</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 23</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2014-01-01T00:00:00-06:00</eventDate>
+                <firstName>Chloe</firstName>
+                <fullName>Chloe Williams</fullName>
+                <lastName>Williams</lastName>
+                <personID>600053314</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>734332222</socialSecurityNumber>
+                <sortDate>2013-05-23T10:00:34-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>14</alReasonSequenceNumber>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1991-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-05-23T11:15:22-05:00</decisionDate>
+                <dependencyDecisionID>39339</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2013-05-10T00:00:00-05:00</eventDate>
+                <firstName>Emma</firstName>
+                <fullName>Emma Emma</fullName>
+                <lastName>Emma</lastName>
+                <personID>600053395</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>797342702</socialSecurityNumber>
+                <sortDate>2013-05-23T11:15:22-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1994-08-20T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-11T12:30:31-05:00</decisionDate>
+                <dependencyDecisionID>38673</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2012-12-20T00:00:00-06:00</eventDate>
+                <firstName>Gina</firstName>
+                <fullName>Gina Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600053392</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>744332222</socialSecurityNumber>
+                <sortDate>2013-04-11T12:30:31-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>10</alReasonSequenceNumber>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2012-08-20T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1994-08-20T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-11T12:30:30-05:00</decisionDate>
+                <dependencyDecisionID>38672</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2012-08-20T00:00:00-05:00</eventDate>
+                <firstName>Gina</firstName>
+                <fullName>Gina Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600053392</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>744332222</socialSecurityNumber>
+                <sortDate>2013-04-11T12:30:30-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>5</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2011-12-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1970-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-10T15:01:38-05:00</decisionDate>
+                <dependencyDecisionID>38638</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2011-11-11T00:00:00-06:00</eventDate>
+                <firstName>Spousy</firstName>
+                <fullName>Spousy Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600053315</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>724332222</socialSecurityNumber>
+                <sortDate>2013-04-10T15:01:38-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>1</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-04-10T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1991-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-10T15:01:37-05:00</decisionDate>
+                <dependencyDecisionID>38637</dependencyDecisionID>
+                <dependencyDecisionType>O18NISOH</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Over 18-Not in School or Helpless</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2013-04-10T00:00:00-05:00</eventDate>
+                <firstName>Chloe</firstName>
+                <fullName>Chloe Williams</fullName>
+                <lastName>Williams</lastName>
+                <personID>600053314</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>734332222</socialSecurityNumber>
+                <sortDate>2013-04-10T15:01:37-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2010-11-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1994-08-20T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-11T12:30:32-05:00</decisionDate>
+                <dependencyDecisionID>38674</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-11-01T00:00:00-05:00</eventDate>
+                <firstName>Gina</firstName>
+                <fullName>Gina Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600053392</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>744332222</socialSecurityNumber>
+                <sortDate>2013-04-11T12:30:32-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>0</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2020-01-02T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2002-01-02T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-12-26T10:30:54-06:00</decisionDate>
+                <dependencyDecisionID>37396</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-01-02T00:00:00-06:00</eventDate>
+                <firstName>Jackie</firstName>
+                <fullName>Jackie Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600049779</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>797497973</socialSecurityNumber>
+                <sortDate>2012-12-26T10:30:54-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>16</alReasonSequenceNumber>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-02-06T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1987-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-02-06T11:00:30-06:00</decisionDate>
+                <dependencyDecisionID>37913</dependencyDecisionID>
+                <dependencyDecisionType>RATNHEL</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Rated Not Helpless</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2013-02-06T00:00:00-06:00</eventDate>
+                <firstName>Danny</firstName>
+                <fullName>Danny Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600051349</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>798342707</socialSecurityNumber>
+                <sortDate>2013-02-06T11:00:30-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2012-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2002-01-02T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-12-26T10:30:53-06:00</decisionDate>
+                <dependencyDecisionID>37395</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2012-07-01T00:00:00-05:00</eventDate>
+                <firstName>Jackie</firstName>
+                <fullName>Jackie Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600049779</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>797497973</socialSecurityNumber>
+                <sortDate>2012-12-26T10:30:53-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>3</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-02-14T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1995-02-14T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-05-28T17:15:34-05:00</decisionDate>
+                <dependencyDecisionID>39383</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2013-02-14T00:00:00-06:00</eventDate>
+                <firstName>vicki</firstName>
+                <fullName>vicki lu</fullName>
+                <lastName>lu</lastName>
+                <personID>600054365</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>798034232</socialSecurityNumber>
+                <sortDate>2013-05-28T17:15:34-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>13</alReasonSequenceNumber>
+                <claimID>258302</claimID>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2024-06-06T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2006-06-06T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-10T13:16:29-05:00</decisionDate>
+                <dependencyDecisionID>38620</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2024-06-06T00:00:00-05:00</eventDate>
+                <firstName>Tinni</firstName>
+                <fullName>Tinni Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600053295</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>794332222</socialSecurityNumber>
+                <sortDate>2013-04-10T13:16:29-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>17</alReasonSequenceNumber>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2013-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1995-02-14T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-05-28T17:15:33-05:00</decisionDate>
+                <dependencyDecisionID>39382</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2013-05-05T00:00:00-05:00</eventDate>
+                <firstName>vicki</firstName>
+                <fullName>vicki lu</fullName>
+                <lastName>lu</lastName>
+                <personID>600054365</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>798034232</socialSecurityNumber>
+                <sortDate>2013-05-28T17:15:33-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <claimID>258302</claimID>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2010-11-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2006-06-06T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-10T13:16:28-05:00</decisionDate>
+                <dependencyDecisionID>38619</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-11-01T00:00:00-05:00</eventDate>
+                <firstName>Tinni</firstName>
+                <fullName>Tinni Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600053295</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>794332222</socialSecurityNumber>
+                <sortDate>2013-04-10T13:16:28-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>0</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2025-05-03T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2007-05-03T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-12-21T13:45:29-06:00</decisionDate>
+                <dependencyDecisionID>37377</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2025-05-03T00:00:00-05:00</eventDate>
+                <firstName>Kelly</firstName>
+                <fullName>Kelly Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600049763</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>793739732</socialSecurityNumber>
+                <sortDate>2012-12-21T13:45:29-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>18</alReasonSequenceNumber>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2024-06-06T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2006-06-06T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-10T13:15:45-05:00</decisionDate>
+                <dependencyDecisionID>38618</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2024-06-06T00:00:00-05:00</eventDate>
+                <firstName>Minni</firstName>
+                <fullName>Minni Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600053294</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>784332222</socialSecurityNumber>
+                <sortDate>2013-04-10T13:15:45-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>17</alReasonSequenceNumber>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2012-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2007-05-03T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-12-21T13:45:28-06:00</decisionDate>
+                <dependencyDecisionID>37376</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2012-07-01T00:00:00-05:00</eventDate>
+                <firstName>Kelly</firstName>
+                <fullName>Kelly Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600049763</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>793739732</socialSecurityNumber>
+                <sortDate>2012-12-21T13:45:28-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>3</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2010-11-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>2006-06-06T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-10T13:15:44-05:00</decisionDate>
+                <dependencyDecisionID>38617</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-11-01T00:00:00-05:00</eventDate>
+                <firstName>Minni</firstName>
+                <fullName>Minni Fleming</fullName>
+                <lastName>Fleming</lastName>
+                <personID>600053294</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>784332222</socialSecurityNumber>
+                <sortDate>2013-04-10T13:15:44-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>0</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2014-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1991-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-05-23T11:15:23-05:00</decisionDate>
+                <dependencyDecisionID>39340</dependencyDecisionID>
+                <dependencyDecisionType>T23</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 23</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2014-01-01T00:00:00-06:00</eventDate>
+                <firstName>Emma</firstName>
+                <fullName>Emma Emma</fullName>
+                <lastName>Emma</lastName>
+                <personID>600053395</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>797342702</socialSecurityNumber>
+                <sortDate>2013-05-23T11:15:23-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>14</alReasonSequenceNumber>
+                <grantDenial>Denial</grantDenial>
+            </dependencySummary>
+            <dependencySummary>
+                <awardEffectiveDate>2010-11-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049701</beneficiaryID>
+                <birthdayDate>1995-02-14T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-05-28T17:00:37-05:00</decisionDate>
+                <dependencyDecisionID>39380</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-11-01T00:00:00-05:00</eventDate>
+                <firstName>vicki</firstName>
+                <fullName>vicki lu</fullName>
+                <lastName>lu</lastName>
+                <personID>600054365</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>798034232</socialSecurityNumber>
+                <sortDate>2013-05-28T17:00:37-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049701</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+                <alReasonSequenceNumber>0</alReasonSequenceNumber>
+                <grantDenial>Grant</grantDenial>
+            </dependencySummary>
+            <veteranID>600049701</veteranID>
+        </AwardSummary>
+        <DocumentSummary>
+            <errorLevel>0</errorLevel>
+            <documentList>
+                <awardEventID>92176</awardEventID>
+                <documentType>AWDDOC</documentType>
+                <letterText>
+                    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L01vZERhdGUoRDoyMDEwMTAxMzExMzAwMFopPj4NCmVuZG9iag0KMiAwIG9iag0KPDwvVHlwZSAvQ2F0YWxvZy9QYWdlcyAzIDAgUi9PdXRsaW5lcyA0IDAgUj4+DQplbmRvYmoNCjMgMCBvYmoNCjw8L1R5cGUgL1BhZ2VzL0NvdW50IDMvS2lkc1s1IDAgUiAxOCAwIFIgMjEgMCBSIF0vUmVzb3VyY2VzPDwvRm9udDw8L0ZBQUFCQyAxMiAwIFIvRkFBQUFIIDcgMCBSPj4+Pj4+DQplbmRvYmoNCjEyIDAgb2JqDQo8PC9UeXBlIC9Gb250L1N1YnR5cGUgL1R5cGUwL0VuY29kaW5nIC9JZGVudGl0eS1IL0Jhc2VGb250IC9GQUFBQkMrR2VudGl1bUJhc2ljL0Rlc2NlbmRhbnRGb250cyBbMTMgMCBSXS9Ub1VuaWNvZGUgMTYgMCBSPj4NCmVuZG9iag0KMTMgMCBvYmoNCjw8L1R5cGUgL0ZvbnQvU3VidHlwZSAvQ0lERm9udFR5cGUyL0Jhc2VGb250IC9GQUFBQkMrR2VudGl1bUJhc2ljL0NJRFRvR0lETWFwIC9JZGVudGl0eS9Gb250RGVzY3JpcHRvciAxNCAwIFIvRFcgMTAwMC9XIFsxNlsyMjBdNDJbNDY5XTU5WzIyOV01NVszMzZdNDVbMjI5XTRbNDY5XTJbNDY5XTdbNDY5XTVbNDY5XThbNDY5XTUzWzQ2OV0zWzQ2OV00M1s0NjldNDRbNDY5XTZbNDY5XTUyWzQ2OV01N1syMjldMVs1OTVdMTBbNTQ5XTM1WzUzNl00OVs1OTJdMjlbNDk2XTMyWzQ3OF0zMFs1ODNdMjhbNjUzXTI3WzI5N102M1szMDVdNTZbNTc4XTI2WzQ3Nl0zM1s4MDZdMzFbNjQ4XTI1WzYwMF0yNFs1MjJdMzRbNTYxXTE3WzQ3Nl0zN1s1NTBdMzhbNjUzXTM2WzY0OV02MVs4NTBdNDZbNTk0XTIzWzQ1OF01NFs1MDddMThbNDM3XTIyWzUyMF05WzQ2MV0xMlszMTFdNDFbNDg3XTE5WzU1MV0xM1syNzBdNThbMjU4XTYyWzUwMF0yMVsyNzBdNDBbODAzXTExWzU1MV0yMFs1MDJdNDdbNTI5XTY0WzUxNV0zOVszOTVdMTVbMzg2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Rm9udERlc2NyaXB0b3IgOSAwIFIvRFcgMTAwMC9XIFs3WzIyMF0xOFszMTZdMjFbMzE2XTI3WzMzNl0zMVsyMjldNTVbNDY5XTI4WzQ2OV0yOVs0NjldMTlbNDY5XTIwWzQ2OV0yNls0NjldMjRbNDY5XTI1WzQ2OV0xNFsyMjldMVs1OTVdMjNbNTQ5XTEzWzUzNl0xMls1OTJdMTdbNDk2XThbNDc4XTE2WzU4M101Nls2NTNdNFsyOTddOVszMDVdMTVbNDc2XTIyWzgwNl02WzY0OF01WzYwMF0zMFs1MjJdMTFbNTYxXTJbNDc2XTNbNTUwXTEwWzY1M10zMls2NDldMzNbODUwXTM3WzQ1OF01MVs1MDddNDhbNDM3XTQ2WzUyMF00M1s0NjFdMzVbMzExXTU0WzQ4N101M1s1NTFdMzhbMjcwXTU3WzUwMF0zNlsyNzBdMzlbODAzXTQwWzU1MV0zNFs1MDJdNDVbNTI5XTQxWzM5NV00OVszODZdNDJbMzQ0XTQ3WzUyOV01Mls0OTNdNTBbNzA2XTQ0WzQ5M101OFs0NDFdMFs2ODNdXS9DSURTeXN0ZW1JbmZvIDw8L09yZGVyaW5nKElkZW50aXR5KS9SZWdpc3RyeShBZG9iZSkvU3VwcGxlbWVudCAwPj4+Pg0KZW5kb2JqDQo5IDAgb2JqDQo8PC9UeXBlIC9Gb250RGVzY3JpcHRvci9Gb250TmFtZSAvRkFBQUFIK0dlbnRpdW1CYXNpYyxCb2xkL1N0ZW1WIDgwL0Rlc2NlbnQgLTI4My9Bc2NlbnQgODc0L0NhcEhlaWdodCA2MTUvRmxhZ3MgMzIvSXRhbGljQW5nbGUgMC9Gb250QkJveCBbLTUwMSAtMzU0IDk3NyAxMDU5XS9Gb250RmlsZTIgMTAgMCBSPj4NCmVuZG9iag0KMTAgMCBvYmoNCjw8L0xlbmd0aDEgMjcgMCBSL0xlbmd0aCAyOCAwIFIvRmlsdGVyIC9GbGF0ZURlY29kZT4+c3RyZWFtDQp4nMV8eXhbx3Xv3Hux7wsBkNgvVgKXIEiAALiD+ypSpDaSsq19tyRrt2R5kXdbjuMmzWLXreukrutnJ36qmzq05JfGaVP3pVnYz1n6Wvl7TZo0+Zq09XNdxy8Sofebu5DQQjev+cPUd4S5A2DuzDm/35kzZ+aC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BejA93cMJt8d9oe+m1T+ww/N0U3q3PWtd7fh7hunTu7S9dlCa9V2zZQQl+Zaj9kiD/nHx21y10N/HrLFZqPyn+HxbfIP9bRth5P7EqK++9b5rr+op9+743zjeB/Hv+7q+kkts0VVqdad52pf6/FbfXUqR+rzoQ0R3fR4Dmn/hfx6jE5JvKHjVM3QuttYN87X/cWFQZbhqDbv4aiyhevbzwHFOiaezs2f2n9OmElX4bzSJJmpMCQDWpFWiFyTClCqYkFvpHImWZJe8MyS1qAtaYsOBekVJKQdIlP3PShN9jaTSVXe8WwXSS9BJSn6sYOGn7yQ4GdYU8PPsJ+Gn9BWR789CX4rzqnhZ1I/+JmUBz9Ddw0/SVXgZ7jyGn4m1YRfwRXU8BOursCvYE2BX8HuAj/LtyLwsykSfparJPCz7C7ws5xa4Gc5p8DPpu7wKzmnwK/kmgn8LNda4FemmvAraSTwsykPfiXzDPws34qBX5kIfiVtTfTjLAZ+JW1N9OObNtEv5cXvk6tk4veZIuFnX0nRbxs3V9pE8z7Df+FjIzd378Mexu8De3fetV3vPn4x4zAij6d/q8UJfA0KZW5kc3RyZWFtDQplbmRvYmoNCjI5IDAgb2JqDQo0OTEgDQplbmRvYmoNCjQgMCBvYmoNCjw8L1R5cGUgL091dGxpbmVzPj4NCmVuZG9iag0KeHJlZg0KMCAzMA0KMDAwMDAwMDAwMCA2NTUzNSBmDQowMDAwMDExNTE1IDAwMDAwIG4NCjAwMDAwMTE3MzkgMDAwMDAgbg0KMDAwMDAxMTgwMyAwMDAwMCBuDQowMDAwMDQwMDg3IDAwMDAwIG4NCjAwMDAwMDAwMTAgMDAwMDAgbg0KMDAwMDAwMDE0NSAwMDAwMCBuDQowMDAwMDI2NzUyIDAwMDAwIG4NCjAwMDAwMjY4OTggMDAwMDAgbg0KMDAwMDAyNzUxNSAwMDAwMCBuDQowMDAwMDI3NzExIDAwMDAwIG4NCjAwMDAwMzk0OTUgMDAwMDAgbg0KMDAwMDAxMTkyMyAwMDAwMCBuDQowMDAwMDEyMDY2IDAwMDAwIG4NCjAwMDAwMTI3MjIgMDAwMDAgbg0KMDAwMDAxMjkxNCAwMDAwMCBuDQowMDAwMDI2MTM5IDAwMDAwIG4NCjAwMDAwMDU2OTggMDAwMDAgbg0KMDAwMDAwNTcyMyAwMDAwMCBuDQowMDAwMDA1ODYwIDAwMDAwIG4NCjAwMDAwMTAxNDcgMDAwMDAgbg0KMDAwMDAxMDE3MiAwMDAwMCBuDQowMDAwMDEwMzA5IDAwMDAwIG4NCjAwMDAwMTE0OTAgMDAwMDAgbg0KMDAwMDAyNjExMyAwMDAwMCBuDQowMDAwMDI2MDg3IDAwMDAwIG4NCjAwMDAwMjY3MjggMDAwMDAgbg0KMDAwMDAzOTQ2OSAwMDAwMCBuDQowMDAwMDM5NDQzIDAwMDAwIG4NCjAwMDAwNDAwNjMgMDAwMDAgbg0KdHJhaWxlcg0KPDwvU2l6ZSAzMC9JbmZvIDEgMCBSL1Jvb3QgMiAwIFI+Pg0Kc3RhcnR4cmVmDQo0MDEyNQ0KJSVFT0YNCg==
+                </letterText>
+            </documentList>
+        </DocumentSummary>
+    </return>
+</ns2:processAwardDependentResponse>

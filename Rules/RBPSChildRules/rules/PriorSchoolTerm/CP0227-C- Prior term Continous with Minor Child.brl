@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0227-C- Prior term Continous with Minor Child</name>
+  <uuid>03f64585-beee-4491-9fb6-152ad593a543</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if  the dependency status type of 'the Award' is present and 
+     the dependency status type of 'the Award' is MINOR_CHILD and
+     priorSchoolTermValid and 
+     the birth date of 'the Child' plus 18 Year ( s ) plus 5  months is after  or the same as 
+     the event date of 'PriorSchoolChild'
+ then
+  set the event date of 'PriorSchoolChild' to the birth date of 'the Child' plus 18 Year ( s ) ;
+  
+ ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,27 @@
+package PriorSchoolTerm {
+   use priorSchoolTermValid;
+   use ConditionSatisfied;
+   use Completed;
+   rule CP0237__C$45$Prior_term_included_but_not_continous_with_current_ERROR {
+      property ilog.rules.business_name = "CP0237  C-Prior term included but not continous with current ERROR";
+      property ilog.rules.package_name = "PriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         gov.va.vba.rbps.coreframework.xom.Award() from PriorSchoolChild;
+         gov.va.vba.rbps.coreframework.xom.Award() from Award;
+         evaluate ((((((priorSchoolTermValid
+         	&& Child.lastTerm != null)
+         	&& Child.lastTermInCorpEndDate != null)
+         	&& Child.currentTerm != null)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.getOmnibusedDate(PriorSchoolChild.endDate).compareTo(Child.lastTermInCorpEndDate) < 0)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addMonthsToDate(5, Child.lastTerm.courseEndDate).compareTo(gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.getOmnibusedDate(Award.eventDate)) < 0));
+      } then {
+         ConditionSatisfied = true;
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException("Auto Processing Dependency Processing Reject - Prior school term submitted is shorter than on the award and would result in school attendance not being continuous. Please Review.");
+      }
+   }
+}
+

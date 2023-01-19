@@ -1,0 +1,580 @@
+      <ns2:processAwardDependentResponse xmlns:ns2="http://session.ejb.awards.benefits.vba.va.gov/">
+         <return>
+            <errorLevel>0</errorLevel>
+            <AwardSummary>
+               <errorLevel>0</errorLevel>
+               <awardEventSummary>
+                  <awardEventID>1474573</awardEventID>
+                  <awardEventType>S</awardEventType>
+                  <awardGenerationDate>2013-10-17T12:47:30-04:00</awardGenerationDate>
+                  <awardOverrideIndicator>N</awardOverrideIndicator>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <concurrentRetirementDisabilityPayIndicator>N</concurrentRetirementDisabilityPayIndicator>
+                  <firstChangedDate>2012-01-01T00:00:00-04:00</firstChangedDate>
+                  <generationProcessType>G</generationProcessType>
+                  <processingStationLocationID>1911</processingStationLocationID>
+                  <ratingAwardSummaryID>94280</ratingAwardSummaryID>
+                  <stationOfJurisdictionLocationID>1911</stationOfJurisdictionLocationID>
+                  <totalNetAmountDue>0</totalNetAmountDue>
+                  <veteranID>825788</veteranID>
+                  <associatedClaimIDs>
+                     <awardEventID>1474573</awardEventID>
+                     <claimID>9831139</claimID>
+                     <modifiedAction>I</modifiedAction>
+                     <modifiedBy>281RBPS</modifiedBy>
+                     <modifiedDate>2013-10-17T12:47:31-04:00</modifiedDate>
+                     <modifiedLocation>317</modifiedLocation>
+                     <modifiedProcess>cp_awd_claim_pkg.do_create</modifiedProcess>
+                  </associatedClaimIDs>
+                  <authorizedDate>2013-10-17T12:47:37-04:00</authorizedDate>
+                  <awardLineSummary>
+                     <awardLineReportID>10247219</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <combatRelatedSpecialCompensationAmount>674</combatRelatedSpecialCompensationAmount>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2008-12-01T00:00:00-05:00</effectiveDate>
+                     <grossAmount>674</grossAmount>
+                     <netAmount>674</netAmount>
+                     <numberOfMinorChildren>2</numberOfMinorChildren>
+                     <retiredPayActualAdjustmentAmount>0</retiredPayActualAdjustmentAmount>
+                     <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                     <totalWithholdingAmount>0</totalWithholdingAmount>
+                     <veteranID>825788</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>00</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Original Award</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>0</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>10247216</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <combatRelatedSpecialCompensationAmount>428</combatRelatedSpecialCompensationAmount>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2009-03-14T00:00:00-04:00</effectiveDate>
+                     <grossAmount>611</grossAmount>
+                     <netAmount>428</netAmount>
+                     <numberOfMinorChildren>2</numberOfMinorChildren>
+                     <retiredPayActualAdjustmentAmount>183</retiredPayActualAdjustmentAmount>
+                     <totalWithholdingAmount>183</totalWithholdingAmount>
+                     <veteranID>825788</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>29</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Retired Pay Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>1</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>CRSCAMT</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Combat Related Special Compensation</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>2</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>23</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Change in Spouse Status</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>3</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>10247217</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <combatRelatedSpecialCompensationAmount>406</combatRelatedSpecialCompensationAmount>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2009-03-25T00:00:00-04:00</effectiveDate>
+                     <grossAmount>581</grossAmount>
+                     <netAmount>406</netAmount>
+                     <numberOfMinorChildren>1</numberOfMinorChildren>
+                     <retiredPayActualAdjustmentAmount>175</retiredPayActualAdjustmentAmount>
+                     <totalWithholdingAmount>175</totalWithholdingAmount>
+                     <veteranID>825788</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>CRSCAMT</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Combat Related Special Compensation</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>4</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>5</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>29</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Retired Pay Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>6</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>10247213</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2009-05-01T00:00:00-04:00</effectiveDate>
+                     <grossAmount>581</grossAmount>
+                     <netAmount>581</netAmount>
+                     <numberOfMinorChildren>1</numberOfMinorChildren>
+                     <retiredPayActualAdjustmentAmount>0</retiredPayActualAdjustmentAmount>
+                     <totalWithholdingAmount>0</totalWithholdingAmount>
+                     <veteranID>825788</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>29</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Retired Pay Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>7</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>CRSCAMT</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Combat Related Special Compensation</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>8</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>10247214</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2010-02-01T00:00:00-05:00</effectiveDate>
+                     <grossAmount>611</grossAmount>
+                     <netAmount>581</netAmount>
+                     <numberOfMinorChildren>2</numberOfMinorChildren>
+                     <retiredPayActualAdjustmentAmount>30</retiredPayActualAdjustmentAmount>
+                     <totalWithholdingAmount>30</totalWithholdingAmount>
+                     <veteranID>825788</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>29</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Retired Pay Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>9</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>10</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>10247220</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2011-12-01T00:00:00-05:00</effectiveDate>
+                     <grossAmount>631</grossAmount>
+                     <netAmount>581</netAmount>
+                     <numberOfMinorChildren>2</numberOfMinorChildren>
+                     <retiredPayActualAdjustmentAmount>50</retiredPayActualAdjustmentAmount>
+                     <totalWithholdingAmount>50</totalWithholdingAmount>
+                     <veteranID>825788</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>02</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Cost of Living Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>11</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>29</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Retired Pay Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>12</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>10247218</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2012-12-01T00:00:00-05:00</effectiveDate>
+                     <grossAmount>642</grossAmount>
+                     <netAmount>581</netAmount>
+                     <numberOfMinorChildren>2</numberOfMinorChildren>
+                     <retiredPayActualAdjustmentAmount>61</retiredPayActualAdjustmentAmount>
+                     <totalWithholdingAmount>61</totalWithholdingAmount>
+                     <veteranID>825788</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>02</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Cost of Living Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>13</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>29</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Retired Pay Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>14</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>CRSCAMT</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Combat Related Special Compensation</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>4</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>10247215</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2013-05-16T00:00:00-04:00</effectiveDate>
+                     <grossAmount>611</grossAmount>
+                     <netAmount>541</netAmount>
+                     <numberOfMinorChildren>1</numberOfMinorChildren>
+                     <retiredPayActualAdjustmentAmount>70</retiredPayActualAdjustmentAmount>
+                     <totalWithholdingAmount>70</totalWithholdingAmount>
+                     <veteranID>825788</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>29</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Retired Pay Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>15</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>16</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>CRSCAMT</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Combat Related Special Compensation</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>4</reasonSequenceNumber>
+                     </awardLineReasons>                     
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>10247223</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2013-07-01T00:00:00-04:00</effectiveDate>
+                     <grossAmount>669</grossAmount>
+                     <netAmount>541</netAmount>
+                     <numberOfMinorChildren>0</numberOfMinorChildren>
+                     <numberOfSchoolChildren>1</numberOfSchoolChildren>
+                     <retiredPayActualAdjustmentAmount>128</retiredPayActualAdjustmentAmount>
+                     <totalWithholdingAmount>128</totalWithholdingAmount>
+                     <veteranID>825788</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>17</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>22</awardLineReasonType>
+                        <awardLineReasonTypeDescription>School Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>18</reasonSequenceNumber>
+                     </awardLineReasons>
+                     <awardLineReasons>
+                        <awardLineReasonType>29</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Retired Pay Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>19</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>10247221</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2013-10-01T00:00:00-04:00</effectiveDate>
+                     <grossAmount>669</grossAmount>
+                     <netAmount>669</netAmount>
+                     <numberOfSchoolChildren>1</numberOfSchoolChildren>
+                     <retiredPayActualAdjustmentAmount>0</retiredPayActualAdjustmentAmount>
+                     <totalWithholdingAmount>0</totalWithholdingAmount>
+                     <veteranID>825788</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>29</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Retired Pay Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>20</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>10247222</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2013-11-01T00:00:00-04:00</effectiveDate>
+                     <grossAmount>569</grossAmount>
+                     <netAmount>569</netAmount>
+                     <numberOfSchoolChildren>0</numberOfSchoolChildren>
+                     <veteranID>825788</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>22</awardLineReasonType>
+                        <awardLineReasonTypeDescription>School Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>21</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+               </awardEventSummary>
+               <awardType>CPL</awardType>
+               <beneficiaryID>825788</beneficiaryID>
+               <dependencySummary>
+                  <awardEffectiveDate>2013-11-01T00:00:00-04:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <birthdayDate>1995-06-15T00:00:00-04:00</birthdayDate>
+                  <decisionDate>2013-10-17T12:47:29-04:00</decisionDate>
+                  <dependencyDecisionID>39703</dependencyDecisionID>
+                  <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2013-10-15T00:00:00-04:00</eventDate>
+                  <firstName>GIRLTWO</firstName>
+                  <fullName>GIRLTWO FIFTEEN</fullName>
+                  <lastName>FIFTEEN</lastName>
+                  <personID>32260113</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <sortDate>2013-10-17T12:47:29-04:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>825788</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>21</alReasonSequenceNumber>
+                  <claimID>9831139</claimID>
+                  <grantDenial>Denial</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>1990-07-01T00:00:00-04:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <birthdayDate>1970-09-09T00:00:00-04:00</birthdayDate>
+                  <decisionDate>2010-09-26T13:44:28-04:00</decisionDate>
+                  <dependencyDecisionID>21325</dependencyDecisionID>
+                  <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>SP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                  <eventDate>1990-06-12T00:00:00-04:00</eventDate>
+                  <firstName>SPOUSE</firstName>
+                  <fullName>SPOUSE FIFTEEN</fullName>
+                  <lastName>FIFTEEN</lastName>
+                  <personID>825789</personID>
+                  <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                  <socialSecurityNumber>144870015</socialSecurityNumber>
+                  <sortDate>2010-09-26T13:44:28-04:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>825788</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>0</alReasonSequenceNumber>
+                  <grantDenial>Grant</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2013-10-01T00:00:00-04:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <birthdayDate>1995-06-15T00:00:00-04:00</birthdayDate>
+                  <decisionDate>2013-10-17T12:47:28-04:00</decisionDate>
+                  <dependencyDecisionID>39702</dependencyDecisionID>
+                  <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>SCHCHD</dependencyStatusType>
+                  <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                  <eventDate>2013-09-15T00:00:00-04:00</eventDate>
+                  <firstName>GIRLTWO</firstName>
+                  <fullName>GIRLTWO FIFTEEN</fullName>
+                  <lastName>FIFTEEN</lastName>
+                  <personID>32260113</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <sortDate>2013-10-17T12:47:28-04:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>825788</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <claimID>9831139</claimID>
+                  <grantDenial>Denial</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2009-03-14T00:00:00-04:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <birthdayDate>1970-09-09T00:00:00-04:00</birthdayDate>
+                  <decisionDate>2010-09-26T13:44:29-04:00</decisionDate>
+                  <dependencyDecisionID>21326</dependencyDecisionID>
+                  <dependencyDecisionType>MT</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Marriage Terminated</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2009-03-14T00:00:00-04:00</eventDate>
+                  <firstName>SPOUSE</firstName>
+                  <fullName>SPOUSE FIFTEEN</fullName>
+                  <lastName>FIFTEEN</lastName>
+                  <personID>825789</personID>
+                  <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                  <socialSecurityNumber>144870015</socialSecurityNumber>
+                  <sortDate>2010-09-26T13:44:29-04:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>825788</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>3</alReasonSequenceNumber>
+                  <grantDenial>Denial</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2013-09-01T00:00:00-04:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <birthdayDate>1995-06-15T00:00:00-04:00</birthdayDate>
+                  <decisionDate>2013-10-15T10:44:43-04:00</decisionDate>
+                  <dependencyDecisionID>39633</dependencyDecisionID>
+                  <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>SCHCHD</dependencyStatusType>
+                  <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                  <eventDate>2013-08-15T00:00:00-04:00</eventDate>
+                  <firstName>GIRLTWO</firstName>
+                  <fullName>GIRLTWO FIFTEEN</fullName>
+                  <lastName>FIFTEEN</lastName>
+                  <personID>32260113</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <sortDate>2013-10-15T10:44:43-04:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>825788</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <grantDenial>Denial</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2009-03-25T00:00:00-04:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <birthdayDate>1991-03-25T00:00:00-05:00</birthdayDate>
+                  <decisionDate>2010-09-26T13:44:31-04:00</decisionDate>
+                  <dependencyDecisionID>21328</dependencyDecisionID>
+                  <dependencyDecisionType>T18</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2009-03-25T00:00:00-04:00</eventDate>
+                  <firstName>BOY</firstName>
+                  <fullName>BOY FIFTEEN</fullName>
+                  <lastName>FIFTEEN</lastName>
+                  <personID>825790</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>144980015</socialSecurityNumber>
+                  <sortDate>2010-09-26T13:44:31-04:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>825788</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>5</alReasonSequenceNumber>
+                  <grantDenial>Denial</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2013-07-01T00:00:00-04:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <birthdayDate>1995-06-15T00:00:00-04:00</birthdayDate>
+                  <decisionDate>2013-10-15T07:09:15-04:00</decisionDate>
+                  <dependencyDecisionID>39619</dependencyDecisionID>
+                  <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>SCHCHD</dependencyStatusType>
+                  <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                  <eventDate>2013-06-15T00:00:00-04:00</eventDate>
+                  <firstName>GIRLTWO</firstName>
+                  <fullName>GIRLTWO FIFTEEN</fullName>
+                  <lastName>FIFTEEN</lastName>
+                  <personID>32260113</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <sortDate>2013-10-15T07:09:15-04:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>825788</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>18</alReasonSequenceNumber>
+                  <grantDenial>Grant</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>1991-04-01T00:00:00-05:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <birthdayDate>1991-03-25T00:00:00-05:00</birthdayDate>
+                  <decisionDate>2010-09-26T13:44:30-04:00</decisionDate>
+                  <dependencyDecisionID>21327</dependencyDecisionID>
+                  <dependencyDecisionType>EMC</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>MC</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                  <eventDate>1991-03-25T00:00:00-05:00</eventDate>
+                  <firstName>BOY</firstName>
+                  <fullName>BOY FIFTEEN</fullName>
+                  <lastName>FIFTEEN</lastName>
+                  <personID>825790</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>144980015</socialSecurityNumber>
+                  <sortDate>2010-09-26T13:44:30-04:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>825788</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>0</alReasonSequenceNumber>
+                  <grantDenial>Grant</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2010-02-01T00:00:00-05:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <birthdayDate>1995-06-15T00:00:00-04:00</birthdayDate>
+                  <decisionDate>2013-10-13T06:56:52-04:00</decisionDate>
+                  <dependencyDecisionID>39569</dependencyDecisionID>
+                  <dependencyDecisionType>EMC</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>MC</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                  <eventDate>2010-01-01T00:00:00-05:00</eventDate>
+                  <firstName>GIRLTWO</firstName>
+                  <fullName>GIRLTWO FIFTEEN</fullName>
+                  <lastName>FIFTEEN</lastName>
+                  <personID>32260113</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <sortDate>2013-10-13T06:56:52-04:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>825788</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>10</alReasonSequenceNumber>
+                  <grantDenial>Grant</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2013-05-16T00:00:00-04:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <birthdayDate>1995-05-16T00:00:00-04:00</birthdayDate>
+                  <decisionDate>2010-09-26T13:44:33-04:00</decisionDate>
+                  <dependencyDecisionID>21330</dependencyDecisionID>
+                  <dependencyDecisionType>T18</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2013-05-16T00:00:00-04:00</eventDate>
+                  <firstName>GIRL</firstName>
+                  <fullName>GIRL FIFTEEN</fullName>
+                  <lastName>FIFTEEN</lastName>
+                  <personID>825791</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>144950015</socialSecurityNumber>
+                  <sortDate>2010-09-26T13:44:33-04:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>825788</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>16</alReasonSequenceNumber>
+                  <grantDenial>Denial</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>1995-06-01T00:00:00-04:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>825788</beneficiaryID>
+                  <birthdayDate>1995-05-16T00:00:00-04:00</birthdayDate>
+                  <decisionDate>2010-09-26T13:44:32-04:00</decisionDate>
+                  <dependencyDecisionID>21329</dependencyDecisionID>
+                  <dependencyDecisionType>EMC</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>MC</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                  <eventDate>1995-05-16T00:00:00-04:00</eventDate>
+                  <firstName>GIRL</firstName>
+                  <fullName>GIRL FIFTEEN</fullName>
+                  <lastName>FIFTEEN</lastName>
+                  <personID>825791</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>144950015</socialSecurityNumber>
+                  <sortDate>2010-09-26T13:44:32-04:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>825788</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>0</alReasonSequenceNumber>
+                  <grantDenial>Grant</grantDenial>
+               </dependencySummary>
+               <veteranID>825788</veteranID>
+            </AwardSummary>
+            <DocumentSummary>
+               <errorLevel>0</errorLevel>
+               <documentList>
+                  <awardEventID>1474573</awardEventID>
+                  <documentType>AWDDOC</documentType>
+               </documentList>
+            </DocumentSummary>
+         </return>
+      </ns2:processAwardDependentResponse>

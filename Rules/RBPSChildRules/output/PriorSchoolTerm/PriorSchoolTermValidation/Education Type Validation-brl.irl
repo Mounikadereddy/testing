@@ -1,0 +1,16 @@
+package PriorSchoolTerm.PriorSchoolTermValidation {
+   use priorSchoolTermValid;
+   rule Education_Type_Validation {
+      property ilog.rules.business_name = "Education Type Validation";
+      property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((Child.lastTerm.educationType == null));
+      } then {
+         priorSchoolTermValid = false;
+         ?context.updateContext();
+      }
+   }
+}
+

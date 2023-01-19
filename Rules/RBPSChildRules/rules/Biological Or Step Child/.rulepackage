@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Biological Or Step Child</name>
+  <uuid>f24e9c12-86f8-47b1-b7da-997b7e86d596</uuid>
+</ilog.rules.studio.model.base:RulePackage>

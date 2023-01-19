@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="file://c:/dev/RBPS_RBPS-R1.4/doc/markdown.css" rel="stylesheet"/>
+</head>
+<h2 id="toc_0">The web services used by RBPS</h2>
+
+<p>The first entry is the url used in development.  Subsequent bullets are the individual parts
+of the web service that are used.  For example, the new signature web service was added to
+an already existing service end point.</p>
+
+<h3 id="toc_1">Awards</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/AmendAwardDependencyEJB/AmendAwardDependencyEJBService">http://bepdev.vba.va.gov/AmendAwardDependencyEJB/AmendAwardDependencyEJBService</a></p></li>
+<li><p>ProcessAwardDependent</p></li>
+</ul>
+
+<h3 id="toc_2">Military Pay</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/ReadMilitaryPayEJB/ReadMilitaryPayService">http://bepdev.vba.va.gov/ReadMilitaryPayEJB/ReadMilitaryPayService</a></p></li>
+<li><p>FindMilitaryPay</p></li>
+</ul>
+
+<h3 id="toc_3">Award State</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/AwardStateEJB/AwardStateEJBService">http://bepdev.vba.va.gov/AwardStateEJB/AwardStateEJBService</a></p></li>
+<li><p>FindAwardState</p></li>
+</ul>
+
+<h3 id="toc_4">Dependency decisions for the Veteran</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/DependencyDecisionEJB/DependencyDecisionEJBService">http://bepdev.vba.va.gov/DependencyDecisionEJB/DependencyDecisionEJBService</a></p></li>
+<li><p>FindDependencyDecisionByAward</p></li>
+</ul>
+
+<h3 id="toc_5">User Info - finds the next claim to process</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/UserInformationWebServiceBean/UserInformationService">http://bepdev.vba.va.gov/UserInformationWebServiceBean/UserInformationService</a></p></li>
+<li><p>FindByDataSupplied</p></li>
+</ul>
+
+<h3 id="toc_6">Update benefit claim label</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/BenefitClaimServiceBean/BenefitClaimWebService">http://bepdev.vba.va.gov/BenefitClaimServiceBean/BenefitClaimWebService</a></p></li>
+<li><p>UpdateBenefitClaim</p></li>
+<li><p>FindBenefitClaim ( get a list of claims that match a file number, to convert to corporate claim id )</p></li>
+</ul>
+
+<h3 id="toc_7">Claim status (Manual, Started, Complete)</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/VnpProcWebServiceBean/VnpProcService">http://bepdev.vba.va.gov/VnpProcWebServiceBean/VnpProcService</a></p></li>
+<li><p>VnpProcUpdate</p></li>
+</ul>
+
+<h3 id="toc_8">POA, Dependents, Flashes</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/ClaimantServiceBean/ClaimantWebService">http://bepdev.vba.va.gov/ClaimantServiceBean/ClaimantWebService</a></p></li>
+<li><p>FindPOA</p></li>
+<li><p>FindDependents</p></li>
+<li><p>FindFlashes</p></li>
+<li><p>FindFiduciary</p></li>
+</ul>
+
+<h3 id="toc_9">Rating Comparison</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/RatingComparisonEJB/RatingComparisonEJBService">http://bepdev.vba.va.gov/RatingComparisonEJB/RatingComparisonEJBService</a></p></li>
+<li><p>CompareByDateRange</p></li>
+</ul>
+
+<h3 id="toc_10">Regional offices list</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/ShareStandardDataServiceBean/ShareStandardDataWebService">http://bepdev.vba.va.gov/ShareStandardDataServiceBean/ShareStandardDataWebService</a></p></li>
+<li><p>FindRegionalOffices</p></li>
+</ul>
+
+<h3 id="toc_11">Signature</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/StandardDataWebServiceBean/StandardDataWebService">http://bepdev.vba.va.gov/StandardDataWebServiceBean/StandardDataWebService</a></p></li>
+<li><p>FindSignaturesByStationNumber</p></li>
+<li><p>FindRegionalOffices</p></li>
+</ul>
+
+<h3 id="toc_12">Notes</h3>
+
+<ul>
+<li><p><a href="http://bepdev.vba.va.gov/DevelopmentNotesService/DevelopmentNotesService">http://bepdev.vba.va.gov/DevelopmentNotesService/DevelopmentNotesService</a></p></li>
+<li><p>CreateNote</p></li>
+</ul>
+</html>

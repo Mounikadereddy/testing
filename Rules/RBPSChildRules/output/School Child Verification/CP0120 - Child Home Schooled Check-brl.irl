@@ -1,0 +1,19 @@
+package School_Child_Verification {
+   use Completed;
+   rule CP0120_$45$_Child_Home_Schooled_Check {
+      property ilog.rules.business_name = "CP0120 - Child Home Schooled Check";
+      property ilog.rules.package_name = "School Child Verification";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.currentTerm)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.currentTerm.educationLevelType))
+         	&& (Child.currentTerm.educationLevelType.equals(gov.va.vba.rbps.coreframework.xom.EducationLevelType.HOME_SCHOOLED))));
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Child : " + Child.lastName) + ", ") + Child.firstName) + " reported as being home schooled. Please develop for needed evidence."));
+      }
+   }
+}
+

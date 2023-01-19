@@ -1,0 +1,25 @@
+<ns2:findMilitaryPayResponse xmlns:ns2='http://session.ejb.cp.benefits.vba.va.gov/'>
+    <return>
+        <errorLevel>0</errorLevel>
+        <vnErrorsVOList>
+            <datasource>Oracle</datasource>
+            <jrnLctnId>335</jrnLctnId>
+            <jrnUserId>281RBPS</jrnUserId>
+            <message>no data found on read</message>
+            <rowNum>1</rowNum>
+            <vnError>1001</vnError>
+            <vnMsg>No records found</vnMsg>
+        </vnErrorsVOList>
+        <vnErrorsVOList>
+            <datasource>Oracle</datasource>
+            <jrnLctnId>335</jrnLctnId>
+            <jrnUserId>281RBPS</jrnUserId>
+            <message>no data found on read</message>
+            <rowNum>1</rowNum>
+            <vnError>1001</vnError>
+            <vnMsg>No records found</vnMsg>
+        </vnErrorsVOList>
+    </return>
+</ns2:findMilitaryPayResponse>
+
+

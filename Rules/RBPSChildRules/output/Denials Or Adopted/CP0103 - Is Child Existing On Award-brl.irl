@@ -1,0 +1,17 @@
+package Denials_Or_Adopted {
+   use Completed;
+   rule CP0103_$45$_Is_Child_Existing_On_Award {
+      property ilog.rules.business_name = "CP0103 - Is Child Existing On Award";
+      property ilog.rules.package_name = "Denials Or Adopted";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (Child.onCurrentAward);
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Child : " + Child.lastName) + ", ") + Child.firstName) + " is already existing on award. Please review."));
+      }
+   }
+}
+

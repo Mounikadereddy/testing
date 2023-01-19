@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0">
+	
+
+	<info organisation="gov.va.vba.benefits" module="rbps" revision="${rbps.ear.ver}" status="release" publication="20200123104743"/>
+	<configurations>
+		<conf name="rbps" description="rbps ear file"/>
+		<conf name="rbps-xom" description="rbps xom jar file"/>
+		<conf name="rbpsRuleApp" description="rbps rule jar file"/>
+		<conf name="pom" description="pom file"/>
+	</configurations>
+
+	<publications>
+		<artifact name="rbps" conf="rbps" ext="ear"/>
+		<artifact name="rbps-xom" conf="rbps-xom" ext="jar"/>
+		<artifact name="RBPSRuleApp" conf="rbpsRuleApp" ext="jar"/>
+		<artifact name="pom" conf="pom" ext="xml"/>
+	</publications>
+
+	<dependencies>		
+		<dependency org="gov.va.vba.framework" name="bep-app-client" rev="${bep.fw.ver}" transitive="false"/>
+		<dependency org="gov.va.vba.framework" name="bep-domain" rev="${bep.fw.ver}" transitive="false"/>	
+		<dependency org="gov.va.vba.framework" name="framework" rev="${bep.fw.ver}" transitive="false"/>
+		<dependency org="gov.va.vba.framework" name="ws-framework" rev="${ws.fw.ver}" transitive="false" />
+	
+		<!-- added jar files for Webloigc 12C and Java 1.8 compile -->
+		<dependency org="adobe-livecycle" name="adobe-livecycle-client" rev="${adobe-livecycle}" transitive="false" />
+		<dependency org="org.apache.logging.log4j" name="log4j-api" rev="${log4j-api.ver}" transitive="false" />
+		<dependency org="org.apache.logging.log4j" name="log4j-core" rev="${log4j-core.ver}" transitive="false" />
+<!--  remove log4j jar file 
+		<dependency org="log4j" name="log4j" rev="${log4j.ver}" transitive="false">
+					<artifact name="log4j" type="jar"/>
+		</dependency>
+-->
+		<dependency org="net.sf.ehcache" name="ehcache-core" rev="${ehcache-core.ver}" transitive="false">
+			<artifact name="ehcache-core" type="jar"/>
+		</dependency>
+
+		<dependency org="org.slf4j" name="slf4j-api" rev="${slf4j.ver}" transitive="false">
+			<artifact name="slf4j-api" type="jar"/>
+		</dependency>
+		<dependency org="org.slf4j" name="slf4j-ext" rev="${slf4j.ver}" transitive="false">
+			<artifact name="slf4j-ext" type="jar"/>
+		</dependency>
+<!-- remove slf4j-log4j12 jar files
+		<dependency org="org.slf4j" name="slf4j-log4j12" rev="${slf4j.ver}" transitive="false">
+			<artifact name="slf4j-log4j12" type="jar"/>
+		</dependency>
+-->
+	</dependencies>
+</ivy-module>

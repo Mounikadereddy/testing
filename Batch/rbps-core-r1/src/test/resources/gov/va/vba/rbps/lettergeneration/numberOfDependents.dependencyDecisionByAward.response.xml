@@ -1,0 +1,990 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2020-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-12T09:45:23-05:00</decisionDate>
+                <dependencyDecisionID>38700</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-04-01T00:00:00-05:00</eventDate>
+                <firstName>James</firstName>
+                <fullName>James Iha</fullName>
+                <lastName>Iha</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-12T09:45:22-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053425</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110032</socialSecurityNumber>
+                <sortDate>2013-04-12T09:45:23-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-12T09:45:22-05:00</decisionDate>
+                <dependencyDecisionID>38699</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-04-12T00:00:00-05:00</eventDate>
+                <firstName>James</firstName>
+                <fullName>James Iha</fullName>
+                <lastName>Iha</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-12T09:45:22-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053425</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110032</socialSecurityNumber>
+                <sortDate>2013-04-12T09:45:22-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-16T09:45:30-05:00</decisionDate>
+                <dependencyDecisionID>38759</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-04-16T00:00:00-05:00</eventDate>
+                <firstName>Flea</firstName>
+                <fullName>Flea Balzary</fullName>
+                <lastName>Balzary</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-16T09:45:29-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053504</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110035</socialSecurityNumber>
+                <sortDate>2013-04-16T09:45:30-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2020-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-16T09:45:29-05:00</decisionDate>
+                <dependencyDecisionID>38758</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-04-01T00:00:00-05:00</eventDate>
+                <firstName>Flea</firstName>
+                <fullName>Flea Balzary</fullName>
+                <lastName>Balzary</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-16T09:45:29-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053504</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110035</socialSecurityNumber>
+                <sortDate>2013-04-16T09:45:29-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2020-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T14:17:12-05:00</decisionDate>
+                <dependencyDecisionID>38682</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-04-01T00:00:00-05:00</eventDate>
+                <firstName>Sufjan</firstName>
+                <fullName>Sufjan Stevens</fullName>
+                <lastName>Stevens</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T14:17:11-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053397</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110029</socialSecurityNumber>
+                <sortDate>2013-04-11T14:17:12-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T14:17:11-05:00</decisionDate>
+                <dependencyDecisionID>38681</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-04-11T00:00:00-05:00</eventDate>
+                <firstName>Sufjan</firstName>
+                <fullName>Sufjan Stevens</fullName>
+                <lastName>Stevens</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T14:17:11-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053397</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110029</socialSecurityNumber>
+                <sortDate>2013-04-11T14:17:11-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T15:15:29-05:00</decisionDate>
+                <dependencyDecisionID>38686</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-04-11T00:00:00-05:00</eventDate>
+                <firstName>Kanye</firstName>
+                <fullName>Kanye West</fullName>
+                <lastName>West</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T15:15:28-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053401</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110030</socialSecurityNumber>
+                <sortDate>2013-04-11T15:15:29-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2020-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T15:15:28-05:00</decisionDate>
+                <dependencyDecisionID>38685</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-04-01T00:00:00-05:00</eventDate>
+                <firstName>Kanye</firstName>
+                <fullName>Kanye West</fullName>
+                <lastName>West</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T15:15:28-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053401</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110030</socialSecurityNumber>
+                <sortDate>2013-04-11T15:15:28-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2020-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T16:15:26-05:00</decisionDate>
+                <dependencyDecisionID>38689</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-04-01T00:00:00-05:00</eventDate>
+                <firstName>Richard</firstName>
+                <fullName>Richard Patrick</fullName>
+                <lastName>Patrick</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T16:15:25-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053405</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110031</socialSecurityNumber>
+                <sortDate>2013-04-11T16:15:26-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T16:15:25-05:00</decisionDate>
+                <dependencyDecisionID>38688</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-04-11T00:00:00-05:00</eventDate>
+                <firstName>Richard</firstName>
+                <fullName>Richard Patrick</fullName>
+                <lastName>Patrick</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T16:15:25-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053405</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110031</socialSecurityNumber>
+                <sortDate>2013-04-11T16:15:25-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-16T12:15:24-05:00</decisionDate>
+                <dependencyDecisionID>38766</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-04-16T00:00:00-05:00</eventDate>
+                <firstName>Danger</firstName>
+                <fullName>Danger Lewis</fullName>
+                <lastName>Lewis</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-16T12:15:24-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053510</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110033</socialSecurityNumber>
+                <sortDate>2013-04-16T12:15:24-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2020-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-16T12:15:25-05:00</decisionDate>
+                <dependencyDecisionID>38767</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-04-01T00:00:00-05:00</eventDate>
+                <firstName>Danger</firstName>
+                <fullName>Danger Lewis</fullName>
+                <lastName>Lewis</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-16T12:15:24-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053510</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110033</socialSecurityNumber>
+                <sortDate>2013-04-16T12:15:25-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2021-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2003-07-01T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-03-18T16:15:18-05:00</decisionDate>
+                <dependencyDecisionID>38298</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2021-07-01T00:00:00-05:00</eventDate>
+                <firstName>Dave</firstName>
+                <fullName>Dave Grohl</fullName>
+                <lastName>Grohl</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-03-18T16:15:17-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600052528</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110006</socialSecurityNumber>
+                <sortDate>2013-03-18T16:15:18-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2003-07-01T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-03-18T16:15:17-05:00</decisionDate>
+                <dependencyDecisionID>38297</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-03-18T00:00:00-05:00</eventDate>
+                <firstName>Dave</firstName>
+                <fullName>Dave Grohl</fullName>
+                <lastName>Grohl</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-03-18T16:15:17-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600052528</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110006</socialSecurityNumber>
+                <sortDate>2013-03-18T16:15:17-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2005-09-01T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-03-21T14:15:16-05:00</decisionDate>
+                <dependencyDecisionID>38375</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-03-21T00:00:00-05:00</eventDate>
+                <firstName>Maynard</firstName>
+                <fullName>Maynard J. Keenan</fullName>
+                <lastName>Keenan</lastName>
+                <middleName>James</middleName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-03-21T14:15:16-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600052741</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575112005</socialSecurityNumber>
+                <sortDate>2013-03-21T14:15:16-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2020-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T13:15:16-05:00</decisionDate>
+                <dependencyDecisionID>38677</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-04-01T00:00:00-05:00</eventDate>
+                <firstName>Raine</firstName>
+                <fullName>Raine Maida</fullName>
+                <lastName>Maida</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T13:15:16-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053394</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110028</socialSecurityNumber>
+                <sortDate>2013-04-11T13:15:16-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2020-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T12:45:35-05:00</decisionDate>
+                <dependencyDecisionID>38676</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-04-01T00:00:00-05:00</eventDate>
+                <firstName>Bjork</firstName>
+                <fullName>Bjork Gudmundsdottir</fullName>
+                <lastName>Gudmundsdottir</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T12:45:34-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053393</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110027</socialSecurityNumber>
+                <sortDate>2013-04-11T12:45:35-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T12:45:34-05:00</decisionDate>
+                <dependencyDecisionID>38675</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-04-11T00:00:00-05:00</eventDate>
+                <firstName>Bjork</firstName>
+                <fullName>Bjork Gudmundsdottir</fullName>
+                <lastName>Gudmundsdottir</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T12:45:34-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053393</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110027</socialSecurityNumber>
+                <sortDate>2013-04-11T12:45:34-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2020-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T10:30:23-05:00</decisionDate>
+                <dependencyDecisionID>38659</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-04-01T00:00:00-05:00</eventDate>
+                <firstName>Johnathan</firstName>
+                <fullName>Johnathan Davis</fullName>
+                <lastName>Davis</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T10:30:22-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053382</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110026</socialSecurityNumber>
+                <sortDate>2013-04-11T10:30:23-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T13:15:17-05:00</decisionDate>
+                <dependencyDecisionID>38678</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-04-11T00:00:00-05:00</eventDate>
+                <firstName>Raine</firstName>
+                <fullName>Raine Maida</fullName>
+                <lastName>Maida</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T13:15:16-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053394</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110028</socialSecurityNumber>
+                <sortDate>2013-04-11T13:15:17-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-08-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2012-07-15T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-01T15:30:28-05:00</decisionDate>
+                <dependencyDecisionID>38506</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2012-07-15T00:00:00-05:00</eventDate>
+                <firstName>Sinead</firstName>
+                <fullName>Sinead OConnor</fullName>
+                <lastName>OConnor</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-01T15:30:27-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053073</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110007</socialSecurityNumber>
+                <sortDate>2013-04-01T15:30:28-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2001-03-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-10T15:00:25-05:00</decisionDate>
+                <dependencyDecisionID>38635</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-04-10T00:00:00-05:00</eventDate>
+                <firstName>Daniel</firstName>
+                <fullName>Daniel Johns</fullName>
+                <lastName>Johns</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-10T15:00:26-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053313</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110023</socialSecurityNumber>
+                <sortDate>2013-04-10T15:00:25-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2030-07-15T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2012-07-15T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-04-01T15:30:27-05:00</decisionDate>
+                <dependencyDecisionID>38505</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2030-07-15T00:00:00-05:00</eventDate>
+                <firstName>Sinead</firstName>
+                <fullName>Sinead OConnor</fullName>
+                <lastName>OConnor</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-01T15:30:27-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053073</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110007</socialSecurityNumber>
+                <sortDate>2013-04-01T15:30:27-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>1970-11-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-03-29T10:30:14-05:00</decisionDate>
+                <dependencyDecisionID>38481</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2012-06-15T00:00:00-05:00</eventDate>
+                <firstName>Thom</firstName>
+                <fullName>Thom Yorke</fullName>
+                <lastName>Yorke</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-03-29T10:30:14-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053035</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>575110013</socialSecurityNumber>
+                <sortDate>2013-03-29T10:30:14-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-11T10:30:22-05:00</decisionDate>
+                <dependencyDecisionID>38658</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-04-11T00:00:00-05:00</eventDate>
+                <firstName>Johnathan</firstName>
+                <fullName>Johnathan Davis</fullName>
+                <lastName>Davis</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-11T10:30:22-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053382</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110026</socialSecurityNumber>
+                <sortDate>2013-04-11T10:30:22-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2030-07-07T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2012-07-07T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-03-22T15:45:17-05:00</decisionDate>
+                <dependencyDecisionID>38424</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2030-07-07T00:00:00-05:00</eventDate>
+                <firstName>Darcy</firstName>
+                <fullName>Darcy Wretzky</fullName>
+                <lastName>Wretzky</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-03-22T15:45:16-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600052794</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110010</socialSecurityNumber>
+                <sortDate>2013-03-22T15:45:17-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-10T17:00:31-05:00</decisionDate>
+                <dependencyDecisionID>38642</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-04-10T00:00:00-05:00</eventDate>
+                <firstName>Bradley</firstName>
+                <fullName>Bradley Nowell</fullName>
+                <lastName>Nowell</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-10T17:00:30-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053322</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110025</socialSecurityNumber>
+                <sortDate>2013-04-10T17:00:31-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2029-03-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2011-03-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-01T10:00:39-05:00</decisionDate>
+                <dependencyDecisionID>38496</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2029-03-01T00:00:00-06:00</eventDate>
+                <firstName>Josh</firstName>
+                <fullName>Josh Homme</fullName>
+                <lastName>Homme</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-01T10:00:39-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053064</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110017</socialSecurityNumber>
+                <sortDate>2013-04-01T10:00:39-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2020-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2002-04-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-10T17:00:30-05:00</decisionDate>
+                <dependencyDecisionID>38641</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-04-01T00:00:00-05:00</eventDate>
+                <firstName>Bradley</firstName>
+                <fullName>Bradley Nowell</fullName>
+                <lastName>Nowell</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-10T17:00:30-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053322</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110025</socialSecurityNumber>
+                <sortDate>2013-04-10T17:00:30-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2011-03-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-01T10:00:38-05:00</decisionDate>
+                <dependencyDecisionID>38495</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2012-06-15T00:00:00-05:00</eventDate>
+                <firstName>Josh</firstName>
+                <fullName>Josh Homme</fullName>
+                <lastName>Homme</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-01T10:00:39-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053064</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110017</socialSecurityNumber>
+                <sortDate>2013-04-01T10:00:38-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2019-03-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2001-03-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2013-04-10T15:00:26-05:00</decisionDate>
+                <dependencyDecisionID>38636</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2019-03-01T00:00:00-06:00</eventDate>
+                <firstName>Daniel</firstName>
+                <fullName>Daniel Johns</fullName>
+                <lastName>Johns</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-04-10T15:00:26-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600053313</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110023</socialSecurityNumber>
+                <sortDate>2013-04-10T15:00:26-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2016-10-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>1998-10-01T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-03-22T15:15:18-05:00</decisionDate>
+                <dependencyDecisionID>38422</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2016-10-01T00:00:00-05:00</eventDate>
+                <firstName>Krist</firstName>
+                <fullName>Krist Novoselic</fullName>
+                <lastName>Novoselic</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-03-22T15:15:18-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600052793</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110009</socialSecurityNumber>
+                <sortDate>2013-03-22T15:15:18-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2023-09-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2005-09-01T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-03-21T14:15:17-05:00</decisionDate>
+                <dependencyDecisionID>38376</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2023-09-01T00:00:00-05:00</eventDate>
+                <firstName>Maynard</firstName>
+                <fullName>Maynard J. Keenan</fullName>
+                <lastName>Keenan</lastName>
+                <middleName>James</middleName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-03-21T14:15:16-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600052741</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575112005</socialSecurityNumber>
+                <sortDate>2013-03-21T14:15:17-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-08-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>2012-07-07T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-03-22T15:45:16-05:00</decisionDate>
+                <dependencyDecisionID>38423</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2012-07-07T00:00:00-05:00</eventDate>
+                <firstName>Darcy</firstName>
+                <fullName>Darcy Wretzky</fullName>
+                <lastName>Wretzky</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-03-22T15:45:16-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600052794</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110010</socialSecurityNumber>
+                <sortDate>2013-03-22T15:45:16-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600049709</beneficiaryID>
+                <birthdayDate>1998-10-01T00:00:00-05:00</birthdayDate>
+                <decisionDate>2013-03-22T15:15:17-05:00</decisionDate>
+                <dependencyDecisionID>38421</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2013-03-22T00:00:00-05:00</eventDate>
+                <firstName>Krist</firstName>
+                <fullName>Krist Novoselic</fullName>
+                <lastName>Novoselic</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2013-03-22T15:15:17-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>600052793</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>575110009</socialSecurityNumber>
+                <sortDate>2013-03-22T15:15:17-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>600049709</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>

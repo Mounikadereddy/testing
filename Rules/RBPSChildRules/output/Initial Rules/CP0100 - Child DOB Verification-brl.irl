@@ -1,0 +1,17 @@
+package Initial_Rules {
+   use Completed;
+   rule CP0100_$45$_Child_DOB_Verification {
+      property ilog.rules.business_name = "CP0100 - Child DOB Verification";
+      property ilog.rules.package_name = "Initial Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Child.birthDate));
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Child : " + Child.lastName) + ", ") + Child.firstName) + " DOB was not provided. Please review."));
+      }
+   }
+}
+

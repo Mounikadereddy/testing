@@ -1,0 +1,101 @@
+import gov.va.vba.rbps.coreframework.xom.Award;
+import gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages;
+
+use exceptionGenerated;
+
+flowtask SpouseRuleFlow {
+  property mainflowtask = true;
+  property ilog.rules.business_name = "SpouseRuleFlow";
+  property ilog.rules.package_name = "";
+  initialaction {
+    exceptionGenerated = false;?context.updateContext();
+  };
+  body {
+    SpouseRuleFlow#Spouse_Validation_Rules;
+    if ((exceptionGenerated) == (false)) {
+      SpouseRuleFlow#Spouse_Claim_Date_Validation;
+      if ((exceptionGenerated) == (false)) {
+        if (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Spouse.currentMarriage.endDate)) {
+          SpouseRuleFlow#Spouse_Award_Rules;
+          if (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Award.eventDate)) {
+            _node_6 : SpouseRuleFlow#Spouse_With_No_Event_Date_Rule;
+          }
+        }
+        else {
+          SpouseRuleFlow#Spouse_Removal_Rules;
+          if (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Award.eventDate)) {
+            goto _node_6;
+          }
+        }
+      }
+    }
+  }
+};
+
+ruletask SpouseRuleFlow#Spouse_Validation_Rules {
+  property ilog.rules.business_name = "SpouseRuleFlow>Spouse Validation Rules";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  initialaction {
+    Exceptions = new gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages();
+    Award = new gov.va.vba.rbps.coreframework.xom.Award();
+
+  };
+  body {
+    Spouse_Validation_Rules.*
+  }
+};
+
+ruletask SpouseRuleFlow#Spouse_Award_Rules {
+  property ilog.rules.business_name = "SpouseRuleFlow>Spouse Award Rules";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  initialaction {
+    MarriagePlus1Year = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(1, Veteran.marriageDate);
+    ?context.updateContext();
+
+  };
+  body {
+    Spouse_Award_Rules.*
+  }
+};
+
+ruletask SpouseRuleFlow#Spouse_With_No_Event_Date_Rule {
+  property ilog.rules.business_name = "SpouseRuleFlow>Spouse With No Event Date Rule";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Spouse_With_No_Event_Date_Rule.*
+  }
+};
+
+ruletask SpouseRuleFlow#Spouse_Removal_Rules {
+  property ilog.rules.business_name = "SpouseRuleFlow>Spouse Removal Rules";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Spouse_Removal_Rules.*
+  }
+};
+
+ruletask SpouseRuleFlow#Spouse_Claim_Date_Validation {
+  property ilog.rules.business_name = "SpouseRuleFlow>Spouse Claim Date Validation";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  initialaction {
+    RatingDatePlus1Year = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(1, Veteran.ratingDate);
+    RatingPlus1YearPlus30Days = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addDaysToDate(30, gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(1, Veteran.ratingDate));
+    RatingPlus1YearPlus7Days = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addDaysToDate(7, gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(1, Veteran.ratingDate));
+    ?context.updateContext();
+
+  };
+  body {
+    Spouse_Claim_Date_Validation.*
+  }
+};
+

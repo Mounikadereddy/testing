@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="file://c:/dev/RBPS_RBPS-R1.4/doc/markdown.css" rel="stylesheet"/>
+</head>
+<h1 id="toc_0">Letter Generation</h1>
+
+<p>Letter Generation is a process of transforming the data from awards into data structures that make generating
+a letter easy - the data structures match what needs to be printed.</p>
+
+<ol>
+<li><p>Create a map between the dependentId and the <em>DependencyDecisionResultVO</em>, which
+is the grant/denial entry for each dependent.  Usually these can be related
+to an award line summary by the <em>alReasonSequenceNumber</em>.</p>
+
+<p>During this process, we make sure that the denials are assigned
+a sequence number.  If they don&#39;t have one, they are assigned
+the <em>DENIAL_SEQUENCE_NUMBER</em>.</p>
+
+<p>Also the <em>DependencyDecisionResultVO</em> objects are sorted
+so that they are ordered by:</p>
+
+<ul>
+<li>event date</li>
+<li>the sequence number</li>
+<li>first name</li>
+<li>grants before denials</li>
+</ul></li>
+<li><p>Create a fake AwardLineSummaryVO summary to accumulate denials.</p>
+
+<p>This allows us to attach denials to this summary which do not belong
+to any other summary.   Sometimes denials don&#39;t have an <em>alReasonSequenceNumber</em>.
+Since this number is used to tie a grant or denial to an award line reason,
+and hence to a denial, a denial w/o one needs this fake summary
+so that it can be processed later.   It won&#39;t get lost this way.</p>
+
+<ul>
+<li>This fake summary is assigned the <em>DENIAL_SEQUENCE_NUMBER</em>.</li>
+<li>The effective date of the fake summary is the claim received date.</li>
+<li>A fake <em>AwardReasonSeqNbrVO</em> is provided (empty).</li>
+<li>The gross amount is set to -1.</li>
+</ul></li>
+<li><p>If any AwardLineSummaryVO is prior to the <em>firstChangeDate</em>, drop them on the floor.</p>
+
+<ul>
+<li>A <em>firstChangeDate</em> is not always provided.
+When a <em>firstChangeDate</em> isn&#39;t provided, then all AwardLineSummaryVO are
+processed.</li>
+<li>If a AwardLineSummaryVO is a denial, then it is not checked
+for being prior to the <em>firstChangeDate</em></li>
+</ul></li>
+<li><p>An <em>AwardSummaryBuilder</em> is used to convert each <em>AwardLineSummaryVO</em>
+to an <em>AwardSummary</em>, whish is an RBPS class, as opposed to a class provided
+by the response from the amend awards web service.  The <em>AwardSummaryBuilder</em>
+is provided the <em>AwardLineSummaryVO</em> and the list of <em>DependencyDecisionResultVO</em>
+that is retrieved from the map created above.</p></li>
+</ol>
+
+<hr/>
+
+<ol>
+<li><p>The <em>AwardSummaryBuilder</em> creates an empty <em>AwardSummary</em> object.</p></li>
+<li><p>The following fields are copied from the <em>AwardLineSummaryVO</em> to the
+<em>AwardSummary</em>.</p>
+
+<ul>
+<li>net amount</li>
+<li>payment change date (copied from the effective date)</li>
+</ul></li>
+<li><p>A list of reasons is constructed from the <em>AwardLineSummaryVO</em> and
+the list of decisions.</p></li>
+<li><p>For each <em>AwardReasonSeqNbrVO</em> we get a list of <em>DependencyDecisionResultVO</em> with
+a matching <em>alReasonSequenceNumber</em>.  If there is no matching dependent, we create
+a fake one.</p></li>
+<li><p>For each <em>DependencyDecisionResultVO</em> in this list, we create an <em>AwardReason</em>
+that is added to the <em>AwardSummary</em>.  The <em>AwardReason</em> and <em>AwardSummary</em> are
+classes which match the data that is needed to generate the pdf letter. The following
+info is set on the new <em>AwardReason</em>:</p>
+
+<ul>
+<li>award line reason type</li>
+<li>award line reason type description</li>
+<li>reason sequence number</li>
+<li>dependent name</li>
+<li>dependent decision type</li>
+<li>dependent decision type description</li>
+<li>first name</li>
+<li>full name</li>
+<li>isChild</li>
+<li>approval type ( GRANT/DENIAL )</li>
+<li>claim id</li>
+<li>corporate participant id for the dependent</li>
+<li>a <em>ReasonTranslator</em> is added to the new <em>AwardReason</em></li>
+</ul>
+
+<p>A <em>ReasonTranslator</em> is used to translate from <strong>RATNHEL</strong>
+to <em>%s was reported as being 23 years of age or older and not reported as being seriously disabled.</em>
+The <em>%s</em> is substituted with the dependent&#39;s name.</p></li>
+<li><p>The one award summary is split into a list of grant summaries and denial summaries, if any.</p></li>
+</ol>
+
+<hr/>
+
+<ol>
+<li><p>Letter Generation uses <em>Velocity</em> a java templating engine
+to produce html, which is later translated to a pdf file.  Velocity takes
+a map of names -&gt; objects which can be used to fill in values in the
+template.  Here is an sample taken and simplified from the Letter Generation
+template.</p>
+
+<pre><code>We are paying you as a Veteran with $letterFields.totalDependents dependent(s).
+Your payment includes an additional amount for your spouse $letterFields.approvalSpouseName.
+</code></pre>
+
+<p>You can see that the string <em>$letterFields</em> is used in the template in a number
+of places.  This is the <em>LetterFields</em> object that is passed into Velocity
+via the map that Velocity takes.  The <em>totalDependents</em> and <em>approvalSpouseName</em>
+are fields on the java class <em>LetterFields</em>.</p></li>
+<li><p><em>LetterFields</em> is created with the <em>RbpsRepository</em> object and the
+list of <em>AwardSummaries</em> produced by the <em>AwardSummaryBuilder</em>.</p></li>
+<li><p>An <em>AwardSummaryFilter</em> is used to process the list of <em>AwardSummary</em>
+objects.</p></li>
+<li><p>The <em>AwardSummaryFilter</em>  filters the total list of <em>AwardReason</em>
+objects from all <em>AwardSummary</em> objects into a list of grant/removals
+and denial reasons.  During this process, if a denial contains
+a previous grant, then it is changed from a denial to a removal and
+added to the list of grant/removals.</p></li>
+<li><p>The <em>AwardSummaryFilter</em> splits the list of <em>AwardSummary</em> objects
+into a list of grants/removals, and denials.  Also, each summary
+that has a <em>AwardReason</em> with no dependents has that reason removed
+from it&#39;s list of reasons.</p></li>
+<li><p>Any empty <em>AwardSummary</em> objects are then removed from the
+list of all summaries, the list of grant/removals, and the
+list of denials.</p></li>
+<li><p><em>approval names</em> are accumulated.  This is the process
+of converting the spouse and children
+names to have an initial capital letter
+and building up the child names into a string with the
+appropriate English for 1 child, 2 children, or 3 or
+more children.  This list only contains the
+names of children that had grants.</p>
+
+<p>The names are made unique in case a dependent had two grants.
+The uniqueness is determined by corporate participant id.</p></li>
+<li><p>Velocity is called with the <em>LetterFields</em> object so as
+to produce html into a String.</p></li>
+<li><p>The html is used to produce a pdf file.</p></li>
+<li><p>A csv file is generated for transmittal to the VVA.</p></li>
+</ol>
+</html>

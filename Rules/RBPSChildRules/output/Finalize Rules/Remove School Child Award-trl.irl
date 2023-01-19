@@ -1,0 +1,12 @@
+package Finalize_Rules {
+rule Remove_School_Child_Award {
+property status = "new";
+ when {
+         gov.va.vba.rbps.coreframework.xom.Award() from Award;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award.dependencyStatusType)
+         	&& (Award.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.SCHOOL_CHILD))));
+} then {
+        Award = null;
+}
+}
+}

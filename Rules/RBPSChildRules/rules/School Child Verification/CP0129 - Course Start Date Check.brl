@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0129 - Course Start Date Check</name>
+  <uuid>30e5fed4-1f5a-472f-95c6-063b0b16f878</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	 the current term of 'the Child' is present and
+	 the education type of the current term of 'the Child' is present and
+	 the education type of the current term of 'the Child' is FULL_TIME and  
+	 the course start date of the current term of 'the Child' is not present 
+then 
+	set Completed to true ;
+	add "Auto Dependency Processing Reject Reason - Dependent : " + the last name of 'the Child' + ", " + the first name of 'the Child' + " current course start date was not provided. Please review." to the list of Exceptions ;]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

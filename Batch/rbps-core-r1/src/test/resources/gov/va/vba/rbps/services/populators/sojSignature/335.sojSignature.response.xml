@@ -1,0 +1,12 @@
+<ns2:findSignaturesByStationNumberResponse xmlns:ns2='http://standarddata.services.vetsnet.vba.va.gov/'>
+    <StnPrfilDetailDTO>
+        <letterSigntrTitleTxt>Veterans Service Center Manager</letterSigntrTitleTxt>
+        <letterSigntrTxt>K. L. Anderson</letterSigntrTxt>
+    </StnPrfilDetailDTO>
+    <StnPrfilDetailDTO>
+        <letterSigntrTitleTxt>KING</letterSigntrTitleTxt>
+        <letterSigntrTxt>FANK KUSH</letterSigntrTxt>
+    </StnPrfilDetailDTO>
+</ns2:findSignaturesByStationNumberResponse>
+
+

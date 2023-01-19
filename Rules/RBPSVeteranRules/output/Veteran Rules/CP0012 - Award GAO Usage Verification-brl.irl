@@ -1,0 +1,15 @@
+package Veteran_Rules {
+   rule CP0012_$45$_Award_GAO_Usage_Verification {
+      property ilog.rules.business_name = "CP0012 - Award GAO Usage Verification";
+      property ilog.rules.package_name = "Veteran Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Veteran() from Veteran;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.awardStatus)
+         	&& Veteran.awardStatus.GAOUsed));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - The Veterans Award has used the GAO. Please review.");
+      }
+   }
+}
+

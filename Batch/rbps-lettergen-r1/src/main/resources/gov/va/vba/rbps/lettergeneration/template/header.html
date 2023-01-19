@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Department of Veteran Affairs Grant Approval Letter</title>
+    <style type="text/css">
+#parse
+(
+ 
+"gov/va/vba/rbps/lettergeneration/template/css/common.css"
+ 
+)
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th width="240">
+                #if( "$!letterFields.fiduciaryName" != "" )  
+                    <img border="0" src="${logoPath}" style="float: left" width="90" height="90" />
+                #else
+                    <img border="0" src="${logoPath}" style="float: left" width="100" height="100" />
+                #end
+                </th>
+                <th>
+                    <p class="document-header">
+                        <div class="dept" >
+                            DEPARTMENT OF VETERANS AFFAIRS
+                        </div>
+                        #if( "$!letterFields.sojLine1" != "" )
+                            <p style="line-height: 70%" />${letterFields.sojLine1}
+                        #end
+                         
+                        #if( "$!letterFields.sojLine2" != "" )
+                            <p style="line-height: 70%" />${letterFields.sojLine2}
+                        #end
+                         
+                        #if( "$!letterFields.sojLine3" != "" )
+                            <p style="line-height: 70%" />${letterFields.sojLine3}
+                        #end
+                         
+                        #if( "$!letterFields.sojCity" != "" )
+                            <p style="line-height: 70%" />${letterFields.sojCity}
+                        #end
+                         
+                        #if( "$!letterFields.sojState" != "" )
+                            ${letterFields.sojState}
+                        #end
+                         
+                        #if( "$!letterFields.sojCountry" != "" )
+                            ${letterFields.sojCountry}
+                        #end
+                         
+                        #if( "$!letterFields.sojZip" != "" )
+                            ${letterFields.sojZip}
+                        #end
+                    </p>
+                </th>
+            </tr>
+        </thead>
+    </table>
+    
+    <br />
+    
+    <span  class="paragraph">
+        $date.get( "MMM dd, yyyy" )
+    </span>
+    <br/>
+    <br/>
+    
+    <span class="address-block"> 
+     #if( "$!letterFields.fiduciaryName" != "" ) 
+        #if( "$!letterFields.fiduciaryAttentionText" != "" )
+           ${letterFields.fiduciaryAttentionText}
+           <br/>
+        #end   
+            
+        #if( "$!letterFields.fiduciaryName" != "" )   
+	        ${letterFields.fiduciaryName}
+	         <br/>
+	    #end  
+	      
+	     #if( "$!letterFields.fiduciaryPrepositionalPhrase" != "" )   
+            ${letterFields.fiduciaryPrepositionalPhrase}
+        #end
+      #end     
+         ${letterFields.firstLast}
+         #if( "$!letterFields.line1" != "" )
+        	<p style="line-height: 70%" />${letterFields.line1}
+        #end
+        #if( "$!letterFields.line2" != "" )
+            <p style="line-height: 70%" />${letterFields.line2}
+        #end
+        
+        #if( "$!letterFields.line3" != "" )
+            <p style="line-height: 70%" />${letterFields.line3}
+        #end
+        
+        <p style="line-height: 70%" /> ${letterFields.city},
+        ${letterFields.state}
+        ${letterFields.country}
+        ${letterFields.zip}
+    </span>
+
+    <span class="in-reply"> <p style="line-height: 70%" />In Reply Refer To: ${letterFields.fileNumber}
+        <p style="line-height: 70%" /> ${letterFields.lastName}, ${letterFields.firstName} ${letterFields.middleName}
+    </span>
+    
+<!--
+    <br />
+    <br />
+-->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p/>
+        #if( "$!letterFields.salutation" != "" )
+            <p class="paragraph">Dear ${letterFields.salutation} ${letterFields.lastName}:</p>
+        #else  
+            <p class="paragraph">Dear ${letterFields.firstName} ${letterFields.lastName}:</p>
+        #end
+

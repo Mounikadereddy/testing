@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0134-02</name>
+  <uuid>25614104-0ce3-4f81-83ba-bae336355738</uuid>
+  <documentation><![CDATA[    set the dependency status type of 'the Award' to SCHOOL_CHILD ;
+    set the dependency decision type of 'the Award' to SCHOOL_ATTENDANCE_BEGIN_DATE ;
+    set the end date of 'the Award' to the expected graduation date of the current term of 'the Child' ;]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the FCDR of 'the Veteran' is present
+    and the age of 'the Child' on the FCDR of 'the Veteran' is at least 18
+    and the age of 'the Child' on the FCDR of 'the Veteran' is less than 23
+    and the current term of 'the Child' is present
+then
+    set the dependency status type of 'the Award' to SCHOOL_CHILD ;
+    set the dependency decision type of 'the Award' to SCHOOL_ATTENDANCE_BEGIN_DATE ;
+    set the end date of 'the Award' to the expected graduation date of the current term of 'the Child' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

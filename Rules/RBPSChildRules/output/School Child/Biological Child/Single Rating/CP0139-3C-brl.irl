@@ -1,0 +1,17 @@
+package School_Child.Biological_Child.Single_Rating {
+   use priorSchoolTermValid;
+   use Child18BirthDay;
+   rule CP0139$45$3C {
+      property ilog.rules.business_name = "CP0139-3C";
+      property ilog.rules.package_name = "School Child.Biological Child.Single Rating";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         evaluate ((((Child.childType.equals(gov.va.vba.rbps.coreframework.xom.ChildType.BIOLOGICAL_CHILD))) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.firstChangedDateofRating)) && ((Veteran.firstChangedDateofRating.equals(Veteran.ratingEffectiveDate))) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.currentTerm)) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent((Child.currentTerm).courseStudentStartDate)) && ((priorSchoolTermValid) == (false)) && ((Child.currentTerm).courseStudentStartDate.compareTo(Veteran.firstChangedDateofRating) > 0) && ((Child.currentTerm).courseStudentStartDate.compareTo(gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addMonthsToDate(5, Child18BirthDay)) <= 0)));
+      } then {
+         Award.eventDate = Veteran.firstChangedDateofRating;
+      }
+   }
+}
+

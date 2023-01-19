@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0012 - Award Changes Verification</name>
+  <uuid>e32f23b5-fe5e-462e-80eb-a7c61b03ad94</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	the existing award of 'the Veteran' is present and 
+	(	changes have been made to the existing award of 'the Veteran' or
+		rating changes have been made to the existing award of 'the Veteran' 
+	)
+then
+	add "Auto Dependency Processing Reject Reason - Changes to the Veterans Last Authorized Award have been made. Please review." to the list of Exceptions ;]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

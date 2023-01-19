@@ -1,0 +1,20 @@
+package PriorSchoolTerm.PriorSchoolTermValidation {
+   use priorSchoolTermValid;
+   rule CP0140_$45$_Part_Time_Validation {
+      property ilog.rules.business_name = "CP0140 - Part Time Validation";
+      property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (((Child.lastTerm.educationType.equals(gov.va.vba.rbps.coreframework.xom.EducationType.PART_TIME))
+         	&& ((Child.lastTerm.sessionsPerWeek < 3
+         	&& Child.lastTerm.hoursPerWeek < 3))));
+      } then {
+         priorSchoolTermValid = false;
+         PriorSchoolTermStatus = "ignore";
+         ?context.updateContext();
+         LogMessage.addException("last term  not valid");
+      }
+   }
+}
+

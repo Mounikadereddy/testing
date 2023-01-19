@@ -1,0 +1,18 @@
+package PriorSchoolTerm.PriorSchoolTermValidation {
+   use priorSchoolTermValid;
+   rule CP0118_Prior_End_Date_before_Prior_Start_Date_Check {
+      property ilog.rules.business_name = "CP0118 Prior End Date before Prior Start Date Check";
+      property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (Child.lastTerm.courseEndDate.compareTo(Child.lastTerm.courseStudentStartDate) <= 0);
+      } then {
+         priorSchoolTermValid = false;
+         PriorSchoolTermStatus = "ignore";
+         ?context.updateContext();
+         LogMessage.addException("last term  not valid");
+      }
+   }
+}
+

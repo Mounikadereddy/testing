@@ -1,0 +1,19 @@
+package PriorSchoolTerm.PriorSchoolTermValidation {
+   use priorSchoolTermValid;
+   rule CP0118_$45$_Child_School_Name_Verification {
+      property ilog.rules.business_name = "CP0118 - Child School Name Verification";
+      property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.lastTerm.school)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Child.lastTerm.school.name)));
+      } then {
+         priorSchoolTermValid = false;
+         PriorSchoolTermStatus = "ignore";
+         ?context.updateContext();
+         LogMessage.addException("last term  not valid");
+      }
+   }
+}
+

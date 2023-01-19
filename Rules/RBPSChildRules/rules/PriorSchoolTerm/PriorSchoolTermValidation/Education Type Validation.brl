@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Education Type Validation</name>
+  <uuid>299f38b4-cc02-4d74-8ee5-8b84de0f352b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if 
+	the education type of the last term of  'the Child'  is null   
+	
+then 
+	set priorSchoolTermValid to false  ;
+	 ]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

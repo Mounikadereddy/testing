@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>setPriorSchoolTermStatus</name>
+  <uuid>fa49cac0-4902-4d4c-b655-1f86ac102506</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+  set the prior school term status of 'the Child' to "ignore";
+ 	add "last term  not valid" to the list of 'LogMessage' ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

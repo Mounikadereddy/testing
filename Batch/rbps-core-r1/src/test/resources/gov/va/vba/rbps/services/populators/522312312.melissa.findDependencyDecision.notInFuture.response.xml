@@ -1,0 +1,122 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-09-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13048172</beneficiaryID>
+                <birthdayDate>1994-12-19T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-07T13:36:48-06:00</decisionDate>
+                <dependencyDecisionID>15953</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-08-15T00:00:00-05:00</eventDate>
+                <firstName>GARRY</firstName>
+                <fullName>GARRY MERLOT</fullName>
+                <lastName>MERLOT</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>CAPDGERV</modifiedBy>
+                <modifiedDate>2012-02-07T13:36:48-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048173</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>542113131</socialSecurityNumber>
+                <sortDate>2012-02-07T13:36:48-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13048172</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-12-19T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13048172</beneficiaryID>
+                <birthdayDate>1994-12-19T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-07T13:36:49-06:00</decisionDate>
+                <dependencyDecisionID>15954</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2012-12-19T00:00:00-06:00</eventDate>
+                <firstName>GARRY</firstName>
+                <fullName>GARRY MERLOT</fullName>
+                <lastName>MERLOT</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>CAPDGERV</modifiedBy>
+                <modifiedDate>2012-02-07T13:36:48-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048173</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>542113131</socialSecurityNumber>
+                <sortDate>2012-02-07T13:36:49-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13048172</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-12-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13048172</beneficiaryID>
+                <birthdayDate>1980-05-02T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-09T11:25:54-06:00</decisionDate>
+                <dependencyDecisionID>16114</dependencyDecisionID>
+                <dependencyDecisionType>MT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Marriage Terminated</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2011-11-23T00:00:00-06:00</eventDate>
+                <firstName>MELISSA</firstName>
+                <fullName>MELISSA SANCHEZ</fullName>
+                <lastName>SANCHEZ</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>317STDNT139</modifiedBy>
+                <modifiedDate>2012-02-09T11:25:54-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048371</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>856421589</socialSecurityNumber>
+                <sortDate>2012-02-09T11:25:54-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13048172</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-09-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13048172</beneficiaryID>
+                <birthdayDate>1980-05-02T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-09T11:16:15-06:00</decisionDate>
+                <dependencyDecisionID>16113</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2011-08-15T00:00:00-05:00</eventDate>
+                <firstName>MELISSA</firstName>
+                <fullName>MELISSA SANCHEZ</fullName>
+                <lastName>SANCHEZ</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-09T11:16:15-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048371</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>856421589</socialSecurityNumber>
+                <sortDate>2012-02-09T11:16:15-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13048172</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+
+

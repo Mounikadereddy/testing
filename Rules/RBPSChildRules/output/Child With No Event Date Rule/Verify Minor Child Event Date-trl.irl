@@ -1,0 +1,16 @@
+package Child_With_No_Event_Date_Rule {
+use Child18BirthDay;
+
+rule Verify_Minor_Child_Event_Date {
+property status = "new";
+  when {
+         gov.va.vba.rbps.coreframework.xom.Award() from Award;
+         evaluate ((((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award.dependencyStatusType)
+         	&& (Award.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.MINOR_CHILD)))
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award.eventDate))
+         	&& Award.eventDate.compareTo(Child18BirthDay) >=0));
+      } then {
+         Award =  null;
+      }
+}
+}

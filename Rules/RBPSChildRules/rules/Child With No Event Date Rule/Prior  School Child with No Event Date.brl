@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Prior  School Child with No Event Date</name>
+  <uuid>140fccad-f74e-4d59-b231-43d9e0386b3b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+    		- 'PriorSchoolChild' is present 
+            - the dependency status type of 'PriorSchoolChild' is present 
+            - the dependency status type of 'PriorSchoolChild' is SCHOOL_CHILD  
+            - the event date of 'PriorSchoolChild' is not present 
+then
+   set PriorSchoolTermStatus to "ignore";
+	add "RBPS could not set the event date for prior school child : "+ the last name of 'the Child' +", "+the first name of 'the Child' +" Please review." to the list of  'LogMessage' ; 
+	
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

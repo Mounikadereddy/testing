@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0136-02</name>
+  <uuid>1b7f3949-4a49-4bdc-8dfb-55212810742c</uuid>
+  <documentation><![CDATA[DOC > (AFTER)  DOM + 365 Days]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the FCDR of 'the Veteran' is not present
+    and 'the Veteran' claim received date is after '1 Year of date of marriage'
+then
+    set the event date of 'the Award' to 'the Veteran' claim received date ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

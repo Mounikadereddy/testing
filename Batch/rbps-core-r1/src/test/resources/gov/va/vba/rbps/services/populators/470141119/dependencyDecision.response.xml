@@ -1,0 +1,66 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-02-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>32221287</beneficiaryID>
+                <birthdayDate>1991-05-05T00:00:00-04:00</birthdayDate>
+                <decisionDate>2012-01-26T09:31:20-05:00</decisionDate>
+                <dependencyDecisionID>32555</dependencyDecisionID>
+                <dependencyDecisionType>O18NISOH</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Over 18-Not in School or Helpless</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2012-01-15T00:00:00-05:00</eventDate>
+                <firstName>SCHOOLCHILD</firstName>
+                <fullName>SCHOOLCHILD BRIGHT</fullName>
+                <lastName>BRIGHT</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-01-26T09:31:21-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>32221308</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999917422</socialSecurityNumber>
+                <sortDate>2012-01-26T09:31:20-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>32221287</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-02-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>32221287</beneficiaryID>
+                <birthdayDate>1991-05-05T00:00:00-04:00</birthdayDate>
+                <decisionDate>2012-01-26T09:31:20-05:00</decisionDate>
+                <dependencyDecisionID>32555</dependencyDecisionID>
+                <dependencyDecisionType>O18NISOH</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Over 18-Not in School or Helpless</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2012-01-15T00:00:00-05:00</eventDate>
+                <firstName>SCHOOLCHILD</firstName>
+                <fullName>SCHOOLCHILD BRIGHT</fullName>
+                <lastName>BRIGHT</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-01-26T09:31:21-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>32221308</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999917422</socialSecurityNumber>
+                <sortDate>2012-01-26T09:31:20-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>32221287</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+
+

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>FCDR within 365 Days</name>
+  <uuid>6283957d-1d4a-4b19-a506-5f08d62e5c00</uuid>
+</ilog.rules.studio.model.base:RulePackage>

@@ -1,0 +1,15 @@
+package Veteran_Rules {
+   rule CP0130_$45$_Number_Of_Dependents_Check {
+      property ilog.rules.business_name = "CP0130 - Number Of Dependents Check";
+      property ilog.rules.package_name = "Veteran Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Veteran() from Veteran;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.awardStatus)
+         	&& Veteran.totalNumberOfDependents > 20));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - The number of Dependents on Award is > 20. Please review.");
+      }
+   }
+}
+

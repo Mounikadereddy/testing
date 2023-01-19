@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0137-07</name>
+  <uuid>79779e74-fade-4f83-ba63-32576e1aad6a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the child type of 'the Child' is BIOLOGICAL_CHILD
+            - it is not true that 'the Child'  is on award as minor child
+            - the FCDR of 'the Veteran' is present
+            - the rating effective date of 'the Veteran' is not the FCDR of 'the Veteran'
+            - 'the Veteran' claim received date is after the FCDR of 'the Veteran' plus 365 Days
+            - 'the Veteran' claim received date is after the birth date of 'the Child' plus 365 Days
+            - the birth date of 'the Child' is before or the same as the FCDR of 'the Veteran' ,
+then
+    set the event date of 'the Award' to the FCDR of 'the Veteran' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

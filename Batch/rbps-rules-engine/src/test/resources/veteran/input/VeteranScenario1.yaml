@@ -1,0 +1,16 @@
+fileNumber: 990915708
+hasPOA: true
+
+claim:
+    hasAttachments: true
+
+alive: false
+
+awardStatus:
+    proposed: true
+    runningAward: false
+    isSuspended: true
+    gaoused: true
+    hasAttorneyFeeAgreement: true
+
+totalNumberOfDependents: 21

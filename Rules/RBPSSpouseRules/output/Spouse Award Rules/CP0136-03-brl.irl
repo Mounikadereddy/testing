@@ -1,0 +1,18 @@
+package Spouse_Award_Rules {
+   /**
+ * DOM > (after) FCDR
+ * Note:  if the event (i.e. the Marriage date) is after FCDR, FCDR comparison with DOC is irrelvant.
+ */
+rule CP0136$45$03 {
+      property ilog.rules.business_name = "CP0136-03";
+      property ilog.rules.package_name = "Spouse Award Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         evaluate (((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.firstChangedDateofRating)) && (Veteran.marriageDate.compareTo(Veteran.firstChangedDateofRating) > 0)));
+      } then {
+         Award.eventDate = Veteran.marriageDate;
+      }
+   }
+}
+

@@ -1,0 +1,92 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-02-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100773522</beneficiaryID>
+                <birthdayDate>1984-08-06T00:00:00-05:00</birthdayDate>
+                <decisionDate>2011-10-21T15:47:03-05:00</decisionDate>
+                <dependencyDecisionID>16029179</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2011-01-01T00:00:00-06:00</eventDate>
+                <firstName>JILL</firstName>
+                <fullName>JILL BROWN</fullName>
+                <lastName>BROWN</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2011-10-21T15:47:03-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100773553</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>999678070</socialSecurityNumber>
+                <sortDate>2011-10-21T15:47:03-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100773522</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100773522</beneficiaryID>
+                <birthdayDate>1993-02-22T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-10-31T12:48:06-05:00</decisionDate>
+                <dependencyDecisionID>16031610</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-01-01T00:00:00-06:00</eventDate>
+                <firstName>SCOTT</firstName>
+                <fullName>SCOTT SMITH</fullName>
+                <lastName>SMITH</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-10-31T12:48:06-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100773722</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999508746</socialSecurityNumber>
+                <sortDate>2012-10-31T12:48:06-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100773522</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-02-22T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100773522</beneficiaryID>
+                <birthdayDate>1993-02-22T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-10-31T12:48:07-05:00</decisionDate>
+                <dependencyDecisionID>16031611</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2011-02-22T00:00:00-06:00</eventDate>
+                <firstName>SCOTT</firstName>
+                <fullName>SCOTT SMITH</fullName>
+                <lastName>SMITH</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-10-31T12:48:07-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100773722</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999508746</socialSecurityNumber>
+                <sortDate>2012-10-31T12:48:07-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100773522</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>

@@ -1,0 +1,15 @@
+package Minor_Child.Bilological_Child {
+   rule CP0137$45$04 {
+      property ilog.rules.business_name = "CP0137-04";
+      property ilog.rules.package_name = "Minor Child.Bilological Child";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         evaluate ((((Child.childType.equals(gov.va.vba.rbps.coreframework.xom.ChildType.BIOLOGICAL_CHILD))) && (!(Child.onAwardAsMinorChild)) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.firstChangedDateofRating)) && ((Veteran.firstChangedDateofRating.equals(Veteran.ratingEffectiveDate))) && (Child.birthDate.compareTo(Veteran.firstChangedDateofRating) <= 0)));
+      } then {
+         Award.eventDate = Veteran.firstChangedDateofRating;
+      }
+   }
+}
+

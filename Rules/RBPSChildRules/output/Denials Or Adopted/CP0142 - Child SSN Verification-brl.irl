@@ -1,0 +1,17 @@
+package Denials_Or_Adopted {
+   use Completed;
+   rule CP0142_$45$_Child_SSN_Verification {
+      property ilog.rules.business_name = "CP0142 - Child SSN Verification";
+      property ilog.rules.package_name = "Denials Or Adopted";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Child.ssn));
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Dependent : " + Child.lastName) + ", ") + Child.firstName) + " SSN was not provided. Please Review."));
+      }
+   }
+}
+

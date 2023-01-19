@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>PriorSchoolTermProcessFlow</name>
+  <uuid>7aae89f9-002b-41de-ae37-90831b0ea81d</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+    <Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+      <Body>
+        <TaskList>
+          <StartTask Identifier="task_0"/>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0225-1-Prior school term End Date is before the allowable date" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="94e38b49-dd79-4001-845d-8fbce6c44dd3"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0227- A-End date of the last term on the award  is less than or equal to 5 months before the prior school begin date," Ordering="Default">
+            <RuleList>
+              <Rule Uuid="0007b322-8549-4972-a738-139b5d115acb"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0225  Set  Prior School Term begin to Allowable Date" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="3a84d9dd-a042-4676-9bf1-a610a5c4a4da"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="setSchoolAllowableDate" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="1a35595f-5d1b-4c89-9976-3c5171a0affc"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0226-B-difference between the end date of the last term on the award  GT 5m" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="abd55d47-aca4-4809-96cc-a7f52e9b6c2c"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="No Lasttermin Corp Set Prior Begin date to eventdate" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="4f2f6990-a246-4715-94dc-4416e3ebcc11"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0236-Prior begin date is before the begin date of the school term on the award" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="57a40ffc-1660-417d-9630-7190449c002c"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CheckSchoolAllowableDateTo18thBirday" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="45ae7dd9-c78a-426b-b803-71fa8753b043"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0227-B-prior term continous with minor child award" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="dcf38c1c-02b2-4ec4-8ba1-114e2204b399"/>
+            </RuleList>
+          </RuleTask>
+          <StopTask Identifier="task_1"/>
+        </TaskList>
+        <NodeList>
+          <TaskNode Identifier="node_0" Task="task_0"/>
+          <TaskNode Identifier="node_1" Task="task_1"/>
+          <TaskNode Identifier="node_4" Task="CP0225-1-Prior school term End Date is before the allowable date"/>
+          <TaskNode Identifier="node_8" Task="CP0227- A-End date of the last term on the award  is less than or equal to 5 months before the prior school begin date,"/>
+          <TaskNode Identifier="node_2" Task="CP0225  Set  Prior School Term begin to Allowable Date"/>
+          <TaskNode Identifier="node_5" Task="setSchoolAllowableDate"/>
+          <TaskNode Identifier="node_7" Task="CP0226-B-difference between the end date of the last term on the award  GT 5m"/>
+          <TaskNode Identifier="node_10" Task="No Lasttermin Corp Set Prior Begin date to eventdate"/>
+          <TaskNode Identifier="node_6" Task="CP0236-Prior begin date is before the begin date of the school term on the award"/>
+          <TaskNode Identifier="node_3" Task="CheckSchoolAllowableDateTo18thBirday"/>
+          <TaskNode Identifier="node_9" Task="CP0227-B-prior term continous with minor child award"/>
+        </NodeList>
+        <TransitionList>
+          <Transition Identifier="transition_0" Source="node_0" Target="node_5"/>
+          <Transition Identifier="transition_1" Source="node_4" Target="node_2"/>
+          <Transition Identifier="transition_7" Source="node_4" Target="node_1">
+            <Conditions Language="bal"><![CDATA[ 'PriorConditionSatisfied' ]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_13" Source="node_8" Target="node_1"/>
+          <Transition Identifier="transition_6" Source="node_7" Target="node_1">
+            <Conditions Language="bal"><![CDATA['PriorConditionSatisfied']]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_3" Source="node_7" Target="node_8"/>
+          <Transition Identifier="transition_9" Source="node_10" Target="node_7"/>
+          <Transition Identifier="transition_15" Source="node_10" Target="node_9">
+            <Conditions Language="bal"><![CDATA[ 'PriorConditionSatisfied' ]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_8" Source="node_2" Target="node_10"/>
+          <Transition Identifier="transition_5" Source="node_6" Target="node_4"/>
+          <Transition Identifier="transition_4" Source="node_6" Target="node_1">
+            <Conditions Language="bal"><![CDATA[ 'PriorConditionSatisfied' ]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_2" Source="node_5" Target="node_3"/>
+          <Transition Identifier="transition_10" Source="node_3" Target="node_6"/>
+          <Transition Identifier="transition_11" Source="node_9" Target="node_1"/>
+        </TransitionList>
+      </Body>
+      <Resources>
+        <ResourceSet Locale="en_US">
+          <Data Name="node_10#height">68.75308</Data>
+          <Data Name="node_7#height">126.9082</Data>
+          <Data Name="node_3#height">40.0</Data>
+          <Data Name="node_6#name">node_6</Data>
+          <Data Name="node_2#name">node_2</Data>
+          <Data Name="node_0#x">14.0</Data>
+          <Data Name="node_0#y">-158.0</Data>
+          <Data Name="node_2#x">175.49173</Data>
+          <Data Name="node_2#y">25.675415</Data>
+          <Data Name="node_4#x">-63.99756</Data>
+          <Data Name="node_4#y">33.496857</Data>
+          <Data Name="node_6#x">-425.0088</Data>
+          <Data Name="node_6#y">58.761963</Data>
+          <Data Name="node_8#x">-192.9961</Data>
+          <Data Name="node_8#y">299.8346</Data>
+          <Data Name="node_10#x">191.49115</Data>
+          <Data Name="node_6#height">82.80469</Data>
+          <Data Name="node_10#name">node_10</Data>
+          <Data Name="node_10#y">120.376526</Data>
+          <Data Name="node_7#name">node_7</Data>
+          <Data Name="node_2#height">68.103516</Data>
+          <Data Name="node_1#width">23.0</Data>
+          <Data Name="transition_1#label">else</Data>
+          <Data Name="node_3#name">node_3</Data>
+          <Data Name="node_3#width">260.78906</Data>
+          <Data Name="node_5#width">171.41016</Data>
+          <Data Name="transition_5#label">else</Data>
+          <Data Name="node_7#width">138.9895</Data>
+          <Data Name="transition_7#label">true</Data>
+          <Data Name="node_9#width">102.0</Data>
+          <Data Name="node_9#height">141.60938</Data>
+          <Data Name="node_5#height">40.0</Data>
+          <Data Name="node_8#name">node_8</Data>
+          <Data Name="node_1#height">23.0</Data>
+          <Data Name="node_4#name">node_4</Data>
+          <Data Name="node_0#name">node_0</Data>
+          <Data Name="node_1#x">44.0</Data>
+          <Data Name="node_1#y">498.0</Data>
+          <Data Name="node_3#x">-259.0</Data>
+          <Data Name="node_3#y">-76.0</Data>
+          <Data Name="node_5#x">-4.0</Data>
+          <Data Name="node_5#y">-82.0</Data>
+          <Data Name="node_8#height">97.66919</Data>
+          <Data Name="node_7#x">-21.505249</Data>
+          <Data Name="node_7#y">177.47559</Data>
+          <Data Name="node_9#x">242.0</Data>
+          <Data Name="node_9#y">266.0</Data>
+          <Data Name="node_4#height">88.99373</Data>
+          <Data Name="node_0#width">21.0</Data>
+          <Data Name="node_5#name">node_5</Data>
+          <Data Name="node_0#height">21.0</Data>
+          <Data Name="node_2#width">170.98407</Data>
+          <Data Name="node_4#width">188.00482</Data>
+          <Data Name="node_1#name">node_2</Data>
+          <Data Name="transition_4#label">true</Data>
+          <Data Name="node_6#width">183.9823</Data>
+          <Data Name="transition_6#label">true</Data>
+          <Data Name="node_8#width">229.97803</Data>
+          <Data Name="transition_15#label">true</Data>
+          <Data Name="node_10#width">184.9823</Data>
+        </ResourceSet>
+      </Resources>
+      <Properties/>
+    </Ruleflow>
+</rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

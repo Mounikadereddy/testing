@@ -1,0 +1,94 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-03-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780042</beneficiaryID>
+                <birthdayDate>1993-04-15T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-04-25T10:03:19-05:00</decisionDate>
+                <dependencyDecisionID>16030930</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-03-01T00:00:00-06:00</eventDate>
+                <firstName>SALLY</firstName>
+                <fullName>SALLY ADAMS</fullName>
+                <lastName>ADAMS</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-25T10:03:20-05:00</modifiedDate>
+                <modifiedLocation>310</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780270</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999817610</socialSecurityNumber>
+                <sortDate>2012-04-25T10:03:19-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780042</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-04-15T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780042</beneficiaryID>
+                <birthdayDate>1993-04-15T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-04-25T10:33:12-05:00</decisionDate>
+                <dependencyDecisionID>16030932</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2011-04-15T00:00:00-05:00</eventDate>
+                <firstName>SALLY</firstName>
+                <fullName>SALLY ADAMS</fullName>
+                <lastName>ADAMS</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-25T10:33:13-05:00</modifiedDate>
+                <modifiedLocation>310</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780270</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999817610</socialSecurityNumber>
+                <sortDate>2012-04-25T10:33:12-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780042</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780042</beneficiaryID>
+                <birthdayDate>1993-04-15T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-04-25T10:33:13-05:00</decisionDate>
+                <dependencyDecisionID>16030933</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2011-12-20T00:00:00-06:00</eventDate>
+                <firstName>SALLY</firstName>
+                <fullName>SALLY ADAMS</fullName>
+                <lastName>ADAMS</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-25T10:33:13-05:00</modifiedDate>
+                <modifiedLocation>310</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780270</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999817610</socialSecurityNumber>
+                <sortDate>2012-04-25T10:33:13-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780042</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+
+

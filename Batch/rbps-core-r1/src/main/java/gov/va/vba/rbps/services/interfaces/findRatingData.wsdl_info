@@ -1,0 +1,248 @@
+<definitions xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://services.share.benefits.vba.va.gov/' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns='http://schemas.xmlsoap.org/wsdl/' targetNamespace='http://services.share.benefits.vba.va.gov/' name='RatingWebService'>
+    <types>
+        <xsd:schema>
+            <xsd:import namespace='http://services.share.benefits.vba.va.gov/' schemaLocation='http://bepdev.vba.va.gov:80/RatingServiceBean/RatingWebService?xsd=1'/>
+        </xsd:schema>
+    </types>
+    <message name='findRatingData'>
+        <part name='parameters' element='tns:findRatingData'/>
+    </message>
+    <message name='findRatingDataResponse'>
+        <part name='parameters' element='tns:findRatingDataResponse'/>
+    </message>
+    <message name='ShareException'>
+        <part name='fault' element='tns:ShareException'/>
+    </message>
+    <portType name='RatingService'>
+        <operation name='findRatingData'>
+            <input message='tns:findRatingData'/>
+            <output message='tns:findRatingDataResponse'/>
+            <fault message='tns:ShareException' name='ShareException'/>
+        </operation>
+    </portType>
+    <binding name='RatingWebServicePortBinding' type='tns:RatingService'>
+        <soap:binding transport='http://schemas.xmlsoap.org/soap/http' style='document'/>
+        <operation name='findRatingData'>
+            <soap:operation soapAction=''/>
+            <input>
+                <soap:body use='literal'/>
+            </input>
+            <output>
+                <soap:body use='literal'/>
+            </output>
+            <fault name='ShareException'>
+                <soap:fault name='ShareException' use='literal'/>
+            </fault>
+        </operation>
+    </binding>
+    <service name='RatingWebService'>
+        <port name='RatingWebServicePort' binding='tns:RatingWebServicePortBinding'>
+            <soap:address location='http://bepdev.vba.va.gov:80/RatingServiceBean/RatingWebService'/>
+        </port>
+    </service>
+</definitions>
+
+
+<xs:schema xmlns:tns='http://services.share.benefits.vba.va.gov/' xmlns:xs='http://www.w3.org/2001/XMLSchema' version='1.0' targetNamespace='http://services.share.benefits.vba.va.gov/'>
+    <xs:element name='ShareException' nillable='true' type='tns:shareFaultInfoBean'/>
+    <xs:element name='findRatingData' type='tns:findRatingData'/>
+    <xs:element name='findRatingDataResponse' type='tns:findRatingDataResponse'/>
+    <xs:complexType name='findRatingData'>
+        <xs:sequence>
+            <xs:element name='fileNumber' type='xs:string' minOccurs='0'/>
+            <xs:element name='user' type='tns:userContext' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='userContext'>
+        <xs:sequence>
+            <xs:element name='applicationName' type='xs:string' minOccurs='0'/>
+            <xs:element name='clientIpAddress' type='xs:string' minOccurs='0'/>
+            <xs:element name='lockedInd' type='xs:string' minOccurs='0'/>
+            <xs:element name='requestContext' type='tns:requestContext' minOccurs='0'/>
+            <xs:element name='stationId' type='xs:string' minOccurs='0'/>
+            <xs:element name='stnLctnId' type='xs:long'/>
+            <xs:element name='userExternalIdentity' type='tns:externalIdentity' minOccurs='0'/>
+            <xs:element name='userProfile' type='tns:userProfile' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='requestContext'>
+        <xs:sequence>
+            <xs:element name='operationName' type='xs:string' minOccurs='0'/>
+            <xs:element name='serviceName' type='xs:string' minOccurs='0'/>
+            <xs:element name='transactionId' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='externalIdentity'>
+        <xs:sequence>
+            <xs:element name='keyInfo' type='xs:string' minOccurs='0'/>
+            <xs:element name='systemUid' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='userProfile'>
+        <xs:sequence>
+            <xs:element name='participantId' type='xs:string' minOccurs='0'/>
+            <xs:element name='securityLevel' type='xs:string' minOccurs='0'/>
+            <xs:element name='ssn' type='xs:string' minOccurs='0'/>
+            <xs:element name='userName' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='findRatingDataResponse'>
+        <xs:sequence>
+            <xs:element name='return' type='tns:ratingRecord' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='ratingRecord'>
+        <xs:sequence>
+            <xs:element name='deathRatingRecord' type='tns:deathRatingRecord' minOccurs='0'/>
+            <xs:element name='disabilityRatingRecord' type='tns:disabilityRatingRecord' minOccurs='0'/>
+            <xs:element name='familyMemberRatingRecord' type='tns:familyMemberRatingRecord' minOccurs='0'/>
+            <xs:element name='otherRatingRecord' type='tns:otherRatingRecord' minOccurs='0'/>
+            <xs:element name='specialMonthlyCompensationRatingRecord' type='tns:specialMonthlyCompensationRatingRecord' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='deathRatingRecord'>
+        <xs:sequence>
+            <xs:element name='numberOfRecords' type='xs:string' minOccurs='0'/>
+            <xs:element name='ratings' type='tns:deathRating' nillable='true' minOccurs='0' maxOccurs='unbounded'/>
+            <xs:element name='returnCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='returnMessage' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='deathRating'>
+        <xs:sequence>
+            <xs:element name='militaryServicePeriodTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='personDeathCauseTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='ratingDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='ratingDecisionID' type='xs:string' minOccurs='0'/>
+            <xs:element name='serviceConnectedDeathDecisionTypeName' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='disabilityRatingRecord'>
+        <xs:sequence>
+            <xs:element name='combinedDegreeEffectiveDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='legalEffectiveDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='nonServiceConnectedCombinedDegree' type='xs:string' minOccurs='0'/>
+            <xs:element name='numberOfRecords' type='xs:string' minOccurs='0'/>
+            <xs:element name='promulgationDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='ratings' type='tns:disabilityRating' nillable='true' minOccurs='0' maxOccurs='unbounded'/>
+            <xs:element name='returnCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='returnMessage' type='xs:string' minOccurs='0'/>
+            <xs:element name='serviceConnectedCombinedDegree' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='disabilityRating'>
+        <xs:sequence>
+            <xs:element name='beginDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='bilateralTypeCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='bilateralTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='combatIndicator' type='xs:string' minOccurs='0'/>
+            <xs:element name='diagnosticPercent' type='xs:string' minOccurs='0'/>
+            <xs:element name='diagnosticText' type='xs:string' minOccurs='0'/>
+            <xs:element name='diagnosticTypeCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='diagnosticTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='disabilityDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='disabilityDecisionTypeCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='disabilityDecisionTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='disabilityID' type='xs:string' minOccurs='0'/>
+            <xs:element name='endDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='futureExamDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='hyphenatedDiagnosticTypeCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='hyphenatedDiagnosticTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='hyphenatedRelatedDisabilityTypeCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='hyphenatedRelatedDisabilityTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='lastExamDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='majorIndicator' type='xs:string' minOccurs='0'/>
+            <xs:element name='militaryServicePeriodTypeCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='militaryServicePeriodTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='paragraphTypeCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='paragraphTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='previousServicePercent' type='xs:string' minOccurs='0'/>
+            <xs:element name='relatedDisabilityTypeCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='relatedDisabilityTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='supplementalDecisionTypeCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='supplementalDecisionTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='withholdingPercent' type='xs:string' minOccurs='0'/>
+            <xs:element name='withholdingTypeCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='withholdingTypeName' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='familyMemberRatingRecord'>
+        <xs:sequence>
+            <xs:element name='numberOfRecords' type='xs:string' minOccurs='0'/>
+            <xs:element name='ratings' type='tns:familyMemberRating' nillable='true' minOccurs='0' maxOccurs='unbounded'/>
+            <xs:element name='returnCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='returnMessage' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='familyMemberRating'>
+        <xs:sequence>
+            <xs:element name='beginDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='decisionTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='disabilityTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='endDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='familyMemberName' type='xs:string' minOccurs='0'/>
+            <xs:element name='ratingDate' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='otherRatingRecord'>
+        <xs:sequence>
+            <xs:element name='numberOfRecords' type='xs:string' minOccurs='0'/>
+            <xs:element name='ratings' type='tns:otherRating' nillable='true' minOccurs='0' maxOccurs='unbounded'/>
+            <xs:element name='returnCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='returnMessage' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='otherRating'>
+        <xs:sequence>
+            <xs:element name='beginDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='decisionTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='disabilityTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='endDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='ratingDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='supplementalDecisionTypeName' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='specialMonthlyCompensationRatingRecord'>
+        <xs:sequence>
+            <xs:element name='numberOfSMCParagraphRecords' type='xs:string' minOccurs='0'/>
+            <xs:element name='numberOfSMCRecords' type='xs:string' minOccurs='0'/>
+            <xs:element name='returnCode' type='xs:string' minOccurs='0'/>
+            <xs:element name='returnMessage' type='xs:string' minOccurs='0'/>
+            <xs:element name='smcParagraphRatings' type='tns:smcParagraphRating' nillable='true' minOccurs='0' maxOccurs='unbounded'/>
+            <xs:element name='smcRatings' type='tns:specialMonthlyCompensationRating' nillable='true' minOccurs='0' maxOccurs='unbounded'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='smcParagraphRating'>
+        <xs:sequence>
+            <xs:element name='profileDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='ratingID' type='xs:string' minOccurs='0'/>
+            <xs:element name='smcParagraphKeyTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='smcParagraphText' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='specialMonthlyCompensationRating'>
+        <xs:sequence>
+            <xs:element name='anatomicalLossTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='beginDate' type='xs:string' minOccurs='0'/>
+            <xs:element name='hospitalSMCTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='lossUseTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='otherLossTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='ratingPercent' type='xs:string' minOccurs='0'/>
+            <xs:element name='smcTypeName' type='xs:string' minOccurs='0'/>
+            <xs:element name='supplementalDecisonTypeName' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='shareFaultInfoBean'>
+        <xs:sequence>
+            <xs:element name='message' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+
+
+namespace:     http://services.share.benefits.vba.va.gov/
+endpoint:      http://bepdev.vba.va.gov/RatingServiceBean/RatingWebService
+
+soap actions
+========
+find_rating_data

@@ -1,0 +1,63 @@
+#!/usr/bin/bash
+
+TOP=~
+TMPDIR=~/tmp
+mkdir -p $TMPDIR
+
+if [ -z "${FUNCTIONS}" ]
+then
+    FUNCTIONS="${TOP}/bin/rbps-functions"
+fi
+
+if [ -z "${LOGDIR}" ]
+then
+    LOGDIR="${TOP}/logs"
+fi
+
+if [ -f ${FUNCTIONS} ]
+then
+    . ${FUNCTIONS}
+else
+    echo "FUNCTIONS file [${FUNCTIONS}] not found."
+
+    exit 1
+fi
+
+# numFilesInDir sending
+# numFilesInDir sending pdf
+
+setUp()
+{
+    rm -f pending/*
+    rm -f sending/*
+    rm -f waiting/*
+    rm -f failure/*
+    touch pending/one.pdf pending/one.csv pending/two.pdf pending/two.csv
+}
+
+
+testNumFilesInDirWithPdf()
+{
+    num=`numFilesInDir pending pdf`
+    assertEquals $num 2
+}
+
+
+testCopiesPdfFilesFromPendingToSending()
+{
+    movePendingFilesToSending
+    num=`numFilesInDir sending pdf`
+    assertEquals $num 2
+}
+
+
+testCopiesCsvFilesFromPendingToSending()
+{
+    movePendingFilesToSending
+    num=`numFilesInDir sending csv`
+    assertEquals $num 2
+}
+
+
+
+. shunit2

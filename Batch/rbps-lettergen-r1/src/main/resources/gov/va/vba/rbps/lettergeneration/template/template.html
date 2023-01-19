@@ -1,0 +1,157 @@
+#parse
+(
+ 
+"gov/va/vba/rbps/lettergeneration/template/header.html"
+ 
+)
+
+
+    <p class="paragraph">
+        We made a decision on your claim for additional benefits for
+        your dependents received on $date.format( "MMM dd, yyyy", $letterFields.claimDate ).
+    </p>
+
+
+    <p class="paragraph">
+        This letter tells you what we decided, how we made our decision
+        and the evidence used to decide your claim. We have also included
+        information about what to do if you disagree with our decision, and
+        who to contact if you have questions or need assistance.
+    </p>
+
+    #if( $letterFields.hasApprovals )
+        <span class="section"> 
+            Your Award Amount and Payment Change Date
+        </span>
+    
+        <p class="subparagraph">Your monthly payment amount is shown below:</p>
+    
+    
+        <table class="info">
+            <thead>
+                <tr>
+                    <th align="center">Monthly Award Amount</th>
+                    <th align="center">Payment Change Date</th>
+                    <th>Reason For Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                #foreach( $awardLine in $letterFields.approvals )
+                    <tr>
+                        <td align="center" rowspan="$awardLine.rowspan" >$awardLine.formattedAwardAmount</td>
+                        <td align="center" rowspan="$awardLine.rowspan" >$date.format( "MMM dd, yyyy", $awardLine.paymentChangeDate )</td>
+                        <td>${awardLine.firstFormattedReason}</td>
+                    </tr>
+        
+                    #if( "$!awardLine.restOfFormattedReasons" != "" )
+                        #foreach( $reason in $awardLine.restOfFormattedReasons )
+                            <tr>
+                                <td>
+                                    $reason
+                                </td>
+                            </tr>
+                        #end
+                    #end
+                #end
+            </tbody>
+        </table>
+    
+        <h2 class="section">You Can Expect Payment</h2>
+        
+        <p class="subparagraph">
+            Your payment begins the first day of the month following your
+            effective date. You will receive a payment covering the initial amount
+            due under this award, minus any withholdings, in approximately 15
+            days. Payment will then be made at the beginning of each month for the
+            prior month. For example, benefits due for May are paid on or about
+            June 1.
+        </p>
+    #elseif( $letterFields.hasDenials )
+        <span class="section"> 
+            Your Award Amount
+        </span>
+    
+        <p class="subparagraph">
+            Your monthly payment remains unchanged. You will continue to receive 
+            “currently monthly amount.”
+        </p>
+    #end
+        
+    <h2 class="section">What We Decided</h2>
+    
+    #if( $letterFields.hasApprovals )
+        <p class="subparagraph">
+            We are paying you as a Veteran with $letterFields.totalDependents dependent(s). Your
+            payment includes an additional amount for 
+            
+            #if( "$!letterFields.approvalSpouseName" != "" )
+                your spouse $letterFields.approvalSpouseName
+            #end
+            
+            #if( "$!letterFields.approvalSpouseName" != "" && $letterFields.approvalChildNames.size() > 0 )
+                and
+            #end
+            
+            #if( $letterFields.approvalChildNames.size() > 0 )
+                your $letterFields.joinedApprovalChildNames
+            #end
+            .
+            We made this decision because your reported dependents meet the criteria for establishing a relationship and you are in receipt of at least 30% service-connected disability benefits.
+            <span class="italic" >
+                Let us know
+                right away if there is any change in the status of your dependents.
+            </span>
+        </p>
+    #end
+    
+    #if( $letterFields.hasDenials )
+        #foreach( $awardLine in $letterFields.denials )
+            #foreach( $reason in $awardLine.reasons )
+                <p class="subparagraph">
+                    We cannot add $reason.fullName due to the following reason: $reason.formattedReason.
+                </p>
+            #end
+        #end
+
+<!--            
+        <p class="subparagraph">
+            Text string #1
+            “dependent name" was reported as being between the ages of 18 and 23 and currently not
+            pursuing a course of instruction at an approved educational institution”
+        </p>
+    
+        <p class="subparagraph">
+            Text string #2
+            “dependent name" was reported as being 18 years of age or older and not reported as being
+            seriously disabled.
+        </p>
+    
+        <p class="subparagraph">
+            Text string #3
+            “dependent name" was reported as being 23 years of age or older and not reported as being
+            seriously disabled.”
+        </p>
+    
+        <p class="subparagraph">
+            Text string #4
+            “dependent name" was reported as being married”
+        </p>
+    
+        <p class="subparagraph">
+            Text string #5
+            “Currently your combined service-connected rating is less than 30 percent. By law VA cannot pay an
+            increase in monetary benefits unless a Veteran has a combined service-connected rating of 30 percent or
+            greater.”
+        </p>
+-->
+    #end    
+    
+#parse
+(
+ 
+"gov/va/vba/rbps/lettergeneration/template/bottom.html"
+ 
+)
+
+</body>
+</html>

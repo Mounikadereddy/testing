@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Single Rating</name>
+  <uuid>c2098c1a-c547-4ac9-9b4a-94f78df1a81f</uuid>
+</ilog.rules.studio.model.base:RulePackage>

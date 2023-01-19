@@ -1,0 +1,22 @@
+package School_Child.Biological_Child.No_FCDR {
+   use Child19BrithDay;
+   use priorSchoolTermValid;
+   use Child18BirthDay;
+   /**
+ * DOC <= 18th BD + 365 Days
+ * CTSTD > 18th BD + 5 Months
+ */
+rule CP0139$45$1B {
+      property ilog.rules.business_name = "CP0139-1B";
+      property ilog.rules.package_name = "School Child.Biological Child.No FCDR";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         evaluate ((((Child.childType.equals(gov.va.vba.rbps.coreframework.xom.ChildType.BIOLOGICAL_CHILD))) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Veteran.firstChangedDateofRating)) && (Veteran.claimDate.compareTo(Child19BrithDay) <= 0) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.currentTerm)) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent((Child.currentTerm).courseStudentStartDate)) && ((priorSchoolTermValid) == (false)) && ((Child.currentTerm).courseStudentStartDate.compareTo(gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addMonthsToDate(5, Child18BirthDay)) > 0)));
+      } then {
+         Award.eventDate = (Child.currentTerm).courseStudentStartDate;
+      }
+   }
+}
+

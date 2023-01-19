@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Step Child</name>
+  <uuid>46c397e4-1092-4c43-90f6-c225b97c87ab</uuid>
+</ilog.rules.studio.model.base:RulePackage>

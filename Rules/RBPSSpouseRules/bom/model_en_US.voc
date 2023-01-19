@@ -1,0 +1,447 @@
+# Vocabulary Properties
+uuid = d87c4791-6d8e-41f4-abbd-41f59db9246d
+
+# gov.va.vba.rbps.coreframework.xom.Address
+gov.va.vba.rbps.coreframework.xom.Address#concept.label = address
+gov.va.vba.rbps.coreframework.xom.Address.city#phrase.action = set the city of {this} to {city}
+gov.va.vba.rbps.coreframework.xom.Address.city#phrase.navigation = {city} of {this}
+gov.va.vba.rbps.coreframework.xom.Address.country#phrase.action = set the country of {this} to {country}
+gov.va.vba.rbps.coreframework.xom.Address.country#phrase.navigation = {country} of {this}
+gov.va.vba.rbps.coreframework.xom.Address.line1#phrase.action = set the line1 of {this} to {line1}
+gov.va.vba.rbps.coreframework.xom.Address.line1#phrase.navigation = {line1} of {this}
+gov.va.vba.rbps.coreframework.xom.Address.line2#phrase.action = set the line2 of {this} to {line2}
+gov.va.vba.rbps.coreframework.xom.Address.line2#phrase.navigation = {line2} of {this}
+gov.va.vba.rbps.coreframework.xom.Address.line3#phrase.action = set the line3 of {this} to {line3}
+gov.va.vba.rbps.coreframework.xom.Address.line3#phrase.navigation = {line3} of {this}
+gov.va.vba.rbps.coreframework.xom.Address.state#phrase.action = set the state of {this} to {state}
+gov.va.vba.rbps.coreframework.xom.Address.state#phrase.navigation = {state} of {this}
+gov.va.vba.rbps.coreframework.xom.Address.zipPrefix#phrase.action = set the zip prefix of {this} to {zip prefix}
+gov.va.vba.rbps.coreframework.xom.Address.zipPrefix#phrase.navigation = {zip prefix} of {this}
+gov.va.vba.rbps.coreframework.xom.Address.zipSuffix1#phrase.action = set the zip suffix1 of {this} to {zip suffix1}
+gov.va.vba.rbps.coreframework.xom.Address.zipSuffix1#phrase.navigation = {zip suffix1} of {this}
+gov.va.vba.rbps.coreframework.xom.Address.zipSuffix2#phrase.action = set the zip suffix2 of {this} to {zip suffix2}
+gov.va.vba.rbps.coreframework.xom.Address.zipSuffix2#phrase.navigation = {zip suffix2} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.Award
+gov.va.vba.rbps.coreframework.xom.Award#concept.label = award
+gov.va.vba.rbps.coreframework.xom.Award.dependencyDecisionType#phrase.action = set the dependency decision type of {this} to {dependency decision type}
+gov.va.vba.rbps.coreframework.xom.Award.dependencyDecisionType#phrase.navigation = {dependency decision type} of {this}
+gov.va.vba.rbps.coreframework.xom.Award.dependencyStatusType#phrase.action = set the dependency status type of {this} to {dependency status type}
+gov.va.vba.rbps.coreframework.xom.Award.dependencyStatusType#phrase.navigation = {dependency status type} of {this}
+gov.va.vba.rbps.coreframework.xom.Award.endDate#phrase.action = set the end date of {this} to {end date}
+gov.va.vba.rbps.coreframework.xom.Award.endDate#phrase.navigation = {end date} of {this}
+gov.va.vba.rbps.coreframework.xom.Award.eventDate#phrase.action = set the event date of {this} to {event date}
+gov.va.vba.rbps.coreframework.xom.Award.eventDate#phrase.navigation = {event date} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.AwardStatus
+gov.va.vba.rbps.coreframework.xom.AwardStatus#concept.label = award status
+gov.va.vba.rbps.coreframework.xom.AwardStatus.GAOUsed#phrase.action = make it {GAOUsed} that {this} is GAOUsed
+gov.va.vba.rbps.coreframework.xom.AwardStatus.GAOUsed#phrase.navigation = {this} is GAOUsed
+gov.va.vba.rbps.coreframework.xom.AwardStatus.changesMade#phrase.action = make it {changes made} that {this} is changes made
+gov.va.vba.rbps.coreframework.xom.AwardStatus.changesMade#phrase.navigation = {this} is changes made
+gov.va.vba.rbps.coreframework.xom.AwardStatus.hasAttorneyFeeAgreement#phrase.action = make it {has attorney fee agreement} that {this} is has attorney fee agreement
+gov.va.vba.rbps.coreframework.xom.AwardStatus.isSuspended#phrase.action = make it {suspended} that {this} is suspended
+gov.va.vba.rbps.coreframework.xom.AwardStatus.numDependentsOnAward#phrase.action = set the num dependents on award of {this} to {num dependents on award}
+gov.va.vba.rbps.coreframework.xom.AwardStatus.numDependentsOnAward#phrase.navigation = {num dependents on award} of {this}
+gov.va.vba.rbps.coreframework.xom.AwardStatus.proposed#phrase.action = make it {proposed} that {this} is proposed
+gov.va.vba.rbps.coreframework.xom.AwardStatus.proposed#phrase.navigation = {this} is proposed
+gov.va.vba.rbps.coreframework.xom.AwardStatus.runningAward#phrase.action = make it {running award} that {this} is running award
+gov.va.vba.rbps.coreframework.xom.AwardStatus.runningAward#phrase.navigation = {this} is running award
+gov.va.vba.rbps.coreframework.xom.AwardStatus.suspended#phrase.navigation = {this} is suspended
+
+# gov.va.vba.rbps.coreframework.xom.Child
+gov.va.vba.rbps.coreframework.xom.Child#concept.label = child
+gov.va.vba.rbps.coreframework.xom.Child.agencyPayingTuition#phrase.action = set the agency paying tuition of {this} to {agency paying tuition}
+gov.va.vba.rbps.coreframework.xom.Child.agencyPayingTuition#phrase.navigation = {agency paying tuition} of {this}
+gov.va.vba.rbps.coreframework.xom.Child.attendedSchoolLastTerm#phrase.action = make it {attended school last term} that {this} is attended school last term
+gov.va.vba.rbps.coreframework.xom.Child.attendedSchoolLastTerm#phrase.navigation = {this} is attended school last term
+gov.va.vba.rbps.coreframework.xom.Child.birthAddress#phrase.action = set the birth address of {this} to {birth address}
+gov.va.vba.rbps.coreframework.xom.Child.birthAddress#phrase.navigation = {birth address} of {this}
+gov.va.vba.rbps.coreframework.xom.Child.childType#phrase.action = set the child type of {this} to {child type}
+gov.va.vba.rbps.coreframework.xom.Child.childType#phrase.navigation = {child type} of {this}
+gov.va.vba.rbps.coreframework.xom.Child.currentTerm#phrase.action = set the current term of {this} to {current term}
+gov.va.vba.rbps.coreframework.xom.Child.currentTerm#phrase.navigation = {current term} of {this}
+gov.va.vba.rbps.coreframework.xom.Child.govtPaymentStartDate#phrase.action = set the govt payment start date of {this} to {govt payment start date}
+gov.va.vba.rbps.coreframework.xom.Child.govtPaymentStartDate#phrase.navigation = {govt payment start date} of {this}
+gov.va.vba.rbps.coreframework.xom.Child.lastTerm#phrase.action = set the last term of {this} to {last term}
+gov.va.vba.rbps.coreframework.xom.Child.lastTerm#phrase.navigation = {last term} of {this}
+gov.va.vba.rbps.coreframework.xom.Child.livingWith#phrase.action = set the living with of {this} to {living with}
+gov.va.vba.rbps.coreframework.xom.Child.livingWith#phrase.navigation = {living with} of {this}
+gov.va.vba.rbps.coreframework.xom.Child.minorSchoolChildAward#phrase.action = set the minor school child award of {this} to {minor school child award}
+gov.va.vba.rbps.coreframework.xom.Child.minorSchoolChildAward#phrase.navigation = {minor school child award} of {this}
+gov.va.vba.rbps.coreframework.xom.Child.previousTerms#phrase.action = set the previous terms of {this} to {previous term}
+gov.va.vba.rbps.coreframework.xom.Child.previousTerms#phrase.navigation = {previous term} of {this}
+gov.va.vba.rbps.coreframework.xom.Child.previouslyMarried#phrase.action = make it {previously married} that {this} is previously married
+gov.va.vba.rbps.coreframework.xom.Child.previouslyMarried#phrase.navigation = {this} is previously married
+gov.va.vba.rbps.coreframework.xom.Child.schoolChild#phrase.action = make it {school child} that {this} is school child
+gov.va.vba.rbps.coreframework.xom.Child.schoolChild#phrase.navigation = {this} is school child
+gov.va.vba.rbps.coreframework.xom.Child.seriouslyDisabled#phrase.action = make it {seriously disabled} that {this} is seriously disabled
+gov.va.vba.rbps.coreframework.xom.Child.seriouslyDisabled#phrase.navigation = {this} is seriously disabled
+gov.va.vba.rbps.coreframework.xom.Child.tuitionPaidByGovt#phrase.action = make it {tuition paid by govt} that {this} is tuition paid by govt
+gov.va.vba.rbps.coreframework.xom.Child.tuitionPaidByGovt#phrase.navigation = {this} is tuition paid by govt
+gov.va.vba.rbps.coreframework.xom.Child.unfilteredChildType#phrase.action = set the unfiltered child type of {this} to {unfiltered child type}
+gov.va.vba.rbps.coreframework.xom.Child.unfilteredChildType#phrase.navigation = {unfiltered child type} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.ChildType
+gov.va.vba.rbps.coreframework.xom.ChildType#concept.label = child type
+gov.va.vba.rbps.coreframework.xom.ChildType.ADOPTED_CHILD#instance.label = ADOPTED_CHILD
+gov.va.vba.rbps.coreframework.xom.ChildType.BIOLOGICAL_CHILD#instance.label = BIOLOGICAL_CHILD
+gov.va.vba.rbps.coreframework.xom.ChildType.STEPCHILD#instance.label = STEPCHILD
+gov.va.vba.rbps.coreframework.xom.ChildType.UNDEFINED#instance.label = UNDEFINED
+gov.va.vba.rbps.coreframework.xom.ChildType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.Claim
+gov.va.vba.rbps.coreframework.xom.Claim#concept.label = claim
+gov.va.vba.rbps.coreframework.xom.Claim.claimId#phrase.action = set the claim id of {this} to {claim id}
+gov.va.vba.rbps.coreframework.xom.Claim.claimId#phrase.navigation = {claim id} of {this}
+gov.va.vba.rbps.coreframework.xom.Claim.claimLabel#phrase.action = set the claim label of {this} to {claim label}
+gov.va.vba.rbps.coreframework.xom.Claim.claimLabel#phrase.navigation = {claim label} of {this}
+gov.va.vba.rbps.coreframework.xom.Claim.endProductCode#phrase.action = set the end product code of {this} to {end product code}
+gov.va.vba.rbps.coreframework.xom.Claim.endProductCode#phrase.navigation = {end product code} of {this}
+gov.va.vba.rbps.coreframework.xom.Claim.forms#phrase.action = set the forms of {this} to {form}
+gov.va.vba.rbps.coreframework.xom.Claim.forms#phrase.navigation = {form} of {this}
+gov.va.vba.rbps.coreframework.xom.Claim.hasAttachments#phrase.action = make it {has attachments} that {this} is has attachments
+gov.va.vba.rbps.coreframework.xom.Claim.new#phrase.action = make it {new} that {this} is new
+gov.va.vba.rbps.coreframework.xom.Claim.new#phrase.navigation = {this} is new
+gov.va.vba.rbps.coreframework.xom.Claim.receivedDate#phrase.action = set the received date of {this} to {received date}
+gov.va.vba.rbps.coreframework.xom.Claim.receivedDate#phrase.navigation = {received date} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.ClaimLabelType
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType#concept.label = claim label type
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.NEW_674#instance.label = NEW_674
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.NEW_686C#instance.label = NEW_686C
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.NEW_EBENEFITS_674#instance.label = NEW_EBENEFITS_674
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.NEW_EBENEFITS_686C#instance.label = NEW_EBENEFITS_686C
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.NEW_PHONE_DEPENDENCY_ADJUSTMENT#instance.label = NEW_PHONE_DEPENDENCY_ADJUSTMENT
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.NEW_PHONE_DEPENDENCY_ADJUSTMENT_EXCEPTION#instance.label = NEW_PHONE_DEPENDENCY_ADJUSTMENT_EXCEPTION
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.NEW_PHONE_SCHOOL_ATTENDANCE#instance.label = NEW_PHONE_SCHOOL_ATTENDANCE
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.NEW_PHONE_SCHOOL_ATTENDANCE_EXCEPTION#instance.label = NEW_PHONE_SCHOOL_ATTENDANCE_EXCEPTION
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.NEW_PMC_674#instance.label = NEW_PMC_674
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.NEW_PMC_686C#instance.label = NEW_PMC_686C
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.REJECTED_674#instance.label = REJECTED_674
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.REJECTED_686C#instance.label = REJECTED_686C
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.REJECTED_EBENEFITS_674#instance.label = REJECTED_EBENEFITS_674
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.REJECTED_EBENEFITS_686C#instance.label = REJECTED_EBENEFITS_686C
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.REJECTED_PMC_674#instance.label = REJECTED_PMC_674
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.REJECTED_PMC_686C#instance.label = REJECTED_PMC_686C
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.code#phrase.navigation = {code} of {this}
+gov.va.vba.rbps.coreframework.xom.ClaimLabelType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.Claimant
+gov.va.vba.rbps.coreframework.xom.Claimant#concept.label = claimant
+
+# gov.va.vba.rbps.coreframework.xom.Dependent
+gov.va.vba.rbps.coreframework.xom.Dependent#concept.label = dependent
+gov.va.vba.rbps.coreframework.xom.Dependent.award#phrase.action = set the award of {this} to {award}
+gov.va.vba.rbps.coreframework.xom.Dependent.award#phrase.navigation = {award} of {this}
+gov.va.vba.rbps.coreframework.xom.Dependent.childPresentForSpouse#phrase.navigation = child is present for {this}
+gov.va.vba.rbps.coreframework.xom.Dependent.deniedAward#phrase.navigation = {this} is denied award
+gov.va.vba.rbps.coreframework.xom.Dependent.deniedDate#phrase.action = set the denied date of {this} to {denied date}
+gov.va.vba.rbps.coreframework.xom.Dependent.deniedDate#phrase.navigation = {denied date} of {this}
+gov.va.vba.rbps.coreframework.xom.Dependent.everOnAward#phrase.navigation = {this} is ever on award
+gov.va.vba.rbps.coreframework.xom.Dependent.forms#phrase.navigation = {form} of {this}
+gov.va.vba.rbps.coreframework.xom.Dependent.isChildPresentForSpouse#phrase.action = make it {child present for spouse} that {this} has child present
+gov.va.vba.rbps.coreframework.xom.Dependent.isDeniedAward#phrase.action = make it {denied award} that {this} is denied award
+gov.va.vba.rbps.coreframework.xom.Dependent.isEverOnAward#phrase.action = make it {ever on award} that {this} is ever on award
+gov.va.vba.rbps.coreframework.xom.Dependent.livingWithVeteran#phrase.action = make it {living with veteran} that {this} is living with veteran
+gov.va.vba.rbps.coreframework.xom.Dependent.livingWithVeteran#phrase.navigation = {this} is living with veteran
+gov.va.vba.rbps.coreframework.xom.Dependent.newSchoolChild#phrase.action = make it {new school child} that {this} is new school child
+gov.va.vba.rbps.coreframework.xom.Dependent.newSchoolChild#phrase.navigation = {this} is new school child
+gov.va.vba.rbps.coreframework.xom.Dependent.onAwardAsMinorChild#phrase.action = make it {on award as minor child} that {this} is on award as minor child
+gov.va.vba.rbps.coreframework.xom.Dependent.onAwardAsMinorChild#phrase.navigation = {this} is on award as minor child
+gov.va.vba.rbps.coreframework.xom.Dependent.onCurrentAward#phrase.action = make it {on current award} that {this} is on current award
+gov.va.vba.rbps.coreframework.xom.Dependent.onCurrentAward#phrase.navigation = {this} is existing on current award
+
+# gov.va.vba.rbps.coreframework.xom.DependentDecisionType
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType#concept.label = dependent decision type
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.DEATH#instance.label = DEATH
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.DEPENDENCY_ESTABLISHED#instance.label = DEPENDENCY_ESTABLISHED
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.ELIGIBLE_MINOR_CHILD#instance.label = ELIGIBLE_MINOR_CHILD
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.MARRIAGE#instance.label = MARRIAGE
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.MARRIAGE_TERMINATED#instance.label = MARRIAGE_TERMINATED
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.OVER_18_NOT_IN_SCHOOL_OR_HELPLESS#instance.label = OVER_18_NOT_IN_SCHOOL_OR_HELPLESS
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.RATED_NOT_HELPLESS#instance.label = RATED_NOT_HELPLESS
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.RATED_SERIOUSLY_DISABLED#instance.label = RATED_SERIOUSLY_DISABLED
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.RELATIONSHIP_NOT_ESTABLISHED#instance.label = RELATIONSHIP_NOT_ESTABLISHED
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.SCHOOL_ATTENDANCE_BEGIN_DATE#instance.label = SCHOOL_ATTENDANCE_BEGIN_DATE
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.SCHOOL_ATTENDENCE_TERMINATES#instance.label = SCHOOL_ATTENDENCE_TERMINATES
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.TURNS_18#instance.label = TURNS_18
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.TURNS_23#instance.label = TURNS_23
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.code#phrase.navigation = {code} of {this}
+gov.va.vba.rbps.coreframework.xom.DependentDecisionType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.DependentStatusType
+gov.va.vba.rbps.coreframework.xom.DependentStatusType#concept.label = dependent status type
+gov.va.vba.rbps.coreframework.xom.DependentStatusType.MINOR_CHILD#instance.label = MINOR_CHILD
+gov.va.vba.rbps.coreframework.xom.DependentStatusType.NOT_AN_AWARD_DEPENDENT#instance.label = NOT_AN_AWARD_DEPENDENT
+gov.va.vba.rbps.coreframework.xom.DependentStatusType.SCHOOL_CHILD#instance.label = SCHOOL_CHILD
+gov.va.vba.rbps.coreframework.xom.DependentStatusType.SERIOUSLY_DISABLED_CHILD#instance.label = SERIOUSLY_DISABLED_CHILD
+gov.va.vba.rbps.coreframework.xom.DependentStatusType.SPOUSE#instance.label = SPOUSE
+gov.va.vba.rbps.coreframework.xom.DependentStatusType.code#phrase.navigation = {code} of {this}
+gov.va.vba.rbps.coreframework.xom.DependentStatusType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.Education
+gov.va.vba.rbps.coreframework.xom.Education#concept.label = education
+gov.va.vba.rbps.coreframework.xom.Education.courseEndDate#phrase.action = set the course end date of {this} to {course end date}
+gov.va.vba.rbps.coreframework.xom.Education.courseEndDate#phrase.navigation = {course end date} of {this}
+gov.va.vba.rbps.coreframework.xom.Education.courseName#phrase.action = set the course name of {this} to {course name}
+gov.va.vba.rbps.coreframework.xom.Education.courseName#phrase.navigation = {course name} of {this}
+gov.va.vba.rbps.coreframework.xom.Education.courseStudentStartDate#phrase.action = set the course student start date of {this} to {course student start date}
+gov.va.vba.rbps.coreframework.xom.Education.courseStudentStartDate#phrase.navigation = {course student start date} of {this}
+gov.va.vba.rbps.coreframework.xom.Education.educationLevelType#phrase.action = set the education level type of {this} to {education level type}
+gov.va.vba.rbps.coreframework.xom.Education.educationLevelType#phrase.navigation = {education level type} of {this}
+gov.va.vba.rbps.coreframework.xom.Education.educationType#phrase.action = set the education type of {this} to {education type}
+gov.va.vba.rbps.coreframework.xom.Education.educationType#phrase.navigation = {education type} of {this}
+gov.va.vba.rbps.coreframework.xom.Education.expectedGraduationDate#phrase.action = set the expected graduation date of {this} to {expected graduation date}
+gov.va.vba.rbps.coreframework.xom.Education.expectedGraduationDate#phrase.navigation = {expected graduation date} of {this}
+gov.va.vba.rbps.coreframework.xom.Education.hoursPerWeek#phrase.action = set the hours per week of {this} to {hours per week}
+gov.va.vba.rbps.coreframework.xom.Education.hoursPerWeek#phrase.navigation = {hours per week} of {this}
+gov.va.vba.rbps.coreframework.xom.Education.officialCourseStartDate#phrase.action = set the official course start date of {this} to {official course start date}
+gov.va.vba.rbps.coreframework.xom.Education.officialCourseStartDate#phrase.navigation = {official course start date} of {this}
+gov.va.vba.rbps.coreframework.xom.Education.school#phrase.action = set the school of {this} to {school}
+gov.va.vba.rbps.coreframework.xom.Education.school#phrase.navigation = {school} of {this}
+gov.va.vba.rbps.coreframework.xom.Education.sessionsPerWeek#phrase.action = set the sessions per week of {this} to {sessions per week}
+gov.va.vba.rbps.coreframework.xom.Education.sessionsPerWeek#phrase.navigation = {sessions per week} of {this}
+gov.va.vba.rbps.coreframework.xom.Education.subjectName#phrase.action = set the subject name of {this} to {subject name}
+gov.va.vba.rbps.coreframework.xom.Education.subjectName#phrase.navigation = {subject name} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.EducationLevelType
+gov.va.vba.rbps.coreframework.xom.EducationLevelType#concept.label = education level type
+gov.va.vba.rbps.coreframework.xom.EducationLevelType.HIGH_SCHOOL#instance.label = HIGH_SCHOOL
+gov.va.vba.rbps.coreframework.xom.EducationLevelType.HOME_SCHOOLED#instance.label = HOME_SCHOOLED
+gov.va.vba.rbps.coreframework.xom.EducationLevelType.POST_SECONDARY#instance.label = POST_SECONDARY
+gov.va.vba.rbps.coreframework.xom.EducationLevelType.code#phrase.navigation = {code} of {this}
+gov.va.vba.rbps.coreframework.xom.EducationLevelType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.EducationType
+gov.va.vba.rbps.coreframework.xom.EducationType#concept.label = education type
+gov.va.vba.rbps.coreframework.xom.EducationType.FULL_TIME#instance.label = FULL_TIME
+gov.va.vba.rbps.coreframework.xom.EducationType.PART_TIME#instance.label = PART_TIME
+gov.va.vba.rbps.coreframework.xom.EducationType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.EndProductType
+gov.va.vba.rbps.coreframework.xom.EndProductType#concept.label = end product type
+gov.va.vba.rbps.coreframework.xom.EndProductType.COMPENSATION_EP130#instance.label = COMPENSATION_EP130
+gov.va.vba.rbps.coreframework.xom.EndProductType.COMPENSATION_EP131#instance.label = COMPENSATION_EP131
+gov.va.vba.rbps.coreframework.xom.EndProductType.COMPENSATION_EP132#instance.label = COMPENSATION_EP132
+gov.va.vba.rbps.coreframework.xom.EndProductType.COMPENSATION_EP133#instance.label = COMPENSATION_EP133
+gov.va.vba.rbps.coreframework.xom.EndProductType.COMPENSATION_EP134#instance.label = COMPENSATION_EP134
+gov.va.vba.rbps.coreframework.xom.EndProductType.COMPENSATION_EP135#instance.label = COMPENSATION_EP135
+gov.va.vba.rbps.coreframework.xom.EndProductType.COMPENSATION_EP136#instance.label = COMPENSATION_EP136
+gov.va.vba.rbps.coreframework.xom.EndProductType.COMPENSATION_EP137#instance.label = COMPENSATION_EP137
+gov.va.vba.rbps.coreframework.xom.EndProductType.COMPENSATION_EP138#instance.label = COMPENSATION_EP138
+gov.va.vba.rbps.coreframework.xom.EndProductType.COMPENSATION_EP139#instance.label = COMPENSATION_EP139
+gov.va.vba.rbps.coreframework.xom.EndProductType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.FormType
+gov.va.vba.rbps.coreframework.xom.FormType#concept.label = form type
+gov.va.vba.rbps.coreframework.xom.FormType.FORM_21_674#instance.label = FORM_21_674
+gov.va.vba.rbps.coreframework.xom.FormType.FORM_21_686C#instance.label = FORM_21_686C
+gov.va.vba.rbps.coreframework.xom.FormType.code#phrase.navigation = {code} of {this}
+gov.va.vba.rbps.coreframework.xom.FormType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.GenderType
+gov.va.vba.rbps.coreframework.xom.GenderType#concept.label = gender type
+gov.va.vba.rbps.coreframework.xom.GenderType.FEMALE#instance.label = FEMALE
+gov.va.vba.rbps.coreframework.xom.GenderType.MALE#instance.label = MALE
+gov.va.vba.rbps.coreframework.xom.GenderType.code#phrase.navigation = {code} of {this}
+gov.va.vba.rbps.coreframework.xom.GenderType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.MaritalStatusType
+gov.va.vba.rbps.coreframework.xom.MaritalStatusType#concept.label = marital status type
+gov.va.vba.rbps.coreframework.xom.MaritalStatusType.DIVORCED#instance.label = DIVORCED
+gov.va.vba.rbps.coreframework.xom.MaritalStatusType.MARRIED#instance.label = MARRIED
+gov.va.vba.rbps.coreframework.xom.MaritalStatusType.NEVER_MARRIED#instance.label = NEVER_MARRIED
+gov.va.vba.rbps.coreframework.xom.MaritalStatusType.SEPARATED#instance.label = SEPARATED
+gov.va.vba.rbps.coreframework.xom.MaritalStatusType.WIDOWED#instance.label = WIDOWED
+gov.va.vba.rbps.coreframework.xom.MaritalStatusType.code#phrase.navigation = {code} of {this}
+gov.va.vba.rbps.coreframework.xom.MaritalStatusType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.Marriage
+gov.va.vba.rbps.coreframework.xom.Marriage#concept.label = marriage
+gov.va.vba.rbps.coreframework.xom.Marriage.endDate#phrase.action = set the end date of {this} to {end date}
+gov.va.vba.rbps.coreframework.xom.Marriage.endDate#phrase.navigation = {end date} of {this}
+gov.va.vba.rbps.coreframework.xom.Marriage.marriedPlace#phrase.action = set the married place of {this} to {married place}
+gov.va.vba.rbps.coreframework.xom.Marriage.marriedPlace#phrase.navigation = {married place} of {this}
+gov.va.vba.rbps.coreframework.xom.Marriage.marriedTo#phrase.action = set the married to of {this} to {married to}
+gov.va.vba.rbps.coreframework.xom.Marriage.marriedTo#phrase.navigation = {married to} of {this}
+gov.va.vba.rbps.coreframework.xom.Marriage.startDate#phrase.action = set the start date of {this} to {start date}
+gov.va.vba.rbps.coreframework.xom.Marriage.startDate#phrase.navigation = {start date} of {this}
+gov.va.vba.rbps.coreframework.xom.Marriage.terminationPlace#phrase.action = set the termination place of {this} to {termination place}
+gov.va.vba.rbps.coreframework.xom.Marriage.terminationPlace#phrase.navigation = {termination place} of {this}
+gov.va.vba.rbps.coreframework.xom.Marriage.terminationType#phrase.action = set the termination type of {this} to {termination type}
+gov.va.vba.rbps.coreframework.xom.Marriage.terminationType#phrase.navigation = {termination type} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.MarriageTerminationType
+gov.va.vba.rbps.coreframework.xom.MarriageTerminationType#concept.label = marriage termination type
+gov.va.vba.rbps.coreframework.xom.MarriageTerminationType.DEATH#instance.label = DEATH
+gov.va.vba.rbps.coreframework.xom.MarriageTerminationType.DIVORCE#instance.label = DIVORCE
+gov.va.vba.rbps.coreframework.xom.MarriageTerminationType.OTHER#instance.label = OTHER
+gov.va.vba.rbps.coreframework.xom.MarriageTerminationType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.NoSSNReasonType
+gov.va.vba.rbps.coreframework.xom.NoSSNReasonType#concept.label = no SSNReason type
+gov.va.vba.rbps.coreframework.xom.NoSSNReasonType.NONRESIDENT_ALIEN#instance.label = NONRESIDENT_ALIEN
+gov.va.vba.rbps.coreframework.xom.NoSSNReasonType.NO_SSN_FROM_SSA#instance.label = NO_SSN_FROM_SSA
+gov.va.vba.rbps.coreframework.xom.NoSSNReasonType.code#phrase.navigation = {code} of {this}
+gov.va.vba.rbps.coreframework.xom.NoSSNReasonType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.Parent
+gov.va.vba.rbps.coreframework.xom.Parent#concept.label = parent
+
+# gov.va.vba.rbps.coreframework.xom.Person
+gov.va.vba.rbps.coreframework.xom.Person#concept.label = person
+gov.va.vba.rbps.coreframework.xom.Person.alive#phrase.action = make it {alive} that {this} is alive
+gov.va.vba.rbps.coreframework.xom.Person.alive#phrase.navigation = {this} is alive
+gov.va.vba.rbps.coreframework.xom.Person.birthDate#phrase.action = set the birth date of {this} to {birth date}
+gov.va.vba.rbps.coreframework.xom.Person.birthDate#phrase.navigation = {birth date} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.children#phrase.action = set the childrens of {this} to {children}
+gov.va.vba.rbps.coreframework.xom.Person.children#phrase.navigation = {children} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.corpParticipantId#phrase.action = set the corp participant id of {this} to {corp participant id}
+gov.va.vba.rbps.coreframework.xom.Person.corpParticipantId#phrase.navigation = {corp participant id} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.currentMarriage#phrase.action = set the  current marriage of {this} to {marriage}
+gov.va.vba.rbps.coreframework.xom.Person.currentMarriage#phrase.navigation = {marriage} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.email#phrase.action = set the email of {this} to {email}
+gov.va.vba.rbps.coreframework.xom.Person.email#phrase.navigation = {email} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.firstName#phrase.action = set the first name of {this} to {first name}
+gov.va.vba.rbps.coreframework.xom.Person.firstName#phrase.navigation = {first name} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.gender#phrase.action = set the gender of {this} to {gender}
+gov.va.vba.rbps.coreframework.xom.Person.gender#phrase.navigation = {gender} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.lastName#phrase.action = set the last name of {this} to {last name}
+gov.va.vba.rbps.coreframework.xom.Person.lastName#phrase.navigation = {last name} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.latestPreviousMarriage#phrase.action = set the latest previous marriage of {this} to {latest previous marriage}
+gov.va.vba.rbps.coreframework.xom.Person.latestPreviousMarriage#phrase.navigation = {latest previous marriage} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.mailingAddress#phrase.action = set the mailing address of {this} to {mailing address}
+gov.va.vba.rbps.coreframework.xom.Person.mailingAddress#phrase.navigation = {mailing address} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.middleName#phrase.action = set the middle name of {this} to {middle name}
+gov.va.vba.rbps.coreframework.xom.Person.middleName#phrase.navigation = {middle name} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.noSsnReason#phrase.action = set the no ssn reason of {this} to {no ssn reason}
+gov.va.vba.rbps.coreframework.xom.Person.noSsnReason#phrase.navigation = {no ssn reason} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.permanentAddress#phrase.action = set the permanent address of {this} to {permanent address}
+gov.va.vba.rbps.coreframework.xom.Person.permanentAddress#phrase.navigation = {permanent address} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.previousMarriages#phrase.action = set the previous marriages of {this} to {previous marriage}
+gov.va.vba.rbps.coreframework.xom.Person.previousMarriages#phrase.navigation = {previous marriage} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.residenceAddress#phrase.action = set the residence address of {this} to {residence address}
+gov.va.vba.rbps.coreframework.xom.Person.residenceAddress#phrase.navigation = {residence address} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.ssn#phrase.action = set the ssn of {this} to {ssn}
+gov.va.vba.rbps.coreframework.xom.Person.ssn#phrase.navigation = {ssn} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.ssnVerification#phrase.action = set the ssn verification of {this} to {ssn verification}
+gov.va.vba.rbps.coreframework.xom.Person.ssnVerification#phrase.navigation = {ssn verification} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.suffixName#phrase.action = set the suffix name of {this} to {suffix name}
+gov.va.vba.rbps.coreframework.xom.Person.suffixName#phrase.navigation = {suffix name} of {this}
+gov.va.vba.rbps.coreframework.xom.Person.vnpParticipantId#phrase.action = set the vnp participant id of {this} to {vnp participant id}
+gov.va.vba.rbps.coreframework.xom.Person.vnpParticipantId#phrase.navigation = {vnp participant id} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.Phone
+gov.va.vba.rbps.coreframework.xom.Phone#concept.label = phone
+gov.va.vba.rbps.coreframework.xom.Phone.areaCode#phrase.action = set the area code of {this} to {area code}
+gov.va.vba.rbps.coreframework.xom.Phone.areaCode#phrase.navigation = {area code} of {this}
+gov.va.vba.rbps.coreframework.xom.Phone.countryCode#phrase.action = set the country code of {this} to {country code}
+gov.va.vba.rbps.coreframework.xom.Phone.countryCode#phrase.navigation = {country code} of {this}
+gov.va.vba.rbps.coreframework.xom.Phone.extension#phrase.action = set the extension of {this} to {extension}
+gov.va.vba.rbps.coreframework.xom.Phone.extension#phrase.navigation = {extension} of {this}
+gov.va.vba.rbps.coreframework.xom.Phone.phoneNumber#phrase.action = set the phone number of {this} to {phone number}
+gov.va.vba.rbps.coreframework.xom.Phone.phoneNumber#phrase.navigation = {phone number} of {this}
+gov.va.vba.rbps.coreframework.xom.Phone.phoneType#phrase.action = set the phone type of {this} to {phone type}
+gov.va.vba.rbps.coreframework.xom.Phone.phoneType#phrase.navigation = {phone type} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.PhoneType
+gov.va.vba.rbps.coreframework.xom.PhoneType#concept.label = phone type
+gov.va.vba.rbps.coreframework.xom.PhoneType.DAY#instance.label = DAY
+gov.va.vba.rbps.coreframework.xom.PhoneType.NIGHT#instance.label = NIGHT
+gov.va.vba.rbps.coreframework.xom.PhoneType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages
+gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages#concept.label = rule exception messages
+gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages.addException(java.lang.String)#phrase.action = add {0} to the list of {this}
+gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages.messages#phrase.action = set the messages of {this} to {message}
+gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages.messages#phrase.navigation = {message} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.SSNVerificationType
+gov.va.vba.rbps.coreframework.xom.SSNVerificationType#concept.label = SSNVerification type
+gov.va.vba.rbps.coreframework.xom.SSNVerificationType.BIRLS#instance.label = BIRLS
+gov.va.vba.rbps.coreframework.xom.SSNVerificationType.CHILD_UNDER_2#instance.label = CHILD_UNDER_2
+gov.va.vba.rbps.coreframework.xom.SSNVerificationType.SSA_VERIFIED_NO_NUMBER#instance.label = SSA_VERIFIED_NO_NUMBER
+gov.va.vba.rbps.coreframework.xom.SSNVerificationType.UNVERIFIED#instance.label = UNVERIFIED
+gov.va.vba.rbps.coreframework.xom.SSNVerificationType.VERIFIED_BY_SSA#instance.label = VERIFIED_BY_SSA
+gov.va.vba.rbps.coreframework.xom.SSNVerificationType.VERIFIED_BY_VBA#instance.label = VERIFIED_BY_VBA
+gov.va.vba.rbps.coreframework.xom.SSNVerificationType.code#phrase.navigation = {code} of {this}
+gov.va.vba.rbps.coreframework.xom.SSNVerificationType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.SalutationType
+gov.va.vba.rbps.coreframework.xom.SalutationType#concept.label = salutation type
+gov.va.vba.rbps.coreframework.xom.SalutationType.MISS#instance.label = MISS
+gov.va.vba.rbps.coreframework.xom.SalutationType.MR#instance.label = MR
+gov.va.vba.rbps.coreframework.xom.SalutationType.MRS#instance.label = MRS
+gov.va.vba.rbps.coreframework.xom.SalutationType.MS#instance.label = MS
+gov.va.vba.rbps.coreframework.xom.SalutationType.value#phrase.navigation = {value} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.School
+gov.va.vba.rbps.coreframework.xom.School#concept.label = school
+gov.va.vba.rbps.coreframework.xom.School.address#phrase.action = set the address of {this} to {address}
+gov.va.vba.rbps.coreframework.xom.School.address#phrase.navigation = {address} of {this}
+gov.va.vba.rbps.coreframework.xom.School.eduInstnPtcpntId#phrase.action = set the edu instn ptcpnt id of {this} to {edu instn ptcpnt id}
+gov.va.vba.rbps.coreframework.xom.School.eduInstnPtcpntId#phrase.navigation = {edu instn ptcpnt id} of {this}
+gov.va.vba.rbps.coreframework.xom.School.name#phrase.action = set the name of {this} to {name}
+gov.va.vba.rbps.coreframework.xom.School.name#phrase.navigation = {name} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.Spouse
+gov.va.vba.rbps.coreframework.xom.Spouse#concept.label = spouse
+gov.va.vba.rbps.coreframework.xom.Spouse.fileNumber#phrase.action = set the file number of {this} to {file number}
+gov.va.vba.rbps.coreframework.xom.Spouse.fileNumber#phrase.navigation = {file number} of {this}
+gov.va.vba.rbps.coreframework.xom.Spouse.vet#phrase.action = make it {vet} that {this} is vet
+gov.va.vba.rbps.coreframework.xom.Spouse.vet#phrase.navigation = {this} is vet
+
+# gov.va.vba.rbps.coreframework.xom.Veteran
+gov.va.vba.rbps.coreframework.xom.Veteran#concept.label = veteran
+gov.va.vba.rbps.coreframework.xom.Veteran.awardStatus#phrase.action = set the award status of {this} to {award status}
+gov.va.vba.rbps.coreframework.xom.Veteran.awardStatus#phrase.navigation = {award status} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.claim#phrase.action = set the claim of {this} to {claim}
+gov.va.vba.rbps.coreframework.xom.Veteran.claim#phrase.navigation = {claim} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.currentMonthlyAmount#phrase.action = set the current monthly amount of {this} to {current monthly amount}
+gov.va.vba.rbps.coreframework.xom.Veteran.currentMonthlyAmount#phrase.navigation = {current monthly amount} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.dayTimePhone#phrase.action = set the day time phone of {this} to {day time phone}
+gov.va.vba.rbps.coreframework.xom.Veteran.dayTimePhone#phrase.navigation = {day time phone} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.fileNumber#phrase.action = set the file number of {this} to {file number}
+gov.va.vba.rbps.coreframework.xom.Veteran.fileNumber#phrase.navigation = {file number} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.firstChangedDateofRating#phrase.action = set the first changed dateof rating of {this} to {first changed dateof rating}
+gov.va.vba.rbps.coreframework.xom.Veteran.firstChangedDateofRating#phrase.navigation = {first changed dateof rating} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.hasMilitaryPay#phrase.action = make it {has military pay} that {this} is has military pay
+gov.va.vba.rbps.coreframework.xom.Veteran.hasPOA#phrase.action = make it {has POA} that {this} is has POA
+gov.va.vba.rbps.coreframework.xom.Veteran.maritalStatus#phrase.action = set the marital status of {this} to {marital status}
+gov.va.vba.rbps.coreframework.xom.Veteran.maritalStatus#phrase.navigation = {marital status} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.nightTimePhone#phrase.action = set the night time phone of {this} to {night time phone}
+gov.va.vba.rbps.coreframework.xom.Veteran.nightTimePhone#phrase.navigation = {night time phone} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.ratingDate#phrase.action = set the rating date of {this} to {rating date}
+gov.va.vba.rbps.coreframework.xom.Veteran.ratingDate#phrase.navigation = {rating date} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.ratingEffectiveDate#phrase.action = set the rating effective date of {this} to {rating effective date}
+gov.va.vba.rbps.coreframework.xom.Veteran.ratingEffectiveDate#phrase.navigation = {rating effective date} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.receivingMilitaryRetirePay#phrase.action = make it {receiving military retire pay} that {this} is receiving military retire pay
+gov.va.vba.rbps.coreframework.xom.Veteran.receivingMilitaryRetirePay#phrase.navigation = {this} is receiving military retire pay
+gov.va.vba.rbps.coreframework.xom.Veteran.salutation#phrase.action = set the salutation of {this} to {salutation}
+gov.va.vba.rbps.coreframework.xom.Veteran.salutation#phrase.navigation = {salutation} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.serviceConnectedDisabilityRating#phrase.action = set the service connected disability rating of {this} to {service connected disability rating}
+gov.va.vba.rbps.coreframework.xom.Veteran.serviceConnectedDisabilityRating#phrase.navigation = {service connected disability rating} of {this}
+gov.va.vba.rbps.coreframework.xom.Veteran.totalNumberOfDependents#phrase.action = set the total number of dependents of {this} to {total number of dependents}
+gov.va.vba.rbps.coreframework.xom.Veteran.totalNumberOfDependents#phrase.navigation = {total number of dependents} of {this}
+
+# gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil
+gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil#concept.label = rbps xom util
+gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addDaysToDate(int,java.util.Date)#phrase.navigation = {1} plus {0} Days
+gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(int,java.util.Date)#phrase.navigation = {1} plus {0} Year(s)
+gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.getCurrentAge(gov.va.vba.rbps.coreframework.xom.Person)#phrase.navigation = the current age of {0}
+gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(java.lang.Object)#phrase.navigation = {0} is not present
+gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(java.lang.Object)#phrase.navigation = {0} is present
+
+# gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates
+gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates#concept.label = veteran common dates
+gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates.claimDate#phrase.action = set the claim date of {this} to {claim date}
+gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates.claimDate#phrase.navigation = {this} claim received date
+gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates.firstChangedDateofRating#phrase.action = set the FCDR of {this} to {FCDR}
+gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates.firstChangedDateofRating#phrase.navigation = {FCDR} of {this}
+gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates.marriageDate#phrase.action = set the marriage date of {this} to {marriage date}
+gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates.marriageDate#phrase.navigation = {marriage date} of {this}
+gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates.ratingDate#phrase.action = set the rating date of {this} to {rating date}
+gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates.ratingDate#phrase.navigation = {rating date} of {this}
+gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates.ratingEffectiveDate#phrase.action = set the rating effective date of {this} to {rating effective date}
+gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates.ratingEffectiveDate#phrase.navigation = {rating effective date} of {this}

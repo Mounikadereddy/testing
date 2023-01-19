@@ -1,0 +1,17 @@
+package Spouse_Removal_Rules {
+   rule CP0161_$45$_Spouse_Removal_Award_Decision_Determination_due_to_Divorce {
+      property ilog.rules.business_name = "CP0161 - Spouse Removal Award Decision Determination due to Divorce";
+      property ilog.rules.package_name = "Spouse Removal Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Spouse() from Spouse;
+         evaluate ((!(Spouse.childPresentForSpouse)
+         	&& (Spouse.currentMarriage.terminationType.equals(gov.va.vba.rbps.coreframework.xom.MarriageTerminationType.DIVORCE))));
+      } then {
+         Award.eventDate = Spouse.currentMarriage.endDate;
+         Award.dependencyDecisionType = gov.va.vba.rbps.coreframework.xom.DependentDecisionType.MARRIAGE_TERMINATED;
+         Award.dependencyStatusType = gov.va.vba.rbps.coreframework.xom.DependentStatusType.NOT_AN_AWARD_DEPENDENT;
+      }
+   }
+}
+

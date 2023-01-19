@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0003 - Attachment Check</name>
+  <uuid>31f21658-79d1-4fde-a43e-f8aea4fe15e7</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the claim of 'the Veteran' is present and
+    the claim of 'the Veteran' has attachments
+then
+    add "Auto Dependency Processing Reject Reason - Claim submitted with attached document(s). Please review document(s)." to the list of Exceptions ;]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

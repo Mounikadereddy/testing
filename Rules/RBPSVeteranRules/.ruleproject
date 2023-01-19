@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore">
+  <name>RBPSVeteranRules</name>
+  <uuid>bd73987a-efaf-4b13-b8b1-0af39de8703a</uuid>
+  <outputLocation>output</outputLocation>
+  <categories>any</categories>
+  <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
+    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="rbps-xom.jar" url="file:C:/dev/xom/rbps-xom.jar"/>
+  </paths>
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="model" url="platform:/RBPSVeteranRules/bom/model.bom" origin="xom:/RBPSVeteranRules/C:/Documents and Settings/vafscchilus/Desktop/rbps-xom.jar"/>
+  </paths>
+  <parameters name="Veteran" type="gov.va.vba.rbps.coreframework.xom.Veteran" initialValue="" verbalization="the Veteran"/>
+  <parameters name="Exceptions" type="gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages" initialValue="" verbalization="Exceptions" direction="OUT"/>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
+    <name>rules</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.bom:BOMFolder">
+    <name>bom</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.rule:TemplateFolder">
+    <name>templates</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.query:QueryFolder">
+    <name>queries</name>
+  </modelFolders>
+</ilog.rules.studio.model.base:RuleProject>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0237- prior term included but not continous with current ERROR</name>
+  <uuid>53369766-c39c-4ade-a4ec-43f6014c49e0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+  the last term of 'the Child'  is not null and 
+   the last term in corp end date of 'the Child' is not null and
+   the current term of 'the Child' is not null and 
+ getOmnibusedDate ( the course end date of the last term of 'the Child')  is before  the last term in corp end date of 'the Child'  and
+ the course end date of the last term of 'the Child' plus 5 months  is before  the course start date of the current term of 'the Child'
+ then 
+ set 'Condition Satisfied' to true;
+ add â€œAuto Processing Dependency Processing Reject - Prior school term submitted is shorter than on the award and would result in school attendance not being continuous. Please Review.â€? to the list of Exceptions ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

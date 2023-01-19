@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0226-B-difference between the end date of the last term on the award  GT 5m</name>
+  <uuid>abd55d47-aca4-4809-96cc-a7f52e9b6c2c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	 the last term in corp end date of 'the Child'  is not null and 
+     the last term in corp end date of 'the Child' plus 5 months is before
+     the course start date of the last term of 'the Child'
+ then
+ set the event date of 'PriorSchoolChild'  to the course start date of the last term of 'the Child' ; 
+   set 'PriorConditionSatisfied' to true ;   
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

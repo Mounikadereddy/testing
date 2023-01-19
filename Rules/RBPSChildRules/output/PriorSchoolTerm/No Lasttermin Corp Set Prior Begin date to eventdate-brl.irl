@@ -1,0 +1,17 @@
+package PriorSchoolTerm {
+   use PriorConditionSatisfied;
+   rule No_Lasttermin_Corp_Set_Prior_Begin_date_to_eventdate {
+      property ilog.rules.business_name = "No Lasttermin Corp Set Prior Begin date to eventdate";
+      property ilog.rules.package_name = "PriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((Child.lastTermInCorpBeginDate == null));
+      } then {
+         PriorSchoolChild.eventDate = Child.lastTerm.courseStudentStartDate;
+         PriorConditionSatisfied = true;
+         ?context.updateContext();
+      }
+   }
+}
+

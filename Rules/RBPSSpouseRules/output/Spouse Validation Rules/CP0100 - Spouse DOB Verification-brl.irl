@@ -1,0 +1,18 @@
+package Spouse_Validation_Rules {
+   use exceptionGenerated;
+   rule CP0100_$45$_Spouse_DOB_Verification {
+      property ilog.rules.business_name = "CP0100 - Spouse DOB Verification";
+      property ilog.rules.package_name = "Spouse Validation Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Spouse() from Spouse;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Spouse.birthDate)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Spouse.currentMarriage.endDate)));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - Spouse DOB was not provided. Please review.");
+         exceptionGenerated = true;
+         ?context.updateContext();
+      }
+   }
+}
+

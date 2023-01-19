@@ -1,0 +1,14 @@
+package Child_With_No_Event_Date_Rule {
+   rule Minor_to_School_Child_with_No_Event_Date {
+      property ilog.rules.business_name = "Minor to School Child with No Event Date";
+      property ilog.rules.package_name = "Child With No Event Date Rule";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Award() from MinorSchoolChildAward;
+         evaluate (((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(MinorSchoolChildAward)) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(MinorSchoolChildAward.dependencyStatusType)) && ((MinorSchoolChildAward.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.SCHOOL_CHILD))) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(MinorSchoolChildAward.eventDate))));
+      } then {
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - RBPS could not set the event date for minor to school child : " + Child.lastName) + ", ") + Child.firstName) + " Please review."));
+      }
+   }
+}
+

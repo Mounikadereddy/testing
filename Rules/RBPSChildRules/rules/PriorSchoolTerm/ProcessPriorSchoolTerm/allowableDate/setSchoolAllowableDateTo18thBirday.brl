@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>setSchoolAllowableDateTo18thBirday</name>
+  <uuid>08d42365-8f04-4083-b66f-9e8125b3934d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+  'School Allowable date' is not null and 
+   'childs 18th birth day'   is not null and 
+    'School Allowable date' is before 'childs 18th birth day' 
+  then
+  set 'School Allowable date' to 'childs 18th birth day' ;  
+  
+  ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,24 @@
+package School_Child_Verification {
+   use Completed;
+   rule CP0118_$45$_Child_School_Address_Verification {
+      property ilog.rules.business_name = "CP0118 - Child School Address Verification";
+      property ilog.rules.package_name = "School Child Verification";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((((((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.currentTerm)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.currentTerm.educationType))
+         	&& (Child.currentTerm.educationType.equals(gov.va.vba.rbps.coreframework.xom.EducationType.FULL_TIME)))
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.currentTerm.educationLevelType))
+         	&& (Child.currentTerm.educationLevelType.equals(gov.va.vba.rbps.coreframework.xom.EducationLevelType.POST_SECONDARY)))
+         	&& (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Child.currentTerm.school)
+         	|| ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.currentTerm.school)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Child.currentTerm.school.address))))));
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Child : " + Child.lastName) + ", ") + Child.firstName) + "'s current school address is not provided. Please review."));
+      }
+   }
+}
+

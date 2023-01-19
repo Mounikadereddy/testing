@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0100 - Child Last Name Verification</name>
+  <uuid>f02e2011-4a14-49c7-8eac-b0bb9fc3c36c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if 
+	 the last name of 'the Child' is not present 
+then 
+	add "Auto Dependency Processing Reject Reason - Child last name is not provided. Please review." to the list of Exceptions ;
+	set Completed  to true ; 
+	set the last name of 'the Child' to "Last Name Not Provided" ;   
+	]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

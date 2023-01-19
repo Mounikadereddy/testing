@@ -1,0 +1,313 @@
+      <ns2:processAwardDependentResponse xmlns:ns2="http://session.ejb.awards.benefits.vba.va.gov/">
+         <return>
+            <errorLevel>0</errorLevel>
+            <AwardSummary>
+               <errorLevel>0</errorLevel>
+               <awardEventSummary>
+                  <awardEventID>550962</awardEventID>
+                  <awardEventType>S</awardEventType>
+                  <awardGenerationDate>2011-12-13T15:08:28-06:00</awardGenerationDate>
+                  <awardOverrideIndicator>N</awardOverrideIndicator>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>829559</beneficiaryID>
+                  <concurrentRetirementDisabilityPayIndicator>N</concurrentRetirementDisabilityPayIndicator>
+                  <firstChangedDate>2010-07-01T00:00:00-05:00</firstChangedDate>
+                  <generationProcessType>G</generationProcessType>
+                  <processingStationLocationID>1911</processingStationLocationID>
+                  <ratingAwardSummaryID>95866</ratingAwardSummaryID>
+                  <stationOfJurisdictionLocationID>1911</stationOfJurisdictionLocationID>
+                  <totalNetAmountDue>480</totalNetAmountDue>
+                  <veteranID>829559</veteranID>
+                  <associatedClaimIDs>
+                     <awardEventID>550962</awardEventID>
+                     <claimID>9790123</claimID>
+                     <modifiedAction>I</modifiedAction>
+                     <modifiedBy>VETLCIST</modifiedBy>
+                     <modifiedDate>2011-12-13T15:08:30-06:00</modifiedDate>
+                     <modifiedLocation>317</modifiedLocation>
+                     <modifiedProcess>cp_awd_claim_pkg.do_create</modifiedProcess>
+                  </associatedClaimIDs>
+                  <authorizedDate>2011-12-13T15:08:34-06:00</authorizedDate>
+                  <awardLineSummary>
+                     <awardLineReportID>3120853</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2008-02-01T00:00:00-06:00</effectiveDate>
+                     <grossAmount>512</grossAmount>
+                     <netAmount>512</netAmount>
+                     <veteranID>829559</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>00</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Original Award</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>0</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>3120851</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2008-12-01T00:00:00-06:00</effectiveDate>
+                     <grossAmount>541</grossAmount>
+                     <netAmount>541</netAmount>
+                     <veteranID>829559</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>02</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Cost of Living Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>1</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>3120852</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2009-10-01T00:00:00-05:00</effectiveDate>
+                     <grossAmount>581</grossAmount>
+                     <netAmount>581</netAmount>
+                     <numberOfMinorChildren>1</numberOfMinorChildren>
+                     <veteranID>829559</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>2</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>3120850</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2010-07-01T00:00:00-05:00</effectiveDate>
+                     <grossAmount>644</grossAmount>
+                     <netAmount>644</netAmount>
+                     <numberOfMinorChildren>1</numberOfMinorChildren>
+                     <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                     <veteranID>829559</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>23</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Change in Spouse Status</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>3</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>3120855</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2011-08-01T00:00:00-05:00</effectiveDate>
+                     <grossAmount>740</grossAmount>
+                     <netAmount>740</netAmount>
+                     <numberOfMinorChildren>1</numberOfMinorChildren>
+                     <numberOfSchoolChildren>1</numberOfSchoolChildren>
+                     <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                     <veteranID>829559</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>22</awardLineReasonType>
+                        <awardLineReasonTypeDescription>School Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>4</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>3120856</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2012-07-01T00:00:00-05:00</effectiveDate>
+                     <grossAmount>644</grossAmount>
+                     <netAmount>644</netAmount>
+                     <numberOfMinorChildren>1</numberOfMinorChildren>
+                     <numberOfSchoolChildren>0</numberOfSchoolChildren>
+                     <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                     <veteranID>829559</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>22</awardLineReasonType>
+                        <awardLineReasonTypeDescription>School Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>5</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+                  <awardLineSummary>
+                     <awardLineReportID>3120854</awardLineReportID>
+                     <awardLineType>C</awardLineType>
+                     <awardOverrideIndicator>N</awardOverrideIndicator>
+                     <disabilityPercent>040</disabilityPercent>
+                     <effectiveDate>2019-09-01T00:00:00-05:00</effectiveDate>
+                     <grossAmount>601</grossAmount>
+                     <netAmount>601</netAmount>
+                     <numberOfMinorChildren>0</numberOfMinorChildren>
+                     <spouseIsPartOfAward>Spouse</spouseIsPartOfAward>
+                     <veteranID>829559</veteranID>
+                     <awardLineReasons>
+                        <awardLineReasonType>21</awardLineReasonType>
+                        <awardLineReasonTypeDescription>Minor Child Adjustment</awardLineReasonTypeDescription>
+                        <reasonSequenceNumber>6</reasonSequenceNumber>
+                     </awardLineReasons>
+                  </awardLineSummary>
+               </awardEventSummary>
+               <awardType>CPL</awardType>
+               <beneficiaryID>829559</beneficiaryID>
+               <dependencySummary>
+                  <awardEffectiveDate>2012-07-01T00:00:00-05:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>829559</beneficiaryID>
+                  <birthdayDate>1993-08-01T00:00:00-05:00</birthdayDate>
+                  <decisionDate>2011-12-13T15:08:28-06:00</decisionDate>
+                  <dependencyDecisionID>31877</dependencyDecisionID>
+                  <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2012-06-05T00:00:00-05:00</eventDate>
+                  <firstName>SCHOOL CHILD</firstName>
+                  <fullName>SCHOOL CHILD CISTONTEST</fullName>
+                  <lastName>CISTONTEST</lastName>
+                  <personID>32218920</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>272040089</socialSecurityNumber>
+                  <sortDate>2011-12-13T15:08:28-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>829559</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>5</alReasonSequenceNumber>
+                  <claimID>9790123</claimID>
+                  <grantDenial>Denial</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2010-07-01T00:00:00-05:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>829559</beneficiaryID>
+                  <birthdayDate>1976-08-01T00:00:00-05:00</birthdayDate>
+                  <decisionDate>2011-12-13T14:28:27-06:00</decisionDate>
+                  <dependencyDecisionID>31868</dependencyDecisionID>
+                  <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>SP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                  <eventDate>2010-06-25T00:00:00-05:00</eventDate>
+                  <firstName>SPOUSE GIRAFFE</firstName>
+                  <fullName>SPOUSE GIRAFFE CISTONTEST</fullName>
+                  <lastName>CISTONTEST</lastName>
+                  <personID>32218917</personID>
+                  <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                  <socialSecurityNumber>272020089</socialSecurityNumber>
+                  <sortDate>2011-12-13T14:28:27-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>829559</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>3</alReasonSequenceNumber>
+                  <grantDenial>Grant</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2009-10-01T00:00:00-05:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>829559</beneficiaryID>
+                  <birthdayDate>2001-09-01T00:00:00-05:00</birthdayDate>
+                  <decisionDate>2011-12-13T14:28:25-06:00</decisionDate>
+                  <dependencyDecisionID>31866</dependencyDecisionID>
+                  <dependencyDecisionType>EMC</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>MC</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                  <eventDate>2009-09-01T00:00:00-05:00</eventDate>
+                  <firstName>MINOR CHILD</firstName>
+                  <fullName>MINOR CHILD CISTONTEST</fullName>
+                  <lastName>CISTONTEST</lastName>
+                  <personID>32218918</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>272030089</socialSecurityNumber>
+                  <sortDate>2011-12-13T14:28:25-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>829559</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>2</alReasonSequenceNumber>
+                  <grantDenial>Grant</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2019-09-01T00:00:00-05:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>829559</beneficiaryID>
+                  <birthdayDate>2001-09-01T00:00:00-05:00</birthdayDate>
+                  <decisionDate>2011-12-13T14:21:28-06:00</decisionDate>
+                  <dependencyDecisionID>31863</dependencyDecisionID>
+                  <dependencyDecisionType>T18</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2019-09-01T00:00:00-05:00</eventDate>
+                  <firstName>MINOR CHILD</firstName>
+                  <fullName>MINOR CHILD CISTONTEST</fullName>
+                  <lastName>CISTONTEST</lastName>
+                  <personID>32218918</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>272030089</socialSecurityNumber>
+                  <sortDate>2011-12-13T14:21:28-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>829559</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>6</alReasonSequenceNumber>
+                  <grantDenial>Denial</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2011-08-01T00:00:00-05:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>829559</beneficiaryID>
+                  <birthdayDate>1993-08-01T00:00:00-05:00</birthdayDate>
+                  <decisionDate>2011-12-13T15:08:27-06:00</decisionDate>
+                  <dependencyDecisionID>31876</dependencyDecisionID>
+                  <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>SCHCHD</dependencyStatusType>
+                  <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                  <eventDate>2011-08-01T00:00:00-05:00</eventDate>
+                  <firstName>SCHOOL CHILD</firstName>
+                  <fullName>SCHOOL CHILD CISTONTEST</fullName>
+                  <lastName>CISTONTEST</lastName>
+                  <personID>32218920</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>272040089</socialSecurityNumber>
+                  <sortDate>2011-12-13T15:08:27-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>829559</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <alReasonSequenceNumber>4</alReasonSequenceNumber>
+                  <claimID>9790123</claimID>
+                  <grantDenial>Grant</grantDenial>
+               </dependencySummary>
+               <dependencySummary>
+                  <awardEffectiveDate>2011-02-01T00:00:00-06:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>829559</beneficiaryID>
+                  <birthdayDate>1993-08-01T00:00:00-05:00</birthdayDate>
+                  <decisionDate>2011-12-13T15:08:26-06:00</decisionDate>
+                  <dependencyDecisionID>31875</dependencyDecisionID>
+                  <dependencyDecisionType>RATNHEL</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Rated Not Helpless</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2011-01-25T00:00:00-06:00</eventDate>
+                  <firstName>SCHOOL CHILD</firstName>
+                  <fullName>SCHOOL CHILD CISTONTEST</fullName>
+                  <lastName>CISTONTEST</lastName>
+                  <personID>32218920</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>272040089</socialSecurityNumber>
+                  <sortDate>2011-12-13T15:08:26-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>829559</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+                  <claimID>9790123</claimID>
+                  <grantDenial>Denial</grantDenial>
+               </dependencySummary>
+               <veteranID>829559</veteranID>
+            </AwardSummary>
+            <DocumentSummary>
+               <errorLevel>0</errorLevel>
+               <documentList>
+                  <awardEventID>550962</awardEventID>
+                  <documentType>AWDDOC</documentType>
+                  <letterText>JVBERi0xLjUNCjUgMCBvYmoNCjw8L1R5cGUgL1BhZ2UvUGFyZW50IDMgMCBSL0NvbnRlbnRzIDYgMCBSL01lZGlhQm94IFswIDAgNjEyIDc5Ml0vR3JvdXAgPDwvVHlwZS9Hcm91cC9TL1RyYW5zcGFyZW5jeS9DUy9EZXZpY2VSR0I+Pj4+DQplbmRvYmoNCjYgMCBvYmoNCjw8L0xlbmd0aCAxNyAwIFIvRmlsdGVyIC9GbGF0ZURlY29kZT4+DQpzdGFydHhyZWYNCjM1Njk5DQolJUVPRg0K</letterText>
+               </documentList>
+            </DocumentSummary>
+         </return>
+      </ns2:processAwardDependentResponse>

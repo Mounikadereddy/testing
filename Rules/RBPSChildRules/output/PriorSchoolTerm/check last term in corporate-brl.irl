@@ -1,0 +1,17 @@
+package PriorSchoolTerm {
+   use ConditionSatisfied;
+   rule check_last_term_in_corporate {
+      property ilog.rules.business_name = "check last term in corporate";
+      property ilog.rules.package_name = "PriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((Child.lastTermInCorpBeginDate != null
+         	&& Child.lastTermInCorpEndDate != null));
+      } then {
+         ConditionSatisfied = true;
+         ?context.updateContext();
+      }
+   }
+}
+

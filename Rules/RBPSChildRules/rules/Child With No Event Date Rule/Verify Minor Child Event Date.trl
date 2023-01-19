@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.irl:IRLRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.irl="http://ilog.rules.studio/model/irl.ecore">
+  <name>Verify Minor Child Event Date</name>
+  <uuid>4a42831c-035f-431f-85f5-1176ddb4b4db</uuid>
+  <definition><![CDATA[  when {
+         gov.va.vba.rbps.coreframework.xom.Award() from Award;
+         evaluate ((((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award.dependencyStatusType)
+         	&& (Award.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.MINOR_CHILD)))
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award.eventDate))
+         	&& Award.eventDate.compareTo(Child18BirthDay) >=0));
+      } then {
+         Award =  null;
+      }]]></definition>
+  <imports><![CDATA[use Child18BirthDay;]]></imports>
+</ilog.rules.studio.model.irl:IRLRule>

@@ -1,0 +1,14 @@
+package Veteran_Rules {
+   rule CP0008_$45$_Is_Veteran_Alive {
+      property ilog.rules.business_name = "CP0008 - Is Veteran Alive";
+      property ilog.rules.package_name = "Veteran Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Veteran() from Veteran;
+         evaluate (!(Veteran.alive));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - Veteran is not living. Please review.");
+      }
+   }
+}
+

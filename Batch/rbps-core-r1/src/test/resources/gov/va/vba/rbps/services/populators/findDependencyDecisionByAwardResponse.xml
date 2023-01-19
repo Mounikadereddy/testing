@@ -1,0 +1,284 @@
+      <ns2:findDependencyDecisionByAwardResponse xmlns:ns2="http://session.ejb.awards.benefits.vba.va.gov/">
+         <return>
+            <DependencyDecision>
+               <DependencyDecision>
+                  <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>32218612</beneficiaryID>
+                  <birthdayDate>1993-01-01T00:00:00-06:00</birthdayDate>
+                  <decisionDate>2012-01-10T12:59:42-06:00</decisionDate>
+                  <dependencyDecisionID>32303</dependencyDecisionID>
+                  <dependencyDecisionType>T18</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2011-01-01T00:00:00-06:00</eventDate>
+                  <firstName>thirdchild</firstName>
+                  <fullName>thirdchild rbps</fullName>
+                  <lastName>rbps</lastName>
+                  <modifiedAction>I</modifiedAction>
+                  <modifiedBy>VETJREDD</modifiedBy>
+                  <modifiedDate>2012-01-10T12:59:38-06:00</modifiedDate>
+                  <modifiedLocation>317</modifiedLocation>
+                  <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                  <personID>32220660</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>111207401</socialSecurityNumber>
+                  <sortDate>2012-01-10T12:59:42-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>32218612</veteranID>
+               </DependencyDecision>
+               <DependencyDecision>
+                  <awardEffectiveDate>1995-02-01T00:00:00-06:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>32218612</beneficiaryID>
+                  <birthdayDate>1993-01-01T00:00:00-06:00</birthdayDate>
+                  <decisionDate>2012-01-10T12:59:40-06:00</decisionDate>
+                  <dependencyDecisionID>32301</dependencyDecisionID>
+                  <dependencyDecisionType>EMC</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>MC</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                  <eventDate>1995-01-01T00:00:00-06:00</eventDate>
+                  <firstName>thirdchild</firstName>
+                  <fullName>thirdchild rbps</fullName>
+                  <lastName>rbps</lastName>
+                  <modifiedAction>I</modifiedAction>
+                  <modifiedBy>VETJREDD</modifiedBy>
+                  <modifiedDate>2012-01-10T12:59:38-06:00</modifiedDate>
+                  <modifiedLocation>317</modifiedLocation>
+                  <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                  <personID>32220660</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>111207401</socialSecurityNumber>
+                  <sortDate>2012-01-10T12:59:40-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>32218612</veteranID>
+               </DependencyDecision>
+               <DependencyDecision>
+                  <awardEffectiveDate>2011-03-01T00:00:00-06:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>32218612</beneficiaryID>
+                  <birthdayDate>1993-01-01T00:00:00-06:00</birthdayDate>
+                  <decisionDate>2012-01-11T12:59:43-06:00</decisionDate>
+                  <dependencyDecisionID>32304</dependencyDecisionID>
+                  <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>SCHCHD</dependencyStatusType>
+                  <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                  <eventDate>2011-02-10T00:00:00-06:00</eventDate>
+                  <firstName>thirdchild</firstName>
+                  <fullName>thirdchild rbps</fullName>
+                  <lastName>rbps</lastName>
+                  <modifiedAction>I</modifiedAction>
+                  <modifiedBy>VETJREDD</modifiedBy>
+                  <modifiedDate>2012-01-10T12:59:38-06:00</modifiedDate>
+                  <modifiedLocation>317</modifiedLocation>
+                  <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                  <personID>32220660</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>111207401</socialSecurityNumber>
+                  <sortDate>2012-01-10T12:59:43-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>32218612</veteranID>
+               </DependencyDecision>
+               <DependencyDecision>
+                  <awardEffectiveDate>2011-02-10T00:00:00-06:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>32218612</beneficiaryID>
+                  <birthdayDate>1993-02-10T00:00:00-06:00</birthdayDate>
+                  <decisionDate>2012-01-10T12:59:39-06:00</decisionDate>
+                  <dependencyDecisionID>32300</dependencyDecisionID>
+                  <dependencyDecisionType>T18</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2011-02-10T00:00:00-06:00</eventDate>
+                  <firstName>CHILD</firstName>
+                  <fullName>CHILD RBPSTEST</fullName>
+                  <lastName>RBPSTEST</lastName>
+                  <modifiedAction>I</modifiedAction>
+                  <modifiedBy>VETJREDD</modifiedBy>
+                  <modifiedDate>2012-01-10T12:59:38-06:00</modifiedDate>
+                  <modifiedLocation>317</modifiedLocation>
+                  <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                  <personID>32218613</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>111207101</socialSecurityNumber>
+                  <sortDate>2012-01-10T12:59:39-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>32218612</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+               </DependencyDecision>
+               <DependencyDecision>
+                  <awardEffectiveDate>2019-08-01T00:00:00-05:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>32218612</beneficiaryID>
+                  <birthdayDate>2001-08-01T00:00:00-05:00</birthdayDate>
+                  <decisionDate>2012-01-13T12:58:47-06:00</decisionDate>
+                  <dependencyDecisionID>32449</dependencyDecisionID>
+                  <dependencyDecisionType>T18</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2019-08-01T00:00:00-05:00</eventDate>
+                  <firstName>MINOR CHILD</firstName>
+                  <fullName>MINOR CHILD CISTONTEST</fullName>
+                  <lastName>CISTONTEST</lastName>
+                  <modifiedAction>I</modifiedAction>
+                  <modifiedBy>VETJREDD</modifiedBy>
+                  <modifiedDate>2012-01-13T12:58:48-06:00</modifiedDate>
+                  <modifiedLocation>317</modifiedLocation>
+                  <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                  <personID>32218764</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>111207301</socialSecurityNumber>
+                  <sortDate>2012-01-13T12:58:47-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>32218612</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+               </DependencyDecision>
+               <DependencyDecision>
+                  <awardEffectiveDate>2000-02-01T00:00:00-06:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>32218612</beneficiaryID>
+                  <birthdayDate>1993-02-10T00:00:00-06:00</birthdayDate>
+                  <decisionDate>2012-01-10T12:59:38-06:00</decisionDate>
+                  <dependencyDecisionID>32299</dependencyDecisionID>
+                  <dependencyDecisionType>EMC</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>MC</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                  <eventDate>2000-01-01T00:00:00-06:00</eventDate>
+                  <firstName>CHILD</firstName>
+                  <fullName>CHILD RBPSTEST</fullName>
+                  <lastName>RBPSTEST</lastName>
+                  <modifiedAction>I</modifiedAction>
+                  <modifiedBy>VETJREDD</modifiedBy>
+                  <modifiedDate>2012-01-10T12:59:38-06:00</modifiedDate>
+                  <modifiedLocation>317</modifiedLocation>
+                  <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                  <personID>32218613</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>111207101</socialSecurityNumber>
+                  <sortDate>2012-01-10T12:59:38-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>32218612</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+               </DependencyDecision>
+               <DependencyDecision>
+                  <awardEffectiveDate>2011-11-01T00:00:00-05:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>32218612</beneficiaryID>
+                  <birthdayDate>1993-01-01T00:00:00-06:00</birthdayDate>
+                  <decisionDate>2012-01-12T12:59:44-06:00</decisionDate>
+                  <dependencyDecisionID>32305</dependencyDecisionID>
+                  <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2011-10-01T00:00:00-05:00</eventDate>
+                  <firstName>thirdchild</firstName>
+                  <fullName>thirdchild rbps</fullName>
+                  <lastName>rbps</lastName>
+                  <modifiedAction>I</modifiedAction>
+                  <modifiedBy>VETJREDD</modifiedBy>
+                  <modifiedDate>2012-01-10T12:59:38-06:00</modifiedDate>
+                  <modifiedLocation>317</modifiedLocation>
+                  <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                  <personID>32220660</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>111207401</socialSecurityNumber>
+                  <sortDate>2012-01-10T12:59:44-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>32218612</veteranID>
+               </DependencyDecision>
+               <DependencyDecision>
+                  <awardEffectiveDate>2011-09-15T00:00:00-05:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>32218612</beneficiaryID>
+                  <birthdayDate>1993-02-10T00:00:00-06:00</birthdayDate>
+                  <decisionDate>2012-01-10T10:06:47-06:00</decisionDate>
+                  <dependencyDecisionID>32298</dependencyDecisionID>
+                  <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>SCHCHD</dependencyStatusType>
+                  <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                  <eventDate>2011-09-15T00:00:00-05:00</eventDate>
+                  <firstName>CHILD</firstName>
+                  <fullName>CHILD RBPSTEST</fullName>
+                  <lastName>RBPSTEST</lastName>
+                  <modifiedAction>I</modifiedAction>
+                  <modifiedBy>VETJREDD</modifiedBy>
+                  <modifiedDate>2012-01-10T10:06:47-06:00</modifiedDate>
+                  <modifiedLocation>317</modifiedLocation>
+                  <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                  <personID>32218613</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>111207101</socialSecurityNumber>
+                  <sortDate>2012-01-10T10:06:47-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>32218612</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+               </DependencyDecision>
+               <DependencyDecision>
+                  <awardEffectiveDate>2012-02-01T00:00:00-06:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>32218612</beneficiaryID>
+                  <birthdayDate>1993-02-10T00:00:00-06:00</birthdayDate>
+                  <decisionDate>2012-01-10T10:04:30-06:00</decisionDate>
+                  <dependencyDecisionID>32297</dependencyDecisionID>
+                  <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2012-01-01T00:00:00-06:00</eventDate>
+                  <firstName>CHILD</firstName>
+                  <fullName>CHILD RBPSTEST</fullName>
+                  <lastName>RBPSTEST</lastName>
+                  <modifiedAction>I</modifiedAction>
+                  <modifiedBy>VETJREDD</modifiedBy>
+                  <modifiedDate>2012-01-10T10:04:29-06:00</modifiedDate>
+                  <modifiedLocation>317</modifiedLocation>
+                  <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                  <personID>32218613</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>111207101</socialSecurityNumber>
+                  <sortDate>2012-01-10T10:04:30-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>32218612</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+               </DependencyDecision>
+               <DependencyDecision>
+                  <awardEffectiveDate>2002-04-01T00:00:00-06:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>32218612</beneficiaryID>
+                  <birthdayDate>2001-08-01T00:00:00-05:00</birthdayDate>
+                  <decisionDate>2012-01-13T12:58:48-06:00</decisionDate>
+                  <dependencyDecisionID>32450</dependencyDecisionID>
+                  <dependencyDecisionType>EMC</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>MC</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                  <eventDate>2002-01-01T00:00:00-06:00</eventDate>
+                  <firstName>MINOR CHILD</firstName>
+                  <fullName>MINOR CHILD CISTONTEST</fullName>
+                  <lastName>CISTONTEST</lastName>
+                  <modifiedAction>I</modifiedAction>
+                  <modifiedBy>VETJREDD</modifiedBy>
+                  <modifiedDate>2012-01-13T12:58:48-06:00</modifiedDate>
+                  <modifiedLocation>317</modifiedLocation>
+                  <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                  <personID>32218764</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>111207301</socialSecurityNumber>
+                  <sortDate>2012-01-13T12:58:48-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>32218612</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+               </DependencyDecision>
+            </DependencyDecision>
+            <errorLevel>0</errorLevel>
+            <Errors/>
+         </return>
+      </ns2:findDependencyDecisionByAwardResponse>

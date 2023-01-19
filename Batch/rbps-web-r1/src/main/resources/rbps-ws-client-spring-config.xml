@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:jee="http://www.springframework.org/schema/jee"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:wss="http://jax-ws.dev.java.net/spring/servlet"
+    xmlns:ws="http://jax-ws.dev.java.net/spring/core"
+
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/jee
+        http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+        http://jax-ws.dev.java.net/spring/servlet
+        http://jax-ws.dev.java.net/spring/servlet.xsd
+        http://jax-ws.dev.java.net/spring/core
+        http://jax-ws.dev.java.net/spring/core.xsd
+        http://jax-ws.dev.java.net/spring/servlet
+        http://jax-ws.dev.java.net/spring/servlet.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<!-- WEB SERVICE CLIENTS -->
+
+    <bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory" />
+
+
+
+    <bean id="loggingInterceptor"
+          class="gov.va.vba.rbps.services.ws.client.util.LoggingInterceptor" >
+
+	</bean>
+	
+    <!-- 1. AWARDS WEB SERVICES -->
+
+
+
+    <!--  START findAwardState -->
+    <bean id="awardsFindAwardStateWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.FindAwardStateWSHandler"
+          autowire="byName"
+          scope="prototype" >
+
+        <property name="webServiceUri"          value="${rbps.ws.awards.uri.findAwardState}" />
+        <property name="webServiceTemplate"     ref="findAwardStateWebServiceTemplate" />
+    </bean>
+
+
+    <bean id="findAwardStateWebServiceTemplate" 
+          class="org.springframework.ws.client.core.WebServiceTemplate">
+          
+        <constructor-arg ref="messageFactory" />
+        
+        <property name="marshaller"             ref="findAwardStateMarshaller" />
+        <property name="unmarshaller"           ref="findAwardStateMarshaller" />
+        
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="findAwardStateMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.state.FindAwardState</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.state.FindAwardStateResponse</value>
+            </list>
+        </property>
+    </bean>
+    <!--  END findAwardState -->
+
+    <!--  1.2 START findMilitaryPay -->
+    <bean id="awardsFindMilitaryPayWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.FindMilitaryPayWSHandler"
+          autowire="byName"
+          scope="prototype" >
+       <!--  <property name="repository" ref="repository" />  -->
+        <property name="webServiceTemplate" ref="findMilitaryPayWebServiceTemplate" />
+        <property name="findMilitaryPayUri" value="${rbps.ws.awards.uri.findMilitaryPay}" />
+    </bean>
+
+    <bean id="findMilitaryPayWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="findMilitaryPayMarshaller" />
+        <property name="unmarshaller" ref="findMilitaryPayMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="findMilitaryPayMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.militarypay.FindMilitaryPay</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.militarypay.FindMilitaryPayResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.militarypay.ReadMilitaryPayServiceReturnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.militarypay.DischargePayVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.militarypay.RetirementPayVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.militarypay.VnErrorsVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.militarypay.VoBase</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.militarypay.MessageVO</value>
+            </list>
+        </property>
+    </bean>
+    <!--  END findMilitaryPay -->
+
+
+    <!--  1.3 START findDependenOnAward -->
+    <bean id="awardsFindDependentOnAwardWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.FindDependentOnAwardWSHandler"
+          autowire="byName"
+          scope="prototype" >
+
+        <property name="webServiceTemplate"         ref="findDependentOnAwardWebServiceTemplate" />
+        <property name="findDependentOnAwardUri"    value="${rbps.ws.awards.uri.finddependentonaward}" />
+         <!--  <property name="repository" ref="repository" />  -->
+    </bean>
+
+    <bean id="findDependentOnAwardWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="findDependentOnAwardMarshaller" />
+        <property name="unmarshaller" ref="findDependentOnAwardMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="findDependentOnAwardMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dep.FindDependentOnAward</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dep.FindDependentOnAwardResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dep.DependentOnAwardServiceReturnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dep.VoReturnBase</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dep.MessageVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dep.VoBase</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dep.DependencyDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dep.VnErrorsVO</value>
+            </list>
+        </property>
+    </bean>
+    <!--  End findDependenonAward -->
+
+
+    <bean id="ratingComparisonWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.share.RatingComparisonWSHandler"
+          autowire="byName"
+          scope="prototype" >
+
+        <!--  <property name="repository" ref="repository" />  -->
+        <property name="webServiceTemplate"         ref="ratingComparisonWebServiceTemplate" />
+        <property name="ratingComparisonUri"        value="${rbps.ws.share.uri.ratingComparison}" />
+    </bean>
+
+    <bean id="ratingComparisonWebServiceTemplate"
+          class="org.springframework.ws.client.core.WebServiceTemplate">
+
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller"                 ref="ratingComparisonMarshaller" />
+        <property name="unmarshaller"               ref="ratingComparisonMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="ratingComparisonMarshaller"
+          class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.CompareByDateRange</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.CompareByDateRangeResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.RatingComparisonServiceReturnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.VoReturnBase</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.MessageVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.VoBase</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.CombinedPercentVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.RatingDetailsVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.RbaPrfil</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <!--  1.1 START sojSignature -->
+    <bean id="sojSignatureWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.share.SojSignatureWSHandler"
+          autowire="byName"
+          scope="prototype" >
+
+        <property name="webServiceTemplate"         ref="sojSignatureWebServiceTemplate" />
+        <property name="webServiceUri"              value="${rbps.ws.share.uri.sojSignature}" />
+    </bean>
+
+
+    <bean id="sojSignatureWebServiceTemplate" 
+          class="org.springframework.ws.client.core.WebServiceTemplate">
+          
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller"                 ref="sojSignatureMarshaller" />
+        <property name="unmarshaller"               ref="sojSignatureMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="sojSignatureMarshaller" 
+          class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+          
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.sojSignature.FindSignaturesByStationNumber</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.sojSignature.FindSignaturesByStationNumberResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.sojSignature.StnPrfilDetailDTO</value>
+            </list>
+        </property>
+    </bean>
+    <!--  END sojSignature -->
+
+
+
+
+    <!--  1.4 START awardsProcessAwardDependent -->
+    <bean id="awardsProcessAwardDependentWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.ProcessAwardDependentWSHandler"
+          autowire="byName"
+          scope="prototype" >
+
+        <property name="webServiceTemplate"                 ref="processAwardDependentWebServiceTemplate" />
+        <property name="processAwardDependentUri"           value="${rbps.ws.awards.uri.amendawarddependency}" />
+        <property name="processAwardDependentSoTimeout"     value="${rbps.ws.awards.socket.timeout.amendawarddependency}" />
+        <property name="processAwardDependentRequestFilter" ref="processAwardDependentRequestFilter" />
+    </bean>
+
+    <bean id="processAwardDependentWebServiceTemplate" 
+          class="org.springframework.ws.client.core.WebServiceTemplate">
+          
+        <constructor-arg ref="messageFactory" />
+        
+        <property name="marshaller"         ref="processAwardDependentMarshaller" />
+        <property name="unmarshaller"       ref="processAwardDependentMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="processAwardDependentMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+        <list>
+            <!-- all these are not necessary filter and test OG -->
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.ProcessAwardDependent</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.ProcessAwardDependentResponse</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AmendAwardDependencyInputVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AwardEventAuthVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AwardEventVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AwardReasonSeqNbrVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.DependencyDecisionVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.DependencyDecisionResultVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AwardLineSummaryVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.BenefitsExceptionBean</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.FaultInfoBean</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AwardLineVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.VoBase</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.DocumentVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AwardReasonVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AwardLineRecipientVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AwardSummaryVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AwardLineVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AwardEventVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.MessageVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AwardClaimRelationshipVO</value>
+             <!-- <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.DocumentReturnVO</value> -->
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AmendDependencyDecisionVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.AmendAwardServiceReturnVO</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.VoReturnBase</value>
+            </list>
+        </property>
+    </bean>
+      <!-- END findDependentOnAward -->
+
+    <!--  1.4 START updateBnftClaimLocationToPMC -->
+    <bean id="updateBnftClaimLocationToPMCWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.UpdateBnftClaimLocationToPMCWSHandler"
+          autowire="byName"
+          scope="prototype" >
+
+        <property name="webServiceTemplate"                 ref="updateBnftClaimLocationToPMCWebServiceTemplate" />
+        <property name="webServiceUri"           value="${rbps.ws.awards.uri.amendawarddependency}" />
+    </bean>
+
+    <bean id="updateBnftClaimLocationToPMCWebServiceTemplate" 
+          class="org.springframework.ws.client.core.WebServiceTemplate">
+          
+        <constructor-arg ref="messageFactory" />
+        
+        <property name="marshaller"         ref="updateBnftClaimLocationToPMCMarshaller" />
+        <property name="unmarshaller"       ref="updateBnftClaimLocationToPMCMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="updateBnftClaimLocationToPMCMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+        <list>
+            <!-- all these are not necessary filter and test OG -->
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.UpdateBnftClaimLocationToPMC</value>
+            <value>gov.va.vba.rbps.services.ws.client.mapping.awards.amend.UpdateBnftClaimLocationToPMCResponse</value>
+            </list>
+        </property>
+    </bean>
+      <!-- END updateBnftClaimLocationToPMC -->
+
+    <bean id="findDependencyDecisionByAwardWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.FindDependencyDecisionByAwardWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" ref="findDependencyDecisionByAwardTemplate" />
+        <property name="webServiceUri"      value="${rbps.ws.awards.uri.findDependencyDecision}" />
+    </bean>
+
+    <bean id="findDependencyDecisionByAwardTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="findDependencyDecisionByAwardMarshaller" />
+        <property name="unmarshaller" ref="findDependencyDecisionByAwardMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+     </bean>
+
+    <bean id="findDependencyDecisionByAwardMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dependencydecision.FindDependencyDecisionByAward</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dependencydecision.DependencyDecisionReturnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dependencydecision.FindDependencyDecisionByAwardResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dependencydecision.DependencyDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dependencydecision.VnErrorsVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dependencydecision.VoBase</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.dependencydecision.VoBase</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- END AWARDS WEB SERVICES -->
+
+
+    <!--  START findPOA -->
+    <bean id="findPOAWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.share.FindPOAWSHandler"
+          autowire="byName"
+          scope="prototype" >
+          
+        <property name="webServiceTemplate"     ref="findPOAWebServiceTemplate" />
+        <property name="webServiceUri"          value="${rbps.ws.share.uri.familyTree}" />
+    </bean>
+
+    <bean id="findPOAWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="findPOAMarshaller" />
+        <property name="unmarshaller" ref="findPOAMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="findPOAMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.FindPOA</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.FindPOAResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.ShrinqfPersonOrg</value>
+            </list>
+        </property>
+    </bean>
+    <!--  END findPOA -->
+
+    <!--  START findDependents -->
+    <bean id="findDependentsWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.share.FindDependentsWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" ref="findDependentsWebServiceTemplate" />
+       <!--  <property name="repository" ref="repository" />  -->
+        <property name="findDependentsUri"  value="${rbps.ws.share.uri.familyTree}" />
+    </bean>
+
+    <bean id="findDependentsWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="findDependentsMarshaller" />
+        <property name="unmarshaller" ref="findDependentsMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="findDependentsMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.FindDependents</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.FindDependentsResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.UserContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.RequestContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.ExternalIdentity</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.UserProfile</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.Shrinq3Record</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.Shrinq3Person</value>
+            </list>
+        </property>
+    </bean>
+    <!--  END findDependents -->
+
+    <!--  START findFlashes -->
+    <bean id="findFlashesWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.share.FindFlashesWSHandler"
+          autowire="byName"
+          scope="prototype" >
+          
+        <property name="webServiceUri"          value="${rbps.ws.share.uri.familyTree}" />
+        <property name="webServiceTemplate"     ref="findFlashesWebServiceTemplate" />
+    </bean>
+
+    <bean id="findFlashesWebServiceTemplate" 
+          class="org.springframework.ws.client.core.WebServiceTemplate">
+          
+        <constructor-arg ref="messageFactory" />
+        
+        <property name="marshaller"             ref="findFlashesMarshaller" />
+        <property name="unmarshaller"           ref="findFlashesMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="findFlashesMarshaller" 
+          class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+          
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.FindFlashes</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.UserContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.RequestContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.ExternalIdentity</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.UserProfile</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.FindFlashesResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.FlashInquiryRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.Flash</value>
+            </list>
+        </property>
+    </bean>
+    <!--  END findFlashes -->
+
+    <!--  START updateBenefitClaimDependents -->
+    <bean id="updateBenefitClaimDependentsWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.share.UpdateBenefitClaimDependentsWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" ref="updateBenefitClaimDependentsWebServiceTemplate" />
+        <!--  <property name="repository" ref="repository" />  -->
+        <property name="updateBenefitClaimDependentsUri"  value="${rbps.ws.vonapp.uri.updateBenefitClaim}" />
+    </bean>
+
+    <bean id="updateBenefitClaimDependentsWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="updateBenefitClaimDependentsMarshaller" />
+        <property name="unmarshaller" ref="updateBenefitClaimDependentsMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="updateBenefitClaimDependentsMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UpdateBenefitClaimDependents</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UpdateBenefitClaimDependentsResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.BenefitClaimRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcBenefitClaimRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcLifeCycleRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcParticipantRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSuspenceRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcLifeCycle</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcParticipantRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSelection</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSuspence</value>
+            </list>
+        </property>
+    </bean>
+    <!--  END updateBenefitClaimDependents -->
+
+
+
+  <!--  START FindRegionalOfficesData -->
+    <bean id="findRegionalOfficesWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.share.FindRegionalOfficesWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate"     ref="findStationsWebServiceTemplate" />
+        <!--  <property name="repository" ref="repository" />  -->
+        <property name="webServiceUri"          value="${rbps.ws.share.uri.sojSignature}" />
+    </bean>
+
+    <bean id="findStationsWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller"             ref="findStationsMarshaller" />
+        <property name="unmarshaller"           ref="findStationsMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="findStationsMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.sojSignature.FindRegionalOffices</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.sojSignature.FindRegionalOfficesResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.sojSignature.StnDTO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.sojSignature.FindStations</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.sojSignature.FindStationsResponse</value>
+            </list>
+        </property>
+    </bean>
+    <!--  END FindRegionalOfficesData -->
+
+   <!--  START FindStationAddress -->
+    <bean id="findStationAddressWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.share.FindStationAddressWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate"     ref="findStationAddressWebServiceTemplate" />
+        <!--  <property name="repository" ref="repository" />  -->
+        <property name="findStationsDataUri"         value="${rbps.ws.share.uri.findStationsData}" />
+    </bean>
+
+    <bean id="findStationAddressWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller"             ref="findStationAddressMarshaller" />
+        <property name="unmarshaller"           ref="findStationAddressMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="findStationAddressMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.findstations.FindStationAddress</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.findstations.FindStationAddressResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.findstations.Station</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--  END FindStationAddress -->
+
+
+    <!--  START findBenefitClaim  
+    EK - Can't be singleton and no more repo in object-->
+    <bean id="findBenefitClaimWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.vonapp.FindBenefitClaimWSHandler"
+          autowire="byName"
+           scope="prototype">
+
+        <property name="webServiceTemplate"             ref="findBenefitClaimWebServiceTemplate" />
+        <!--  no more repo 
+        	<property name="repository"                     ref="repository" />
+        -->
+        <property name="findBenefitClaimUri"            value="${rbps.ws.vonapp.uri.updateBenefitClaim}" />
+    </bean>
+
+    <bean id="findBenefitClaimWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+
+        <property name="marshaller"         ref="findBenefitClaimMarshaller" />
+        <property name="unmarshaller"       ref="findBenefitClaimMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="findBenefitClaimMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.FindBenefitClaim</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UserContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.RequestContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ExternalIdentity</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UserProfile</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.FindBenefitClaimResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.BenefitClaimRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcBenefitClaimRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcLifeCycleRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcParticipantRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSuspenceRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcLifeCycle</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSelection</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSuspence</value>
+            </list>
+        </property>
+    </bean>
+    <!--  END updateBenefitClaimDependents -->
+
+    <bean id="webServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="marshaller" />
+        <property name="unmarshaller" ref="marshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.FindBenefitClaim</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UserContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.RequestContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ExternalIdentity</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UserProfile</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.FindBenefitClaimResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.BenefitClaimRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcBenefitClaimRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcLifeCycleRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcParticipantRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSuspenceRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcLifeCycle</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSelection</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSuspence</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="vnpProcUpdateWSHandler"
+        class="gov.va.vba.rbps.services.ws.client.handler.vonapp.VnpProcUpdateWSHandler"
+        autowire="byName"
+        scope="prototype">
+
+        <property name="webServiceTemplate" ref="vnpProcUpdateWebServiceTemplate" />
+        <property name="updateVnpProcUri" value="${rbps.ws.vonapp.uri.updateproc}" />
+    </bean>
+
+    <bean id="vnpProcUpdateWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="vnpProcUpdateMarshaller" />
+        <property name="unmarshaller" ref="vnpProcUpdateMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="vnpProcUpdateMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimstatus.VnpProcUpdate</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimstatus.VnpProcDTO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimstatus.VnpProcUpdateResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimstatus.VnpProcDTO</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="userInformationWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.vonapp.UserInformationWSHandler"
+          autowire="byName"
+          scope="prototype">
+
+        <property name="webServiceUri"          value="${rbps.ws.vonapp.uri.userInformation}" />
+        <property name="webServiceTemplate"     ref="userInformationWebServiceTemplate" />
+    </bean>
+ 
+
+    <bean id="userInformationWebServiceTemplate" 
+          class="org.springframework.ws.client.core.WebServiceTemplate">
+          
+        <constructor-arg ref="messageFactory" />
+        
+        <property name="marshaller"         ref="userInformationMarshaller" />
+        <property name="unmarshaller"       ref="userInformationMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="userInformationMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.FindByDataSupplied</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.UserInformationInput</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.FindByDataSuppliedResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.UserInformationDTO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.UserInformation</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpPtcpntAddrs</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpBnftClaim</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpChildSchool</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpChildStudnt</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpPtcpnt</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpPerson</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpProcForm</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpProc</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpProcTempData</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpPtcpntPhone</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpPtcpntRlnshp</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.VnpTempDataRfrnc</value>
+            </list>
+        </property>
+    </bean>
+<bean id="userInformationClaimWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.vonapp.UserInformationClaimWSHandler"
+          autowire="byName"
+          scope="prototype">
+
+        <property name="webServiceUri"          value="${rbps.ws.vonapp.uri.userInformation}" />
+        <property name="webServiceTemplate"     ref="userInformationClaimWebServiceTemplate" />
+    </bean>
+    
+      <bean id="userInformationClaimWebServiceTemplate" 
+          class="org.springframework.ws.client.core.WebServiceTemplate">
+          
+        <constructor-arg ref="messageFactory" />
+        
+        <property name="marshaller"         ref="userInformationClaimMarshaller" />
+        <property name="unmarshaller"       ref="userInformationClaimMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="userInformationClaimMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.GetClaimInfo</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.GetClaimInfoResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.userinformation.ClaimInfoDTO</value>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="updateBenefitClaimWSHandler"
+        class="gov.va.vba.rbps.services.ws.client.handler.vonapp.UpdateBenefitClaimWSHandler"
+        autowire="byName"
+        scope="prototype">
+
+        <property name="webServiceTemplate" ref="updateBenefitClaimWebServiceTemplate" />
+        <property name="updateBenefitClaimUri" value="${rbps.ws.vonapp.uri.updateBenefitClaim}" />
+         <!--  <property name="repository" ref="repository" />  -->
+    </bean>
+
+    <bean id="updateBenefitClaimWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="updateBenefitClaimMarshaller" />
+        <property name="unmarshaller" ref="updateBenefitClaimMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="updateBenefitClaimMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UpdateBenefitClaim</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UserContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.RequestContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ExternalIdentity</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UserProfile</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UpdateBenefitClaimResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.BenefitClaimRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcBenefitClaimRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcLifeCycleRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcParticipantRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSuspenceRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcLifeCycle</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSelection</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSuspence</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="createNoteWSHandler"
+        class="gov.va.vba.rbps.services.ws.client.handler.mapd.CreateNoteWSHandler"
+        autowire="byName"
+        scope="prototype">
+
+        <property name="webServiceTemplate" ref="createNoteWebServiceTemplate" />
+        <property name="developmentNotesUri" value="${rbps.ws.mapd.uri.notes}" />
+    </bean>
+
+    <bean id="createNoteWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="createNoteMarshaller" />
+        <property name="unmarshaller" ref="createNoteMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="createNoteMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.mapd.notes.CreateNote</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.mapd.notes.Note</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.mapd.notes.TransferObject</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.mapd.notes.CreateNoteResponse</value>
+            </list>
+        </property>
+    </bean>
+
+      <!--  START findFiduciary -->
+    <bean id="findFiduciaryWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.share.FindFiduciaryWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" ref="findFiduciaryWebServiceTemplate" />
+         <!--  <property name="repository" ref="repository" />  -->
+        <property name="findFiduciaryUri"  value="${rbps.ws.share.uri.familyTree}" />
+    </bean>
+
+    <bean id="findFiduciaryWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="findFiduciaryMarshaller" />
+        <property name="unmarshaller" ref="findFiduciaryMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="findFiduciaryMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.FindFiduciary</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.UserContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.RequestContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.ExternalIdentity</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.UserProfile</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.FindFiduciaryResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.familytree.ShrinqfPersonOrg</value>
+            </list>
+        </property>
+    </bean>
+    
+    <!--  END findFiduciary -->
+    
+    
+      <!--  START getDecisionsAtIssue -->
+      
+    <bean id="decisionsAtIssueWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.share.GetDecisionsAtIssueWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" ref="decisionsAtIssueWebServiceTemplate" />
+        <!--  <property name="repository" ref="repository" />  -->
+        <property name="decisionsAtIssueUri"  value="${rbps.ws.share.uri.ratingComparison}" />
+    </bean>
+
+    <bean id="decisionsAtIssueWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="decisionsAtIssueMarshaller" />
+        <property name="unmarshaller" ref="decisionsAtIssueMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="decisionsAtIssueMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.GetDecisionsAtIssue</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.DecisionAtIssueInputVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.GetDecisionsAtIssueResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.DecisionsAtIssueServiceReturnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.VoReturnBase</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.MessageVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.VoBase</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.CombinedPercentVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.HDecisionsAtIssueVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.DecisionsAtIssueVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.ResponseVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.HSpecialProvisionLawVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.SpecialProvisionLawVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.HDecisionAnalysisVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.DecisionAnalysisVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.FieldsChangedVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.HSpecialMoCompVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.SpecialMoCompVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.HIndividualUnemployabilityVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.IndividualUnemployabilityVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.HDisabilityVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.DisabilityVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.HDisabilityEvaluationVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.share.ratingComparison.DisabilityEvaluationVO</value>
+            </list>
+        </property>
+    </bean>
+
+<!--  END getDecisionsAtIssue -->
+
+<!-- BEGIN ReadAwardDocData -->
+	
+	<bean id="readAwardDocDataWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awardDoc.ReadAwardDocDataWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" 			ref="readAwardDocDataTemplate" />
+        <property name="webServiceUri" 					value="${rbps.ws.awards.uri.awardDocService}" />
+    </bean>
+    
+    <bean id="readAwardDocDataTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="readAwardDocDataMarshaller" />
+        <property name="unmarshaller" ref="readAwardDocDataMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="readAwardDocDataMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.ReadAwardDocData</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.ReadAwardDocDataResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.AwardDocResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.AllotmentDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.AncillaryRatingDecnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.AuthorizationEventVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.AwardAuthEventVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.AwardClaimRelationshipVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.AwardDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.AwardHistoryVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.AwardVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.AwardRecipientVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.BurialBeneDecnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.BurialBenefitDecnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.BurialSummaryDecnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.ClaimVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.ClothingAllowanceDecnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.CompetencyDecnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.DependencyDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.DiaryVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.DischargePayVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.EftAddressVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.ExpenseDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.FamilyRelationshipVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.FiduciaryProfileVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.FolderVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.HDisabilityVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.IvapDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.IncomeDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.IndividualUnemployabilityVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.InterfaceIncomeVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.MilitaryPersonVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.MilitaryPersonPOWVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.MiscAwardBeneDecnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.MiscDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.NetWorthDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.OrganizationVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.ParticipantAddressVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.ParticipantAwardDataVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.ParticipantPhoneVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.PermAndTotalDecnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.PersonVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.PersonSpecialStatusVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.PostalTypeVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.PowerOfAttorneyProfileVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.RatingSummaryVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.RecipientClaimVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.RecipientEventVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.RecurringPayableVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.RepsClaimantDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.RepsDecisionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.RetirementPayVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.ServiceConnDeathDecnVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.ServicePeriodVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.SpecialMoCompVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.SpecialMoPensionVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.StationAddressVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.StationVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.TypeRelationshipVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.HAwardEventVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.AwardProfileVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.HPriorsAnchorVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awardDoc.service.RbaProfileVO</value>
+            </list>
+        </property>
+    </bean>
+	
+<!-- END -->
+
+<!-- BEGIN GetPersonProfile  -->
+	
+	<bean id="getPersonProfileWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.getPersonProfile.GetPersonProfileWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" 			ref="getPersonProfileTemplate" />
+        <property name="webServiceUri" 					value="${rbps.ws.awards.uri.awardDataService}" />
+    </bean>
+    
+    <bean id="getPersonProfileTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="getPersonProfileMarshaller" />
+        <property name="unmarshaller" ref="getPersonProfileMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="getPersonProfileMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+            	<value>gov.va.vba.vbmsc.services.ws.client.mapping.awardData.service.GetPersonProfile</value>
+            	<value>gov.va.vba.vbmsc.services.ws.client.mapping.awardData.service.GetPersonProfileResponse</value>
+                <value>gov.va.vba.vbmsc.services.ws.client.mapping.awardData.service.PersonProfileResponseVO</value>
+                <value>gov.va.vba.vbmsc.services.ws.client.mapping.awardData.service.ResponseVO</value>
+                <value>gov.va.vba.vbmsc.services.ws.client.mapping.awardData.service.HParticipantVO</value>
+                <value>gov.va.vba.vbmsc.services.ws.client.mapping.awardData.service.HPoaDetailVO</value>
+                <value>gov.va.vba.vbmsc.services.ws.client.mapping.awardData.service.AddressEFTVO</value>
+                <value>gov.va.vba.vbmsc.services.ws.client.mapping.awardData.service.AddressPostalVO</value>
+            </list>
+        </property>
+    </bean>
+
+<!-- END GetPersonProfile -->
+
+<!--  BEGIN ReadCurrentAndProposedAward --> 
+      
+    <bean id="readCurrentAndProposedAwardWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.ReadCurrentAndProposedAwardWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" 			ref="readCurrentAndProposedAwardTemplate" />
+        <property name="webServiceUri" 					value="${rbps.ws.awards.uri.awardService}" />
+    </bean>
+
+    <bean id="readCurrentAndProposedAwardTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="readCurrentAndProposedAwardMarshaller" />
+        <property name="unmarshaller" ref="readCurrentAndProposedAwardMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="readCurrentAndProposedAwardMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.ReadCurrentAndProposedAward</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.ReadCurrentAndProposedAwardResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.CurrAndPropAwardResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.AuthorizationEventVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.VoBase</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.AwardRecipientVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.AwardVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.HAwardEventVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.HAwardLineVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.AwardLineVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.AwardLineRecipientVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.service.AwardReasonVO</value>
+            </list>
+        </property>
+    </bean>
+    
+<!--  END ReadCurrentAndProposedAward -->    
+    
+ 
+ <!--  BEGIN clearBenefitClaimWSHandler --> 
+      
+    <bean id="clearBenefitClaimWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.share.ClearBenefitClaimWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" 			ref="clearBenefitClaimTemplate" />
+        <property name="webServiceUri" 					value="${rbps.ws.vonapp.uri.updateBenefitClaim}" />
+    </bean>
+
+    <bean id="clearBenefitClaimTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="clearBenefitClaimMarshaller" />
+        <property name="unmarshaller" ref="clearBenefitClaimMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="clearBenefitClaimMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ClearBenefitClaim</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UserContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.RequestContext</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ExternalIdentity</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.UserProfile</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ClearBenefitClaimResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.BenefitClaimRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcBenefitClaimRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcLifeCycleRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcLifeCycle</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcParticipantRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSelection</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSuspenceRecord</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.vonapp.claimlabel.ShrinqbcSuspence</value>
+            </list>
+        </property>
+    </bean>
+    
+<!--  END clearBenefitClaimWSHandler -->    
+
+
+
+<!--  BEGIN processMilitaryPayWSHandler --> 
+      
+    <bean id="processMilitaryPayWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.ProcessMilitaryPayWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" 			ref="processMilitaryPayTemplate" />
+        <property name="webServiceUri" 					value="${rbps.ws.awards.uri.adjustmentDecnsService}" />
+    </bean>
+
+    <bean id="processMilitaryPayTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="processMilitaryPayMarshaller" />
+        <property name="unmarshaller" ref="processMilitaryPayMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="processMilitaryPayMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.adjustmentDecision.ReadRetiredPayDecn</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.adjustmentDecision.AwardKeyInputVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.adjustmentDecision.ReadRetiredPayDecnResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.adjustmentDecision.RetiredPayDecnResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.adjustmentDecision.VoReturnBase</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.adjustmentDecision.MessageVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.adjustmentDecision.VoBase</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.adjustmentDecision.RetiredPayDecnVO</value>
+            </list>
+        </property>
+    </bean>
+    
+    
+    <bean id="checkerServiceWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.CheckerServiceWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" 			ref="checkerServiceTemplate" />
+        <property name="webServiceUri" 					value="${rbps.ws.awards.uri.checkerService}" />
+    </bean>
+
+    <bean id="checkerServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="checkerServiceMarshaller" />
+        <property name="unmarshaller" ref="checkerServiceMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="checkerServiceMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.checkerService.CheckServicesByAppName</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.checkerService.ServiceCheckInputVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.checkerService.CheckServicesByAppNameResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.checkerService.ServiceCheckResposeVO</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.checkerService.ServiceCheckInfoVO</value>
+            </list>
+        </property>
+    </bean>
+    
+    
+    
+<!--  END processMilitaryPayWSHandler -->       
+
+
+<!--  BEGIN personServiceWSHandler --> 
+
+    <bean id="personServiceWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.PersonServiceWSHandler"
+          autowire="byName"
+          scope="prototype" >
+        <property name="webServiceTemplate" 			ref="personServiceTemplate" />
+        <property name="webServiceUri" 					value="${rbps.ws.awards.uri.personService}" />
+    </bean>
+
+    <bean id="personServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+        <property name="marshaller" ref="personServiceMarshaller" />
+        <property name="unmarshaller" ref="personServiceMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="personServiceMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.personService.FindPersonsBySsns</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.personService.FindPersonsBySsnsResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.personService.PersonDTO</value>
+            </list>
+        </property>
+    </bean>
+    
+<!--  END personServiceWSHandler -->
+
+<!--  BEGIN awardWebServiceHandler -->
+
+    <bean id="awardWebServiceWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.AwardWebServiceWSHandler"
+          autowire="byName"
+          scope="prototype" >
+
+        <property name="webServiceTemplate" 			ref="awardWebServiceTemplate" />
+        <property name="webServiceUri"           value="${rbps.ws.awards.uri.awardWebService}" />
+    </bean>
+
+    <bean id="awardWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+
+        <property name="marshaller" ref="awardWebServiceMarshaller" />
+        <property name="unmarshaller" ref="awardWebServiceMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="awardWebServiceMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.awardWebService.FindStationOfJurisdiction</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.awards.awardWebService.FindStationOfJurisdictionResponse</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--  END awardWebServiceHandler -->
+
+
+    <!--  BEGIN orgWebServceWSHandler -->
+
+    <bean id="orgWebServiceWSHandler"
+          class="gov.va.vba.rbps.services.ws.client.handler.org.OrgWebServiceWSHandler"
+          autowire="byName"
+          scope="prototype" >
+
+        <property name="webServiceTemplate" 			ref="orgWebServiceTemplate" />
+        <property name="webServiceUri"           value="${rbps.ws.org.uri.orgWebService}" />
+    </bean>
+
+    <bean id="orgWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+        <constructor-arg ref="messageFactory" />
+
+        <property name="marshaller" ref="orgWebServiceMarshaller" />
+        <property name="unmarshaller" ref="orgWebServiceMarshaller" />
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.CommonsHttpMessageSender" />
+        </property>
+
+        <property name="interceptors">
+            <list>
+                <ref local="loggingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="orgWebServiceMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="classesToBeBound">
+            <list>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.org.FindPOAsByFileNumbers</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.org.FindPOAsByFileNumbersResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.org.FindPOAsByFileNumbersResponse</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.org.PoaSearchResult</value>
+                <value>gov.va.vba.rbps.services.ws.client.mapping.org.PowerOfAttorneyDTO</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--  END awardWebServiceHandler -->
+  
+</beans>

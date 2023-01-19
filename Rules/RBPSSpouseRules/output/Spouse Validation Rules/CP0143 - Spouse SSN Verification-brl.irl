@@ -1,0 +1,18 @@
+package Spouse_Validation_Rules {
+   use exceptionGenerated;
+   rule CP0143_$45$_Spouse_SSN_Verification {
+      property ilog.rules.business_name = "CP0143 - Spouse SSN Verification";
+      property ilog.rules.package_name = "Spouse Validation Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Spouse() from Spouse;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Spouse.ssn)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Spouse.currentMarriage.endDate)));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - Spouse SSN is not provided. Please review.");
+         exceptionGenerated = true;
+         ?context.updateContext();
+      }
+   }
+}
+

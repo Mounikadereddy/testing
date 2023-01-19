@@ -1,0 +1,64 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-11-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780046</beneficiaryID>
+                <birthdayDate>1993-11-10T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-04-18T10:47:31-05:00</decisionDate>
+                <dependencyDecisionID>16030828</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-11-01T00:00:00-05:00</eventDate>
+                <firstName>MIKE</firstName>
+                <fullName>MIKE SMITH</fullName>
+                <lastName>SMITH</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-18T10:47:32-05:00</modifiedDate>
+                <modifiedLocation>349</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780161</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999817615</socialSecurityNumber>
+                <sortDate>2012-04-18T10:47:31-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780046</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-11-10T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780046</beneficiaryID>
+                <birthdayDate>1993-11-10T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-04-18T10:47:32-05:00</decisionDate>
+                <dependencyDecisionID>16030829</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2011-11-10T00:00:00-06:00</eventDate>
+                <firstName>MIKE</firstName>
+                <fullName>MIKE SMITH</fullName>
+                <lastName>SMITH</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-18T10:47:32-05:00</modifiedDate>
+                <modifiedLocation>349</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780161</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999817615</socialSecurityNumber>
+                <sortDate>2012-04-18T10:47:32-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780046</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>

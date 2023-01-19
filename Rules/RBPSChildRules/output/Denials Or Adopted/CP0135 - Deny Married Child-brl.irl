@@ -1,0 +1,17 @@
+package Denials_Or_Adopted {
+   use Completed;
+   rule CP0135_$45$_Deny_Married_Child {
+      property ilog.rules.business_name = "CP0135 - Deny Married Child";
+      property ilog.rules.package_name = "Denials Or Adopted";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.currentMarriage));
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Child : " + Child.lastName) + ", ") + Child.firstName) + " reported as married. Please review."));
+      }
+   }
+}
+

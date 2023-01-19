@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Minor To School Child</name>
+  <uuid>41b6e4bc-1fa1-40c5-bcaa-4d4244194aac</uuid>
+</ilog.rules.studio.model.base:RulePackage>

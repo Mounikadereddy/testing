@@ -1,0 +1,16 @@
+package Child_With_No_Event_Date_Rule {
+   rule Verify_Minor_Step_Child_Second_Event_Date {
+      property ilog.rules.business_name = "Verify Minor Step Child Second Event Date";
+      property ilog.rules.package_name = "Child With No Event Date Rule";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         gov.va.vba.rbps.coreframework.xom.Award() from MinorSchoolChildAward;
+         evaluate ((((Child.childType.equals(gov.va.vba.rbps.coreframework.xom.ChildType.STEPCHILD))) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.marriageDate)) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(MinorSchoolChildAward)) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(MinorSchoolChildAward.eventDate)) && (Veteran.marriageDate.compareTo(MinorSchoolChildAward.eventDate) > 0)));
+      } then {
+         MinorSchoolChildAward.eventDate = Veteran.marriageDate;
+      }
+   }
+}
+

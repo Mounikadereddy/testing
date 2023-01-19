@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0134-08</name>
+  <uuid>dd2918f5-4f78-4b93-b3b6-76bbce587fca</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the FCDR of 'the Veteran' is not present
+            - 'age of the child on date of claim' is at least 18
+            - 'age of the child on date of claim' is less than 23
+            - it is not true that 'the Child' is school child
+            - it is not true that 'the Child' is seriously disabled ,
+then
+    set Completed to true ;
+    set the dependency status type of 'the Award' to NOT_AN_AWARD_DEPENDENT ;
+    set the dependency decision type of 'the Award' to OVER_18_NOT_IN_SCHOOL_OR_HELPLESS ;]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

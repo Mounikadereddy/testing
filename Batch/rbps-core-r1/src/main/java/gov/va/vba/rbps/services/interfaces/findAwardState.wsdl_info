@@ -1,0 +1,168 @@
+<definitions xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://session.ejb.awards.benefits.vba.va.gov/' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns='http://schemas.xmlsoap.org/wsdl/' targetNamespace='http://session.ejb.awards.benefits.vba.va.gov/' name='AwardStateEJBService'>
+    <types>
+        <xsd:schema>
+            <xsd:import namespace='http://session.ejb.awards.benefits.vba.va.gov/' schemaLocation='http://bepdev.vba.va.gov:80/AwardStateEJB/AwardStateEJBService?xsd=1'/>
+        </xsd:schema>
+    </types>
+    <message name='findAwardState'>
+        <part name='parameters' element='tns:findAwardState'/>
+    </message>
+    <message name='findAwardStateResponse'>
+        <part name='parameters' element='tns:findAwardStateResponse'/>
+    </message>
+    <message name='DataValidationException'>
+        <part name='fault' element='tns:DataValidationFault'/>
+    </message>
+    <message name='BenefitsException'>
+        <part name='fault' element='tns:BenefitsException'/>
+    </message>
+    <portType name='AwardStateEJB'>
+        <operation name='findAwardState'>
+            <input message='tns:findAwardState'/>
+            <output message='tns:findAwardStateResponse'/>
+            <fault message='tns:DataValidationException' name='DataValidationException'/>
+            <fault message='tns:BenefitsException' name='BenefitsException'/>
+        </operation>
+    </portType>
+    <binding name='AwardStateEJBPortBinding' type='tns:AwardStateEJB'>
+        <soap:binding transport='http://schemas.xmlsoap.org/soap/http' style='document'/>
+        <operation name='findAwardState'>
+            <soap:operation soapAction=''/>
+            <input>
+                <soap:body use='literal'/>
+            </input>
+            <output>
+                <soap:body use='literal'/>
+            </output>
+            <fault name='DataValidationException'>
+                <soap:fault name='DataValidationException' use='literal'/>
+            </fault>
+            <fault name='BenefitsException'>
+                <soap:fault name='BenefitsException' use='literal'/>
+            </fault>
+        </operation>
+    </binding>
+    <service name='AwardStateEJBService'>
+        <port name='AwardStateEJBPort' binding='tns:AwardStateEJBPortBinding'>
+            <soap:address location='http://bepdev.vba.va.gov:80/AwardStateEJB/AwardStateEJBService'/>
+        </port>
+    </service>
+</definitions>
+
+
+<xs:schema xmlns:tns='http://session.ejb.awards.benefits.vba.va.gov/' xmlns:xs='http://www.w3.org/2001/XMLSchema' version='1.0' targetNamespace='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <xs:element name='AwardStateServiceReturn' type='tns:awardStateServiceReturnVO'/>
+    <xs:element name='BenefitsException' nillable='true' type='tns:benefitsExceptionBean'/>
+    <xs:element name='DataValidationFault' nillable='true' type='tns:benefitsExceptionBean'/>
+    <xs:element name='Message' type='tns:messageVO'/>
+    <xs:element name='findAwardState' type='tns:findAwardState'/>
+    <xs:element name='findAwardStateResponse' type='tns:findAwardStateResponse'/>
+    <xs:complexType name='findAwardState'>
+        <xs:sequence>
+            <xs:element name='veteranID' type='xs:long' minOccurs='0'/>
+            <xs:element name='beneficiaryID' type='xs:long' minOccurs='0'/>
+            <xs:element name='awardType' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='findAwardStateResponse'>
+        <xs:sequence>
+            <xs:element name='return' type='tns:awardStateServiceReturnVO' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='awardStateServiceReturnVO'>
+        <xs:complexContent>
+            <xs:extension base='tns:voReturnBase'>
+                <xs:sequence>
+                    <xs:element name='awardType' type='xs:string' minOccurs='0'/>
+                    <xs:element name='beneficiaryID' type='xs:long' minOccurs='0'/>
+                    <xs:element name='changeSinceLastAuth' type='xs:string' minOccurs='0'/>
+                    <xs:element name='cntrlDate' type='xs:dateTime' minOccurs='0'/>
+                    <xs:element name='isGaoUsed' type='xs:string' minOccurs='0'/>
+                    <xs:element name='isProposed' type='xs:string' minOccurs='0'/>
+                    <xs:element name='isRunningAward' type='xs:string' minOccurs='0'/>
+                    <xs:element name='isSuspended' type='xs:string' minOccurs='0'/>
+                    <xs:element name='veteranID' type='xs:long' minOccurs='0'/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name='voReturnBase' abstract='true'>
+        <xs:sequence>
+            <xs:element name='errorLevel' type='xs:int'/>
+            <xs:element name='MessageList' minOccurs='0'>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name='Message' type='tns:messageVO' minOccurs='0' maxOccurs='unbounded'/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name='messageVO'>
+        <xs:complexContent>
+            <xs:extension base='tns:voBase'>
+                <xs:sequence>
+                    <xs:element name='databaseMessage' type='xs:string' minOccurs='0'/>
+                    <xs:element name='fieldName' type='xs:string' minOccurs='0'/>
+                    <xs:element name='logIt' type='xs:string' minOccurs='0'/>
+                    <xs:element name='message' type='xs:string' minOccurs='0'/>
+                    <xs:element name='messageID' type='xs:int' minOccurs='0'/>
+                    <xs:element name='modifiedAction' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedBy' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedDate' type='xs:dateTime' minOccurs='0'/>
+                    <xs:element name='modifiedLocation' type='xs:string' minOccurs='0'/>
+                    <xs:element name='modifiedProcess' type='xs:string' minOccurs='0'/>
+                    <xs:element name='object' type='xs:string' minOccurs='0'/>
+                    <xs:element name='rowIdentifier' type='xs:long' minOccurs='0'/>
+                    <xs:element name='source' type='xs:string' minOccurs='0'/>
+                    <xs:element name='sourceErrorID' type='xs:string' minOccurs='0'/>
+                    <xs:element name='sourceMessage' type='xs:string' minOccurs='0'/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name='voBase' abstract='true'>
+        <xs:sequence/>
+    </xs:complexType>
+    <xs:complexType name='benefitsExceptionBean'>
+        <xs:complexContent>
+            <xs:extension base='tns:faultInfoBean'>
+                <xs:sequence>
+                    <xs:element name='CALL_ID' type='xs:int' minOccurs='0'/>
+                    <xs:element name='DATASOURCE' type='xs:string' minOccurs='0'/>
+                    <xs:element name='DS_ERROR' type='xs:string' minOccurs='0'/>
+                    <xs:element name='DS_MESSAGE' type='xs:string' minOccurs='0'/>
+                    <xs:element name='FIELD_NAME' type='xs:string' minOccurs='0'/>
+                    <xs:element name='JRN_DT' type='xs:string' minOccurs='0'/>
+                    <xs:element name='JRN_LCTN_ID' type='xs:string' minOccurs='0'/>
+                    <xs:element name='JRN_OBJ_ID' type='xs:string' minOccurs='0'/>
+                    <xs:element name='JRN_STT_TC' type='xs:string' minOccurs='0'/>
+                    <xs:element name='JRN_USER_ID' type='xs:string' minOccurs='0'/>
+                    <xs:element name='LOG' type='xs:string' minOccurs='0'/>
+                    <xs:element name='ORA_MSG' type='xs:string' minOccurs='0'/>
+                    <xs:element name='PARENT_ID' type='xs:int' minOccurs='0'/>
+                    <xs:element name='PARENT_NAME' type='xs:string' minOccurs='0'/>
+                    <xs:element name='ROW_CNT' type='xs:int' minOccurs='0'/>
+                    <xs:element name='ROW_ID' type='xs:int' minOccurs='0'/>
+                    <xs:element name='ROW_NUM' type='xs:int' minOccurs='0'/>
+                    <xs:element name='TABLE_NAME' type='xs:string' minOccurs='0'/>
+                    <xs:element name='VN_ERROR' type='xs:int' minOccurs='0'/>
+                    <xs:element name='VN_MSG' type='xs:string' minOccurs='0'/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name='faultInfoBean'>
+        <xs:sequence>
+            <xs:element name='message' type='xs:string' minOccurs='0'/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+
+
+namespace:     http://session.ejb.awards.benefits.vba.va.gov/
+endpoint:      http://bepdev.vba.va.gov/AwardStateEJB/AwardStateEJBService
+
+soap actions
+========
+find_award_state

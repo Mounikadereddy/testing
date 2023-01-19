@@ -1,0 +1,19 @@
+package PriorSchoolTerm.PriorSchoolTermValidation {
+   use priorSchoolTermValid;
+   rule CP0120_$45$_Child_Home_Schooled_Check {
+      property ilog.rules.business_name = "CP0120 - Child Home Schooled Check";
+      property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.lastTerm.educationLevelType)
+         	&& (Child.lastTerm.educationLevelType.equals(gov.va.vba.rbps.coreframework.xom.EducationLevelType.HOME_SCHOOLED))));
+      } then {
+         priorSchoolTermValid = false;
+         PriorSchoolTermStatus = "ignore";
+         ?context.updateContext();
+         LogMessage.addException("last term  not valid");
+      }
+   }
+}
+

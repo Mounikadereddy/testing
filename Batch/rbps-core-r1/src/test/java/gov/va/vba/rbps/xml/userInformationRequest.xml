@@ -1,0 +1,30 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:user="http://userInformationService.services.vonapp.vba.va.gov/">
+<soapenv:Header>
+<wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+<wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+ <wsse:Username>281CEASL</wsse:Username>
+ <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Buda110!</wsse:Password>
+</wsse:UsernameToken>
+<vaws:VaServiceHeaders xmlns:vaws="http://vbawebservices.vba.va.gov/vawss">
+ <vaws:CLIENT_MACHINE>Anything</vaws:CLIENT_MACHINE>
+ <vaws:STN_ID>281</vaws:STN_ID>
+ <vaws:applicationName>VBMS</vaws:applicationName>
+</vaws:VaServiceHeaders>
+</wsse:Security>
+</soapenv:Header>
+   <soapenv:Body>
+      <user:findAllAsArray>
+         <!--Optional:-->
+         <arg0>
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            <processId>34549</processId>
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            
+         </arg0>
+      </user:findAllAsArray>
+   </soapenv:Body>
+</soapenv:Envelope>

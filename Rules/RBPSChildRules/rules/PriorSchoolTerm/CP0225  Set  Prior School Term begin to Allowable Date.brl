@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0225  Set  Prior School Term begin to Allowable Date</name>
+  <uuid>3a84d9dd-a042-4676-9bf1-a610a5c4a4da</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+  the course start date of the last term of 'the Child'   is before or the same as  'School Allowable date' 
+ then
+  set the course start date of the last term of 'the Child' to  'School Allowable date' ; 
+  set the event date of 'PriorSchoolChild' to 'School Allowable date' ;
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

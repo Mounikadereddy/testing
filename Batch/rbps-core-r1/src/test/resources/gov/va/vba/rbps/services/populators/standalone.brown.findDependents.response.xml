@@ -1,0 +1,47 @@
+<ns2:findDependentsResponse xmlns:ns2='http://services.share.benefits.vba.va.gov/'>
+    <return>
+        <numberOfRecords> 2</numberOfRecords>
+        <persons>
+            <awardIndicator>Y</awardIndicator>
+            <cityOfBirth>AUSTIN</cityOfBirth>
+            <currentRelateStatus/>
+            <dateOfBirth>08/06/1984</dateOfBirth>
+            <dateOfDeath/>
+            <deathReason/>
+            <emailAddress/>
+            <firstName>JILL</firstName>
+            <gender>F</gender>
+            <lastName>BROWN</lastName>
+            <middleName/>
+            <proofOfDependency>N</proofOfDependency>
+            <ptcpntId>9100773553</ptcpntId>
+            <relatedToVet>N</relatedToVet>
+            <relationship>Spouse</relationship>
+            <ssn>999678070</ssn>
+            <ssnVerifyStatus>0</ssnVerifyStatus>
+            <stateOfBirth>TX</stateOfBirth>
+        </persons>
+        <persons>
+            <awardIndicator>Y</awardIndicator>
+            <cityOfBirth>AUSTIN</cityOfBirth>
+            <currentRelateStatus/>
+            <dateOfBirth>02/22/1993</dateOfBirth>
+            <dateOfDeath/>
+            <deathReason/>
+            <emailAddress/>
+            <firstName>SCOTT</firstName>
+            <gender/>
+            <lastName>SMITH</lastName>
+            <middleName/>
+            <proofOfDependency>Y</proofOfDependency>
+            <ptcpntId>9100773722</ptcpntId>
+            <relatedToVet>N</relatedToVet>
+            <relationship>Child</relationship>
+            <ssn>999508746</ssn>
+            <ssnVerifyStatus>1</ssnVerifyStatus>
+            <stateOfBirth>TX</stateOfBirth>
+        </persons>
+        <returnCode>SHAR 9999</returnCode>
+        <returnMessage>Records found.</returnMessage>
+    </return>
+</ns2:findDependentsResponse>

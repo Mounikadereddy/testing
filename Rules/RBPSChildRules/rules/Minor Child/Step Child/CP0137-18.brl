@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0137-18</name>
+  <uuid>c37f6a8f-6fd4-4d50-87cb-c758887c69e1</uuid>
+  <documentation><![CDATA[FCDR != RED
+DOC <=  FCDR + 365 Days
+DOM <= FCDR
+DOC  > DOB + 365 Days
+DOC <= DOM + 365 Days]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the child type of 'the Child' is STEPCHILD
+            - it is not true that 'the Child'  is on award as minor child
+            - the FCDR of 'the Veteran' is present
+            - the marriage date of 'the Veteran' is present
+            - the FCDR of 'the Veteran' is not the rating effective date of 'the Veteran'
+            - 'the Veteran' claim received date is before or the same as the FCDR of 'the Veteran' plus 365 Days
+            - the birth date of 'the Child' is before or the same as the FCDR of 'the Veteran'
+            - 'the Veteran' claim received date is after the birth date of 'the Child' plus 365 Days
+            - the marriage date of 'the Veteran' is before or the same as the FCDR of 'the Veteran'
+            - 'the Veteran' claim received date is before or the same as the marriage date of 'the Veteran' plus 365 Days ,
+then
+    set the event date of 'the Award' to the marriage date of 'the Veteran';]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

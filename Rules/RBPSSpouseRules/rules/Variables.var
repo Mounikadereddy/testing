@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Variables</name>
+  <uuid>929879d5-511d-4190-b5f1-3c39dc73cb90</uuid>
+  <variables name="RatingDatePlus1Year" type="java.util.Date" initialValue="" verbalization="1 Year of rating date"/>
+  <variables name="RatingPlus1YearPlus30Days" type="java.util.Date" initialValue="" verbalization="1 Year + 30 days of rating date"/>
+  <variables name="MarriagePlus1Year" type="java.util.Date" initialValue="" verbalization="1 Year of date of marriage"/>
+  <variables name="exceptionGenerated" type="boolean" initialValue="" verbalization="exception generated"/>
+  <variables name="RatingPlus1YearPlus7Days" type="java.util.Date" initialValue="" verbalization="1 Year + 7 days of rating date"/>
+</ilog.rules.studio.model.base:VariableSet>

@@ -1,0 +1,16 @@
+package PriorSchoolTerm {
+   use schollallowableDate;
+   rule CP0225__Set__Prior_School_Term_begin_to_Allowable_Date {
+      property ilog.rules.business_name = "CP0225  Set  Prior School Term begin to Allowable Date";
+      property ilog.rules.package_name = "PriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (Child.lastTerm.courseStudentStartDate.compareTo(schollallowableDate) <= 0);
+      } then {
+         Child.lastTerm.courseStudentStartDate = schollallowableDate;
+         PriorSchoolChild.eventDate = schollallowableDate;
+      }
+   }
+}
+

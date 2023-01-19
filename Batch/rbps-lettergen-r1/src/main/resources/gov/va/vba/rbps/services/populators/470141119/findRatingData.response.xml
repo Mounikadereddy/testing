@@ -1,0 +1,72 @@
+<ns2:findRatingDataResponse xmlns:ns2='http://services.share.benefits.vba.va.gov/'>
+    <return>
+        <deathRatingRecord>
+            <numberOfRecords>0</numberOfRecords>
+            <returnCode>SHAR 9999</returnCode>
+            <returnMessage>Records found.</returnMessage>
+        </deathRatingRecord>
+        <disabilityRatingRecord>
+            <combinedDegreeEffectiveDate>04012008</combinedDegreeEffectiveDate>
+            <legalEffectiveDate>03012008</legalEffectiveDate>
+            <nonServiceConnectedCombinedDegree>30</nonServiceConnectedCombinedDegree>
+            <numberOfRecords>1</numberOfRecords>
+            <promulgationDate>10202008</promulgationDate>
+            <ratings>
+                <beginDate>03012008</beginDate>
+                <bilateralTypeName/>
+                <combatIndicator>N</combatIndicator>
+                <diagnosticPercent>30</diagnosticPercent>
+                <diagnosticText>Hearing Loss</diagnosticText>
+                <diagnosticTypeCode>7500</diagnosticTypeCode>
+                <diagnosticTypeName>Removal of kidney</diagnosticTypeName>
+                <disabilityDate>10202008</disabilityDate>
+                <disabilityDecisionTypeCode>SVCCONNCTED</disabilityDecisionTypeCode>
+                <disabilityDecisionTypeName>Service Connected</disabilityDecisionTypeName>
+                <disabilityID>1045835</disabilityID>
+                <endDate/>
+                <futureExamDate/>
+                <hyphenatedDiagnosticTypeCode/>
+                <hyphenatedDiagnosticTypeName/>
+                <hyphenatedRelatedDisabilityTypeName/>
+                <lastExamDate/>
+                <majorIndicator>N</majorIndicator>
+                <militaryServicePeriodTypeName>Gulf War</militaryServicePeriodTypeName>
+                <paragraphTypeName/>
+                <previousServicePercent/>
+                <relatedDisabilityTypeName/>
+                <supplementalDecisionTypeName/>
+                <withholdingPercent/>
+                <withholdingTypeName/>
+            </ratings>
+            <returnCode>SHAR 9999</returnCode>
+            <returnMessage>Records found.</returnMessage>
+            <serviceConnectedCombinedDegree>30</serviceConnectedCombinedDegree>
+        </disabilityRatingRecord>
+        <familyMemberRatingRecord>
+            <numberOfRecords>0</numberOfRecords>
+            <returnCode>SHAR 9999</returnCode>
+            <returnMessage>Records found.</returnMessage>
+        </familyMemberRatingRecord>
+        <otherRatingRecord>
+            <numberOfRecords>1</numberOfRecords>
+            <ratings>
+                <beginDate/>
+                <decisionTypeName>Ancillary</decisionTypeName>
+                <disabilityTypeName>Not Entitled to Specially Adapted Housing</disabilityTypeName>
+                <endDate/>
+                <ratingDate>10202008</ratingDate>
+                <supplementalDecisionTypeName/>
+            </ratings>
+            <returnCode>SHAR 9999</returnCode>
+            <returnMessage>Records found.</returnMessage>
+        </otherRatingRecord>
+        <specialMonthlyCompensationRatingRecord>
+            <numberOfSMCParagraphRecords>0</numberOfSMCParagraphRecords>
+            <numberOfSMCRecords>0</numberOfSMCRecords>
+            <returnCode>SHAR 9999</returnCode>
+            <returnMessage>Records found.</returnMessage>
+        </specialMonthlyCompensationRatingRecord>
+    </return>
+</ns2:findRatingDataResponse>
+
+

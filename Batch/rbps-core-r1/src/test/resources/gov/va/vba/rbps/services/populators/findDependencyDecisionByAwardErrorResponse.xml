@@ -1,0 +1,17 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2="http://session.ejb.awards.benefits.vba.va.gov/">
+	<return>
+		<DependencyDecision/>
+		<errorLevel>1</errorLevel>
+		<Errors>
+			<Error>
+				<datasource>Oracle</datasource>
+				<jrnLctnId>335</jrnLctnId>
+				<jrnUserId>281RBPS</jrnUserId>
+				<message>no data found on read</message>
+				<rowNum>1</rowNum>
+				<vnError>1001</vnError>
+				<vnMsg>No records found</vnMsg>
+			</Error>
+		</Errors>
+	</return>
+</ns2:findDependencyDecisionByAwardResponse>

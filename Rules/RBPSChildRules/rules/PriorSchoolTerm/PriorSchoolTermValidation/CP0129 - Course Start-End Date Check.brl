@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0129 - Course Start-End Date Check</name>
+  <uuid>01038456-5864-45ae-912e-d394e57c0723</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	
+	 the course start date of the last term of 'the Child' is not present  or 
+	the course end date of the last term of 'the Child' is not present 
+then 
+	set priorSchoolTermValid to false;
+	 set PriorSchoolTermStatus to "ignore";
+ 	add "last term  not valid" to the list of 'LogMessage' ; ]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

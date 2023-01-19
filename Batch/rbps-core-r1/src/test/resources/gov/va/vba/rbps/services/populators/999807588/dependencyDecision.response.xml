@@ -1,0 +1,150 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100776935</beneficiaryID>
+                <birthdayDate>1974-09-01T00:00:00-05:00</birthdayDate>
+                <decisionDate>2011-12-08T16:17:13-06:00</decisionDate>
+                <dependencyDecisionID>16029688</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>SUSAN</firstName>
+                <fullName>SUSAN SMITH</fullName>
+                <lastName>SMITH</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2011-12-08T16:17:13-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100778098</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>990645102</socialSecurityNumber>
+                <sortDate>2011-12-08T16:17:13-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100776935</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100776935</beneficiaryID>
+                <birthdayDate>1994-05-01T00:00:00-05:00</birthdayDate>
+                <decisionDate>2011-12-08T16:17:14-06:00</decisionDate>
+                <dependencyDecisionID>16029689</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>JAMES</firstName>
+                <fullName>JAMES SMITH</fullName>
+                <lastName>SMITH</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2011-12-08T16:17:14-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100778099</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>990876127</socialSecurityNumber>
+                <sortDate>2011-12-08T16:17:14-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100776935</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100776935</beneficiaryID>
+                <birthdayDate>1994-05-01T00:00:00-05:00</birthdayDate>
+                <decisionDate>2011-12-08T16:17:16-06:00</decisionDate>
+                <dependencyDecisionID>16029691</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2012-05-01T00:00:00-05:00</eventDate>
+                <firstName>JAMES</firstName>
+                <fullName>JAMES SMITH</fullName>
+                <lastName>SMITH</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2011-12-08T16:17:14-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100778099</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>990876127</socialSecurityNumber>
+                <sortDate>2011-12-08T16:17:16-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100776935</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100776935</beneficiaryID>
+                <birthdayDate>1994-05-01T00:00:00-05:00</birthdayDate>
+                <decisionDate>2011-12-08T16:17:15-06:00</decisionDate>
+                <dependencyDecisionID>16029690</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2012-05-01T00:00:00-05:00</eventDate>
+                <firstName>JAMES</firstName>
+                <fullName>JAMES SMITH</fullName>
+                <lastName>SMITH</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2011-12-08T16:17:14-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100778099</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>990876127</socialSecurityNumber>
+                <sortDate>2011-12-08T16:17:15-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100776935</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2015-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100776935</beneficiaryID>
+                <birthdayDate>1994-05-01T00:00:00-05:00</birthdayDate>
+                <decisionDate>2011-12-08T16:17:17-06:00</decisionDate>
+                <dependencyDecisionID>16029692</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2015-05-15T00:00:00-05:00</eventDate>
+                <firstName>JAMES</firstName>
+                <fullName>JAMES SMITH</fullName>
+                <lastName>SMITH</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2011-12-08T16:17:14-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100778099</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>990876127</socialSecurityNumber>
+                <sortDate>2011-12-08T16:17:17-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100776935</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+
+

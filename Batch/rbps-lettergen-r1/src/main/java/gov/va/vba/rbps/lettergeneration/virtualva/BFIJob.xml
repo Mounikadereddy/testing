@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<WL5G3N0:definitions name="BFIJobServiceDefinitions" targetNamespace="http://com/vva/bfi/ws" xmlns="" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://com/vva/bfi/ws" xmlns:WL5G3N2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://com/vva/bfi/ws" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s1="http://com/vva/bfi/ws" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getStatusByDate">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="userID" type="xs:string"/>
+            <xs:element name="beginDate" type="xs:string"/>
+            <xs:element name="endDate" type="xs:string"/>
+            <xs:element name="feedType" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getStatusByDateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="getStatusByDate">
+    <WL5G3N0:part element="WL5G3N1:getStatusByDate" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getStatusByDateResponse">
+    <WL5G3N0:part element="WL5G3N1:getStatusByDateResponse" name="parameters"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="BFIJob">
+    <WL5G3N0:operation name="getStatusByDate" parameterOrder="parameters">
+      <WL5G3N0:input message="WL5G3N1:getStatusByDate"/>
+      <WL5G3N0:output message="WL5G3N1:getStatusByDateResponse"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="BFIJobServiceSoapBinding" type="WL5G3N1:BFIJob">
+    <WL5G3N2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="getStatusByDate">
+      <WL5G3N2:operation style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N2:body parts="parameters" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N2:body parts="parameters" use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="BFIJobService">
+    <WL5G3N0:port binding="WL5G3N1:BFIJobServiceSoapBinding" name="BFIJobSoapPort">
+      <WL5G3N2:address location="http://10.204.11.66:7001/VVA_WS/BFIJob"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

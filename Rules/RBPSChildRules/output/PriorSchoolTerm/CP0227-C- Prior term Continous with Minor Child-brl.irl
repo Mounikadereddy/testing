@@ -1,0 +1,20 @@
+package PriorSchoolTerm {
+   use priorSchoolTermValid;
+   rule CP0227$45$C$45$_Prior_term_Continous_with_Minor_Child {
+      property ilog.rules.business_name = "CP0227-C- Prior term Continous with Minor Child";
+      property ilog.rules.package_name = "PriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Award() from Award;
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         gov.va.vba.rbps.coreframework.xom.Award() from PriorSchoolChild;
+         evaluate ((((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award.dependencyStatusType)
+         	&& (Award.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.MINOR_CHILD)))
+         	&& priorSchoolTermValid)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addMonthsToDate(5, gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(18, Child.birthDate)).compareTo(PriorSchoolChild.eventDate) >=0));
+      } then {
+         PriorSchoolChild.eventDate = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(18, Child.birthDate);
+      }
+   }
+}
+

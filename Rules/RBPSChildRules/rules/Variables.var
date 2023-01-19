@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Variables</name>
+  <uuid>fcc6923f-afaf-464e-8c0e-88ba7e7ea3c2</uuid>
+  <variables name="Completed" type="boolean" initialValue="" verbalization="Completed"/>
+  <variables name="ChildAgeOnEffectiveDate" type="int" initialValue="" verbalization="age of the child on effective date"/>
+  <variables name="RatingPlus1Year" type="java.util.Date" initialValue="" verbalization="1 Year of rating date"/>
+  <variables name="Child18BirthDay" type="java.util.Date" initialValue="" verbalization="childs 18th birth day"/>
+  <variables name="RatingPlus1Year30Days" type="java.util.Date" initialValue="" verbalization="1 Year + 30 days of rating date"/>
+  <variables name="Child19BrithDay" type="java.util.Date" initialValue="" verbalization="1 Year of childs 18th birth day"/>
+  <variables name="DOBPlus1Year" type="java.util.Date" initialValue="" verbalization="1 Year of date of birth of the child"/>
+  <variables name="ChildAgeOnDateOfClaim" type="int" initialValue="" verbalization="age of the child on date of claim"/>
+  <variables name="RatingPlus1Year7Days" type="java.util.Date" initialValue="" verbalization="1 Year + 7 days of rating date"/>
+  <variables name="priorSchoolTermValid" type="boolean" initialValue="false" verbalization="priorSchoolTermValid"/>
+  <variables name="Today" type="java.util.Date" initialValue="new java.util.Date()" verbalization="Today"/>
+  <variables name="ConditionSatisfied" type="boolean" initialValue="false" verbalization="Condition Satisfied"/>
+  <variables name="schollallowableDate" type="java.util.Date" initialValue="" verbalization="School Allowable date"/>
+  <variables name="PriorConditionSatisfied" type="boolean" initialValue="false" verbalization="PriorConditionSatisfied"/>
+</ilog.rules.studio.model.base:VariableSet>

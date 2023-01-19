@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>RuleFlow</name>
+  <uuid>ece97403-9595-4c96-a695-64fa731dc8db</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+    <Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+      <Body>
+        <TaskList>
+          <StartTask Identifier="task_0">
+            <Actions Language="bal"><![CDATA[set Completed to false ;
+
+set '1 Year of rating date' to 30% rating date of 'the Veteran'  plus 1 Year(s) ; 
+	
+set '1 Year + 30 days of rating date' to 30% rating date of 'the Veteran' plus 1 Year(s) plus 30 Days ;  
+
+set '1 Year + 7 days of rating date' to 30% rating date of 'the Veteran' plus 1 Year(s) plus 7 Days ;  
+
+set 'age of the child on effective date' to the age of 'the Child' on the rating effective date of 'the Veteran' ; 
+
+set 'age of the child on date of claim' to the age of 'the Child' on 'the Veteran' claim received date ; 
+
+set 'childs 18th birth day' to the birth date of 'the Child' plus 18 Year(s) ; 
+	
+set '1 Year of childs 18th birth day' to the birth date of 'the Child' plus 19 Year(s) ;
+
+set '1 Year of date of birth of the child' to the birth date of 'the Child' plus 1 Year(s) ;
+
+]]></Actions>
+          </StartTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="Minor Child" Ordering="Default">
+            <RuleList>
+              <Package Name="Minor Child"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="School Child Verification" Ordering="Default">
+            <RuleList>
+              <Package Name="School Child Verification"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="School Child" Ordering="Default">
+            <FinalActions Language="irl"><![CDATA[MinorSchoolChildAward = null;]]></FinalActions>
+            <RuleList>
+              <Package Name="School Child"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="Child With No Event Date Rule" Ordering="Default">
+            <RuleList>
+              <Package Name="Child With No Event Date Rule"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="Minor To School Child" Ordering="Default">
+            <RuleList>
+              <Package Name="Minor To School Child"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="Determine Award Status" Ordering="Default">
+            <RuleList>
+              <Package Name="Determine Award Status"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="Child Validation Rules" Ordering="Default">
+            <InitialActions Language="irl"><![CDATA[Award = new gov.va.vba.rbps.coreframework.xom.Award();
+MinorSchoolChildAward = new gov.va.vba.rbps.coreframework.xom.Award();
+Exceptions = new gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages();
+PriorSchoolChild = new gov.va.vba.rbps.coreframework.xom.Award();
+LogMessage = new gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages();
+PriorSchoolTermStatus ="";
+System.out.println("======================================= ");
+System.out.println(  "Child18BirthDay : " + Child18BirthDay);
+System.out.println(  "Child19BirthDay : " + Child19BrithDay);
+System.out.println(  "ChildAgeOnDateOfClaim : " + ChildAgeOnDateOfClaim);
+System.out.println(  "ChildAgeOnEffectiveDate : " + ChildAgeOnEffectiveDate);
+System.out.println(  "DOBPlus1Year : " + DOBPlus1Year);
+System.out.println(  "RatingPlus1Year : " + RatingPlus1Year);
+System.out.println(  "RatingPlus1Year30Days : " + RatingPlus1Year30Days);
+System.out.println(  "ClaimReceivedDate : " + Veteran.claimDate);
+System.out.println("======================================= ");
+]]></InitialActions>
+            <RuleList>
+              <Package Name="Initial Rules"/>
+              <Package Name="Biological Or Step Child"/>
+              <Package Name="Denials Or Adopted"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="Finalize Rules" Ordering="Default">
+            <RuleList>
+              <Package Name="Finalize Rules"/>
+            </RuleList>
+          </RuleTask>
+          <SubflowTask Identifier="task_2" Uuid="2e097bb8-74c7-4c72-9acf-eeccc6650904"/>
+          <SubflowTask Identifier="task_3" Uuid="7aae89f9-002b-41de-ae37-90831b0ea81d"/>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0237  C-Prior term included but not continous with current ERROR" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="e7699a35-1bad-46c9-a28a-be4c0e42424a"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0237 B Current and Prior Continous term" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="683a4929-b085-4a91-8e5a-4404aca4e16a"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0237 -A- Last term in Corp and Current Continous" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="e3d8a141-4555-4d68-b4bc-86e821e8db95"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0237  C- -A-Prior term included but not continous with Minor to School current ERROR" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="2ce19c34-1a8c-485a-9556-60cbe6c07d74"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0237 B-A Minor to School  Current and Prior Continous term" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="9db2a1df-3fb1-4267-bac8-cabc15bf28a6"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0237 -A-B- Last term in Corp and Minor to School  Current Continous" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="b3762eb7-e190-4d43-867d-a307c197077b"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="CP0227-C- Prior term Continous with Minor Child" Ordering="Default">
+            <RuleList>
+              <Rule Uuid="03f64585-beee-4491-9fb6-152ad593a543"/>
+            </RuleList>
+          </RuleTask>
+          <StopTask Identifier="task_1"/>
+        </TaskList>
+        <NodeList>
+          <TaskNode Identifier="node_1" Task="task_1"/>
+          <TaskNode Identifier="node_12" Task="Minor Child"/>
+          <TaskNode Identifier="node_21" Task="School Child Verification"/>
+          <TaskNode Identifier="node_22" Task="School Child"/>
+          <TaskNode Identifier="node_2" Task="Child With No Event Date Rule"/>
+          <TaskNode Identifier="node_3" Task="Minor To School Child"/>
+          <TaskNode Identifier="node_0" Task="task_0"/>
+          <TaskNode Identifier="node_6" Task="Determine Award Status"/>
+          <TaskNode Identifier="node_5" Task="Child Validation Rules"/>
+          <BranchNode Identifier="node_7"/>
+          <BranchNode Identifier="node_4"/>
+          <TaskNode Identifier="node_8" Task="Finalize Rules"/>
+          <TaskNode Identifier="node_9" Task="task_2"/>
+          <TaskNode Identifier="node_10" Task="task_3"/>
+          <TaskNode Identifier="node_14" Task="CP0237  C-Prior term included but not continous with current ERROR"/>
+          <TaskNode Identifier="node_11" Task="CP0237 B Current and Prior Continous term"/>
+          <TaskNode Identifier="node_15" Task="CP0237 -A- Last term in Corp and Current Continous"/>
+          <TaskNode Identifier="node_13" Task="CP0237  C- -A-Prior term included but not continous with Minor to School current ERROR"/>
+          <TaskNode Identifier="node_16" Task="CP0237 B-A Minor to School  Current and Prior Continous term"/>
+          <TaskNode Identifier="node_17" Task="CP0237 -A-B- Last term in Corp and Minor to School  Current Continous"/>
+          <TaskNode Identifier="node_18" Task="CP0227-C- Prior term Continous with Minor Child"/>
+        </NodeList>
+        <TransitionList>
+          <Transition Identifier="transition_28" Source="node_21" Target="node_8">
+            <Conditions Language="bal"><![CDATA[Completed]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_3" Source="node_12" Target="node_21">
+            <Conditions Language="bal"><![CDATA[the dependency status type of 'the minorSchoolChildAward' is present and 
+the dependency status type of 'the minorSchoolChildAward' is SCHOOL_CHILD ]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_20" Source="node_0" Target="node_5"/>
+          <Transition Identifier="transition_10" Source="node_7" Target="node_12">
+            <Conditions Language="bal"><![CDATA[the dependency status type of 'the Award' is present and 
+the dependency status type of 'the Award' is MINOR_CHILD 
+]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_12" Source="node_7" Target="node_21">
+            <Conditions Language="bal"><![CDATA[the dependency status type of 'the Award' is present and
+the dependency status type of 'the Award' is SCHOOL_CHILD 
+]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_15" Source="node_12" Target="node_18"/>
+          <Transition Identifier="transition_7" Source="node_22" Target="node_14"/>
+          <Transition Identifier="transition_4" Source="node_5" Target="node_6"/>
+          <Transition Identifier="transition_5" Source="node_5" Target="node_8">
+            <Conditions Language="bal"><![CDATA[Completed ]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_6" Source="node_9" Target="node_7"/>
+          <Transition Identifier="transition_8" Source="node_7" Target="node_1"/>
+          <Transition Identifier="transition_11" Source="node_4" Target="node_22">
+            <Conditions Language="bal"><![CDATA[the dependency status type of 'the Award' is present and
+the dependency status type of 'the Award' is SCHOOL_CHILD ]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_13" Source="node_21" Target="node_4"/>
+          <Transition Identifier="transition_14" Source="node_4" Target="node_3">
+            <Conditions Language="bal"><![CDATA[the dependency status type of 'the minorSchoolChildAward' is present and 
+the dependency status type of 'the minorSchoolChildAward' is SCHOOL_CHILD ]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_16" Source="node_4" Target="node_1"/>
+          <Transition Identifier="transition_1" Source="node_8" Target="node_1"/>
+          <Transition Identifier="transition_9" Source="node_2" Target="node_1"/>
+          <Transition Identifier="transition_0" Source="node_7" Target="node_8">
+            <Conditions Language="bal"><![CDATA[Completed ]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_17" Source="node_6" Target="node_9">
+            <Conditions Language="bal"><![CDATA[ the end date of 'PriorSchoolChild' is not null]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_18" Source="node_9" Target="node_10">
+            <Conditions Language="bal"><![CDATA[priorSchoolTermValid 
+]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_19" Source="node_10" Target="node_7"/>
+          <Transition Identifier="transition_21" Source="node_14" Target="node_1">
+            <Conditions Language="bal"><![CDATA['Condition Satisfied']]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_22" Source="node_14" Target="node_11"/>
+          <Transition Identifier="transition_23" Source="node_11" Target="node_2">
+            <Conditions Language="bal"><![CDATA['Condition Satisfied']]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_24" Source="node_15" Target="node_2"/>
+          <Transition Identifier="transition_25" Source="node_11" Target="node_15"/>
+          <Transition Identifier="transition_26" Source="node_13" Target="node_16"/>
+          <Transition Identifier="transition_27" Source="node_13" Target="node_1">
+            <Conditions Language="bal"><![CDATA['Condition Satisfied']]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_29" Source="node_16" Target="node_17"/>
+          <Transition Identifier="transition_30" Source="node_16" Target="node_18">
+            <Conditions Language="bal"><![CDATA['Condition Satisfied']]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_31" Source="node_17" Target="node_18"/>
+          <Transition Identifier="transition_2" Source="node_3" Target="node_13"/>
+          <Transition Identifier="transition_32" Source="node_6" Target="node_7"/>
+          <Transition Identifier="transition_33" Source="node_18" Target="node_2"/>
+        </TransitionList>
+      </Body>
+      <Resources>
+        <ResourceSet Locale="en_US">
+          <Data Name="transition_17#label">Prior School Child</Data>
+          <Data Name="node_14#width">201.98047</Data>
+          <Data Name="node_18#height">75.40991</Data>
+          <Data Name="node_18#width">156.9862</Data>
+          <Data Name="node_10#height">40.0</Data>
+          <Data Name="node_13#name">node_13</Data>
+          <Data Name="node_21#name">node_21</Data>
+          <Data Name="node_22#x">241.00006</Data>
+          <Data Name="node_22#y">757.3341</Data>
+          <Data Name="node_3#height">68.103516</Data>
+          <Data Name="node_2#name">node_2</Data>
+          <Data Name="node_21#width">102.0</Data>
+          <Data Name="transition_28#label">Completed</Data>
+          <Data Name="node_17#height">171.01172</Data>
+          <Data Name="node_0#x">336.0382</Data>
+          <Data Name="node_0#y">10.5</Data>
+          <Data Name="node_4#x">152.13686</Data>
+          <Data Name="node_4#y">640.5294</Data>
+          <Data Name="node_8#x">685.45264</Data>
+          <Data Name="node_8#y">939.5294</Data>
+          <Data Name="node_10#x">-7.0</Data>
+          <Data Name="node_10#name">node_10</Data>
+          <Data Name="node_10#y">294.0</Data>
+          <Data Name="node_7#name">node_6</Data>
+          <Data Name="node_2#height">97.50586</Data>
+          <Data Name="node_14#x">548.00977</Data>
+          <Data Name="node_14#y">762.00854</Data>
+          <Data Name="node_18#x">252.4931</Data>
+          <Data Name="node_3#width">102.0</Data>
+          <Data Name="node_18#y">1233.705</Data>
+          <Data Name="transition_10#label">Minor Child</Data>
+          <Data Name="transition_5#label">Completed</Data>
+          <Data Name="node_7#width">36.414185</Data>
+          <Data Name="transition_14#label">Minor School Child</Data>
+          <Data Name="node_11#width">102.0</Data>
+          <Data Name="transition_18#label">Prior School Term Valid</Data>
+          <Data Name="node_15#width">162.9852</Data>
+          <Data Name="node_16#height">156.31055</Data>
+          <Data Name="node_15#name">node_15</Data>
+          <Data Name="node_9#height">40.0</Data>
+          <Data Name="node_21#x">319.45264</Data>
+          <Data Name="node_21#y">561.0753</Data>
+          <Data Name="node_1#height">16.0</Data>
+          <Data Name="node_4#name">node_6</Data>
+          <Data Name="transition_21#label">true</Data>
+          <Data Name="node_22#width">102.0</Data>
+          <Data Name="node_15#height">85.46875</Data>
+          <Data Name="node_7#label">Child Type</Data>
+          <Data Name="node_3#x">9.0000305</Data>
+          <Data Name="node_3#y">764.3341</Data>
+          <Data Name="node_7#x">254.62366</Data>
+          <Data Name="node_8#height">82.80469</Data>
+          <Data Name="node_12#name">node_12</Data>
+          <Data Name="node_7#y">283.41412</Data>
+          <Data Name="node_9#name">node_9</Data>
+          <Data Name="node_13#x">-107.00747</Data>
+          <Data Name="node_13#y">974.40186</Data>
+          <Data Name="node_0#width">20.99997</Data>
+          <Data Name="node_0#height">21.0</Data>
+          <Data Name="node_17#x">58.0</Data>
+          <Data Name="node_17#y">1255.0</Data>
+          <Data Name="transition_32#label">else</Data>
+          <Data Name="node_1#name">node_2</Data>
+          <Data Name="node_4#width">36.414215</Data>
+          <Data Name="transition_11#label">School Child</Data>
+          <Data Name="node_8#width">114.03516</Data>
+          <Data Name="node_12#width">102.0</Data>
+          <Data Name="node_16#width">102.0</Data>
+          <Data Name="node_14#height">70.01721</Data>
+          <Data Name="node_17#name">node_17</Data>
+          <Data Name="node_7#height">36.414185</Data>
+          <Data Name="node_6#name">node_6</Data>
+          <Data Name="transition_26#label">else</Data>
+          <Data Name="node_2#x">421.0</Data>
+          <Data Name="node_2#y">1326.4894</Data>
+          <Data Name="node_13#height">129.21777</Data>
+          <Data Name="node_6#x">173.03815</Data>
+          <Data Name="node_14#name">node_14</Data>
+          <Data Name="node_6#y">77.15527</Data>
+          <Data Name="node_6#height">68.103516</Data>
+          <Data Name="node_22#name">node_22</Data>
+          <Data Name="node_12#x">262.45267</Data>
+          <Data Name="node_12#y">450.3224</Data>
+          <Data Name="node_1#width">16.0</Data>
+          <Data Name="node_16#x">87.0</Data>
+          <Data Name="node_3#name">node_3</Data>
+          <Data Name="node_16#y">1036.0</Data>
+          <Data Name="transition_3#label">School Child</Data>
+          <Data Name="node_5#width">102.0</Data>
+          <Data Name="transition_12#label">School Child</Data>
+          <Data Name="node_9#width">210.06445</Data>
+          <Data Name="node_13#width">163.98506</Data>
+          <Data Name="node_17#width">102.0</Data>
+          <Data Name="node_12#height">53.402344</Data>
+          <Data Name="node_22#height">82.80469</Data>
+          <Data Name="node_11#name">node_11</Data>
+          <Data Name="node_5#height">68.103516</Data>
+          <Data Name="node_8#name">node_8</Data>
+          <Data Name="node_0#name">node_0</Data>
+          <Data Name="transition_23#label">true</Data>
+          <Data Name="transition_27#label">true</Data>
+          <Data Name="node_1#x">424.11316</Data>
+          <Data Name="node_1#y">1457.2423</Data>
+          <Data Name="node_16#name">node_16</Data>
+          <Data Name="node_5#x">384.03815</Data>
+          <Data Name="node_11#height">126.9082</Data>
+          <Data Name="node_5#y">73.05176</Data>
+          <Data Name="node_21#height">68.103516</Data>
+          <Data Name="node_9#x">33.0</Data>
+          <Data Name="node_9#y">213.0</Data>
+          <Data Name="node_11#x">405.0</Data>
+          <Data Name="node_4#height">36.414185</Data>
+          <Data Name="node_11#y">967.0</Data>
+          <Data Name="node_5#name">node_1</Data>
+          <Data Name="node_15#x">573.49255</Data>
+          <Data Name="transition_0#label">Completed</Data>
+          <Data Name="node_15#y">1208.2803</Data>
+          <Data Name="transition_30#label">true</Data>
+          <Data Name="node_2#width">102.0</Data>
+          <Data Name="node_6#width">102.0</Data>
+          <Data Name="node_10#width">200.70703</Data>
+        </ResourceSet>
+      </Resources>
+      <Properties>
+        <imports><![CDATA[import gov.va.vba.rbps.coreframework.xom.ChildType;
+use childAge;
+import gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil;
+use completed;
+import gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages;
+import gov.va.vba.rbps.coreframework.xom.Award;
+use Completed;
+use LastTermEndPlus5Months;
+use CourseBeginDatePlus1year;
+
+]]></imports>
+      </Properties>
+    </Ruleflow>
+</rfModel>
+  <mainFlowTask>true</mainFlowTask>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

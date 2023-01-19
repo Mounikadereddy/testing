@@ -1,0 +1,14 @@
+package PriorSchoolTerm.ProcessPriorSchoolTerm {
+   rule Reject_Prior_school_term_with_message {
+      property ilog.rules.business_name = "Reject Prior school term with message";
+      property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+      } then {
+         Child.priorSchoolTermStatus = "Reject";
+         Exceptions.addException("“Auto Processing Dependency Processing Reject - Prior school term submitted is shorter than on the award and would result in school attendance not being continuous. Please Review.”");
+      }
+   }
+}
+

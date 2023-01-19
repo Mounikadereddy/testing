@@ -1,0 +1,129 @@
+package PriorSchoolTerm.PriorSchoolTermValidation {
+  use priorSchoolTermValid;
+
+  flowtask PriorSchoolTermValidationFlow {
+    property mainflowtask = false;
+    property ilog.rules.business_name = "PriorSchoolTermValidationFlow";
+    property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+    body {
+      PriorSchoolTermValidationFlow#PriorSchoolTermPersent;
+      if (priorSchoolTermValid) {
+        PriorSchoolTermValidationFlow#CP0129_$45$_Course_Start$45$End_Date_Check;
+        if (priorSchoolTermValid) {
+          PriorSchoolTermValidationFlow#CP0118_Prior_End_Date_before_Prior_Start_Date_Check;
+          if (priorSchoolTermValid) {
+            PriorSchoolTermValidationFlow#Prior_Course_Start$45$future_date_Check;
+            if (priorSchoolTermValid) {
+              PriorSchoolTermValidationFlow#CP0129_$45$_Prior_Course_End_before_current_term_Check;
+              if (priorSchoolTermValid) {
+                PriorSchoolTermValidationFlow#CP0119_$45$_Tution_Feed_Paid_By_Govt_Check;
+                if (priorSchoolTermValid) {
+                  PriorSchoolTermValidationFlow#CP0118_$45$_Child_School_Name_Verification;
+                  if (priorSchoolTermValid) {
+                    PriorSchoolTermValidationFlow#CP0118_$45$_Child_School_Address_Verification;
+                    if (priorSchoolTermValid) {
+                      PriorSchoolTermValidationFlow#CP235$45$Prior_Term_included__in_award;
+                      if (priorSchoolTermValid) {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  };
+
+  ruletask PriorSchoolTermValidationFlow#PriorSchoolTermPersent {
+    property ilog.rules.business_name = "PriorSchoolTermValidationFlow>PriorSchoolTermPersent";
+    property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.PriorSchoolTermValidation.PriorSchoolTermPersent
+    }
+  };
+
+  ruletask PriorSchoolTermValidationFlow#CP0118_$45$_Child_School_Name_Verification {
+    property ilog.rules.business_name = "PriorSchoolTermValidationFlow>CP0118 - Child School Name Verification";
+    property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.PriorSchoolTermValidation.CP0118_$45$_Child_School_Name_Verification
+    }
+  };
+
+  ruletask PriorSchoolTermValidationFlow#CP0119_$45$_Tution_Feed_Paid_By_Govt_Check {
+    property ilog.rules.business_name = "PriorSchoolTermValidationFlow>CP0119 - Tution Feed Paid By Govt Check";
+    property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.PriorSchoolTermValidation.CP0119_$45$_Tution_Feed_Paid_By_Govt_Check
+    }
+  };
+
+  ruletask PriorSchoolTermValidationFlow#CP0118_$45$_Child_School_Address_Verification {
+    property ilog.rules.business_name = "PriorSchoolTermValidationFlow>CP0118 - Child School Address Verification";
+    property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.PriorSchoolTermValidation.CP0118_$45$_Child_School_Address_Verification
+    }
+  };
+
+  ruletask PriorSchoolTermValidationFlow#Prior_Course_Start$45$future_date_Check {
+    property ilog.rules.business_name = "PriorSchoolTermValidationFlow>Prior Course Start-future date Check";
+    property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.PriorSchoolTermValidation.Prior_Course_Start$45$future_date_Check
+    }
+  };
+
+  ruletask PriorSchoolTermValidationFlow#CP0129_$45$_Prior_Course_End_before_current_term_Check {
+    property ilog.rules.business_name = "PriorSchoolTermValidationFlow>CP0129 - Prior Course End before current term Check";
+    property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.PriorSchoolTermValidation.CP0129_$45$_Prior_Course_End_before_current_term_Check
+    }
+  };
+
+  ruletask PriorSchoolTermValidationFlow#CP0129_$45$_Course_Start$45$End_Date_Check {
+    property ilog.rules.business_name = "PriorSchoolTermValidationFlow>CP0129 - Course Start-End Date Check";
+    property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.PriorSchoolTermValidation.CP0129_$45$_Course_Start$45$End_Date_Check
+    }
+  };
+
+  ruletask PriorSchoolTermValidationFlow#CP235$45$Prior_Term_included__in_award {
+    property ilog.rules.business_name = "PriorSchoolTermValidationFlow>CP235-Prior Term included  in award";
+    property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.PriorSchoolTermValidation.CP235$45$Prior_Term_included__in_award
+    }
+  };
+
+  ruletask PriorSchoolTermValidationFlow#CP0118_Prior_End_Date_before_Prior_Start_Date_Check {
+    property ilog.rules.business_name = "PriorSchoolTermValidationFlow>CP0118 Prior End Date before Prior Start Date Check";
+    property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.PriorSchoolTermValidation.CP0118_Prior_End_Date_before_Prior_Start_Date_Check
+    }
+  };
+
+}

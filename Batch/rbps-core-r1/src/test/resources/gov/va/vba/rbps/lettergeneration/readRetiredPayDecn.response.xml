@@ -1,0 +1,55 @@
+<ns3:readRetiredPayDecnResponse xmlns:ns3='http://gov.va.vba.benefits.awards.ws/services' xmlns:ns2='http://gov.va.vba.benefits.awards.ws/data' xmlns:ns4='http://gov.va.vba.benefits.arch.soap/webfault'>
+    <ns2:RetiredDecnResponse>
+        <errorLevel>0</errorLevel>
+        <RetiredPayDecns>
+            <ns2:RetiredPayDecn>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600043195</beneficiaryID>
+                <decisionDate>2013-11-04T15:05:06-06:00</decisionDate>
+                <fromDate>2013-02-01T00:00:00-06:00</fromDate>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>VAFSCRANIS</modifiedBy>
+                <modifiedDate>2013-11-04T15:05:06-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_retddec_pkg.do_create</modifiedProcess>
+                <offsetAmount>810</offsetAmount>
+                <participantID>600043195</participantID>
+                <retirementPayType>DRP</retirementPayType>
+                <retirementPayTypeDescription>Disability Retired Payment</retirementPayTypeDescription>
+                <toDate>2013-11-01T00:00:00-05:00</toDate>
+            </ns2:RetiredPayDecn>
+            <ns2:RetiredPayDecn>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600043195</beneficiaryID>
+                <decisionDate>2013-11-04T15:05:06-06:00</decisionDate>
+                <fromDate>2013-02-01T00:00:00-06:00</fromDate>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>VAFSCRANIS</modifiedBy>
+                <modifiedDate>2013-11-04T15:05:06-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_retddec_pkg.do_create</modifiedProcess>
+                <offsetAmount>810</offsetAmount>
+                <participantID>600043195</participantID>
+                <retirementPayType>DRP</retirementPayType>
+                <retirementPayTypeDescription>Disability Retired Payment</retirementPayTypeDescription>
+                <toDate>2013-10-01T00:00:00-05:00</toDate>
+            </ns2:RetiredPayDecn>
+            <ns2:RetiredPayDecn>
+                <awardType>CPL</awardType>
+                <beneficiaryID>600043195</beneficiaryID>
+                <decisionDate>2013-11-04T15:05:06-06:00</decisionDate>
+                <fromDate>2013-02-01T00:00:00-06:00</fromDate>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>VAFSCRANIS</modifiedBy>
+                <modifiedDate>2013-11-04T15:05:06-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_retddec_pkg.do_create</modifiedProcess>
+                <offsetAmount>810</offsetAmount>
+                <participantID>600043195</participantID>
+                <retirementPayType>DRP</retirementPayType>
+                <retirementPayTypeDescription>Disability Retired Payment</retirementPayTypeDescription>
+                <toDate>2013-07-01T00:00:00-05:00</toDate>
+            </ns2:RetiredPayDecn>            
+        </RetiredPayDecns>
+    </ns2:RetiredDecnResponse>
+</ns3:readRetiredPayDecnResponse>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0139-1G</name>
+  <uuid>34571e16-cceb-44f2-903a-68fc99d3ce83</uuid>
+  <documentation><![CDATA[]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the child type of 'the Child' is BIOLOGICAL_CHILD
+            - the FCDR of 'the Veteran' is not present
+            - 'the Veteran' claim received date is after '1 Year of childs 18th birth day'
+            - the current term of 'the Child' is present
+            - the course start date of ( the current term of 'the Child' ) is present
+            - priorSchoolTermValid is false 
+            - 'the Veteran' claim received date is after the course start date of ( the current term of 'the Child' ) plus 365 Days
+            - the course end date of ( the current term of 'the Child' ) is after 'the Veteran' claim received date ,
+then
+    set the event date of 'the Award' to 'the Veteran' claim received date ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

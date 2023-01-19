@@ -1,0 +1,120 @@
+
+      <ns2:findRatingDataResponse xmlns:ns2="http://services.share.benefits.vba.va.gov/">
+         <return>
+            <deathRatingRecord>
+               <numberOfRecords>0</numberOfRecords>
+               <returnCode>SHAR 9999</returnCode>
+               <returnMessage>Records found.</returnMessage>
+            </deathRatingRecord>
+            <disabilityRatingRecord>
+               <combinedDegreeEffectiveDate>04012011</combinedDegreeEffectiveDate>
+               <legalEffectiveDate>03012011</legalEffectiveDate>
+               <nonServiceConnectedCombinedDegree>100</nonServiceConnectedCombinedDegree>
+               <numberOfRecords>2</numberOfRecords>
+               <promulgationDate>02032012</promulgationDate>
+               <ratings>
+                  <beginDate>03012011</beginDate>
+                  <bilateralTypeName/>
+                  <combatIndicator>N</combatIndicator>
+                  <diagnosticPercent>100</diagnosticPercent>
+                  <diagnosticText>armslap</diagnosticText>
+                  <diagnosticTypeCode>5111</diagnosticTypeCode>
+                  <diagnosticTypeName>Loss of use of one hand and one foot</diagnosticTypeName>
+                  <disabilityDate>02032012</disabilityDate>
+                  <disabilityDecisionTypeCode>SVCCONNCTED</disabilityDecisionTypeCode>
+                  <disabilityDecisionTypeName>Service Connected</disabilityDecisionTypeName>
+                  <disabilityID>1034824</disabilityID>
+                  <endDate/>
+                  <futureExamDate/>
+                  <hyphenatedDiagnosticTypeCode/>
+                  <hyphenatedDiagnosticTypeName/>
+                  <hyphenatedRelatedDisabilityTypeName/>
+                  <lastExamDate/>
+                  <majorIndicator>N</majorIndicator>
+                  <militaryServicePeriodTypeName>Gulf War</militaryServicePeriodTypeName>
+                  <paragraphTypeName/>
+                  <previousServicePercent/>
+                  <relatedDisabilityTypeName/>
+                  <supplementalDecisionTypeName/>
+                  <withholdingPercent/>
+                  <withholdingTypeName/>
+               </ratings>
+               <ratings>
+                  <beginDate>08152010</beginDate>
+                  <bilateralTypeName/>
+                  <combatIndicator>N</combatIndicator>
+                  <diagnosticPercent>30</diagnosticPercent>
+                  <diagnosticText>kick</diagnosticText>
+                  <diagnosticTypeCode>6512</diagnosticTypeCode>
+                  <diagnosticTypeName>Frontal sinusitis</diagnosticTypeName>
+                  <disabilityDate>02032012</disabilityDate>
+                  <disabilityDecisionTypeCode>SVCCONNCTED</disabilityDecisionTypeCode>
+                  <disabilityDecisionTypeName>Service Connected</disabilityDecisionTypeName>
+                  <disabilityID>1034825</disabilityID>
+                  <endDate/>
+                  <futureExamDate/>
+                  <hyphenatedDiagnosticTypeCode/>
+                  <hyphenatedDiagnosticTypeName/>
+                  <hyphenatedRelatedDisabilityTypeName/>
+                  <lastExamDate/>
+                  <majorIndicator>N</majorIndicator>
+                  <militaryServicePeriodTypeName>Gulf War</militaryServicePeriodTypeName>
+                  <paragraphTypeName/>
+                  <previousServicePercent/>
+                  <relatedDisabilityTypeName/>
+                  <supplementalDecisionTypeName/>
+                  <withholdingPercent/>
+                  <withholdingTypeName/>
+               </ratings>
+               <ratings>
+                  <beginDate>11152011</beginDate>
+                  <bilateralTypeName/>
+                  <combatIndicator>N</combatIndicator>
+                  <diagnosticPercent>30</diagnosticPercent>
+                  <diagnosticText>kick</diagnosticText>
+                  <diagnosticTypeCode>6512</diagnosticTypeCode>
+                  <diagnosticTypeName>Frontal sinusitis</diagnosticTypeName>
+                  <disabilityDate>02032012</disabilityDate>
+                  <disabilityDecisionTypeCode>SVCCONNCTED</disabilityDecisionTypeCode>
+                  <disabilityDecisionTypeName>Service Connected</disabilityDecisionTypeName>
+                  <disabilityID>1034825</disabilityID>
+                  <endDate/>
+                  <futureExamDate/>
+                  <hyphenatedDiagnosticTypeCode/>
+                  <hyphenatedDiagnosticTypeName/>
+                  <hyphenatedRelatedDisabilityTypeName/>
+                  <lastExamDate/>
+                  <majorIndicator>N</majorIndicator>
+                  <militaryServicePeriodTypeName>Gulf War</militaryServicePeriodTypeName>
+                  <paragraphTypeName/>
+                  <previousServicePercent/>
+                  <relatedDisabilityTypeName/>
+                  <supplementalDecisionTypeName/>
+                  <withholdingPercent/>
+                  <withholdingTypeName/>
+               </ratings>
+               <returnCode>SHAR 9999</returnCode>
+               <returnMessage>Records found.</returnMessage>
+               <serviceConnectedCombinedDegree>100</serviceConnectedCombinedDegree>
+            </disabilityRatingRecord>
+            <familyMemberRatingRecord>
+               <numberOfRecords>0</numberOfRecords>
+               <returnCode>SHAR 9999</returnCode>
+               <returnMessage>Records found.</returnMessage>
+            </familyMemberRatingRecord>
+            <otherRatingRecord>
+               <numberOfRecords>0</numberOfRecords>
+               <returnCode>SHAR 9999</returnCode>
+               <returnMessage>Records found.</returnMessage>
+            </otherRatingRecord>
+            <specialMonthlyCompensationRatingRecord>
+               <numberOfSMCParagraphRecords>0</numberOfSMCParagraphRecords>
+               <numberOfSMCRecords>0</numberOfSMCRecords>
+               <returnCode>SHAR 9999</returnCode>
+               <returnMessage>Records found.</returnMessage>
+            </specialMonthlyCompensationRatingRecord>
+         </return>
+      </ns2:findRatingDataResponse>
+	
+			
+			

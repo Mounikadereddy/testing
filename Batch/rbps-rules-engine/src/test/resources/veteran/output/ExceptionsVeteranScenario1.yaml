@@ -1,0 +1,9 @@
+messages:
+    - Auto Dependency Processing Reject Reason - Claim submitted with attached document(s). Please review document(s).
+    - Auto Dependency Processing Reject Reason - Veteran address is not provided. Please review.
+    - Auto Dependency Processing Reject Reason - Veteran is not living. Please review.
+    - Auto Dependency Processing Reject Reason - Rating changes to the Veterans Last Authorized Award have been made. Please review.
+    - Auto Dependency Processing Reject Reason - The Veterans Award is not current or is suspended or terminated. Please review.
+    - Auto Dependency Processing Reject Reason - The Veterans Award has used the GAO. Please review.
+    - Auto Dependency Processing Reject Reason - This is an attorney fee case. Please review.
+    - Auto Dependency Processing Reject Reason - The number of Dependents on Award is > 20. Please review.

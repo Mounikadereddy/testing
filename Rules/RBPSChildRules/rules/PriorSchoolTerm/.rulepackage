@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>PriorSchoolTerm</name>
+  <uuid>650dcb01-7767-43c2-bfa5-81bcee81afa2</uuid>
+</ilog.rules.studio.model.base:RulePackage>

@@ -1,0 +1,20 @@
+package Minor_Child.Bilological_Child {
+   use DOBPlus1Year;
+   /**
+ * BIOLOGICAL_CHILD;
+ * DOC > C-DOB + 365 Days
+ */
+rule CP0137$45$01 {
+      property ilog.rules.business_name = "CP0137-01";
+      property ilog.rules.package_name = "Minor Child.Bilological Child";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         evaluate ((((Child.childType.equals(gov.va.vba.rbps.coreframework.xom.ChildType.BIOLOGICAL_CHILD))) && (!(Child.onAwardAsMinorChild)) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Veteran.firstChangedDateofRating)) && (Veteran.claimDate.compareTo(DOBPlus1Year) > 0)));
+      } then {
+         Award.eventDate = Veteran.claimDate;
+      }
+   }
+}
+

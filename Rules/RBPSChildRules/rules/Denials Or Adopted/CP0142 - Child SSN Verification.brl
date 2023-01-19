@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0142 - Child SSN Verification</name>
+  <uuid>bf314ba5-2aac-49a5-8c9b-71e9f0556303</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if 
+	 the ssn of 'the Child' is not present 
+	 
+then  
+	 set Completed to true ; 
+	 add "Auto Dependency Processing Reject Reason - Dependent : "+ the last name of 'the Child' +", "+the first name of 'the Child' +" SSN was not provided. Please Review." to the list of Exceptions ;  ]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

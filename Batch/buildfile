@@ -1,0 +1,538 @@
+# require 'buildr/jetty'
+# require 'buildr/java/cobertura'
+# require 'buildr/jruby/shell'
+# require 'buildr/java/groovyc'
+require 'buildr/groovy/compiler'
+require 'buildr/groovy/shell'
+require 'buildr/java/emma'
+require 'buildr/jdepend'
+require 'fileutils'
+
+
+
+
+def filter_classpath
+
+  classpath = puts ENV['CLASSPATH']
+  classpath ||= []
+  puts classpath
+
+  path = classpath.empty? ? [] : classpath.split( ";" )
+
+  modified_list = path.delete_if do |item|
+    item =~ /.*\.properties*/
+  end
+
+  ENV['CLASSPATH'] = modified_list.join( ";" )
+
+  puts ENV['CLASSPATH']
+end
+
+filter_classpath
+
+
+
+
+
+
+puts "=" * 40
+
+repositories.remote << 'http://repo1.maven.org/maven2'
+#repositories.remote << "http://www.intalio.org/public/maven2"
+#repositories.remote << "http://repo1.maven.org/maven2"
+#repositories.remote << "http://download.java.net/maven/2"
+
+# local_lib           = '../lib'
+rbps_lib            = 'rbps-ear-r1/EarContent/APP-INF/lib'
+repositories.local  = "../m2"
+
+
+# jars            = Dir.glob( "rbps-ear-r1/*/*/*/*.jar" ) + Dir.glob( '../wl/log4j*.jar' )
+jars            = Dir.glob( "#{rbps_lib}/*.jar" ) + Dir.glob( '../wl/log4j*.jar' ) + Dir.glob( 'rbps-client*/lib/*' )
+junit           = artifact( 'junit:junit:jar:4.4' )
+slf4j_api       = artifact( 'org.slf4j:slf4j-api:jar:1.6.4' )
+slf4j_log4j     = artifact( 'org.slf4j:slf4j-log4j12:jar:1.6.4' )
+#itext           = artifact( 'com.lowagie:itext:jar:2.1.7' )
+#itext_rtf       = artifact( 'com.lowagie:itext-rtf:jar:2.1.7' )
+#ant_jsch        = artifact( 'ant:ant-jsch:jar:1.6.5' )
+#jsch            = artifact( 'com.jcraft:jsch:jar:0.1.44' )
+#sshj            = artifact( 'net.schmizz:sshj:jar:0.5.0' )
+jruby           = artifact( 'org.jruby:jruby-complete:jar:1.6.5' )
+
+#   The test classes matching these globs don't really have enough code in them
+#   to be tested, so excluding from emma is fine
+emma_excludes   = '*.mapping.*',
+                  '*.xom.*',
+                  '*.services.impl.*',
+                  '*.dto.*',
+                  '*.fixtures.*',
+                  '*.batching.*',
+                  '*.exception.*',
+                  '*.configutil.*',
+                  '*.virtualva.*',
+                  '*.client.handler.rbps.*'
+
+# jars.each{ |j| puts j }
+
+mkdir_p "rbps-web-r1/target/resources"
+
+define 'rbps' do
+  project.version = '0.1.0'
+  project.group   = 'gov.va.vba'
+
+  shell.using :jirb
+
+  # test.with junit, jmock, hamcrest_core, Dir.glob( "../lib/*.jar" ), jars
+  # test.with Dir.glob( "../lib/*.jar" ), jars, junit
+  test.using :fail_on_failure => false
+#  test.using :properties => { :'org.junit.RunTags' => 'release'  }
+
+#  puts test.dependencies
+
+  desc 'client'
+  define 'client', :base_dir => 'rbps-client' do
+    compile.with jars
+    # package :javadoc
+  end
+
+
+  desc 'common'
+  define 'common', :base_dir => 'rbps-common-r1' do
+    compile.with jars
+    # package :javadoc
+
+    emma.exclude emma_excludes
+  end
+
+
+  desc 'rule_session'
+  define 'rule_session', :base_dir => 'rbps-rule-session-r1' do
+    compile.with jars, project( 'common' ).package( :jar )
+    # package :javadoc
+  end
+
+
+  desc 'lettergen'
+  define 'lettergen', :base_dir => 'rbps-lettergen-r1' do
+    compile.with jars, project( 'common' ).package( :jar )
+    shell.using :groovy
+
+    package :javadoc
+    package( :jar ).exclude '**/.metadata'
+    package( :jar, :classifier => 'test' ).tap do |path|
+      path.include _( 'target/test/classes' ), :as => '.'
+      path.exclude _( 'target/classes' )
+      path.exclude _( 'target/resources' )
+      path.exclude _( '**/.metadata' )
+    end
+
+    emma.exclude emma_excludes
+
+    test.with project( 'common' ).package( :jar ), junit, slf4j_api, slf4j_log4j
+#    puts test.dependencies
+  end
+
+
+  desc 'core'
+  define 'core', :base_dir => 'rbps-core-r1' do
+    compile.with jars,
+                    project( 'common' ).package( :jar ),
+                    project( 'rule_session' ).package( :jar ),
+                    project( 'lettergen' ).package( :jar )
+                    project( 'web' ).package()
+                    # Dir.glob( '../spring-ws*/work/**/spring-ws-*.jar' )
+
+    package :javadoc
+    package( :jar ).exclude '**/.metadata'
+    package( :jar, :classifier => 'test' ).tap do |path|
+      path.include _( 'target/test/classes' ), :as => '.'
+      path.exclude _( 'target/resources' )
+      path.exclude _( '**/.metadata' )
+    end
+
+    emma.exclude emma_excludes
+
+    test.exclude '*WSHandlerTest', '*EP130ClaimPreProcessorTest*', '*EP130ClaimProcessorImplTest*', '*EP130ClaimPost*Test*'
+    test.with jars,
+              Dir.glob( "rbps-lettergen-r1/target/resources" ),
+#              project( 'web' ).compile,
+              Dir.glob( "*web*/target/resources" ),
+#              Dir.glob( "*web*/src/main/resources" ),
+              project( 'lettergen' ).package( :jar, :classifier => 'test' ),
+              junit,
+              slf4j_api,
+              slf4j_log4j
+
+    # package :javadoc
+    shell.using( :jirb ).with Dir.glob( 'rbps-core-r1/src/test/resources' ), Dir.pwd
+
+    # Doesn't seem to work.
+    task :vetInfo do
+      run.with Dir.glob( 'rbps-core-r1/src/test/resources' ), Dir.pwd, jruby
+      run.using :main => ['org.jruby.Main', 'runnit.rb' ]
+    end
+
+    # This works
+    run.with Dir.glob( 'rbps-core-r1/src/test/resources' ), Dir.pwd, jruby
+    run.using :main => ['org.jruby.Main', 'runnit.rb' ]
+
+
+
+    # Generate SOAP related code using the jaxb compiler
+    require 'buildr_jaxb_xjc'
+
+    vonapProcUpdateWsdl = '../vonapVnpProcUpdate.wsdl'
+    awardsWsdl          = '../awards.wsdl'
+
+    familyTreeWsdl      = '../familyTree.wsdl'
+    benefitsClaimsWsdl  = '../benefitsClaims.wsdl'
+    findRatingsWsdl     = '../ratings.wsdl'
+    signatureWsdl       = '../signature.wsdl'
+    awardWebBeanWsdl    = '../awardWebService.wsdl'
+#    compile.from( compile_jaxb( _( awardWebBeanWsdl ),
+#                                # "-quiet",
+#                                "-wsdl",
+#                                :package => 'gov.va.vba.rbps.services.ws.client.mapping.awards.bean' ) )
+  end
+
+
+  #
+  #   This fake sub-project allows the 'cc' (continuous compile) target of buildr
+  #   to compile AND test the core project.  I really wanted the tests to run
+  #   any time I changed the code.
+  #
+  desc 'fake'
+  define 'fake', :base_dir => 'fake' do
+    compile.with jars, project( 'core' ).package( :jar )
+    # package :javadoc
+  end
+
+
+
+  desc 'web'
+  define 'web', :base_dir => 'rbps-web-r1' do
+    mkdir_p "rbps-web-r1/target/resources"
+    # package( :war ).with( :libs => jars )jar, :classifier => 'test' ),
+
+    compile
+    package( :war )
+    test.using :integration
+  end
+
+
+
+  desc 'jar'
+  define 'jar', :base_dir => 'rbps-ear-r1' do
+  end
+
+  desc 'ear'
+  define 'ear', :base_dir => 'rbps-ear-r1' do
+    package( :ear ).add project( 'common' ).package( :jar ),
+                    project( 'rule_session' ).package( :jar ),
+                    project( 'lettergen' ).package( :jar ),
+                    project( 'web' ).package( :war ),
+                    :context_root => 'RbpsServices'
+
+    package(:ear).display_name = 'ear'
+    package(:ear).description  = 'Rules Based Processing Services'
+
+    jars.each do |jar|
+      package( :ear ).add jar, :type => :lib, :path => 'APP-INF/lib'
+    end
+  end
+
+  puts projects.inspect
+
+#  puts project( 'ear' )._( 'EarContent/APP-INF/lib' )
+
+  # puts project.shell.classpath
+  # puts project.shell.provider
+end
+
+
+require 'ruby_gntp'
+growl = GNTP.new( "RBPS buildr" )
+growl.register( {:notifications => [{
+  :name     => "buildr",
+  :enabled  => true,
+}]})
+
+
+
+notify = lambda do |type, title, message|
+  # param = case type
+  #   when 'completed'; '-i'
+  #   when 'failed'; '-e'
+  #   else '-i'
+  # end
+
+  puts "=" * 60
+  puts "#{Time.new} #{title.inspect} #{message.inspect}"
+  puts "=" * 60
+
+  pimp    = 'C:/Documents and Settings/vafsccorbit/My Documents/codeDownloads/Pimp_your_autotest-notificatio'
+  success = "#{pimp}/pass.png"
+  fail    = "#{pimp}/fail.png"
+  image   = success
+  image   = fail if type == 'failed'
+
+  growl.notify({
+    :name  => "buildr",
+    :title => "Build",
+    :text  => "#{title.inspect} #{message.inspect}.",
+    :icon  => image,
+    :sticky=> false,
+  })
+end
+
+
+
+Buildr.application.on_completion do |title, message|
+  notify['completed', title, message]
+end
+
+Buildr.application.on_failure do |title, message, ex|
+  notify['failed', title, message]
+end
+
+
+def colorize_message( first, sub, last )
+
+  first.colorize( :magenta ) + sub.to_s.colorize( :cyan ) + last.colorize( :magenta )
+end
+
+
+def run_sloc( file_type, print_source_files = false )
+  require 'colorize'
+  sources = projects.map { |prj| prj.compile.sources.
+    map { |src| FileList["#{src}/**/*\.#{file_type}"] } }.flatten
+
+# one = projects.map{ |prj| prj.compile.sources }
+# one.map{ |src| puts( "#{src}/**/*\.#{file_type}" ) if ! src.empty? }
+# return
+
+  # sources = projects.map { |prj| prj.compile.sources }.
+  #   map { |src| FileList["#{src}/**/*\.#{file_type}"] if ! src.empty? }
+
+  sources += projects.map { |prj| prj.test.compile.sources.
+    map { |src| FileList["#{src}/**/*\.#{file_type}"] } }.flatten
+
+  sources += projects.map { |prj| prj.resources.sources.
+    map { |src| FileList["#{src}/**/*\.#{file_type}"] } }.flatten
+
+  sources += projects.map { |prj| prj.test.resources.sources.
+    map { |src| FileList["#{src}/**/*\.#{file_type}"] } }.flatten
+
+  # lines = sources.inject(0) { |lines, src|  if ! src.nil? then lines += File.readlines(src).size else lines end }
+  # lines = sources.inject(0) { |lines, src|  lines += File.readlines(src).size }
+  lines = sources.inject(0) do |lines, src|
+    lines += File.readlines(src).inject(0) do |lines,line|
+      lines += 1 if ! line.chomp.empty?
+
+      lines
+    end
+  end
+
+  puts colorize_message( "There are >", sources.size, "< #{file_type} source files" )
+  puts colorize_message "That contain >", lines, "< lines\n"
+
+  return unless print_source_files
+  sources.sort.each{ |f| puts f }
+end
+
+
+desc 'count files and lines of java code'
+task 'sloc' do
+  run_sloc( 'java' )
+  run_sloc( 'xml', false )
+  run_sloc( 'html', false )
+end
+
+
+
+desc 'copy properties files for weblogic'
+task 'copy_props' do
+
+  base_dir = 'rbps-web-r1'
+  puts "web base dir: #{base_dir}"
+  old_props = FileList[ "#{base_dir}/../props/*.prop*" ]
+  # old_props = FileList[ '#{base_dir}/../props/*.prop*' ]
+  puts "Removing old properties files for weblogic: #{old_props}"
+  rm old_props, :verbose => true
+
+  puts "Copying properties files for weblogic: #{FileList[ "#{base_dir}/src/main/resources/*.prop*" ]}"
+  cp FileList[ "#{base_dir}/src/main/resources/*.prop*" ], 'props', :verbose => true
+  rm FileList[ 'props/jndi.prop*' ]
+end
+
+# task compile => 'copy_prop'
+# task package => 'copy_prop'
+
+
+
+desc 'joe'
+task 'joe' do
+
+  # search_for_jar( "../Web*/*/**/*client*.jar", "NestedException" )
+  # search_for_jar( "../Web*/*/**/*.jar", "WebLogicMBean" )
+  # search_for_jar_with_class( "../Web*/*/**/*.jar", "weblogic.descriptor.DescriptorBean" )
+  # search_for_jar_with_class( "../Web*/*/**/*.jar", "weblogic.utils.AssertionError" )
+  # search_for_jar_with_class( "../Web*/*/**/*.jar", "weblogic.utils.classloaders.GenericClassLoader" )
+  # search_for_jar_with_class( "../Web*/*/**/*.jar", "weblogic.logging.NonCatalogLogger" )
+
+  # search_for_jar_with_class( "../spring-ws*/**/*.jar", "GenericMarshallingMethodEndpointAdapter" )
+  # search_for_jar_with_class( "rbps-ear*/**/*.jar", "GenericMarshallingMethodEndpointAdapter" )
+
+  # search_for_jar_with_class( "rbps-ear*/**/*.jar", "org.apache.log4j.Priority" )
+  # search_for_jar_with_class( "../lib/*.jar", "org.apache.log4j.Priority" )
+  # search_for_jar_with_class( "../wl/*.jar", "org.apache.log4j.Priority" )
+  # search_for_jar_with_class( "../lib/*.jar", "XMLGregorianCalendarImpl" )
+
+  # search_for_jar_with_class( "rbps-ear*/**/*.jar", "org.slf4j.ext.LoggerWrapper" )
+  search_for_jar_with_class( "../wl/*.jar", "org.slf4j.impl.StaticLoggerBinder" )
+
+
+
+  # search_for_jar_with_class( "rbps-ear*/**/*.jar", "WSEndpoint" )
+  # search_for_jar_with_class( "../lib/*.jar", "WSEndpoint" )
+  # search_for_jar_with_class( "../*jdk*/**/*.jar", "com/sun/xml/ws/api/server/WSEndpoint" )
+  # search_for_jar_with_class( "../Web*/10.3.0/**/*.jar", "com/sun/xml/ws/api/server/WSEndpoint" )
+
+  # search_for_jar_with_class( "../Web*/10.3.0/**/*.jar", "StaticLoggerBinder" )
+  # search_for_jar_with_class( "../lib/*.jar", "StaticLoggerBinder" )
+  # search_for_jar_with_class( "rbps-ear*/**/*.jar", "StaticLoggerBinder" )
+  # search_for_jar_with_class( "rbps-ear*/**/*.jar", "com.sun.xml.ws.api.server.WSEndpoint" )
+  # search_for_jar_with_class( "../*1.1/rbps-ear*/**/*.jar", "com.sun.xml.ws.api.server.WSEndpoint" )
+# Dir.glob( "**/*Exception.java" ).each{ |t| puts t }
+
+  # search_for_jar_with_class( "../lib/*.jar", "WSAuthorizationHandler" )
+end
+
+
+#    Modified from: http://martinfowler.com/articles/rake.html
+def copy_files srcGlob, targetDir
+  mkdir_p targetDir unless File.exist?(targetDir)
+  # directory targetDir
+  chmod 666, targetDir
+
+  FileList[srcGlob].each do |f|
+    target = File.join targetDir, File.basename(f)
+
+    # puts "f: #{f}"
+    # puts "target: #{target}"
+
+    # file target => f do
+      cp f, target, :verbose => true unless File.exist?( target )
+      chmod 666, target
+    # end
+    # task taskSymbol => target
+  end
+end
+
+
+
+def search_for_jar_with_class( jar_pattern, look_for )
+  require 'zippy'
+  # puts Zippy.list( "../WebLogic/10.3.4/wlserver_10.3/server/lib/webserviceclient.jar" )
+
+  Dir.glob( jar_pattern ).each do |jar|
+    # puts jar
+
+
+    contents = []
+    begin
+      contents = Zippy.list( jar ) unless jar =~ /\+/
+    rescue
+      # puts "failed to examine #{jar}"
+    end
+
+#    require 'colorize'
+    contents.each do |line|
+      if line =~ /#{look_for}/
+#        puts jar.colorize( :red )
+        puts jar
+        puts "\t#{line}"
+        # break
+      end
+    end
+  end
+end
+
+
+desc 'headers'
+task 'headers' do
+  # files = Dir[ "*lettergen*/**/*.java"]
+  files = Dir[ "*/**/*.java"]
+
+  # files.each{ |f| puts f}
+  # puts files.size
+
+  # files = %w{ lettergen/src/test/java/gov/va/vba/rbps/lettergeneration/LetterGenerationTest.java }
+
+
+  files.each do |f|
+
+    header = <<-EOS
+/*
+ * #{File.basename f}
+ *
+ * Copyright 2011 U.S. Department of Veterans Affairs
+ * U.S. Government PROPRIETARY/CONFIDENTIAL. Use is subject to security terms.
+ *
+ */
+    EOS
+    header = header.gsub( /\s*$/, "" )
+
+    # puts header
+    content  = File.read(f)
+
+    file_header = content[0..(header.size - 1)].gsub( /\s*$/, "" )
+    # puts file_header
+    next if file_header == header
+
+    next if f.include?( "mapping" ) || f.include?( "xom" )
+
+    puts "editing #{File.basename(f)}"
+    puts file_header
+    puts ""
+    # new_file = File.open(f, "w")
+    # new_file.write( header + content )
+    # new_file.close
+
+  end
+end
+
+desc 'utf-headers'
+task 'utf-headers' do
+  files = Array.new
+  ["*.rb", "*.rake"].each do |extension|
+    files.concat(Dir[ File.join(Dir.getwd.split(/\\/), "**", extension) ])
+  end
+
+  files.each do |file|
+    content = File.read(file)
+    next if content[0..16] == "# coding: UTF-8\n\n" ||
+          content[0..22] == "# -*- coding: utf-8 -*-"
+
+    ["\n\n", "\n"].each do |file_end|
+      content = content.gsub(/(# encoding: UTF-8#{file_end})|(# coding: UTF-8#{file_end})|(# -*- coding: UTF-8 -*-#{file_end})|(# -*- coding: utf-8 -*-#{file_end})/i, "")
+    end
+
+    new_file = File.open(file, "w")
+    new_file.write("# coding: UTF-8\n\n"+content)
+    new_file.close
+  end
+end
+
+
+
+#test.using :testng 
+#test.exclude '*'  # Prevent normal task from executing 
+#task(:testng) do 
+#  Java.java "org.testng.TestNG", "testng.xml", 
+#     :classpath => [ test.compile.dependencies, test.compile.target, 
+#                     test.compile.target, resources.sources ], 
+#     :java_args => ["-Xmx1024m"] 
+#end 
+#task :test => :testng 
+

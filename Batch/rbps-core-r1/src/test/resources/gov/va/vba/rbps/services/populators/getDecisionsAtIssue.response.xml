@@ -1,0 +1,191 @@
+      <ns3:getDecisionsAtIssueResponse xmlns:ns2="http://gov.va.vba.benefits.awards/data" xmlns:ns3="http://session.ejb.awards.benefits.vba.va.gov/">
+         <return>
+            <errorLevel>0</errorLevel>
+            <hDecisionsAtIssue>
+               <hDisabilityList>
+                  <hDisabilityVO>
+                     <combatInd>N</combatInd>
+                     <concurEntlmtType/>
+                     <concurEntlmtTypeDesc/>
+                     <decisionBasisType>INC</decisionBasisType>
+                     <decisionBasisTypeDesc>Incurred</decisionBasisTypeDesc>
+                     <decisionType>SVCCONNCTED</decisionType>
+                     <decisionTypeDesc>Service Connected</decisionTypeDesc>
+                     <disabilityDate>2006-04-04T00:00:00-05:00</disabilityDate>
+                     <disabilitySeqNbr>14760</disabilitySeqNbr>
+                     <examAtOnceInd>N</examAtOnceInd>
+                     <individualUnemplInd/>
+                     <servicePeriodType>4</servicePeriodType>
+                     <servicePeriodTypeDesc>Peacetime</servicePeriodTypeDesc>
+                     <staticInd/>
+                     <tempDisabilitySequenceNbr>14760</tempDisabilitySequenceNbr>
+                     <hDisabilityEvaluationList>
+                        <hDisabilityEvaluationVO>
+                           <beginDate>1992-07-02T00:00:00-05:00</beginDate>
+                           <bilateralType>RL</bilateralType>
+                           <bilateralTypeDesc>Right Lower</bilateralTypeDesc>
+                           <diagnosticText>History of right anterior cruciate ligament rupture</diagnosticText>
+                           <diagnosticType>5257</diagnosticType>
+                           <diagnosticTypeDesc>Impairment of the knee, general</diagnosticTypeDesc>
+                           <effectiveDate>1992-08-01T00:00:00-05:00</effectiveDate>
+                           <effectiveDateOverrideInd>N</effectiveDateOverrideInd>
+                           <hypntdDiagnosticType/>
+                           <majorInd>N</majorInd>
+                           <paragraphType/>
+                           <paragraphTypeDesc/>
+                           <percent>0</percent>
+                           <profileDate>2006-04-04T00:00:00-05:00</profileDate>
+                           <ratingDecnType>DSBLTYEVALTN</ratingDecnType>
+                           <scheduleType>CS</scheduleType>
+                           <scheduleTypeDesc>Current Schedule</scheduleTypeDesc>
+                           <supplementalDecnType/>
+                           <hDecisionAnalysis>
+                              <increased>Y</increased>
+                              <wasChanged>N</wasChanged>
+                           </hDecisionAnalysis>
+                        </hDisabilityEvaluationVO>
+                     </hDisabilityEvaluationList>
+                  </hDisabilityVO>
+                  <hDisabilityVO>
+                     <combatInd>N</combatInd>
+                     <concurEntlmtType/>
+                     <concurEntlmtTypeDesc/>
+                     <decisionBasisType>INC</decisionBasisType>
+                     <decisionBasisTypeDesc>Incurred</decisionBasisTypeDesc>
+                     <decisionType>SVCCONNCTED</decisionType>
+                     <decisionTypeDesc>Service Connected</decisionTypeDesc>
+                     <disabilityDate>2006-04-04T00:00:00-05:00</disabilityDate>
+                     <disabilitySeqNbr>14759</disabilitySeqNbr>
+                     <examAtOnceInd>N</examAtOnceInd>
+                     <individualUnemplInd/>
+                     <servicePeriodType>4</servicePeriodType>
+                     <servicePeriodTypeDesc>Peacetime</servicePeriodTypeDesc>
+                     <staticInd/>
+                     <tempDisabilitySequenceNbr>14759</tempDisabilitySequenceNbr>
+                     <hDisabilityEvaluationList>
+                        <hDisabilityEvaluationVO>
+                           <beginDate>1992-07-02T00:00:00-05:00</beginDate>
+                           <bilateralType>RL</bilateralType>
+                           <bilateralTypeDesc>Right Lower</bilateralTypeDesc>
+                           <diagnosticText>Post traumatic degenerative arthritis, right ankle, right ankle reconstruction and right leg fracture</diagnosticText>
+                           <diagnosticType>5271</diagnosticType>
+                           <diagnosticTypeDesc>Limitation of motion of the ankle</diagnosticTypeDesc>
+                           <effectiveDate>1992-08-01T00:00:00-05:00</effectiveDate>
+                           <effectiveDateOverrideInd>N</effectiveDateOverrideInd>
+                           <hypntdDiagnosticType>5010</hypntdDiagnosticType>
+                           <majorInd>N</majorInd>
+                           <paragraphType/>
+                           <paragraphTypeDesc/>
+                           <percent>10</percent>
+                           <profileDate>2006-04-04T00:00:00-05:00</profileDate>
+                           <ratingDecnType>DSBLTYEVALTN</ratingDecnType>
+                           <scheduleType>CS</scheduleType>
+                           <scheduleTypeDesc>Current Schedule</scheduleTypeDesc>
+                           <supplementalDecnType/>
+                           <hDecisionAnalysis>
+                              <increased>Y</increased>
+                              <wasChanged>N</wasChanged>
+                           </hDecisionAnalysis>
+                        </hDisabilityEvaluationVO>
+                     </hDisabilityEvaluationList>
+                  </hDisabilityVO>
+                  <hDisabilityVO>
+                     <combatInd>N</combatInd>
+                     <concurEntlmtType/>
+                     <concurEntlmtTypeDesc/>
+                     <decisionBasisType>INC</decisionBasisType>
+                     <decisionBasisTypeDesc>Incurred</decisionBasisTypeDesc>
+                     <decisionType>SVCCONNCTED</decisionType>
+                     <decisionTypeDesc>Service Connected</decisionTypeDesc>
+                     <disabilityDate>2006-04-04T00:00:00-05:00</disabilityDate>
+                     <disabilitySeqNbr>14760</disabilitySeqNbr>
+                     <examAtOnceInd>N</examAtOnceInd>
+                     <individualUnemplInd/>
+                     <servicePeriodType>4</servicePeriodType>
+                     <servicePeriodTypeDesc>Peacetime</servicePeriodTypeDesc>
+                     <staticInd/>
+                     <tempDisabilitySequenceNbr>14760</tempDisabilitySequenceNbr>
+                     <hDisabilityEvaluationList>
+                        <hDisabilityEvaluationVO>
+                           <beginDate>1999-11-30T00:00:00-06:00</beginDate>
+                           <bilateralType>RL</bilateralType>
+                           <bilateralTypeDesc>Right Lower</bilateralTypeDesc>
+                           <diagnosticText>Status post anterior cruciate ligament reconstruction right knee (formerly coded as History of right anterior cruciate ligament rupture)</diagnosticText>
+                           <diagnosticType>5257</diagnosticType>
+                           <diagnosticTypeDesc>Impairment of the knee, general</diagnosticTypeDesc>
+                           <effectiveDate>1999-12-01T00:00:00-06:00</effectiveDate>
+                           <effectiveDateOverrideInd>N</effectiveDateOverrideInd>
+                           <hypntdDiagnosticType>5299</hypntdDiagnosticType>
+                           <majorInd>N</majorInd>
+                           <paragraphType/>
+                           <paragraphTypeDesc/>
+                           <percent>20</percent>
+                           <profileDate>2006-04-04T00:00:00-05:00</profileDate>
+                           <ratingDecnType>DSBLTYEVALTN</ratingDecnType>
+                           <scheduleType>CS</scheduleType>
+                           <scheduleTypeDesc>Current Schedule</scheduleTypeDesc>
+                           <supplementalDecnType/>
+                           <hDecisionAnalysis>
+                              <increased>Y</increased>
+                              <wasChanged>Y</wasChanged>
+                           </hDecisionAnalysis>
+                        </hDisabilityEvaluationVO>
+                        <hDisabilityEvaluationVO>
+                           <beginDate>2000-01-17T00:00:00-06:00</beginDate>
+                           <bilateralType>RL</bilateralType>
+                           <bilateralTypeDesc>Right Lower</bilateralTypeDesc>
+                           <diagnosticText>Status post anterior cruciate ligament reconstruction right knee (formerly coded as History of right anterior cruciate ligament rupture)</diagnosticText>
+                           <diagnosticType>5257</diagnosticType>
+                           <diagnosticTypeDesc>Impairment of the knee, general</diagnosticTypeDesc>
+                           <effectiveDate>2000-02-01T00:00:00-06:00</effectiveDate>
+                           <effectiveDateOverrideInd>N</effectiveDateOverrideInd>
+                           <hypntdDiagnosticType>5299</hypntdDiagnosticType>
+                           <majorInd>N</majorInd>
+                           <paragraphType>30</paragraphType>
+                           <paragraphTypeDesc>Surgical Rating</paragraphTypeDesc>
+                           <percent>100</percent>
+                           <profileDate>2006-04-04T00:00:00-05:00</profileDate>
+                           <ratingDecnType>DSBLTYEVALTN</ratingDecnType>
+                           <scheduleType>CS</scheduleType>
+                           <scheduleTypeDesc>Current Schedule</scheduleTypeDesc>
+                           <supplementalDecnType/>
+                           <hDecisionAnalysis>
+                              <increased>Y</increased>
+                              <wasChanged>Y</wasChanged>
+                           </hDecisionAnalysis>
+                        </hDisabilityEvaluationVO>
+                        <hDisabilityEvaluationVO>
+                           <beginDate>2000-03-01T00:00:00-06:00</beginDate>
+                           <bilateralType>RL</bilateralType>
+                           <bilateralTypeDesc>Right Lower</bilateralTypeDesc>
+                           <diagnosticText>Status post anterior cruciate ligament reconstruction right knee (formerly coded as History of right anterior cruciate ligament rupture)</diagnosticText>
+                           <diagnosticType>5257</diagnosticType>
+                           <diagnosticTypeDesc>Impairment of the knee, general</diagnosticTypeDesc>
+                           <effectiveDate>2000-03-01T00:00:00-06:00</effectiveDate>
+                           <effectiveDateOverrideInd>N</effectiveDateOverrideInd>
+                           <hypntdDiagnosticType>5299</hypntdDiagnosticType>
+                           <majorInd>N</majorInd>
+                           <paragraphType/>
+                           <paragraphTypeDesc/>
+                           <percent>0</percent>
+                           <profileDate>2006-04-04T00:00:00-05:00</profileDate>
+                           <ratingDecnType>DSBLTYEVALTN</ratingDecnType>
+                           <scheduleType>CS</scheduleType>
+                           <scheduleTypeDesc>Current Schedule</scheduleTypeDesc>
+                           <supplementalDecnType/>
+                           <hDecisionAnalysis>
+                              <increased>N</increased>
+                              <wasChanged>Y</wasChanged>
+                           </hDecisionAnalysis>
+                        </hDisabilityEvaluationVO>
+                     </hDisabilityEvaluationList>
+                  </hDisabilityVO>
+               </hDisabilityList>
+               <response>
+                  <responseCode>0</responseCode>
+                  <responseDebug>input_ptcpnt_vet_id = 365811,prfile_dt- 20060404091903</responseDebug>
+                  <responseText>Success</responseText>
+               </response>
+            </hDecisionsAtIssue>
+         </return>
+      </ns3:getDecisionsAtIssueResponse>

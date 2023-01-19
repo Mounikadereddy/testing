@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0119 - Tution Feed Paid By Govt Check</name>
+  <uuid>1991bd83-a0e4-4ecd-a49e-0169e25ce545</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if 
+	 'the Child' tuition is paid by government 
+then 
+	set priorSchoolTermValid to false;
+  set PriorSchoolTermStatus to "ignore";
+ 	add "last term  not valid" to the list of 'LogMessage' ; 	
+
+]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

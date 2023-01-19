@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" xmlns:ilog.rules.studio.model.rule="http://ilog.rules.studio/model/rule.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore">
+  <name>RBPSChildRules</name>
+  <uuid>cafbbbc2-7981-47bc-aa49-23bf8857823d</uuid>
+  <outputLocation>output</outputLocation>
+  <categories>any</categories>
+  <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
+    <entries xsi:type="ilog.rules.studio.model.xom:LibraryXOMPathEntry" name="org.eclipse.jdt.launching.JRE_CONTAINER" url="file:org.eclipse.jdt.launching.JRE_CONTAINER" kind="LIBRARY"/>
+    <entries xsi:type="ilog.rules.studio.model.xom:SystemXOMPathEntry" name="rbps-xom.jar" url="file:C:/dev/xom/rbps-xom.jar"/>
+  </paths>
+  <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="model" url="platform:/RBPSChildRules/bom/model.bom" origin="xom:/RBPSChildRules/C:/dev/xom/rbps-xom.jar"/>
+  </paths>
+  <parameters name="Child" type="gov.va.vba.rbps.coreframework.xom.Child" initialValue="" verbalization="the Child"/>
+  <parameters name="Exceptions" type="gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages" initialValue="" verbalization="Exceptions" direction="OUT"/>
+  <parameters name="Award" type="gov.va.vba.rbps.coreframework.xom.Award" initialValue="" verbalization="the Award" direction="OUT"/>
+  <parameters name="Veteran" type="gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates" initialValue="" verbalization="the Veteran"/>
+  <parameters name="MinorSchoolChildAward" type="gov.va.vba.rbps.coreframework.xom.Award" initialValue="" verbalization="the minorSchoolChildAward" direction="OUT"/>
+  <parameters name="PriorSchoolChild" type="gov.va.vba.rbps.coreframework.xom.Award" initialValue="" verbalization="PriorSchoolChild" direction="OUT"/>
+  <parameters name="LogMessage" type="gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages" initialValue="" verbalization="LogMessage" direction="OUT"/>
+  <parameters name="PriorSchoolTermStatus" type="java.lang.String" initialValue="" verbalization="PriorSchoolTermStatus" direction="OUT"/>
+  <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
+    <name>rules</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.bom:BOMFolder">
+    <name>bom</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.rule:TemplateFolder">
+    <name>templates</name>
+  </modelFolders>
+  <modelFolders xsi:type="ilog.rules.studio.model.query:QueryFolder">
+    <name>queries</name>
+  </modelFolders>
+  <extractors xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="Test" validator="Default Validator">
+    <query href="RBPSChildRules/queries/Test.qry#b0d03db7-0437-4a5d-b632-c2aa0e885fee"/>
+  </extractors>
+</ilog.rules.studio.model.base:RuleProject>

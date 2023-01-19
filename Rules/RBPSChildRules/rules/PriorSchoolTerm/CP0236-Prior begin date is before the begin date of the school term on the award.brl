@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0236-Prior begin date is before the begin date of the school term on the award</name>
+  <uuid>57a40ffc-1660-417d-9630-7190449c002c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+ the last term in corp begin date of 'the Child' is not null and 
+ the course start date of the last term of 'the Child'  is before the last term in corp begin date of 'the Child'
+then
+  add  "Auto Processing Dependency Processing Reject - Begin date of prior school term is before award effective date for school attendance begins.Please Review." to the list of Exceptions ;
+  set 'PriorConditionSatisfied' to true ;  
+   set Completed to true ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

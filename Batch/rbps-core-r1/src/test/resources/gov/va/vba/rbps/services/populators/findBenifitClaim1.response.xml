@@ -1,0 +1,47 @@
+<ns2:findBenefitClaimResponse xmlns:ns2='http://services.share.benefits.vba.va.gov/'>
+    <return>
+        <participantRecord>
+            <numberOfRecords>2</numberOfRecords>
+            <returnCode>SHAR 9999</returnCode>
+            <returnMessage>Records found.</returnMessage>
+            <selection>
+                <benefitClaimID>30449078</benefitClaimID>
+                <claimReceiveDate>06/12/2012</claimReceiveDate>
+                <claimTypeCode>130DPNEBNADJ</claimTypeCode>
+                <claimTypeName>eBenefits Dependency Adjustment</claimTypeName>
+                <claimantFirstName>RICHARD</claimantFirstName>
+                <claimantLastName>HESS</claimantLastName>
+                <claimantMiddleName>KIRK</claimantMiddleName>
+                <claimantSuffix/>
+                <endProductTypeCode>130</endProductTypeCode>
+                <lastActionDate/>
+                <organizationName/>
+                <organizationTitleTypeName/>
+                <payeeTypeCode>00</payeeTypeCode>
+                <personOrOrganizationIndicator>P</personOrOrganizationIndicator>
+                <programTypeCode>CPL</programTypeCode>
+                <statusTypeCode>PEND</statusTypeCode>
+            </selection>
+            <selection>
+                <benefitClaimID>25930193</benefitClaimID>
+                <claimReceiveDate>08/01/2011</claimReceiveDate>
+                <claimTypeCode>010LCOMPPRD</claimTypeCode>
+                <claimTypeName>Quick Start-Initial 8+ issues</claimTypeName>
+                <claimantFirstName>RICHARD</claimantFirstName>
+                <claimantLastName>HESS</claimantLastName>
+                <claimantMiddleName>KIRK</claimantMiddleName>
+                <claimantSuffix/>
+                <endProductTypeCode>017</endProductTypeCode>
+                <lastActionDate/>
+                <organizationName/>
+                <organizationTitleTypeName/>
+                <payeeTypeCode>00</payeeTypeCode>
+                <personOrOrganizationIndicator>P</personOrOrganizationIndicator>
+                <programTypeCode>CPL</programTypeCode>
+                <statusTypeCode>PEND</statusTypeCode>
+            </selection>
+        </participantRecord>
+        <returnCode>SHAR 9999</returnCode>
+        <returnMessage>Records found.</returnMessage>
+    </return>
+</ns2:findBenefitClaimResponse>

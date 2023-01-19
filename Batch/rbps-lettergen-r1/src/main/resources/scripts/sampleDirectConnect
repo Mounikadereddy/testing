@@ -1,0 +1,149 @@
+#!/bin/ksh
+#/*
+#* cdwritva job transfers the VETSNET write outs conversion files to Virtual VA.
+#* Checkpoint interval is set to 2M, extended compression is used.
+#*/
+
+# Declare and script command execution format variables.
+#COMMAND=`basename ${0}`
+USAGE="USAGE: ${0}"
+
+PATH=$PATH:/opt/connect_direct/ndm/bin
+export PATH
+
+NDMAPICFG=/opt/connect_direct/ndm/cfg/cliapi/ndmapi.cfg
+export NDMAPICFG
+
+# Declare log file that will contain cumulative job execution activity.
+LOGFILE=/export/home/prodadm/opa_jobs/log/cdwritva.log
+echo > $LOGFILE
+chmod 600 $LOGFILE
+
+# Declare temporary file that will contain current file transfer activity.
+TMPFILE=/export/home/prodadm/opa_jobs/log/temp/cdwritva.tmp
+
+v_substr_nm="F8270.DT*.*"
+v_rempath_nm="G:\inetpub\ftproot\incoming\FileTransfer\Vetsnet\Writeout"
+v_locpath_nm="/cdxfer/vetsnet/cpbatch/data"
+
+# List the VETSNET write out files in the noted directory that were generated on the execution (system) date.
+echo >> $LOGFILE
+echo "Listing VETSNET write out files to transfer at this time..." >> $LOGFILE
+ls $v_locpath_nm | grep "^F8270.DT" >> $LOGFILE
+
+# Check if any VETSNET write out files are in file transfer directory.
+# If local file list is empty [[ "x$v_locfile_lst" == "x" ]], report error message, set return
+# code, exit from script execution.  Otherwise, continue script execution.
+v_locfile_lst=`/usr/bin/ls -1 $v_locpath_nm/$v_substr_nm`
+
+echo "local path name ... $v_locpath_nm"
+echo "subscript name ... $v_substr_nm"
+echo "local file list ... $v_locfile_lst"
+
+if [[ "x$v_locfile_lst" != "x" ]]
+then
+  # Loop through the local file list and determine VETSNET write out file name.
+  for i in $v_locfile_lst
+  do
+    v_srcfile_nm=`basename $i`                 # Set variable to source file name to reference.
+    v_locfile_nm=$v_locpath_nm/$v_srcfile_nm   # Set variable to file name on local server.
+    v_remfile_nm=$v_rempath_nm\\$v_srcfile_nm  # Set variable to file name on remote server.
+
+    #echo "Source File: $v_srcfile_nm"
+    #echo "Local  File: $v_locfile_nm"
+    #echo "Remote File: $v_remfile_nm"
+    #echo
+
+    # Initialize the temporary file that contains current file transfer activity.
+    echo > $TMPFILE
+    chmod 600 $TMPFILE
+
+ndmcli -x >>$TMPFILE 2>>$TMPFILE << EOJ
+submit maxdelay=unlimited cdwritva process snode=server name
+snodeid(userid,password)
+
+step01 copy
+
+from
+(
+file=$v_locfile_nm
+pnode
+)
+
+ckpt=10M
+compress extended
+
+to
+(
+file=$v_remfile_nm
+disp=rpl
+snode
+)
+
+pend;
+EOJ
+
+    # Search for designated search string to validate status of file transfer.
+    egrep "Return code    = 0" $TMPFILE > /dev/null
+
+    if [ $? = 0 ]
+    then
+      egrep "Message id     = XSMG252I" $TMPFILE > /dev/null
+
+      if [ $? = 0 ]
+      then
+        # Copy contents of temporary file to the log file and remove the temporary file.
+        cat $TMPFILE >> $LOGFILE
+        rm -f $TMPFILE
+
+        # Remove VETSNET write out file from file transfer directory with no confirm delete prompt.
+         echo >> $LOGFILE
+         echo "Removing $v_locfile_nm from file transfer directory..." >> $LOGFILE
+         rm -f $v_locfile_nm
+
+         if [ $? != 0 ]
+         then
+           # Removing VETSNET write out file unsuccessful, warning message, continue processing.
+           echo >> $LOGFILE
+           echo "Warning generated, removing $v_locfile_nm from file transfer directory unsuccessful..." >> $LOGFILE
+         fi
+       else
+         # Set return code, exit from script execution, and pass return code to calling process
+         rc=1
+         echo >> $LOGFILE
+         echo "Error encountered while attempting to transfer file, processing aborted..." >> $LOGFILE
+         echo >> $LOGFILE
+         echo "Return code is: $rc" >> $LOGFILE
+         echo >> $LOGFILE
+         exit $rc
+       fi
+     else
+       # Set return code, exit from script execution, and pass return code to calling process.
+       cat $TMPFILE >> $LOGFILE
+       rc=2
+       echo >> $LOGFILE
+       echo "Error encountered while attempting to transfer file, processing aborted..." >> LOGFILE
+       echo >> $LOGFILE
+       echo "Return code is: $rc" >> $LOGFILE
+       echo >> $LOGFILE
+       exit $rc
+     fi
+   done
+ else
+   echo >> $LOGFILE
+   echo "No VETSNET write out files to transfer at this time..." >> $LOGFILE
+
+   # Set return code, exit from script execution, and pass return code to calling process
+   rc=0
+   echo >> $LOGFILE
+   echo "Return code is: $rc" >> $LOGFILE
+   echo >> $LOGFILE
+   exit $rc
+ fi
+
+ # Set return code, exit from script execution, and pass return code to calling process.
+ rc=0
+ echo >> $LOGFILE
+ echo "Return code is: $rc" >> $LOGFILE
+ echo >> $LOGFILE
+ exit $rc

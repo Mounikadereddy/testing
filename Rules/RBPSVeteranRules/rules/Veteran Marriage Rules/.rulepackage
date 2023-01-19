@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Veteran Marriage Rules</name>
+  <uuid>6837edfa-b0ed-4f46-b2e6-dd115579be58</uuid>
+</ilog.rules.studio.model.base:RulePackage>

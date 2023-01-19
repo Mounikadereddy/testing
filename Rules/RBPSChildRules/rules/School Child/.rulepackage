@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>School Child</name>
+  <uuid>c34ba966-1acb-43fc-90c0-e1b677e11f6a</uuid>
+  <orderedMembers>CP0139-01</orderedMembers>
+  <orderedMembers>Biological Child</orderedMembers>
+  <orderedMembers>CP0139-02</orderedMembers>
+</ilog.rules.studio.model.base:RulePackage>

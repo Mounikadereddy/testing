@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0139-3D</name>
+  <uuid>240fc14b-f3d9-4e90-9fe1-e5f008cb5374</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the child type of 'the Child' is BIOLOGICAL_CHILD
+            - the FCDR of 'the Veteran' is present
+            - the FCDR of 'the Veteran' is the rating effective date of 'the Veteran'
+            - the current term of 'the Child' is present
+            - the course start date of ( the current term of 'the Child' ) is present
+             - the last term of 'the Child'  is present 
+             - priorSchoolTermValid
+            - the course end date of ( the last term of 'the Child' ) is present
+            - the course start date of ( the current term of 'the Child' ) is before or the same as the course end date of ( the last term of 'the Child' ) plus 5 months ,
+then
+    set the event date of 'the Award' to the course end date of ( the last term of 'the Child' ) ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

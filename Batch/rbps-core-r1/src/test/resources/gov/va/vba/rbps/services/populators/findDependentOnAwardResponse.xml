@@ -1,0 +1,44 @@
+      <ns2:findDependentOnAwardResponse xmlns:ns2="http://session.ejb.awards.benefits.vba.va.gov/">
+         <return>
+            <errorLevel>0</errorLevel>
+            <awardType>CPL</awardType>
+            <beneficiaryID>9100776412</beneficiaryID>
+            <dependentID>9100778207</dependentID>
+            
+            <DependentOnAwardServices>
+               <DependentOnAwardService>
+                  <awardEffectiveDate>2012-01-01T00:00:00-06:00</awardEffectiveDate>
+                  <awardType>CPL</awardType>
+                  <beneficiaryID>9100776412</beneficiaryID>
+                  <birthdayDate>1990-05-15T00:00:00-05:00</birthdayDate>
+                  <decisionDate>2011-12-13T11:02:13-06:00</decisionDate>
+                  <dependencyDecisionID>16029768</dependencyDecisionID>
+                  <dependencyDecisionType>O18NISOH</dependencyDecisionType>
+                  <dependencyDecisionTypeDescription>Over 18-Not in School or Helpless</dependencyDecisionTypeDescription>
+                  <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                  <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                  <eventDate>2011-12-05T00:00:00-06:00</eventDate>
+                  <firstName>STEPHAN</firstName>
+                  <fullName>STEPHAN GILL</fullName>
+                  <lastName>GILL</lastName>
+                  <modifiedAction>I</modifiedAction>
+                  <modifiedBy>281RBPS</modifiedBy>
+                  <modifiedDate>2011-12-13T11:02:13-06:00</modifiedDate>
+                  <modifiedLocation>335</modifiedLocation>
+                  <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                  <personID>9100778207</personID>
+                  <relationshipTypeDescription>Child</relationshipTypeDescription>
+                  <socialSecurityNumber>990679045</socialSecurityNumber>
+                  <sortDate>2011-12-13T11:02:13-06:00</sortDate>
+                  <sortOrderNumber>0</sortOrderNumber>
+                  <veteranID>9100776412</veteranID>
+                  <veteranIndicator>N</veteranIndicator>
+               </DependentOnAwardService>
+            </DependentOnAwardServices>
+            
+            <isDependentOnAward>N</isDependentOnAward>
+            <numberOfDependents>0</numberOfDependents>
+            <veteranID>9100776412</veteranID>
+            <Errors/>
+         </return>
+      </ns2:findDependentOnAwardResponse>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0100 - Spouse DOB Verification</name>
+  <uuid>d7ceb5bf-225b-4a8f-ac36-9d95f6793a8a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if 
+	 the birth date of 'the Spouse' is not present and
+	 the end date of the marriage of 'the Spouse' is not present
+then 
+	add "Auto Dependency Processing Reject Reason - Spouse DOB was not provided. Please review." to the list of Exceptions ;  
+	set 'exception generated' to true ; ]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.irl:IRLRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.irl="http://ilog.rules.studio/model/irl.ecore">
+  <name>Remove Award incase of Denial</name>
+  <uuid>0742b749-b5f9-4ee1-bb43-ce2d313f384b</uuid>
+  <definition><![CDATA[ when {
+         gov.va.vba.rbps.coreframework.xom.Award() from Award;
+         evaluate (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Award.dependencyStatusType));
+} then {
+       Award = null;
+}]]></definition>
+</ilog.rules.studio.model.irl:IRLRule>

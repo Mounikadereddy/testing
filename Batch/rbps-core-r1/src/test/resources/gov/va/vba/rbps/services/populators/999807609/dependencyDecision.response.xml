@@ -1,0 +1,262 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780041</beneficiaryID>
+                <birthdayDate>1993-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-04-23T12:47:15-05:00</decisionDate>
+                <dependencyDecisionID>16030895</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-07-01T00:00:00-05:00</eventDate>
+                <firstName>MICHAEL</firstName>
+                <fullName>MICHAEL RICHARDO</fullName>
+                <lastName>RICHARDO</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-23T12:47:15-05:00</modifiedDate>
+                <modifiedLocation>309</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780240</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999847609</socialSecurityNumber>
+                <sortDate>2012-04-23T12:47:15-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780041</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-08-08T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780041</beneficiaryID>
+                <birthdayDate>1993-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-04-23T12:47:16-05:00</decisionDate>
+                <dependencyDecisionID>16030896</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2011-08-08T00:00:00-05:00</eventDate>
+                <firstName>MICHAEL</firstName>
+                <fullName>MICHAEL RICHARDO</fullName>
+                <lastName>RICHARDO</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-23T12:47:15-05:00</modifiedDate>
+                <modifiedLocation>309</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780240</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999847609</socialSecurityNumber>
+                <sortDate>2012-04-23T12:47:16-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780041</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2016-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780041</beneficiaryID>
+                <birthdayDate>1993-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-04-23T10:33:15-05:00</decisionDate>
+                <dependencyDecisionID>16030894</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2016-05-30T00:00:00-05:00</eventDate>
+                <firstName>MARSHA</firstName>
+                <fullName>MARSHA RICHARDO</fullName>
+                <lastName>RICHARDO</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-23T10:33:14-05:00</modifiedDate>
+                <modifiedLocation>328</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780231</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999837609</socialSecurityNumber>
+                <sortDate>2012-04-23T10:33:15-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780041</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-10-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780041</beneficiaryID>
+                <birthdayDate>1993-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-04-23T13:47:24-05:00</decisionDate>
+                <dependencyDecisionID>16030900</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2012-09-30T00:00:00-05:00</eventDate>
+                <firstName>MICHAEL</firstName>
+                <fullName>MICHAEL RICHARDO</fullName>
+                <lastName>RICHARDO</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-23T13:47:23-05:00</modifiedDate>
+                <modifiedLocation>309</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780240</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999847609</socialSecurityNumber>
+                <sortDate>2012-04-23T13:47:24-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780041</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-02-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780041</beneficiaryID>
+                <birthdayDate>1993-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-04-23T10:33:14-05:00</decisionDate>
+                <dependencyDecisionID>16030893</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2012-01-30T00:00:00-06:00</eventDate>
+                <firstName>MARSHA</firstName>
+                <fullName>MARSHA RICHARDO</fullName>
+                <lastName>RICHARDO</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-23T10:33:14-05:00</modifiedDate>
+                <modifiedLocation>328</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780231</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999837609</socialSecurityNumber>
+                <sortDate>2012-04-23T10:33:14-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780041</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-02-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780041</beneficiaryID>
+                <birthdayDate>1993-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-04-23T13:47:23-05:00</decisionDate>
+                <dependencyDecisionID>16030899</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2012-01-30T00:00:00-06:00</eventDate>
+                <firstName>MICHAEL</firstName>
+                <fullName>MICHAEL RICHARDO</fullName>
+                <lastName>RICHARDO</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-23T13:47:23-05:00</modifiedDate>
+                <modifiedLocation>309</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780240</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999847609</socialSecurityNumber>
+                <sortDate>2012-04-23T13:47:23-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780041</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-08-08T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780041</beneficiaryID>
+                <birthdayDate>1993-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-04-23T10:03:23-05:00</decisionDate>
+                <dependencyDecisionID>16030892</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2011-08-08T00:00:00-05:00</eventDate>
+                <firstName>MARSHA</firstName>
+                <fullName>MARSHA RICHARDO</fullName>
+                <lastName>RICHARDO</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-23T10:03:22-05:00</modifiedDate>
+                <modifiedLocation>328</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780231</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999837609</socialSecurityNumber>
+                <sortDate>2012-04-23T10:03:23-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780041</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780041</beneficiaryID>
+                <birthdayDate>1993-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-04-23T10:03:22-05:00</decisionDate>
+                <dependencyDecisionID>16030891</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-07-01T00:00:00-05:00</eventDate>
+                <firstName>MARSHA</firstName>
+                <fullName>MARSHA RICHARDO</fullName>
+                <lastName>RICHARDO</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-23T10:03:22-05:00</modifiedDate>
+                <modifiedLocation>328</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780231</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999837609</socialSecurityNumber>
+                <sortDate>2012-04-23T10:03:22-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780041</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780041</beneficiaryID>
+                <birthdayDate>1970-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-04-23T10:03:21-05:00</decisionDate>
+                <dependencyDecisionID>16030890</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2011-07-01T00:00:00-05:00</eventDate>
+                <firstName>SPOUSE</firstName>
+                <fullName>SPOUSE RICHARDO</fullName>
+                <lastName>RICHARDO</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-23T10:03:22-05:00</modifiedDate>
+                <modifiedLocation>328</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780230</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>999817609</socialSecurityNumber>
+                <sortDate>2012-04-23T10:03:21-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780041</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+
+

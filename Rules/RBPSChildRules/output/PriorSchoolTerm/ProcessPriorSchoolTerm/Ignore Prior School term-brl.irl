@@ -1,0 +1,15 @@
+package PriorSchoolTerm.ProcessPriorSchoolTerm {
+   use ConditionSatisfied;
+   rule Ignore_Prior_School_term {
+      property ilog.rules.business_name = "Ignore Prior School term";
+      property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+         evaluate (ConditionSatisfied);
+      } then {
+         Child.priorSchoolTermStatus = "Ignore";
+      }
+   }
+}
+

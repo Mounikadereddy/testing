@@ -1,0 +1,66 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-10-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780061</beneficiaryID>
+                <birthdayDate>1993-11-29T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-04-25T14:18:12-05:00</decisionDate>
+                <dependencyDecisionID>16030937</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-10-01T00:00:00-05:00</eventDate>
+                <firstName>JOSH</firstName>
+                <fullName>JOSH SHELL</fullName>
+                <lastName>SHELL</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-25T14:18:12-05:00</modifiedDate>
+                <modifiedLocation>323</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780274</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999817617</socialSecurityNumber>
+                <sortDate>2012-04-25T14:18:12-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780061</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-11-29T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100780061</beneficiaryID>
+                <birthdayDate>1993-11-29T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-04-25T14:18:13-05:00</decisionDate>
+                <dependencyDecisionID>16030938</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2011-11-29T00:00:00-06:00</eventDate>
+                <firstName>JOSH</firstName>
+                <fullName>JOSH SHELL</fullName>
+                <lastName>SHELL</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-04-25T14:18:12-05:00</modifiedDate>
+                <modifiedLocation>323</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780274</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999817617</socialSecurityNumber>
+                <sortDate>2012-04-25T14:18:13-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100780061</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+
+

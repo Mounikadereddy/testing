@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Prior end date is before the award effective end date</name>
+  <uuid>7c8138ab-9fea-45b6-959e-b7d40f7102a7</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+  the last term in corp end date of 'the Child' is not null and 
+ the  course end date of the last term of  'the Child' is  before or the same as  the last term in corp end date of 'the Child' 
+then
+ set 'Condition Satisfied' to  true ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

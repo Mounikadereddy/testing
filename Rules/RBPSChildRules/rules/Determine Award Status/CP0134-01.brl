@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0134-01</name>
+  <uuid>7d833d1a-f5e5-4c01-908b-0eb9dacf37c0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the FCDR of 'the Veteran' is present
+    and the age of 'the Child' on the FCDR of 'the Veteran' is less than 18
+then
+    set the dependency status type of 'the Award' to MINOR_CHILD ;
+    set the dependency decision type of 'the Award' to ELIGIBLE_MINOR_CHILD ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

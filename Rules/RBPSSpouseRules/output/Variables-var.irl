@@ -1,0 +1,7 @@
+variables {
+  java.util.Date RatingDatePlus1Year;
+  java.util.Date RatingPlus1YearPlus30Days;
+  java.util.Date MarriagePlus1Year;
+  boolean exceptionGenerated;
+  java.util.Date RatingPlus1YearPlus7Days;
+}

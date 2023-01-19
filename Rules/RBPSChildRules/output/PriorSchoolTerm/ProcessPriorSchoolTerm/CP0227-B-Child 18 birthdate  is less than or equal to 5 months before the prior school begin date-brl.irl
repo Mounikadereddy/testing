@@ -1,0 +1,19 @@
+package PriorSchoolTerm.ProcessPriorSchoolTerm {
+   use Child18BirthDay;
+   use ConditionSatisfied;
+   rule CP0227$45$B$45$Child_18_birthdate__is_less_than_or_equal_to_5_months_before_the_prior_school_begin_date {
+      property ilog.rules.business_name = "CP0227-B-Child 18 birthdate  is less than or equal to 5 months before the prior school begin date";
+      property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (((Child.lastTermInCorpEndDate == null)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addMonthsToDate(5, Child18BirthDay).compareTo(Child.lastTerm.courseStudentStartDate) >=0));
+      } then {
+         PriorSchoolChildAward.eventDate = Child18BirthDay;
+         ConditionSatisfied = true;
+         ?context.updateContext();
+      }
+   }
+}
+

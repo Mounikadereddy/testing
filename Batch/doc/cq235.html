@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="file://c:/dev/RBPS_RBPS-R1.4/doc/markdown.css" rel="stylesheet"/>
+</head>
+<h1 id="toc_0">The algorithm for CQ 235</h1>
+
+<p>The dependent to be sent to awards is filtered based on the grant/ denial data in the DependencyDecision response.</p>
+
+<p>Steps:</p>
+
+<ol>
+<li>The DependencyDecision responses for the  dependent in the
+request object is extracted and stored in a list.</li>
+<li>The Dependency decision list is sorted based on decision date
+and event date so that the grant/denial records are adjacent.</li>
+<li>This list is traversed and a DecisionDetails list is created.</li>
+<li><p>The DecisionDetail object has the</p>
+
+<ul>
+<li>start decision type</li>
+<li>start status type</li>
+<li>event start date</li>
+<li>end decision type</li>
+<li>end status type</li>
+<li>decision date</li>
+<li>event end date.</li>
+<li>birth date</li>
+</ul></li>
+<li><p>For any matching grant/denial, the event end date is set with
+the event date of the denial decision. Otherwise,  event end date is computed.  A match
+is any grant followed by a denial.</p></li>
+<li><p>If a grant is not followed by a denial, the event end date is computed as follows:</p>
+
+<ul>
+<li>For a minor child grant, the event end date is set to the child&#39;s 18th birthday.</li>
+<li>For disabled children (&quot;RATHEL&quot;), 200 years are added to the birthday and set as event end date.</li>
+<li>For &quot;DEPEST&quot;, 200 years are added to the birthday and set as event end date.</li>
+</ul></li>
+<li><p>Now the request object is compared with the decision details objects.
+If decision detail object and the request object has the same decision type and status type,
+and the event date of the request is on or between the event start date and end date of the
+decision detail object, the request object is filtered out.
+Otherwise the request object is added to the list that will be sent to Awards.</p></li>
+</ol>
+
+<p>The process is repeated for the next request object.</p>
+</html>

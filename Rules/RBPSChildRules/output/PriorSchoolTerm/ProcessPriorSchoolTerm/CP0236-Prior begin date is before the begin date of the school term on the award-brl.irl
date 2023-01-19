@@ -1,0 +1,17 @@
+package PriorSchoolTerm.ProcessPriorSchoolTerm {
+   use ConditionSatisfied;
+   rule CP0236$45$Prior_begin_date_is_before_the_begin_date_of_the_school_term_on_the_award {
+      property ilog.rules.business_name = "CP0236-Prior begin date is before the begin date of the school term on the award";
+      property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (Child.lastTerm.courseStudentStartDate.compareTo(Child.lastTermInCorpBeginDate) < 0);
+      } then {
+         Exceptions.addException("“Begin date of prior school term is before award effective date for school attendance begins.”");
+         ConditionSatisfied = true;
+         ?context.updateContext();
+      }
+   }
+}
+

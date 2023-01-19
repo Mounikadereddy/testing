@@ -1,0 +1,597 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2015-03-21T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1992-03-21T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-01T14:18:14-06:00</decisionDate>
+                <dependencyDecisionID>16030198</dependencyDecisionID>
+                <dependencyDecisionType>T23</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 23</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2015-03-21T00:00:00-05:00</eventDate>
+                <firstName>Jennifer</firstName>
+                <fullName>Jennifer Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-01T14:18:13-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779284</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>653725980</socialSecurityNumber>
+                <sortDate>2012-02-01T14:18:14-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2015-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1993-08-25T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-14T12:18:30-06:00</decisionDate>
+                <dependencyDecisionID>16030419</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2015-05-20T00:00:00-05:00</eventDate>
+                <firstName>Michelle</firstName>
+                <fullName>Michelle Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-14T12:18:28-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779447</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>451892562</socialSecurityNumber>
+                <sortDate>2012-02-14T12:18:30-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-09-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1992-03-21T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-01T14:18:13-06:00</decisionDate>
+                <dependencyDecisionID>16030197</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2011-08-24T00:00:00-05:00</eventDate>
+                <firstName>Jennifer</firstName>
+                <fullName>Jennifer Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-01T14:18:13-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779284</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>653725980</socialSecurityNumber>
+                <sortDate>2012-02-01T14:18:13-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-08-25T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1993-08-25T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-14T12:18:29-06:00</decisionDate>
+                <dependencyDecisionID>16030418</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2011-08-25T00:00:00-05:00</eventDate>
+                <firstName>Michelle</firstName>
+                <fullName>Michelle Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-14T12:18:28-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779447</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>451892562</socialSecurityNumber>
+                <sortDate>2012-02-14T12:18:29-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1993-08-25T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-14T12:18:28-06:00</decisionDate>
+                <dependencyDecisionID>16030417</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>Michelle</firstName>
+                <fullName>Michelle Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-14T12:18:28-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779447</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>451892562</socialSecurityNumber>
+                <sortDate>2012-02-14T12:18:28-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-02-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1992-09-02T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-06T17:47:15-06:00</decisionDate>
+                <dependencyDecisionID>16030278</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2012-01-15T00:00:00-06:00</eventDate>
+                <firstName>Stacy</firstName>
+                <fullName>Stacy Smith</fullName>
+                <lastName>Smith</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-06T17:47:15-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779365</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>480796450</socialSecurityNumber>
+                <sortDate>2012-02-06T17:47:15-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-09-05T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1993-09-05T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-04T12:18:26-06:00</decisionDate>
+                <dependencyDecisionID>16030258</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2011-09-05T00:00:00-05:00</eventDate>
+                <firstName>John</firstName>
+                <fullName>John Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-04T12:18:21-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779345</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>491058528</socialSecurityNumber>
+                <sortDate>2012-02-04T12:18:26-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1993-09-05T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-04T12:18:25-06:00</decisionDate>
+                <dependencyDecisionID>16030257</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>John</firstName>
+                <fullName>John Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-04T12:18:21-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779345</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>491058528</socialSecurityNumber>
+                <sortDate>2012-02-04T12:18:25-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2014-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1992-04-12T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-13T16:03:59-06:00</decisionDate>
+                <dependencyDecisionID>16030399</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2014-05-17T00:00:00-05:00</eventDate>
+                <firstName>James</firstName>
+                <fullName>James Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-13T16:03:58-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779435</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>421231234</socialSecurityNumber>
+                <sortDate>2012-02-13T16:03:59-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1965-09-25T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-01-31T09:47:16-06:00</decisionDate>
+                <dependencyDecisionID>16030168</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>Erick</firstName>
+                <fullName>Erick Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-01-31T09:47:16-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779261</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>654789054</socialSecurityNumber>
+                <sortDate>2012-01-31T09:47:16-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1993-09-05T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-04T12:18:22-06:00</decisionDate>
+                <dependencyDecisionID>16030254</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2012-06-02T00:00:00-05:00</eventDate>
+                <firstName>John</firstName>
+                <fullName>John Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-04T12:18:21-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779345</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>491058528</socialSecurityNumber>
+                <sortDate>2012-02-04T12:18:22-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-10-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1992-04-12T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-13T16:03:58-06:00</decisionDate>
+                <dependencyDecisionID>16030398</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2011-09-01T00:00:00-05:00</eventDate>
+                <firstName>James</firstName>
+                <fullName>James Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-13T16:03:58-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779435</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>421231234</socialSecurityNumber>
+                <sortDate>2012-02-13T16:03:58-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1993-09-05T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-04T12:18:21-06:00</decisionDate>
+                <dependencyDecisionID>16030253</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>Jean</firstName>
+                <fullName>Jean Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-04T12:18:21-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779344</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>491023016</socialSecurityNumber>
+                <sortDate>2012-02-04T12:18:21-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-03-01T16:02:23-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1990-01-15T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-07T16:03:18-06:00</decisionDate>
+                <dependencyDecisionID>16030292</dependencyDecisionID>
+                <dependencyDecisionType>O18NISOH</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Over 18-Not in School or Helpless</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2012-02-07T16:02:23-06:00</eventDate>
+                <firstName>Melissa</firstName>
+                <fullName>Melissa Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-07T16:03:18-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779376</personID>
+                <socialSecurityNumber>540796045</socialSecurityNumber>
+                <sortDate>2012-02-07T16:03:18-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2029-09-25T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>2011-09-25T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-01-31T14:33:20-06:00</decisionDate>
+                <dependencyDecisionID>16030170</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2029-09-25T00:00:00-05:00</eventDate>
+                <firstName>MEGAN</firstName>
+                <fullName>MEGAN PRICE</fullName>
+                <lastName>PRICE</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-01-31T14:33:19-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779264</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>990832176</socialSecurityNumber>
+                <sortDate>2012-01-31T14:33:20-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2015-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1993-09-05T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-04T12:18:24-06:00</decisionDate>
+                <dependencyDecisionID>16030256</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2015-05-25T00:00:00-05:00</eventDate>
+                <firstName>Jean</firstName>
+                <fullName>Jean Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-04T12:18:21-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779344</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>491023016</socialSecurityNumber>
+                <sortDate>2012-02-04T12:18:24-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2014-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1992-09-02T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-06T17:47:16-06:00</decisionDate>
+                <dependencyDecisionID>16030279</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2014-05-10T00:00:00-05:00</eventDate>
+                <firstName>Stacy</firstName>
+                <fullName>Stacy Smith</fullName>
+                <lastName>Smith</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-06T17:47:15-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779365</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>480796450</socialSecurityNumber>
+                <sortDate>2012-02-06T17:47:16-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-10-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>2011-09-25T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-01-31T14:33:19-06:00</decisionDate>
+                <dependencyDecisionID>16030169</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-09-25T00:00:00-05:00</eventDate>
+                <firstName>MEGAN</firstName>
+                <fullName>MEGAN PRICE</fullName>
+                <lastName>PRICE</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-01-31T14:33:19-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779264</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>990832176</socialSecurityNumber>
+                <sortDate>2012-01-31T14:33:19-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-09-05T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>1993-09-05T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-04T12:18:23-06:00</decisionDate>
+                <dependencyDecisionID>16030255</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2011-09-05T00:00:00-05:00</eventDate>
+                <firstName>Jean</firstName>
+                <fullName>Jean Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-04T12:18:21-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779344</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>491023016</socialSecurityNumber>
+                <sortDate>2012-02-04T12:18:23-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>2000-02-15T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-01T14:47:21-06:00</decisionDate>
+                <dependencyDecisionID>16030199</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>Jason</firstName>
+                <fullName>Jason Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-01T14:47:21-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779285</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>507816470</socialSecurityNumber>
+                <sortDate>2012-02-01T14:47:21-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2018-02-15T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777160</beneficiaryID>
+                <birthdayDate>2000-02-15T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-01T14:47:22-06:00</decisionDate>
+                <dependencyDecisionID>16030200</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2018-02-15T00:00:00-06:00</eventDate>
+                <firstName>Jason</firstName>
+                <fullName>Jason Price</fullName>
+                <lastName>Price</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-01T14:47:21-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779285</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>507816470</socialSecurityNumber>
+                <sortDate>2012-02-01T14:47:22-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777160</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+
+

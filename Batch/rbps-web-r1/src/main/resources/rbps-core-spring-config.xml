@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jee="http://www.springframework.org/schema/jee"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:wss="http://jax-ws.dev.java.net/spring/servlet" xmlns:ws="http://jax-ws.dev.java.net/spring/core"
+
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+        http://www.springframework.org/schema/jee
+        http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+        http://jax-ws.dev.java.net/spring/servlet
+        http://jax-ws.dev.java.net/spring/servlet.xsd
+        http://jax-ws.dev.java.net/spring/core
+        http://jax-ws.dev.java.net/spring/core.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <!-- START SECTION 1: GENERIC BEANS -->
+    <bean id="propPlaceHolder"
+        class="gov.va.vba.rbps.coreframework.configutil.RbpsPropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:rbps.properties</value>
+                <value>classpath:rbps-admin.properties</value>
+            </list>
+        </property>
+    </bean>
+
+
+
+
+	<!-- Cannot be singleton -->
+    <bean id="rbpsServiceFacade"
+        class="gov.va.vba.rbps.services.impl.RbpsServiceFacade"
+        autowire="byName"
+        scope="prototype">
+
+        <property name="claimProcessorFactory"          ref="claimProcessorFactory" />
+        <property name="userInformationWSHandler"       ref="userInformationWSHandler" />
+          <property name="userInformationClaimWSHandler"       ref="userInformationClaimWSHandler" /> 
+        
+        <property name="rbpsRepositoryPopulator"        ref="rbpsRepositoryPopulator" />
+        
+        
+        <property name="exceptionHandler"               ref="exceptionHandler" />
+       <!--   <property name="vdcClaimFilter"                 ref="vdcClaimFilter" /> -->
+         <property name="findBenefitClaimWSHandler"      ref="findBenefitClaimWSHandler" /> 
+       <!--    <property name="claimIdPopulator"               ref="claimIdPopulator" /> -->
+ 		<property name="numberOfClaimsPerBatch"     	value="${rbps.ws.numberOfClaimsPerBatch}" />
+ 		
+ 		<property name="fromName"     					value="${rbps.email.from.name}" />
+ 		<property name="from"     						value="${rbps.email.from}" />
+ 		<property name="to"     						value="${rbps.email.to}" />
+ 	<!--  	<property name="cc"     						value="${rbps.email.cc}" /> -->
+ 		<property name="body"     						value="${rbps.email.body}" />
+ 		<property name="subject"     					value="${rbps.email.subject}" />
+ 		
+ 		
+    </bean>
+
+
+	<!--  Cannot be singleton -->
+    <bean id="rbpsRepositoryPopulator"
+        class="gov.va.vba.rbps.services.populators.RbpsRepositoryPopulator"
+        autowire="byName" 
+         scope="prototype">
+        <property name="shouldPerformSchoolChildIndWorkaround"      value="${rbps.ws.performSchoolChildIndWorkaround}" />
+        <property name="cacheInvalidator"                           ref="cacheInvalidator" />
+    </bean>
+
+	<!--  Cannot be singleton but shouldnt be injected anywhere anyway 
+    bean id="repository" class="gov.va.vba.rbps.coreframework.dto.RbpsRepository"
+        autowire="byName"
+        init-method="init"
+        destroy-method="destroy"
+    bean
+    -->
+
+    <bean id="wsClientUtil"
+        class="gov.va.vba.rbps.services.ws.client.util.RbpsWebServiceClientUtil"
+        autowire="byName"
+         scope="singleton">
+
+        <property name="username" value="${rbps.ws.username}" />
+        <property name="password" value="${rbps.ws.password}" />
+        <property name="appname" value="${rbps.ws.appname}" />
+        <property name="clientmachine" value="${rbps.ws.clientmachine}" />
+        <property name="stationid" value="${rbps.ws.stationid}" />
+    </bean>
+ 
+    <bean id="rbpsApplicationDetails"
+        class="gov.va.vba.rbps.lettergeneration.RbpsApplicationDetails"
+        autowire="byName"
+         scope="singleton">
+
+        <property name="username" 		value="${rbps.ws.username}" />
+        <property name="password" 		value="${rbps.ws.password}" />
+        <property name="appname" 		value="${rbps.ws.appname}" />
+        <property name="clientmachine" 	value="${rbps.ws.clientmachine}" />
+        <property name="stationid" 		value="${rbps.ws.stationid}" />
+        <property name="serverName" 	value="${rbps.lettergen.server.name}" />
+      <property name="prefix" 	
+            value="${rbps.lettergen.prefix}" /> 
+
+    </bean>   
+    
+    
+    
+    
+    
+    <!-- END SECTION 1 -->
+
+
+    <!-- START SECTION 2: CLAIM PROCESSOR -->
+    
+    <!--  unsure if can become a singleton, will leave for main dev to decide to switch back -->
+    <bean id="claimProcessorFactory"
+        class="gov.va.vba.rbps.claimprocessor.RbpsClaimProcessorFactory"
+        autowire="byName"
+         scope="prototype">
+    </bean>
+
+	<!--  EK cannot be singleton -->
+    <bean id="claimProcessorHelper"
+        class="gov.va.vba.rbps.claimprocessor.util.ClaimProcessorHelper"
+        autowire="byName">
+    </bean>
+
+    <bean id="vdcClaimFilter"
+        class="gov.va.vba.rbps.services.impl.VdcClaimFilter"
+        autowire="byName"
+         scope="prototype">
+
+        <property name="shouldPerformFiltering"     value="${rbps.ws.shouldFilterVdcClaims}" />
+    </bean>
+
+
+	<!--  Cannot be singleton -->
+    <bean id="ep130ClaimProcessorImpl"
+        class="gov.va.vba.rbps.claimprocessor.impl.EP130ClaimProcessorImpl"
+        autowire="byName"
+         scope="prototype">
+
+        <property name="preProcessor" ref="ep130ClaimPreProcessor" />
+        <property name="rbpsRuleService" ref="rbpsRuleService" />
+        <property name="postProcessor" ref="ep130ClaimPostProcessor" />
+    </bean>
+
+
+	<!-- cannot be singleton -->
+    <bean id="ep130ClaimPreProcessor"
+        class="gov.va.vba.rbps.claimprocessor.impl.EP130ClaimPreProcessor"
+        autowire="byName"
+        scope="prototype">
+
+        <property name="findDependentsWSHandler"                    ref="findDependentsWSHandler" />
+        <property name="corporateDependentsPopulator"               ref="corporateDependentsPopulator" />
+        <property name="findFlashesWSHandler"                       ref="findFlashesWSHandler" />
+        <property name="attorneyFeeAgreementPopulator"              ref="attorneyFeeAgreementPopulator" />
+        <property name="orgWebServiceWSHandler"                     ref="orgWebServiceWSHandler" />
+        <property name="poaPopulator"                               ref="poaPopulator" />
+        <property name="ratingComparisonWSHandler"                  ref="ratingComparisonWSHandler" />
+        <property name="fcdrPopulator"								ref="fcdrPopulator" />
+        <property name="sojSignatureWSHandler"                      ref="sojSignatureWSHandler" />
+        <property name="dependencyDecisionByAwardProducer"          ref="dependencyDecisionByAwardProducer" />
+        <property name="dependentOnAwardFilter"                     ref="dependentOnAwardFilter" />
+        <property name="claimStationsBean"                          ref="claimStationsBean" />
+		<property name="personServiceWSHandler"						ref="personServiceWSHandler" />
+		<property name="updateBenefitClaimDependentsWSHandler"  	ref="updateBenefitClaimDependentsWSHandler" />
+    </bean>
+
+
+	<!--  EK cannot be singleton due to claimsprocessorhelper -->
+    <bean id="ep130ClaimPostProcessor"
+        class="gov.va.vba.rbps.claimprocessor.impl.EP130ClaimPostProcessor"
+        autowire="byName"
+        scope="prototype">
+
+        <property name="claimProcessorHelper"                   ref="claimProcessorHelper" />
+        <property name="generatePdf"                            ref="generatePdf" />
+        <property name="awardPrintSaver"                        ref="awardPrintSaver" />
+        <property name="updateBenefitClaimDependentsWSHandler"  ref="updateBenefitClaimDependentsWSHandler" />
+        <property name="participantIdPopulator"                 ref="corporateParticpantIdPopulator" />
+        <property name="findDependentsWSHandler"                ref="findDependentsWSHandler" />
+        <property name="processAwardDependentWSHandler"         ref="awardsProcessAwardDependentWSHandler" />
+        <property name="findFiduciaryWSHandler"                 ref="findFiduciaryWSHandler" />
+        <property name="fiduciaryPopulator"					    ref="fiduciaryPopulator" />
+        <property name="readCurrentAndProposedAwardWSHandler"   ref="readCurrentAndProposedAwardWSHandler" />
+        <property name="clearBenefitClaimWSHandler"       		ref="clearBenefitClaimWSHandler" />
+        <property name="processMilitaryPay"						ref="processMilitaryPay" />
+        <property name="readAwardDocDataWSHandler"				ref="readAwardDocDataWSHandler"/>
+        <property name="getPersonProfileWSHandler"				ref="getPersonProfileWSHandler"/>
+        <property name="rbpsDocGenGenstoreService"						ref="docGenGenStoreService"/>
+       <!-- <property name="generateBGSToken"						ref="generateBGSToken"/>   -->
+    </bean>
+
+
+	<!--  shouldnt be injected
+    <bean id="awardDependentWSHandler"
+        class="gov.va.vba.rbps.lettergeneration.GeneratePdf"
+        scope="prototype">
+
+        <property name="pathToPdfOutputDirectory" value="${rbps.lettergen.homedir}" />
+    </bean>
+     -->
+
+    <bean id="generatePdf"
+        class="gov.va.vba.rbps.lettergeneration.GeneratePdf"
+        scope="prototype">
+
+        <property name="pathToPdfOutputDirectory" value="${rbps.lettergen.homedir}" />
+        <property name="rbpsApplicationDetails"	  ref="rbpsApplicationDetails" /> 
+        <property name="readCurrentAndProposedAwardWSHandler"   ref="readCurrentAndProposedAwardWSHandler" />
+        <property name="awardWebServiceWSHandler"			        ref="awardWebServiceWSHandler" />
+        <property name="awardWebServicePopulator"					ref="awardWebServicePopulator" />
+        <property name="rbpsDocGenGenstoreService"              ref="docGenGenStoreService" /> 
+    </bean>
+
+    <bean id="awardPrintSaver"
+        class="gov.va.vba.rbps.lettergeneration.AwardPrintSaver"
+        scope="prototype">
+
+       <!--  <property name="repository" ref="repository" />  -->
+        <property name="pathToPdfOutputDirectory" value="${rbps.lettergen.homedir}" />
+    </bean>
+
+    <bean id="militaryPayPopulator"
+        class="gov.va.vba.rbps.services.populators.MilitaryPayPopulator"
+        autowire="byName" scope="prototype">
+    </bean>
+
+	<!--  Can't be singleton and can't inject repo -->
+    <bean id="claimIdPopulator"
+        class="gov.va.vba.rbps.services.populators.ClaimIdPopulator">
+
+       <!--  <property name="repository" ref="repository" />  -->
+    </bean>
+ 
+    <bean id="corporateDependentsPopulator"
+        class="gov.va.vba.rbps.services.populators.CorporateDependentsPopulator"
+        scope="prototype">
+
+        <!-- <property name="repository" ref="repository" />   -->
+    </bean>
+
+    <bean id="poaPopulator"
+        class="gov.va.vba.rbps.services.populators.PoaPopulator"
+        scope="prototype">
+
+    </bean>
+
+    <bean id="corporateParticpantIdPopulator"
+        class="gov.va.vba.rbps.services.populators.CorporateParticpantIdPopulator"
+        scope="prototype">
+
+        <!--  <property name="repository" ref="repository" />  -->
+        <property name="corporateDependentsPopulator"   ref="corporateDependentsPopulator" />
+    </bean>
+
+
+ 	<!-- Get this to stop injecting repo FUTURE -->
+    <bean id="attorneyFeeAgreementPopulator"
+        class="gov.va.vba.rbps.services.populators.AttorneyFeeAgreementPopulator">
+
+        <!--  <property name="repository" ref="repository" />  -->
+    </bean>
+
+
+    <bean id="dependentOnAwardFilter"
+          class="gov.va.vba.rbps.services.impl.DependentOnAwardFilter"
+          scope="prototype">
+
+        <property name="shouldProcessDeniedWith674Dependents"   value="${rbps.ws.shouldProcessDeniedWith674Dependents}" />
+        <property name="dependencyDecisionByAwardProducer"      ref="dependencyDecisionByAwardProducer" />
+    </bean>
+
+
+	<!--  Get this to stop injecting repo FUTURE -->
+    <bean id="dependentOnAwardPopulator"
+          class="gov.va.vba.rbps.services.populators.DependentOnAwardPopulator"
+          scope="prototype">
+
+        <!--  <property name="repository" ref="repository" />  -->
+    </bean>
+
+
+<!--  Get this to stop injecting repo FUTURE -->
+    <bean id="dependentOnAwardForCR109Populator"
+          class="gov.va.vba.rbps.services.populators.DependentOnAwardForCR109Populator"
+          scope="prototype">
+
+        <!--  <property name="repository" ref="repository" />  -->
+    </bean>
+    
+    <!--  Get this to stop injecting repo FUTURE -->
+    <bean id="findDependentOnAwardPopulator"
+          class="gov.va.vba.rbps.services.populators.FindDependentOnAwardPopulator"
+          scope="prototype">
+
+    <!--  <property name="repository" ref="repository" />  -->
+    </bean>
+
+<!--  Get this to stop injecting repo FUTURE -->
+    <bean id="awardStatePopulator"
+          class="gov.va.vba.rbps.services.populators.AwardStatePopulator"
+          scope="prototype">
+
+        <!--  <property name="repository" ref="repository" />  -->
+    </bean>
+
+<!--  Get this to stop injecting repo FUTURE -->
+    <bean id="fiduciaryPopulator"
+          class="gov.va.vba.rbps.services.populators.FiduciaryPopulator"
+          scope="prototype">
+
+        <!--  <property name="repository" ref="repository" />  -->
+    </bean>
+
+
+    <bean id="findDependencyDecisionByAwardPopulator"
+          class="gov.va.vba.rbps.services.populators.FindDependencyDecisionByAwardPopulator"
+          scope="prototype">
+
+    </bean>
+
+    <bean id="awardWebServicePopulator"
+          class="gov.va.vba.rbps.services.populators.AwardWebServicePopulator"
+          scope="prototype">
+
+    </bean>
+
+
+    <bean id="processAwardDependentRequestFilter"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.util.ProcessAwardDependentRequestFilter"
+          autowire="byName"
+          scope="prototype" >
+
+        <property name="processAwardDependentRequestBuilder"    ref="processAwardDependentRequestBuilder" />
+        <property name="dependencyDecisionByAwardProducer"      ref="dependencyDecisionByAwardProducer" />
+    </bean>
+
+<!--  Get this to stop injecting repo FUTURE -->
+    <bean id="processAwardDependentRequestBuilder"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.util.ProcessAwardDependentRequestBuilder"
+          autowire="byName"
+          scope="prototype" >
+
+        <!--  <property name="repository" ref="repository" />  -->
+    </bean>
+
+    <bean id="dependencyDecisionByAwardProducer"
+          class="gov.va.vba.rbps.services.ws.client.handler.awards.util.DependencyDecisionByAwardProducer"
+          autowire="byName"
+          scope="prototype" >
+
+        <property name="findDependencyDecisionByAwardWSHandler" ref="findDependencyDecisionByAwardWSHandler" />
+        <property name="findDependencyDecisionByAwardPopulator" ref="findDependencyDecisionByAwardPopulator" />
+    </bean>
+
+    <bean id="claimStationsBean"
+          class="gov.va.vba.rbps.services.populators.utils.ClaimStationsBean"
+          scope="prototype">
+
+        <property name="findStationAddressPopulator"      ref="findStationAddressPopulator" />
+        <property name="findRegionalOfficesPopulator"     ref="findRegionalOfficesPopulator" />
+        <property name="cacheInvalidator"                 ref="cacheInvalidator" />
+    </bean>
+
+
+    <bean id="cacheInvalidator"
+          class="gov.va.vba.rbps.services.populators.utils.CacheInvalidator"
+          scope="prototype">
+
+        <property name="cachePeriod"                      value="${rbps.cacheInvalidationPeriod}" />
+    </bean>
+
+    <bean id="findStationAddressPopulator"
+          class="gov.va.vba.rbps.services.populators.FindStationAddressPopulator"
+          scope="prototype">
+
+        <property name="findStationAddressWSHandler"      ref="findStationAddressWSHandler" />
+    </bean>
+
+    <bean id="findRegionalOfficesPopulator"
+          class="gov.va.vba.rbps.services.populators.FindRegionalOfficesPopulator"
+          scope="prototype">
+
+        <property name="findRegionalOfficesWSHandler"     ref="findRegionalOfficesWSHandler" />
+        <property name="cacheInvalidator"                 ref="cacheInvalidator" />
+    </bean>
+
+    <bean id="exceptionHandler"
+        class="gov.va.vba.rbps.services.impl.ExceptionHandler"
+        autowire="byName" scope="prototype">
+    </bean>
+
+<!--  Get this to stop injecting repo FUTURE -->
+    <bean id="fcdrPopulator"
+        class="gov.va.vba.rbps.services.populators.FCDRPopulator"
+        scope="prototype">
+		
+		<property name="decisionsAtIssueWSHandler" ref="decisionsAtIssueWSHandler" />
+         <!--  <property name="repository" ref="repository" />  -->
+    </bean>
+
+
+    <bean id="processMilitaryPay"
+        class="gov.va.vba.rbps.lettergeneration.ProcessMilitaryPay"
+        scope="prototype">
+		
+		<property name="processMilitaryPayWSHandler" ref="processMilitaryPayWSHandler" />
+    </bean>
+
+
+    <bean id="checkerServicePopulator"
+        class="gov.va.vba.rbps.services.populators.CheckerServicePopulator"
+        scope="prototype">
+		
+		<property name="checkerServiceWSHandler" ref="checkerServiceWSHandler" />
+    </bean>
+
+    <!-- START SECTION 4: CLAIM VALIDATORS -->
+    <bean id="validationAppender"
+          class="gov.va.vba.rbps.claimvalidator.RbpsValidationAppender"
+          autowire="byName"
+          scope="prototype" />
+
+    <bean id="claimValidatorFactory"
+          class="gov.va.vba.rbps.claimvalidator.ClaimValidatorFactory"
+          autowire="byName"
+          scope="prototype" />
+
+    <bean id="ep130ClaimValidatorImpl"
+          class="gov.va.vba.rbps.claimvalidator.EP130ClaimValidatorImpl"
+            autowire="byName"
+            scope="prototype" />
+
+    <bean id="genericUserInformationValidator"
+          class="gov.va.vba.rbps.claimvalidator.GenericUserInformationValidatorImpl"
+          autowire="byName"
+          scope="prototype" />
+  
+    
+    
+    <!--    required to read components configured in classes with @Configuration  />-->
+    <context:annotation-config />
+
+    <bean id="docGenConfiguration" class="gov.va.vba.rbps.lettergeneration.docgen.config.RbpsDocGenConfiguration"/>
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Minor to School Child with No Event Date</name>
+  <uuid>e79f2012-9d23-4af5-aa1f-699212c85823</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+    		- 'the minorSchoolChildAward' is present 
+            - the dependency status type of 'the minorSchoolChildAward' is present 
+            - the dependency status type of 'the minorSchoolChildAward' is SCHOOL_CHILD  
+            - the event date of 'the minorSchoolChildAward' is not present 
+then
+	add "Auto Dependency Processing Reject Reason - RBPS could not set the event date for minor to school child : "+ the last name of 'the Child' +", "+the first name of 'the Child' +" Please review." to the list of Exceptions ;
+	
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

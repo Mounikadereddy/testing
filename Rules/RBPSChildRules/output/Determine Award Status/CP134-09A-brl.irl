@@ -1,0 +1,21 @@
+package Determine_Award_Status {
+   use ChildAgeOnDateOfClaim;
+   rule CP134$45$09A {
+      property ilog.rules.business_name = "CP134-09A";
+      property ilog.rules.package_name = "Determine Award Status";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Veteran.firstChangedDateofRating)
+         	&& ChildAgeOnDateOfClaim < 18)
+         	&& Child.schoolChild)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.lastTerm)));
+      } then {
+         PriorSchoolChild.dependencyStatusType = gov.va.vba.rbps.coreframework.xom.DependentStatusType.SCHOOL_CHILD;
+         PriorSchoolChild.dependencyDecisionType = gov.va.vba.rbps.coreframework.xom.DependentDecisionType.SCHOOL_ATTENDANCE_BEGIN_DATE;
+         PriorSchoolChild.endDate = Child.lastTerm.courseEndDate;
+      }
+   }
+}
+

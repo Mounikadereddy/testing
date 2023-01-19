@@ -1,0 +1,176 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-03-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13047891</beneficiaryID>
+                <birthdayDate>1992-02-02T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-10T15:46:34-06:00</decisionDate>
+                <dependencyDecisionID>16256</dependencyDecisionID>
+                <dependencyDecisionType>O18NISOH</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Over 18-Not in School or Helpless</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2012-02-11T00:00:00-06:00</eventDate>
+                <firstName>Shannon</firstName>
+                <fullName>Shannon McGonigle</fullName>
+                <lastName>McGonigle</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-10T15:46:32-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048478</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>698703215</socialSecurityNumber>
+                <sortDate>2012-02-10T15:46:34-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13047891</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13047891</beneficiaryID>
+                <birthdayDate>1954-07-16T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-10T15:46:31-06:00</decisionDate>
+                <dependencyDecisionID>16253</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2011-04-29T00:00:00-05:00</eventDate>
+                <firstName>Jim</firstName>
+                <fullName>Jim Kavin</fullName>
+                <lastName>Kavin</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-10T15:46:32-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048479</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>258587478</socialSecurityNumber>
+                <sortDate>2012-02-10T15:46:31-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13047891</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-02-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13047891</beneficiaryID>
+                <birthdayDate>1965-12-15T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-07T09:14:33-06:00</decisionDate>
+                <dependencyDecisionID>15914</dependencyDecisionID>
+                <dependencyDecisionType>MT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Marriage Terminated</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2011-01-15T00:00:00-06:00</eventDate>
+                <firstName>twohundred</firstName>
+                <fullName>twohundred cq</fullName>
+                <lastName>cq</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>317STDNT137</modifiedBy>
+                <modifiedDate>2012-02-07T09:14:33-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048136</personID>
+                <socialSecurityNumber>164846164</socialSecurityNumber>
+                <sortDate>2012-02-07T09:14:33-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13047891</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2010-09-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13047891</beneficiaryID>
+                <birthdayDate>1965-12-15T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-07T09:01:16-06:00</decisionDate>
+                <dependencyDecisionID>15913</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2010-08-12T00:00:00-05:00</eventDate>
+                <firstName>twohundred</firstName>
+                <fullName>twohundred cq</fullName>
+                <lastName>cq</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-07T09:01:16-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048136</personID>
+                <socialSecurityNumber>164846164</socialSecurityNumber>
+                <sortDate>2012-02-07T09:01:16-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13047891</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2029-05-25T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13047891</beneficiaryID>
+                <birthdayDate>2011-05-25T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-10T15:46:33-06:00</decisionDate>
+                <dependencyDecisionID>16255</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2029-05-25T00:00:00-05:00</eventDate>
+                <firstName>Johnny</firstName>
+                <fullName>Johnny Kavin</fullName>
+                <lastName>Kavin</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-10T15:46:32-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048477</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>587032015</socialSecurityNumber>
+                <sortDate>2012-02-10T15:46:33-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13047891</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13047891</beneficiaryID>
+                <birthdayDate>2011-05-25T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-10T15:46:32-06:00</decisionDate>
+                <dependencyDecisionID>16254</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-05-25T00:00:00-05:00</eventDate>
+                <firstName>Johnny</firstName>
+                <fullName>Johnny Kavin</fullName>
+                <lastName>Kavin</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-10T15:46:32-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048477</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>587032015</socialSecurityNumber>
+                <sortDate>2012-02-10T15:46:32-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13047891</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+
+

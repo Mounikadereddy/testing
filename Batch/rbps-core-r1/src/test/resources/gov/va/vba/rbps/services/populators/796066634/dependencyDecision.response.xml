@@ -1,0 +1,65 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2010-09-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13047891</beneficiaryID>
+                <birthdayDate>1993-08-15T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-14T13:01:12-06:00</decisionDate>
+                <dependencyDecisionID>16303</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-08-12T00:00:00-05:00</eventDate>
+                <firstName>MINSTOSKOOL</firstName>
+                <fullName>MINSTOSKOOL SMITH</fullName>
+                <lastName>SMITH</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-14T13:01:12-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048767</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>644651651</socialSecurityNumber>
+                <sortDate>2012-02-14T13:01:12-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13047891</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-08-15T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>13047891</beneficiaryID>
+                <birthdayDate>1993-08-15T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-14T13:01:13-06:00</decisionDate>
+                <dependencyDecisionID>16304</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2011-08-15T00:00:00-05:00</eventDate>
+                <firstName>MINSTOSKOOL</firstName>
+                <fullName>MINSTOSKOOL SMITH</fullName>
+                <lastName>SMITH</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-14T13:01:12-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>13048767</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>644651651</socialSecurityNumber>
+                <sortDate>2012-02-14T13:01:13-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>13047891</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+

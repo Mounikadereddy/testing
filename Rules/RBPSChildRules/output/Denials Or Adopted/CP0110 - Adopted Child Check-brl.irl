@@ -1,0 +1,17 @@
+package Denials_Or_Adopted {
+   use Completed;
+   rule CP0110_$45$_Adopted_Child_Check {
+      property ilog.rules.business_name = "CP0110 - Adopted Child Check";
+      property ilog.rules.package_name = "Denials Or Adopted";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((Child.childType.equals(gov.va.vba.rbps.coreframework.xom.ChildType.ADOPTED_CHILD)));
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Child : " + Child.lastName) + ", ") + Child.firstName) + " reported as adopted. Please develop for adoption paperwork."));
+      }
+   }
+}
+

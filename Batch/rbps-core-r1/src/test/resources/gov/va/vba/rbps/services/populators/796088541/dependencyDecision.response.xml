@@ -1,0 +1,290 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-02-15T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777223</beneficiaryID>
+                <birthdayDate>1994-02-15T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-05-09T12:19:03-05:00</decisionDate>
+                <dependencyDecisionID>16031218</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2012-02-15T00:00:00-06:00</eventDate>
+                <firstName>Jamie</firstName>
+                <fullName>Jamie Smith</fullName>
+                <lastName>Smith</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-05-09T12:19:03-05:00</modifiedDate>
+                <modifiedLocation>343</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780486</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>490765120</socialSecurityNumber>
+                <sortDate>2012-05-09T12:19:03-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777223</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2029-04-22T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777223</beneficiaryID>
+                <birthdayDate>2011-04-22T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-05-04T13:33:25-05:00</decisionDate>
+                <dependencyDecisionID>16031161</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2029-04-22T00:00:00-05:00</eventDate>
+                <firstName>STEVEN</firstName>
+                <fullName>STEVEN RHODES</fullName>
+                <lastName>RHODES</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-05-04T13:33:24-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780394</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>565455665</socialSecurityNumber>
+                <sortDate>2012-05-04T13:33:25-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777223</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2017-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777223</beneficiaryID>
+                <birthdayDate>1994-02-15T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-05-09T12:19:04-05:00</decisionDate>
+                <dependencyDecisionID>16031219</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2016-12-15T00:00:00-06:00</eventDate>
+                <firstName>Jamie</firstName>
+                <fullName>Jamie Smith</fullName>
+                <lastName>Smith</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-05-09T12:19:03-05:00</modifiedDate>
+                <modifiedLocation>343</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780486</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>490765120</socialSecurityNumber>
+                <sortDate>2012-05-09T12:19:04-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777223</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-05-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777223</beneficiaryID>
+                <birthdayDate>2011-04-22T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-05-04T13:33:24-05:00</decisionDate>
+                <dependencyDecisionID>16031160</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-04-22T00:00:00-05:00</eventDate>
+                <firstName>STEVEN</firstName>
+                <fullName>STEVEN RHODES</fullName>
+                <lastName>RHODES</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-05-04T13:33:24-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780394</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>565455665</socialSecurityNumber>
+                <sortDate>2012-05-04T13:33:24-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777223</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2018-09-25T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777223</beneficiaryID>
+                <birthdayDate>2000-09-25T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-05-09T12:19:06-05:00</decisionDate>
+                <dependencyDecisionID>16031221</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2018-09-25T00:00:00-05:00</eventDate>
+                <firstName>Samatha</firstName>
+                <fullName>Samatha Smith</fullName>
+                <lastName>Smith</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-05-09T12:19:03-05:00</modifiedDate>
+                <modifiedLocation>343</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780487</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>420763214</socialSecurityNumber>
+                <sortDate>2012-05-09T12:19:06-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777223</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2017-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777223</beneficiaryID>
+                <birthdayDate>1994-01-07T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-05-04T10:03:13-05:00</decisionDate>
+                <dependencyDecisionID>16031153</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2016-12-15T00:00:00-06:00</eventDate>
+                <firstName>AMY</firstName>
+                <fullName>AMY RHODES</fullName>
+                <lastName>RHODES</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-05-04T10:03:12-05:00</modifiedDate>
+                <modifiedLocation>343</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780390</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>384883448</socialSecurityNumber>
+                <sortDate>2012-05-04T10:03:13-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777223</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777223</beneficiaryID>
+                <birthdayDate>2000-09-25T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-05-09T12:19:05-05:00</decisionDate>
+                <dependencyDecisionID>16031220</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-06-15T00:00:00-05:00</eventDate>
+                <firstName>Samatha</firstName>
+                <fullName>Samatha Smith</fullName>
+                <lastName>Smith</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-05-09T12:19:03-05:00</modifiedDate>
+                <modifiedLocation>343</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780487</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>420763214</socialSecurityNumber>
+                <sortDate>2012-05-09T12:19:05-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777223</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-01-07T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777223</beneficiaryID>
+                <birthdayDate>1994-01-07T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-05-04T10:03:12-05:00</decisionDate>
+                <dependencyDecisionID>16031152</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2012-01-07T00:00:00-06:00</eventDate>
+                <firstName>AMY</firstName>
+                <fullName>AMY RHODES</fullName>
+                <lastName>RHODES</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-05-04T10:03:12-05:00</modifiedDate>
+                <modifiedLocation>343</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780390</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>384883448</socialSecurityNumber>
+                <sortDate>2012-05-04T10:03:12-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777223</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777223</beneficiaryID>
+                <birthdayDate>1994-01-07T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-05-04T09:44:54-05:00</decisionDate>
+                <dependencyDecisionID>16031150</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>AMY</firstName>
+                <fullName>AMY RHODES</fullName>
+                <lastName>RHODES</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>VSCNMENA</modifiedBy>
+                <modifiedDate>2012-05-04T09:44:54-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780390</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>384883448</socialSecurityNumber>
+                <sortDate>2012-05-04T09:44:54-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777223</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777223</beneficiaryID>
+                <birthdayDate>1970-08-15T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-05-09T12:19:07-05:00</decisionDate>
+                <dependencyDecisionID>16031222</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2011-06-15T00:00:00-05:00</eventDate>
+                <firstName>Jessie</firstName>
+                <fullName>Jessie Smith</fullName>
+                <lastName>Smith</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-05-09T12:19:03-05:00</modifiedDate>
+                <modifiedLocation>343</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100780488</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>470845796</socialSecurityNumber>
+                <sortDate>2012-05-09T12:19:07-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777223</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+
+

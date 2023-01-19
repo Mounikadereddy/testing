@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>setPerrorTermToIgnore</name>
+  <uuid>cc4b0263-38b6-4142-bb0f-ff725abf8837</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+add "last term  not valid" to the list of 'LogMessage' ; 
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

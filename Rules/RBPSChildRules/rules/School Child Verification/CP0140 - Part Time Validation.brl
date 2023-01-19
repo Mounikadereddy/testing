@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0140 - Part Time Validation</name>
+  <uuid>c14f0d39-3b22-49d6-8a51-2ac9b87a1f3a</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if 
+	 the current term of 'the Child' is present and 
+	 the education type of the current term of 'the Child' is PART_TIME and 
+	 ( 	the sessions per week of the current term of 'the Child' is less than 3 and
+	 	the hours per week of the current term of 'the Child' is less than 3 )
+then 
+	set Completed to true ;
+	add "Auto Dependency Processing Reject Reason - Child : "+ the last name of 'the Child' +", "+the first name of 'the Child' +" reported as attending school less than 3 sessions/hours per week. Please review." to the list of Exceptions ;  ]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

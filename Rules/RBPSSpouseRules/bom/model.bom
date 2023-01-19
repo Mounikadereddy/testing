@@ -1,0 +1,536 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/RBPSSpouseRules/C:/dev/xom/rbps-xom.jar"
+property uuid "07d72c92-4070-4879-8713-48b4b9f66601"
+package gov.va.vba.rbps.coreframework.xom;
+
+
+public class Address
+        extends java.io.Serializable
+{
+    public string city;
+    public string country;
+    public string line1;
+    public string line2;
+    public string line3;
+    public string mltyPostOfficeTypeCd;
+    public string mltyPostalTypeCd;
+    public string state;
+    public string zipPrefix;
+    public string zipSuffix1;
+    public string zipSuffix2;
+    public Address();
+    public string toString();
+}
+
+public class Award
+        extends java.io.Serializable
+{
+    public gov.va.vba.rbps.coreframework.xom.DependentDecisionType dependencyDecisionType;
+    public gov.va.vba.rbps.coreframework.xom.DependentStatusType dependencyStatusType;
+    public java.util.Date endDate;
+    public java.util.Date eventDate;
+    public Award();
+    public string toString();
+}
+
+public class AwardStatus
+        extends java.io.Serializable
+{
+    public boolean GAOUsed;
+    public boolean changesMade;
+    public writeonly boolean hasAttorneyFeeAgreement;
+    public writeonly boolean isSuspended;
+    public int numDependentsOnAward;
+    public boolean proposed;
+    public boolean runningAward;
+    public readonly boolean suspended;
+    public AwardStatus();
+    public boolean hasAttorneyFeeAgreement();
+    public string toString();
+}
+
+public class Child
+        extends gov.va.vba.rbps.coreframework.xom.Dependent
+{
+    public string agencyPayingTuition;
+    public boolean attendedSchoolLastTerm;
+    public gov.va.vba.rbps.coreframework.xom.Address birthAddress;
+    public gov.va.vba.rbps.coreframework.xom.ChildType childType;
+    public gov.va.vba.rbps.coreframework.xom.Education currentTerm;
+    public java.util.Date govtPaymentStartDate;
+    public gov.va.vba.rbps.coreframework.xom.Education lastTerm;
+    public java.util.Date lastTermInCorpBeginDate;
+    public java.util.Date lastTermInCorpEndDate;
+    public gov.va.vba.rbps.coreframework.xom.Person livingWith;
+    public gov.va.vba.rbps.coreframework.xom.Award minorSchoolChildAward;
+    public java.util.List previousTerms domain 0,* class gov.va.vba.rbps.coreframework.xom.Education;
+    public boolean previouslyMarried;
+    public gov.va.vba.rbps.coreframework.xom.Award priorSchoolChildAward;
+    public string priorSchoolTermStatus;
+    public boolean schoolChild;
+    public boolean seriouslyDisabled;
+    public boolean tuitionPaidByGovt;
+    public string unfilteredChildType;
+    public Child();
+    public void addPreviousTerm(gov.va.vba.rbps.coreframework.xom.Education arg);
+    public string toString();
+}
+
+public final class ChildType
+        extends java.lang.Enum
+{
+    domain {static BIOLOGICAL_CHILD, static STEPCHILD, static ADOPTED_CHILD, static UNDEFINED}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ChildType ADOPTED_CHILD;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ChildType BIOLOGICAL_CHILD;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ChildType STEPCHILD;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ChildType UNDEFINED;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.ChildType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.ChildType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.ChildType[] values();
+}
+
+public class Claim
+        extends java.io.Serializable
+{
+    public long claimId;
+    public gov.va.vba.rbps.coreframework.xom.ClaimLabelType claimLabel;
+    public gov.va.vba.rbps.coreframework.xom.EndProductType endProductCode;
+    public java.util.List forms domain 0,* class gov.va.vba.rbps.coreframework.xom.FormType;
+    public writeonly boolean hasAttachments;
+    public string jrnObjId;
+    public boolean new;
+    public java.util.Date receivedDate;
+    public Claim();
+    public void addForm(gov.va.vba.rbps.coreframework.xom.FormType arg);
+    public boolean hasAttachments();
+    public boolean isSameClaimId(long arg);
+    public string toString();
+}
+
+public final class ClaimLabelType
+        extends java.lang.Enum
+{
+    domain {static NEW_686C, static REJECTED_686C, static NEW_674, static REJECTED_674, static NEW_PMC_686C, static REJECTED_PMC_686C, static NEW_PMC_674, static REJECTED_PMC_674, static NEW_EBENEFITS_686C, static REJECTED_EBENEFITS_686C, static NEW_EBENEFITS_674, static REJECTED_EBENEFITS_674, static NEW_PHONE_DEPENDENCY_ADJUSTMENT, static NEW_PHONE_DEPENDENCY_ADJUSTMENT_EXCEPTION, static NEW_PHONE_SCHOOL_ATTENDANCE, static NEW_PHONE_SCHOOL_ATTENDANCE_EXCEPTION}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType NEW_674;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType NEW_686C;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType NEW_EBENEFITS_674;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType NEW_EBENEFITS_686C;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType NEW_PHONE_DEPENDENCY_ADJUSTMENT;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType NEW_PHONE_DEPENDENCY_ADJUSTMENT_EXCEPTION;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType NEW_PHONE_SCHOOL_ATTENDANCE;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType NEW_PHONE_SCHOOL_ATTENDANCE_EXCEPTION;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType NEW_PMC_674;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType NEW_PMC_686C;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType REJECTED_674;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType REJECTED_686C;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType REJECTED_EBENEFITS_674;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType REJECTED_EBENEFITS_686C;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType REJECTED_PMC_674;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.ClaimLabelType REJECTED_PMC_686C;
+    public readonly string code;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.ClaimLabelType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.ClaimLabelType findReject(gov.va.vba.rbps.coreframework.xom.ClaimLabelType arg);
+    public static gov.va.vba.rbps.coreframework.xom.ClaimLabelType findReject(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.ClaimLabelType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.ClaimLabelType[] values();
+}
+
+public class Claimant
+        extends java.io.Serializable
+{
+    public Claimant();
+}
+
+public abstract class Dependent
+        extends gov.va.vba.rbps.coreframework.xom.Person
+{
+    public gov.va.vba.rbps.coreframework.xom.Award award;
+    public readonly boolean childPresentForSpouse;
+    public readonly boolean deniedAward;
+    public java.util.Date deniedDate;
+    public readonly boolean everOnAward;
+    public readonly java.util.List forms domain 0,* class gov.va.vba.rbps.coreframework.xom.FormType;
+    public writeonly boolean isChildPresentForSpouse;
+    public writeonly boolean isDeniedAward;
+    public writeonly boolean isEverOnAward;
+    public boolean livingWithVeteran;
+    public boolean newSchoolChild;
+    public boolean onAwardAsMinorChild;
+    public boolean onCurrentAward;
+    public Dependent();
+    public void addForm(gov.va.vba.rbps.coreframework.xom.FormType arg);
+    public void addForms(java.util.List arg domain 0,*);
+    public string toString();
+}
+
+public final class DependentDecisionType
+        extends java.lang.Enum
+{
+    domain {static ELIGIBLE_MINOR_CHILD, static SCHOOL_ATTENDANCE_BEGIN_DATE, static RATED_SERIOUSLY_DISABLED, static DEPENDENCY_ESTABLISHED, static MARRIAGE, static RATED_NOT_HELPLESS, static OVER_18_NOT_IN_SCHOOL_OR_HELPLESS, static SCHOOL_ATTENDENCE_TERMINATES, static TURNS_18, static TURNS_23, static RELATIONSHIP_NOT_ESTABLISHED, static DEATH, static MARRIAGE_TERMINATED}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType DEATH;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType DEPENDENCY_ESTABLISHED;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType ELIGIBLE_MINOR_CHILD;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType MARRIAGE;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType MARRIAGE_TERMINATED;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType OVER_18_NOT_IN_SCHOOL_OR_HELPLESS;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType RATED_NOT_HELPLESS;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType RATED_SERIOUSLY_DISABLED;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType RELATIONSHIP_NOT_ESTABLISHED;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType SCHOOL_ATTENDANCE_BEGIN_DATE;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType SCHOOL_ATTENDENCE_TERMINATES;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType TURNS_18;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentDecisionType TURNS_23;
+    public readonly string code;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.DependentDecisionType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.DependentDecisionType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.DependentDecisionType[] values();
+}
+
+public final class DependentStatusType
+        extends java.lang.Enum
+{
+    domain {static MINOR_CHILD, static SCHOOL_CHILD, static SERIOUSLY_DISABLED_CHILD, static SPOUSE, static NOT_AN_AWARD_DEPENDENT}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentStatusType MINOR_CHILD;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentStatusType NOT_AN_AWARD_DEPENDENT;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentStatusType SCHOOL_CHILD;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentStatusType SERIOUSLY_DISABLED_CHILD;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.DependentStatusType SPOUSE;
+    public readonly string code;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.DependentStatusType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.DependentStatusType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.DependentStatusType[] values();
+}
+
+public class Education
+        extends java.io.Serializable
+{
+    public java.util.Date courseEndDate;
+    public string courseName;
+    public java.util.Date courseStudentStartDate;
+    public gov.va.vba.rbps.coreframework.xom.EducationLevelType educationLevelType;
+    public gov.va.vba.rbps.coreframework.xom.EducationType educationType;
+    public java.util.Date expectedGraduationDate;
+    public int hoursPerWeek;
+    public java.util.Date officialCourseStartDate;
+    public gov.va.vba.rbps.coreframework.xom.School school;
+    public int sessionsPerWeek;
+    public string subjectName;
+    public Education();
+    public string toString();
+}
+
+public final class EducationLevelType
+        extends java.lang.Enum
+{
+    domain {static HOME_SCHOOLED, static HIGH_SCHOOL, static POST_SECONDARY}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EducationLevelType HIGH_SCHOOL;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EducationLevelType HOME_SCHOOLED;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EducationLevelType POST_SECONDARY;
+    public readonly string code;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.EducationLevelType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.EducationLevelType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.EducationLevelType[] values();
+}
+
+public final class EducationType
+        extends java.lang.Enum
+{
+    domain {static PART_TIME, static FULL_TIME}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EducationType FULL_TIME;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EducationType PART_TIME;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.EducationType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.EducationType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.EducationType[] values();
+}
+
+public final class EndProductType
+        extends java.lang.Enum
+{
+    domain {static COMPENSATION_EP130, static COMPENSATION_EP131, static COMPENSATION_EP132, static COMPENSATION_EP133, static COMPENSATION_EP134, static COMPENSATION_EP135, static COMPENSATION_EP136, static COMPENSATION_EP137, static COMPENSATION_EP138, static COMPENSATION_EP139}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EndProductType COMPENSATION_EP130;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EndProductType COMPENSATION_EP131;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EndProductType COMPENSATION_EP132;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EndProductType COMPENSATION_EP133;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EndProductType COMPENSATION_EP134;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EndProductType COMPENSATION_EP135;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EndProductType COMPENSATION_EP136;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EndProductType COMPENSATION_EP137;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EndProductType COMPENSATION_EP138;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.EndProductType COMPENSATION_EP139;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.EndProductType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.EndProductType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.EndProductType[] values();
+}
+
+public final class FormType
+        extends java.lang.Enum
+{
+    domain {static FORM_21_686C, static FORM_21_674}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.FormType FORM_21_674;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.FormType FORM_21_686C;
+    public readonly string code;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.FormType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.FormType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.FormType[] values();
+}
+
+public final class GenderType
+        extends java.lang.Enum
+{
+    domain {static MALE, static FEMALE}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.GenderType FEMALE;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.GenderType MALE;
+    public readonly string code;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.GenderType find(string arg);
+    public string toString();
+    public static gov.va.vba.rbps.coreframework.xom.GenderType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.GenderType[] values();
+}
+
+public final class MaritalStatusType
+        extends java.lang.Enum
+{
+    domain {static MARRIED, static DIVORCED, static NEVER_MARRIED, static WIDOWED, static SEPARATED}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.MaritalStatusType DIVORCED;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.MaritalStatusType MARRIED;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.MaritalStatusType NEVER_MARRIED;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.MaritalStatusType SEPARATED;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.MaritalStatusType WIDOWED;
+    public readonly string code;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.MaritalStatusType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.MaritalStatusType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.MaritalStatusType[] values();
+}
+
+public class Marriage
+        extends java.io.Serializable
+{
+    public java.util.Date endDate;
+    public gov.va.vba.rbps.coreframework.xom.Address marriedPlace;
+    public gov.va.vba.rbps.coreframework.xom.Spouse marriedTo;
+    public java.util.Date startDate;
+    public gov.va.vba.rbps.coreframework.xom.Address terminationPlace;
+    public gov.va.vba.rbps.coreframework.xom.MarriageTerminationType terminationType;
+    public Marriage();
+    public string toString();
+}
+
+public final class MarriageTerminationType
+        extends java.lang.Enum
+{
+    domain {static DEATH, static DIVORCE, static OTHER}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.MarriageTerminationType DEATH;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.MarriageTerminationType DIVORCE;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.MarriageTerminationType OTHER;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.MarriageTerminationType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.MarriageTerminationType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.MarriageTerminationType[] values();
+}
+
+public final class NoSSNReasonType
+        extends java.lang.Enum
+{
+    domain {static NO_SSN_FROM_SSA, static NONRESIDENT_ALIEN}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.NoSSNReasonType NONRESIDENT_ALIEN;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.NoSSNReasonType NO_SSN_FROM_SSA;
+    public readonly string code;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.NoSSNReasonType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.NoSSNReasonType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.NoSSNReasonType[] values();
+}
+
+public class Parent
+        extends gov.va.vba.rbps.coreframework.xom.Dependent
+{
+    public Parent();
+}
+
+public abstract class Person
+        extends java.io.Serializable
+{
+    public boolean alive;
+    public java.util.Date birthDate;
+    public java.util.List children domain 0,* class gov.va.vba.rbps.coreframework.xom.Child;
+    public long corpParticipantId;
+    public gov.va.vba.rbps.coreframework.xom.Marriage currentMarriage;
+    public string email;
+    public string firstName;
+    public gov.va.vba.rbps.coreframework.xom.GenderType gender;
+    public string lastName;
+    public gov.va.vba.rbps.coreframework.xom.Marriage latestPreviousMarriage;
+    public gov.va.vba.rbps.coreframework.xom.Address mailingAddress;
+    public string middleName;
+    public gov.va.vba.rbps.coreframework.xom.NoSSNReasonType noSsnReason;
+    public gov.va.vba.rbps.coreframework.xom.Address permanentAddress;
+    public java.util.List previousMarriages domain 0,* class gov.va.vba.rbps.coreframework.xom.Marriage;
+    public gov.va.vba.rbps.coreframework.xom.Address residenceAddress;
+    public string ssn;
+    public gov.va.vba.rbps.coreframework.xom.SSNVerificationType ssnVerification;
+    public string suffixName;
+    public long vnpParticipantId;
+    public Person();
+    public void addChild(gov.va.vba.rbps.coreframework.xom.Child arg);
+    public void addPreviousMarriage(gov.va.vba.rbps.coreframework.xom.Marriage arg);
+    public void appendChildren(java.util.List arg domain 0,*);
+    public void appendPreviousMarriages(java.util.List arg domain 0,*);
+    public boolean hasChildren();
+    public boolean hasMarriages();
+    public string toString();
+}
+
+public class Phone
+        extends java.io.Serializable
+{
+    public long areaCode;
+    public long countryCode;
+    public long extension;
+    public long phoneNumber;
+    public gov.va.vba.rbps.coreframework.xom.PhoneType phoneType;
+    public Phone();
+    public string toString();
+}
+
+public final class PhoneType
+        extends java.lang.Enum
+{
+    domain {static DAY, static NIGHT}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.PhoneType DAY;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.PhoneType NIGHT;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.PhoneType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.PhoneType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.PhoneType[] values();
+}
+
+public class RuleExceptionMessages
+        extends java.io.Serializable
+{
+    public java.util.List messages domain 0,* class string;
+    public RuleExceptionMessages();
+    public void addException(string arg);
+    public void appendMessages(java.util.List arg domain 0,*);
+    public void appendMessages(gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages arg);
+    public string toString();
+}
+
+public final class SSNVerificationType
+        extends java.lang.Enum
+{
+    domain {static BIRLS, static CHILD_UNDER_2, static SSA_VERIFIED_NO_NUMBER, static UNVERIFIED, static VERIFIED_BY_SSA, static VERIFIED_BY_VBA}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.SSNVerificationType BIRLS;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.SSNVerificationType CHILD_UNDER_2;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.SSNVerificationType SSA_VERIFIED_NO_NUMBER;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.SSNVerificationType UNVERIFIED;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.SSNVerificationType VERIFIED_BY_SSA;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.SSNVerificationType VERIFIED_BY_VBA;
+    public readonly string code;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.SSNVerificationType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.SSNVerificationType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.SSNVerificationType[] values();
+}
+
+public final class SalutationType
+        extends java.lang.Enum
+{
+    domain {static MR, static MISS, static MS, static MRS}
+    public static final readonly gov.va.vba.rbps.coreframework.xom.SalutationType MISS;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.SalutationType MR;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.SalutationType MRS;
+    public static final readonly gov.va.vba.rbps.coreframework.xom.SalutationType MS;
+    public readonly string value;
+    public static gov.va.vba.rbps.coreframework.xom.SalutationType find(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.SalutationType valueOf(string arg);
+    public static gov.va.vba.rbps.coreframework.xom.SalutationType[] values();
+}
+
+public class School
+        extends java.io.Serializable
+{
+    public gov.va.vba.rbps.coreframework.xom.Address address;
+    public long eduInstnPtcpntId;
+    public string name;
+    public School();
+    public string toString();
+}
+
+public class Spouse
+        extends gov.va.vba.rbps.coreframework.xom.Dependent
+{
+    public string fileNumber;
+    public boolean vet;
+    public Spouse();
+    public string toString();
+}
+
+public class Veteran
+        extends gov.va.vba.rbps.coreframework.xom.Person, java.io.Serializable
+{
+    public java.util.Date allowableDate;
+    public gov.va.vba.rbps.coreframework.xom.AwardStatus awardStatus;
+    public gov.va.vba.rbps.coreframework.xom.Claim claim;
+    public double currentMonthlyAmount;
+    public gov.va.vba.rbps.coreframework.xom.Phone dayTimePhone;
+    public string fileNumber;
+    public java.util.Date firstChangedDateofRating;
+    public writeonly boolean hasMilitaryPay;
+    public writeonly boolean hasPOA;
+    public gov.va.vba.rbps.coreframework.xom.MaritalStatusType maritalStatus;
+    public gov.va.vba.rbps.coreframework.xom.Phone nightTimePhone;
+    public java.util.Date ratingDate;
+    public java.util.Date ratingEffectiveDate;
+    public boolean receivingMilitaryRetirePay;
+    public gov.va.vba.rbps.coreframework.xom.SalutationType salutation;
+    public double serviceConnectedDisabilityRating;
+    public int totalNumberOfDependents;
+    public Veteran();
+    public boolean hasMilitaryPay();
+    public boolean hasPOA();
+    public boolean isSameClaimId(long arg);
+    public string toString();
+}
+
+package gov.va.vba.rbps.coreframework.xom.util;
+
+
+public class RbpsXomUtil
+        extends java.io.Serializable
+{
+    public RbpsXomUtil();
+    public static java.util.Date addDaysToDate(int arg1, java.util.Date arg2);
+    public static java.util.Date addMonthsToDate(int arg1, java.util.Date arg2);
+    public static java.util.Date addYearsToDate(int arg1, java.util.Date arg2);
+    public static int getAge(java.util.Date arg);
+    public static int getAgeOn(gov.va.vba.rbps.coreframework.xom.Person arg1, java.util.Date arg2);
+    public static int getCurrentAge(gov.va.vba.rbps.coreframework.xom.Person arg);
+    public static final java.util.Date getOmnibusedDate(java.util.Date arg);
+    public static boolean isNotPresent(object arg);
+    public static boolean isPresent(object arg);
+    public static int yearsBetween(java.util.Date arg1, java.util.Date arg2);
+}
+
+public class VeteranCommonDates
+        extends java.io.Serializable
+{
+    public java.util.Date allowableDate;
+    public java.util.Date claimDate;
+    public java.util.Date firstChangedDateofRating;
+    public java.util.Date marriageDate;
+    public java.util.Date ratingDate;
+    public java.util.Date ratingEffectiveDate;
+    public VeteranCommonDates();
+}
+

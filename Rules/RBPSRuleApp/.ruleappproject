@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RuleApp>
+   <ruleset>
+      <kind>ruleproject</kind>
+      <display-name>RBPSVeteranRules</display-name>
+      <name>RBPSVeteranRules</name>
+      <version>1.0</version>
+      <fullpath>runtime/RBPSVeteranRules10.jar</fullpath>
+      <location>RBPSVeteranRules</location>
+      <export>true</export>
+   </ruleset>
+   <ruleset>
+      <kind>ruleproject</kind>
+      <display-name>RBPSSpouseRules</display-name>
+      <name>RBPSSpouseRules</name>
+      <version>1.0</version>
+      <fullpath>runtime/RBPSSpouseRules10.jar</fullpath>
+      <location>RBPSSpouseRules</location>
+      <export>true</export>
+   </ruleset>
+   <ruleset>
+      <kind>ruleproject</kind>
+      <display-name>RBPSChildRules</display-name>
+      <name>RBPSChildRules</name>
+      <version>1.0</version>
+      <fullpath>runtime/RBPSChildRules10.jar</fullpath>
+      <location>RBPSChildRules</location>
+      <export>true</export>
+   </ruleset>
+</RuleApp>
+

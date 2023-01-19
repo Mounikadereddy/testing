@@ -1,0 +1,22 @@
+package PriorSchoolTerm {
+   use priorSchoolTermValid;
+   use ConditionSatisfied;
+   rule CP0237_B_Current_and_Prior_Continous_term {
+      property ilog.rules.business_name = "CP0237 B Current and Prior Continous term";
+      property ilog.rules.package_name = "PriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         gov.va.vba.rbps.coreframework.xom.Award() from PriorSchoolChild;
+         gov.va.vba.rbps.coreframework.xom.Award() from Award;
+         evaluate (((priorSchoolTermValid
+         	&& Child.currentTerm != null)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addMonthsToDate(5, PriorSchoolChild.endDate).compareTo(Award.eventDate) >=0));
+      } then {
+         Award.eventDate = Child.lastTerm.courseEndDate;
+         ConditionSatisfied = true;
+         ?context.updateContext();
+      }
+   }
+}
+

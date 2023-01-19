@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0118 - Child School Address Verification</name>
+  <uuid>c8303399-00f3-49dc-9195-374d489e5e4b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if 
+	 the current term of 'the Child' is present and
+	 the education type of the current term of 'the Child' is present and
+	 the education type of the current term of 'the Child' is FULL_TIME and 
+	 the education level type of the current term of 'the Child' is present and
+	 the education level type of the current term of 'the Child' is POST_SECONDARY and 
+	 (the school of the current term of 'the Child' is not present or 
+	 (the school of the current term of 'the Child' is present and 
+	 the address of the school of the current term of 'the Child' is not present)) 
+	 
+then 
+	set Completed to true ;
+	add "Auto Dependency Processing Reject Reason - Child : "+ the last name of 'the Child' +", "+the first name of 'the Child' +"'s current school address is not provided. Please review." to the list of Exceptions ;  ]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

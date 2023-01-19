@@ -1,0 +1,47 @@
+<ns2:findDependentsResponse xmlns:ns2='http://services.share.benefits.vba.va.gov/'>
+    <return>
+        <numberOfRecords> 2</numberOfRecords>
+        <persons>
+            <awardIndicator>Y</awardIndicator>
+            <cityOfBirth/>
+            <currentRelateStatus/>
+            <dateOfBirth>08/15/1993</dateOfBirth>
+            <dateOfDeath/>
+            <deathReason/>
+            <emailAddress/>
+            <firstName>JEFF</firstName>
+            <gender/>
+            <lastName>RAMOS</lastName>
+            <middleName/>
+            <proofOfDependency/>
+            <ptcpntId>9100780303</ptcpntId>
+            <relatedToVet>N</relatedToVet>
+            <relationship>Child</relationship>
+            <ssn>423516121</ssn>
+            <ssnVerifyStatus/>
+            <stateOfBirth/>
+        </persons>
+        <persons>
+            <awardIndicator>N</awardIndicator>
+            <cityOfBirth/>
+            <currentRelateStatus/>
+            <dateOfBirth>09/12/2005</dateOfBirth>
+            <dateOfDeath/>
+            <deathReason/>
+            <emailAddress/>
+            <firstName>AARON</firstName>
+            <gender/>
+            <lastName>RAMOS</lastName>
+            <middleName/>
+            <proofOfDependency/>
+            <ptcpntId>9100780378</ptcpntId>
+            <relatedToVet>N</relatedToVet>
+            <relationship>Child</relationship>
+            <ssn>512313245</ssn>
+            <ssnVerifyStatus/>
+            <stateOfBirth/>
+        </persons>
+        <returnCode>SHAR 9999</returnCode>
+        <returnMessage>Records found.</returnMessage>
+    </return>
+</ns2:findDependentsResponse>

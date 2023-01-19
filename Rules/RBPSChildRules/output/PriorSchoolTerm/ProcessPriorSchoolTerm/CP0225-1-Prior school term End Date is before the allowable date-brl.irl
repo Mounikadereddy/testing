@@ -1,0 +1,17 @@
+package PriorSchoolTerm.ProcessPriorSchoolTerm {
+   use ConditionSatisfied;
+   rule CP0225$45$1$45$Prior_school_term_End_Date_is_before_the_allowable_date {
+      property ilog.rules.business_name = "CP0225-1-Prior school term End Date is before the allowable date";
+      property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (Child.lastTerm.courseEndDate.compareTo(schollallowableDate) < 0);
+      } then {
+         Child.priorSchoolTermStatus = "ignore";
+         ConditionSatisfied = true;
+         ?context.updateContext();
+      }
+   }
+}
+

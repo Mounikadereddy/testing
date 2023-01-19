@@ -1,0 +1,105 @@
+package PriorSchoolTerm.ProcessPriorSchoolTerm {
+  use ConditionSatisfied;
+
+  flowtask PriorSchoolTermProcessFlow {
+    property mainflowtask = false;
+    property ilog.rules.business_name = "PriorSchoolTermProcessFlow";
+    property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+    body {
+      PriorSchoolTermProcessFlow#setSchoolAllowableDate;
+      PriorSchoolTermProcessFlow#CP0225$45$1$45$Prior_school_term_End_Date_is_before_the_allowable_date;
+      if (ConditionSatisfied) {
+      }
+      else {
+        PriorSchoolTermProcessFlow#CP0236$45$Prior_begin_date_is_before_the_begin_date_of_the_school_term_on_the_award;
+        if (ConditionSatisfied) {
+        }
+        else {
+          PriorSchoolTermProcessFlow#CP0225__Set__Prior_School_Term_begin_to_Allowable_Date;
+          PriorSchoolTermProcessFlow#CP0226$45$A$45$difference_between_the_end_date_of_the_last_term_on_the_award__GT_5m;
+          if (ConditionSatisfied) {
+          }
+          else {
+            PriorSchoolTermProcessFlow#CP0227$45$_A$45$End_date_of_the_last_term_on_the_award__is_less_than_or_equal_to_5_months_before_the_prior_school_begin_date$44$;
+            if (ConditionSatisfied) {
+            }
+            else {
+              PriorSchoolTermProcessFlow#CP0227$45$B$45$Child_18_birthdate__is_less_than_or_equal_to_5_months_before_the_prior_school_begin_date;
+            }
+          }
+        }
+      }
+    }
+  };
+
+  ruletask PriorSchoolTermProcessFlow#CP0225$45$1$45$Prior_school_term_End_Date_is_before_the_allowable_date {
+    property ilog.rules.business_name = "PriorSchoolTermProcessFlow>CP0225-1-Prior school term End Date is before the allowable date";
+    property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.ProcessPriorSchoolTerm.CP0225$45$1$45$Prior_school_term_End_Date_is_before_the_allowable_date
+    }
+  };
+
+  ruletask PriorSchoolTermProcessFlow#CP0236$45$Prior_begin_date_is_before_the_begin_date_of_the_school_term_on_the_award {
+    property ilog.rules.business_name = "PriorSchoolTermProcessFlow>CP0236-Prior begin date is before the begin date of the school term on the award";
+    property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.ProcessPriorSchoolTerm.CP0236$45$Prior_begin_date_is_before_the_begin_date_of_the_school_term_on_the_award
+    }
+  };
+
+  ruletask PriorSchoolTermProcessFlow#CP0227$45$_A$45$End_date_of_the_last_term_on_the_award__is_less_than_or_equal_to_5_months_before_the_prior_school_begin_date$44$ {
+    property ilog.rules.business_name = "PriorSchoolTermProcessFlow>CP0227- A-End date of the last term on the award  is less than or equal to 5 months before the prior school begin date,";
+    property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.ProcessPriorSchoolTerm.CP0227$45$_A$45$End_date_of_the_last_term_on_the_award__is_less_than_or_equal_to_5_months_before_the_prior_school_begin_date$44$
+    }
+  };
+
+  ruletask PriorSchoolTermProcessFlow#CP0227$45$B$45$Child_18_birthdate__is_less_than_or_equal_to_5_months_before_the_prior_school_begin_date {
+    property ilog.rules.business_name = "PriorSchoolTermProcessFlow>CP0227-B-Child 18 birthdate  is less than or equal to 5 months before the prior school begin date";
+    property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.ProcessPriorSchoolTerm.CP0227$45$B$45$Child_18_birthdate__is_less_than_or_equal_to_5_months_before_the_prior_school_begin_date
+    }
+  };
+
+  ruletask PriorSchoolTermProcessFlow#CP0225__Set__Prior_School_Term_begin_to_Allowable_Date {
+    property ilog.rules.business_name = "PriorSchoolTermProcessFlow>CP0225  Set  Prior School Term begin to Allowable Date";
+    property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.ProcessPriorSchoolTerm.CP0225__Set__Prior_School_Term_begin_to_Allowable_Date
+    }
+  };
+
+  ruletask PriorSchoolTermProcessFlow#CP0226$45$A$45$difference_between_the_end_date_of_the_last_term_on_the_award__GT_5m {
+    property ilog.rules.business_name = "PriorSchoolTermProcessFlow>CP0226-A-difference between the end date of the last term on the award  GT 5m";
+    property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.ProcessPriorSchoolTerm.CP0226$45$A$45$difference_between_the_end_date_of_the_last_term_on_the_award__GT_5m
+    }
+  };
+
+  ruletask PriorSchoolTermProcessFlow#setSchoolAllowableDate {
+    property ilog.rules.business_name = "PriorSchoolTermProcessFlow>setSchoolAllowableDate";
+    property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+    algorithm = default;
+    ordering = dynamic;
+    body {
+      PriorSchoolTerm.ProcessPriorSchoolTerm.allowableDate.setSchoolAllowableDate
+    }
+  };
+
+}

@@ -1,0 +1,87 @@
+<S:Fault xmlns:ns4='http://www.w3.org/2003/05/soap-envelope' xmlns:S='http://schemas.xmlsoap.org/soap/envelope/'>
+    <faultcode>S:Server</faultcode>
+    <faultstring>
+        java.lang.Exception: two Grant Decisions in a row. participant 13048504
+        with decisionType = EMC, statusType = MC, effective date = Sun May 01
+        00:00:00 CDT 2011, and participant 13048504 with decisionType = EMC,
+        statusType = MC, effective date = Sun May 01 00:00:00 CDT 2011
+    </faultstring>
+    <detail>
+        <ns2:BenefitsException xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+            <message>An unexpected error was encountered. Please contact the System Administrator.</message>
+        </ns2:BenefitsException>
+        <ns2:exception xmlns:ns2='http://jax-ws.dev.java.net/' class='gov.va.vba.benefits.arch.wtc.BenefitsException' note='To disable this feature, set com.sun.xml.ws.fault.SOAPFaultBuilder.disableCaptureStackTrace system property to false'>
+            <message>
+                java.lang.Exception: two Grant Decisions in a row. participant
+                13048504 with decisionType = EMC, statusType = MC, effective
+                date = Sun May 01 00:00:00 CDT 2011, and participant 13048504
+                with decisionType = EMC, statusType = MC, effective date = Sun
+                May 01 00:00:00 CDT 2011
+            </message>
+            <ns2:stackTrace>
+                <ns2:frame class='gov.va.vba.benefits.servicelogic.cp.DependencyDecisionEJB_Impl' line='unknown' method='addDependencyDecisions'/>
+                <ns2:frame class='gov.va.vba.benefits.awards.ejb.session.AmendAwardDependencyEJB' line='unknown' method='processAwardDependent'/>
+                <ns2:frame class='sun.reflect.NativeMethodAccessorImpl' line='native' method='invoke0' file='NativeMethodAccessorImpl.java'/>
+                <ns2:frame class='sun.reflect.NativeMethodAccessorImpl' line='39' method='invoke' file='NativeMethodAccessorImpl.java'/>
+                <ns2:frame class='sun.reflect.DelegatingMethodAccessorImpl' line='25' method='invoke' file='DelegatingMethodAccessorImpl.java'/>
+                <ns2:frame class='java.lang.reflect.Method' line='597' method='invoke' file='Method.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.support.AopUtils' line='281' method='invokeJoinpointUsingReflection' file='AopUtils.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation' line='187' method='invokeJoinpoint' file='ReflectiveMethodInvocation.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation' line='154' method='proceed' file='ReflectiveMethodInvocation.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor' line='126' method='doProceed' file='DelegatingIntroductionInterceptor.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor' line='114' method='invoke' file='DelegatingIntroductionInterceptor.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation' line='176' method='proceed' file='ReflectiveMethodInvocation.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.jee.spi.MethodInvocationVisitorImpl' line='15' method='visit' file='MethodInvocationVisitorImpl.java'/>
+                <ns2:frame class='weblogic.ejb.container.injection.EnvironmentInterceptorCallbackImpl' line='54' method='callback' file='EnvironmentInterceptorCallbackImpl.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.jee.spi.EnvironmentInterceptor' line='30' method='invoke' file='EnvironmentInterceptor.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation' line='176' method='proceed' file='ReflectiveMethodInvocation.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.interceptor.ExposeInvocationInterceptor' line='89' method='invoke' file='ExposeInvocationInterceptor.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation' line='176' method='proceed' file='ReflectiveMethodInvocation.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor' line='126' method='doProceed' file='DelegatingIntroductionInterceptor.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor' line='114' method='invoke' file='DelegatingIntroductionInterceptor.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation' line='176' method='proceed' file='ReflectiveMethodInvocation.java'/>
+                <ns2:frame class='com.bea.core.repackaged.springframework.aop.framework.JdkDynamicAopProxy' line='210' method='invoke' file='JdkDynamicAopProxy.java'/>
+                <ns2:frame class='$Proxy444' line='unknown' method='processAwardDependent'/>
+                <ns2:frame class='gov.va.vba.benefits.awards.ejb.session.AmendAwardDependencyEJB_3fj7nk_WSOImpl' line='152' method='__WL_processAwardDependent_WS' file='AmendAwardDependencyEJB_3fj7nk_WSOImpl.java'/>
+                <ns2:frame class='sun.reflect.NativeMethodAccessorImpl' line='native' method='invoke0' file='NativeMethodAccessorImpl.java'/>
+                <ns2:frame class='sun.reflect.NativeMethodAccessorImpl' line='39' method='invoke' file='NativeMethodAccessorImpl.java'/>
+                <ns2:frame class='sun.reflect.DelegatingMethodAccessorImpl' line='25' method='invoke' file='DelegatingMethodAccessorImpl.java'/>
+                <ns2:frame class='java.lang.reflect.Method' line='597' method='invoke' file='Method.java'/>
+                <ns2:frame class='weblogic.wsee.server.ejb.WsEjb' line='50' method='invoke' file='WsEjb.java'/>
+                <ns2:frame class='weblogic.wsee.jaxws.WLSEjbInstanceResolver$WLSEjbInvoker' line='187' method='invoke' file='WLSEjbInstanceResolver.java'/>
+                <ns2:frame class='weblogic.wsee.jaxws.WLSInstanceResolver$WLSInvoker' line='71' method='invoke' file='WLSInstanceResolver.java'/>
+                <ns2:frame class='com.sun.xml.ws.server.InvokerTube$2' line='146' method='invoke' file='InvokerTube.java'/>
+                <ns2:frame class='com.sun.xml.ws.server.sei.EndpointMethodHandler' line='257' method='invoke' file='EndpointMethodHandler.java'/>
+                <ns2:frame class='com.sun.xml.ws.server.sei.SEIInvokerTube' line='93' method='processRequest' file='SEIInvokerTube.java'/>
+                <ns2:frame class='com.sun.xml.ws.api.pipe.Fiber' line='598' method='__doRun' file='Fiber.java'/>
+                <ns2:frame class='com.sun.xml.ws.api.pipe.Fiber' line='557' method='_doRun' file='Fiber.java'/>
+                <ns2:frame class='com.sun.xml.ws.api.pipe.Fiber' line='542' method='doRun' file='Fiber.java'/>
+                <ns2:frame class='com.sun.xml.ws.api.pipe.Fiber' line='439' method='runSync' file='Fiber.java'/>
+                <ns2:frame class='com.sun.xml.ws.server.WSEndpointImpl$2' line='243' method='process' file='WSEndpointImpl.java'/>
+                <ns2:frame class='com.sun.xml.ws.transport.http.HttpAdapter$HttpToolkit' line='444' method='handle' file='HttpAdapter.java'/>
+                <ns2:frame class='com.sun.xml.ws.transport.http.HttpAdapter' line='244' method='handle' file='HttpAdapter.java'/>
+                <ns2:frame class='com.sun.xml.ws.transport.http.servlet.ServletAdapter' line='134' method='handle' file='ServletAdapter.java'/>
+                <ns2:frame class='weblogic.wsee.jaxws.HttpServletAdapter$AuthorizedInvoke' line='272' method='run' file='HttpServletAdapter.java'/>
+                <ns2:frame class='weblogic.wsee.jaxws.HttpServletAdapter' line='185' method='post' file='HttpServletAdapter.java'/>
+                <ns2:frame class='weblogic.wsee.jaxws.JAXWSServlet' line='180' method='doPost' file='JAXWSServlet.java'/>
+                <ns2:frame class='javax.servlet.http.HttpServlet' line='727' method='service' file='HttpServlet.java'/>
+                <ns2:frame class='weblogic.wsee.jaxws.JAXWSServlet' line='64' method='service' file='JAXWSServlet.java'/>
+                <ns2:frame class='javax.servlet.http.HttpServlet' line='820' method='service' file='HttpServlet.java'/>
+                <ns2:frame class='weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction' line='227' method='run' file='StubSecurityHelper.java'/>
+                <ns2:frame class='weblogic.servlet.internal.StubSecurityHelper' line='125' method='invokeServlet' file='StubSecurityHelper.java'/>
+                <ns2:frame class='weblogic.servlet.internal.ServletStubImpl' line='292' method='execute' file='ServletStubImpl.java'/>
+                <ns2:frame class='weblogic.servlet.internal.ServletStubImpl' line='175' method='execute' file='ServletStubImpl.java'/>
+                <ns2:frame class='weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction' line='3504' method='run' file='WebAppServletContext.java'/>
+                <ns2:frame class='weblogic.security.acl.internal.AuthenticatedSubject' line='321' method='doAs' file='AuthenticatedSubject.java'/>
+                <ns2:frame class='weblogic.security.service.SecurityManager' line='unknown' method='runAs'/>
+                <ns2:frame class='weblogic.servlet.internal.WebAppServletContext' line='2186' method='securedExecute' file='WebAppServletContext.java'/>
+                <ns2:frame class='weblogic.servlet.internal.WebAppServletContext' line='2092' method='execute' file='WebAppServletContext.java'/>
+                <ns2:frame class='weblogic.servlet.internal.ServletRequestImpl' line='unknown' method='run'/>
+                <ns2:frame class='weblogic.work.ExecuteThread' line='201' method='execute' file='ExecuteThread.java'/>
+                <ns2:frame class='weblogic.work.ExecuteThread' line='173' method='run' file='ExecuteThread.java'/>
+            </ns2:stackTrace>
+        </ns2:exception>
+    </detail>
+</S:Fault>
+
+

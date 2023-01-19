@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0008 - Is Veteran Alive</name>
+  <uuid>deb9c647-f676-4ecf-ad7e-1400eb7e364c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	it is not true that 'the Veteran' is living
+then 
+	add "Auto Dependency Processing Reject Reason - Veteran is not living. Please review." to the list of Exceptions ; ]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,23 @@
+fileNumber: 990915708
+hasPOA: false
+
+claim:
+    hasAttachments: false
+
+alive: true
+
+awardStatus:
+    proposed: false
+    runningAward: true
+    isSuspended: false
+    gaoused: false
+    hasAttorneyFeeAgreement: false
+
+totalNumberOfDependents: 3
+
+latestPreviousMarriage:
+    endDate: 2015-05-05
+
+currentMarriage:
+    startDate: 2015-05-01
+

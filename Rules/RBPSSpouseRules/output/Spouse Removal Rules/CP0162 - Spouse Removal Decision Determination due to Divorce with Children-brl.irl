@@ -1,0 +1,18 @@
+package Spouse_Removal_Rules {
+   use exceptionGenerated;
+   rule CP0162_$45$_Spouse_Removal_Decision_Determination_due_to_Divorce_with_Children {
+      property ilog.rules.business_name = "CP0162 - Spouse Removal Decision Determination due to Divorce with Children";
+      property ilog.rules.package_name = "Spouse Removal Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Spouse() from Spouse;
+         evaluate ((Spouse.childPresentForSpouse
+         	&& (Spouse.currentMarriage.terminationType.equals(gov.va.vba.rbps.coreframework.xom.MarriageTerminationType.DIVORCE))));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Validation Reject Reason – Removal of spouse due to divorce with children on award. Please Review for Stepchild Status.");
+         exceptionGenerated = true;
+         ?context.updateContext();
+      }
+   }
+}
+

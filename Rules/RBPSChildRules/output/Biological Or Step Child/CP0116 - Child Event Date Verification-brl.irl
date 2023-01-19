@@ -1,0 +1,20 @@
+package Biological_Or_Step_Child {
+   use RatingPlus1Year;
+   use RatingPlus1Year7Days;
+   use Completed;
+   rule CP0116_$45$_Child_Event_Date_Verification {
+      property ilog.rules.business_name = "CP0116 - Child Event Date Verification";
+      property ilog.rules.package_name = "Biological Or Step Child";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         evaluate ((Veteran.claimDate.compareTo(RatingPlus1Year) > 0
+         	&& Veteran.claimDate.compareTo(RatingPlus1Year7Days) <= 0));
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Date of Veteran's rating is between 366 and 372 days in the past. Please review date of notification letter to determine correct date to add child : " + Child.lastName) + ", ") + Child.firstName) + " ."));
+      }
+   }
+}
+

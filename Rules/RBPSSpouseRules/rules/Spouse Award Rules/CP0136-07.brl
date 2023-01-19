@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0136-07</name>
+  <uuid>fdd2c5fa-37c4-4f87-aa5e-b4b16c8aac5a</uuid>
+  <documentation><![CDATA[DOC <= (before/same) FCDR + 365 Days
+DOC > (after) DOM + 365 Days
+DOM > RED]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the FCDR of 'the Veteran' is present
+            - the rating effective date of 'the Veteran' is not the FCDR of 'the Veteran'
+            - 'the Veteran' claim received date is after the FCDR of 'the Veteran' plus 365 Days
+            - 'the Veteran' claim received date is after the marriage date of 'the Veteran' plus 365 Days
+            - the marriage date of 'the Veteran' is before or the same as the FCDR of 'the Veteran'
+then
+    set the event date of 'the Award' to the FCDR of 'the Veteran' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

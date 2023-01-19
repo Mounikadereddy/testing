@@ -1,0 +1,18 @@
+package Initial_Rules {
+   use Completed;
+   rule CP0100_$45$_Child_First_Name_Verification {
+      property ilog.rules.business_name = "CP0100 - Child First Name Verification";
+      property ilog.rules.package_name = "Initial Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Child.firstName));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - Child First Name is not provided. Please review.");
+         Completed = true;
+         ?context.updateContext();
+         Child.firstName = "First Name Not Provided";
+      }
+   }
+}
+

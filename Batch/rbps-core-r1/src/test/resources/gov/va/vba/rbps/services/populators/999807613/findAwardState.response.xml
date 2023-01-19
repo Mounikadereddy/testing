@@ -1,0 +1,15 @@
+<ns2:findAwardStateResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <errorLevel>0</errorLevel>
+        <awardType>CPL</awardType>
+        <beneficiaryID>9100780044</beneficiaryID>
+        <changeSinceLastAuth>N</changeSinceLastAuth>
+        <isGaoUsed>N</isGaoUsed>
+        <isProposed>N</isProposed>
+        <isRunningAward>Y</isRunningAward>
+        <isSuspended>N</isSuspended>
+        <veteranID>9100780044</veteranID>
+    </return>
+</ns2:findAwardStateResponse>
+
+

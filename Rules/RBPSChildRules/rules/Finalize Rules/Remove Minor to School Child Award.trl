@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.irl:IRLRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.irl="http://ilog.rules.studio/model/irl.ecore">
+  <name>Remove Minor to School Child Award</name>
+  <uuid>670f31a8-2169-444c-adfc-0305037c0d4c</uuid>
+  <definition><![CDATA[when {
+	gov.va.vba.rbps.coreframework.xom.Award() from MinorSchoolChildAward;	
+}
+then {
+ 	MinorSchoolChildAward = null;
+}]]></definition>
+</ilog.rules.studio.model.irl:IRLRule>

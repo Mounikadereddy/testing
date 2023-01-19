@@ -1,0 +1,145 @@
+# encoding: UTF-8
+require 'rake'
+require 'tempfile'
+#require 'active_support/core_ext/numeric'
+#require 'active_support/core_ext/numeric/time'
+#require 'active_support/core_ext/date/calculations'
+require 'active_support/core_ext/time/calculations'
+
+HERE = File.dirname( __FILE__ )
+
+FileList["#{HERE}/**/*.md"].each do |src|
+  label                 = src.gsub( '.md', '' )
+  html                  = "#{label}.html"
+  pdf_html_file_name    = "#{label}.pdf.html"
+  pdf_file_name         = "#{label}.pdf"
+  simple                = File.basename( label )
+  css                   = "#{HERE}/markdown.css"
+
+  FileUtils.touch html, :mtime => Time.now.years_ago( 2 ) if ! File.exist? html
+#  FileUtils.touch html, :mtime => Time.now.years_ago( 2 )
+
+#  puts simple
+#  puts pdf_file_name
+
+#  desc "build #{label} html file from markdown"
+  file html => [src, css] do
+#    markdown( src, "#{simple}.html" )
+    markdown( src, html )
+  end
+
+#  desc "build #{pdf_file_name} from #{src}"
+  file pdf_file_name => [src, css] do
+    puts "generating #{pdf_file_name} and #{pdf_html_file_name} from #{src}"
+    pdf_markdown( src, pdf_html_file_name, pdf_file_name )
+  end
+
+  desc "build #{label}.html and #{pdf_file_name} file from markdown"
+  task simple.to_sym => [html, pdf_file_name]
+
+  task :default => html
+  task :default => simple.to_sym
+end
+
+
+def markdown( file_name, out )
+  require 'redcarpet'
+
+  # p extensions
+  # render = Redcarpet::Render::HTML.new
+  render = create_renderer
+  markdown = <<-EOS
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="file://#{HERE}/markdown.css" rel="stylesheet"/>
+</head>
+EOS
+
+#  markdown << Redcarpet::Markdown.new( Redcarpet::Render::HTML_TOC ).render( File.new( file_name ).read )
+  markdown << Redcarpet::Markdown.new( render, extensions ).render( File.new( file_name ).read )
+
+  markdown << '</html>'
+
+  markdown = modify_html markdown
+
+  File.chmod( 0644, out )
+  File.open( out, 'w' ) { |f| f.write( markdown ) }
+#  puts markdown
+  puts "Writing html to #{out}"
+end
+
+
+def pdf_markdown( file_name, pdf_html_file_name, pdf_file_name )
+  require 'redcarpet'
+
+  render = Redcarpet::Render::HTML.new smart: false
+  markdown = add_pdf_header
+  markdown << Redcarpet::Markdown.new( render, extensions ).render( File.new( file_name ).read )
+  markdown << "\n\n</body>\n</html>\n"
+
+  modify_html markdown
+
+  write_to_html_file( pdf_html_file_name, markdown )
+
+  puts "Writing pdf to #{pdf_file_name}"
+  %x{ html2pdf -f #{pdf_html_file_name} -o #{pdf_file_name} }
+
+  File.delete( pdf_html_file_name )
+end
+
+
+def add_pdf_header
+
+  markdown = "<html>\n<head>\n<style "
+  markdown << 'type="text/css">'
+  markdown << "\n"
+  markdown << File.new( "#{HERE}/markdown.css", 'r' ).read
+  markdown << "\n</style>\n</head>\n<body>\n\n"
+
+  markdown
+end
+
+
+def modify_html( markdown )
+  markdown.gsub!( /<table>/, '<table id="box-table-a">' )
+  markdown.gsub!( /<br>/, '<br/>' )
+  markdown.gsub!( /<hr>/, '<hr/>' )
+
+#  markdown.gsub!( /[”“]/, '"' )
+  markdown.gsub!( /\”/, '&quot;' )
+  markdown.gsub!( /\“/, '&quot;' )
+  markdown.gsub!( /\’/, "&#39;" )
+  markdown.gsub!( /\–/, '-' )
+
+  markdown
+end
+
+
+def create_renderer
+  Redcarpet::Render::HTML.new with_toc_data: true
+end
+
+
+def write_to_html_file( pdf_html_file_name, markdown )
+
+#  File.chmod( 0644, pdf_html_file_name )
+  puts "Writing html to #{pdf_html_file_name}"
+  File.open( pdf_html_file_name, 'w' ) { |f| f.write( markdown ) }
+end
+
+
+def extensions
+  {
+     autolink:              true,
+     fenced_code_blocks:    true,
+     hard_wrap:             true,
+     no_intra_emphasis:     true,
+     smart:                 false,
+     space_after_headers:   true,
+     strikethrough:         true,
+     superscript:           true,
+     tables:                true,
+  }
+end
+

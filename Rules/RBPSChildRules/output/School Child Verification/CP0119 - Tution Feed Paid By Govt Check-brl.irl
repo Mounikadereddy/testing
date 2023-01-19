@@ -1,0 +1,17 @@
+package School_Child_Verification {
+   use Completed;
+   rule CP0119_$45$_Tution_Feed_Paid_By_Govt_Check {
+      property ilog.rules.business_name = "CP0119 - Tution Feed Paid By Govt Check";
+      property ilog.rules.package_name = "School Child Verification";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (Child.tuitionPaidByGovt);
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Reported that child : " + Child.lastName) + ", ") + Child.firstName) + "'s tuition/allowance is being paid by US government. Please review."));
+      }
+   }
+}
+

@@ -1,0 +1,19 @@
+package Biological_Or_Step_Child {
+   use Completed;
+   rule CP0114_$45$_Biological_Child_Address_Verification {
+      property ilog.rules.business_name = "CP0114 - Biological Child Address Verification";
+      property ilog.rules.package_name = "Biological Or Step Child";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((((Child.childType.equals(gov.va.vba.rbps.coreframework.xom.ChildType.BIOLOGICAL_CHILD))
+         	&& !(Child.livingWithVeteran))
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Child.mailingAddress)));
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Child : " + Child.lastName) + ", ") + Child.firstName) + " reported as not living with Veteran but no address for child was submitted. Please review"));
+      }
+   }
+}
+

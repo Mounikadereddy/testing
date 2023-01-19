@@ -1,0 +1,18 @@
+package PriorSchoolTerm {
+   use PriorConditionSatisfied;
+   rule CP0227$45$_A$45$End_date_of_the_last_term_on_the_award__is_less_than_or_equal_to_5_months_before_the_prior_school_begin_date$44$ {
+      property ilog.rules.business_name = "CP0227- A-End date of the last term on the award  is less than or equal to 5 months before the prior school begin date,";
+      property ilog.rules.package_name = "PriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((Child.lastTermInCorpEndDate != null
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addMonthsToDate(5, Child.lastTermInCorpEndDate).compareTo(Child.lastTerm.courseStudentStartDate) >=0));
+      } then {
+         PriorSchoolChild.eventDate = Child.lastTermInCorpEndDate;
+         PriorConditionSatisfied = true;
+         ?context.updateContext();
+      }
+   }
+}
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0016 - Attorney Fee Agreement Check</name>
+  <uuid>c1360689-70e7-426a-a81b-3483539e541f</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the existing award of 'the Veteran' is present and
+	the existing award of 'the Veteran' has an attorney fee agreement
+then
+	add "Auto Dependency Processing Reject Reason - This is an attorney fee case. Please review." to the list of Exceptions ;]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,303 @@
+import gov.va.vba.rbps.coreframework.xom.ChildType;
+use childAge;
+import gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil;
+use completed;
+import gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages;
+import gov.va.vba.rbps.coreframework.xom.Award;
+use Completed;
+use LastTermEndPlus5Months;
+use CourseBeginDatePlus1year;
+
+use Completed;
+use ConditionSatisfied;
+use priorSchoolTermValid;
+
+flowtask RuleFlow {
+  property mainflowtask = true;
+  property ilog.rules.business_name = "RuleFlow";
+  property ilog.rules.package_name = "";
+  initialaction {
+    Completed = false;RatingPlus1Year = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(1, Veteran.ratingDate);RatingPlus1Year30Days = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addDaysToDate(30, gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(1, Veteran.ratingDate));RatingPlus1Year7Days = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addDaysToDate(7, gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(1, Veteran.ratingDate));ChildAgeOnEffectiveDate = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.getAgeOn(Child, Veteran.ratingEffectiveDate);ChildAgeOnDateOfClaim = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.getAgeOn(Child, Veteran.claimDate);Child18BirthDay = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(18, Child.birthDate);Child19BrithDay = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(19, Child.birthDate);DOBPlus1Year = gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addYearsToDate(1, Child.birthDate);?context.updateContext();
+  };
+  body {
+    RuleFlow#Child_Validation_Rules;
+    if (Completed) {
+      goto _node_8;
+    }
+    else {
+      RuleFlow#Determine_Award_Status;
+      if (PriorSchoolChild.endDate != null) {
+        RuleFlow#PriorSchoolTerm$35$PriorSchoolTermValidation$35$PriorSchoolTermValidationFlow;
+        if (priorSchoolTermValid) {
+          RuleFlow#PriorSchoolTerm$35$PriorSchoolTermProcessFlow;
+          goto _node_7;
+        }
+        else {
+          _node_7 : if (false) {}
+          if ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award.dependencyStatusType)	&& (Award.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.MINOR_CHILD)))) {
+            RuleFlow#Minor_Child;
+            if ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(MinorSchoolChildAward.dependencyStatusType)	&& (MinorSchoolChildAward.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.SCHOOL_CHILD)))) {
+              _node_21 : RuleFlow#School_Child_Verification;
+              if (Completed) {
+                _node_8 : RuleFlow#Finalize_Rules;
+              }
+              else {
+                if ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award.dependencyStatusType)	&& (Award.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.SCHOOL_CHILD)))) {
+                  RuleFlow#School_Child;
+                  RuleFlow#CP0237__C$45$Prior_term_included_but_not_continous_with_current_ERROR;
+                  if (ConditionSatisfied) {
+                  }
+                  else {
+                    RuleFlow#CP0237_B_Current_and_Prior_Continous_term;
+                    if (ConditionSatisfied) {
+                      _node_2 : RuleFlow#Child_With_No_Event_Date_Rule;
+                    }
+                    else {
+                      RuleFlow#CP0237_$45$A$45$_Last_term_in_Corp_and_Current_Continous;
+                      goto _node_2;
+                    }
+                  }
+                }
+                else if ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(MinorSchoolChildAward.dependencyStatusType)	&& (MinorSchoolChildAward.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.SCHOOL_CHILD)))) {
+                  RuleFlow#Minor_To_School_Child;
+                  RuleFlow#CP0237__C$45$_$45$A$45$Prior_term_included_but_not_continous_with_Minor_to_School_current_ERROR;
+                  if (ConditionSatisfied) {
+                  }
+                  else {
+                    RuleFlow#CP0237_B$45$A_Minor_to_School__Current_and_Prior_Continous_term;
+                    if (ConditionSatisfied) {
+                      goto _node_18;
+                    }
+                    else {
+                      RuleFlow#CP0237_$45$A$45$B$45$_Last_term_in_Corp_and_Minor_to_School__Current_Continous;
+                      _node_18 : RuleFlow#CP0227$45$C$45$_Prior_term_Continous_with_Minor_Child;
+                      goto _node_2;
+                    }
+                  }
+                }
+              }
+            }
+            else {
+              goto _node_18;
+            }
+          }
+          else if ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award.dependencyStatusType)	&& (Award.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.SCHOOL_CHILD)))) {
+            goto _node_21;
+          }
+          else if (Completed) {
+            goto _node_8;
+          }
+        }
+      }
+      else {
+        goto _node_7;
+      }
+    }
+  }
+};
+
+ruletask RuleFlow#Minor_Child {
+  property ilog.rules.business_name = "RuleFlow>Minor Child";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Minor_Child.*,
+    Minor_Child.Bilological_Child.*,
+    Minor_Child.Step_Child.*
+
+  }
+};
+
+ruletask RuleFlow#School_Child_Verification {
+  property ilog.rules.business_name = "RuleFlow>School Child Verification";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    School_Child_Verification.*
+  }
+};
+
+ruletask RuleFlow#School_Child {
+  property ilog.rules.business_name = "RuleFlow>School Child";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  finalaction {
+    MinorSchoolChildAward = null;
+  };
+  body {
+    School_Child.*,
+    School_Child.Biological_Child.*,
+    School_Child.Biological_Child.FCDR_outside_365_Days.*,
+    School_Child.Biological_Child.FCDR_within_365_Days.*,
+    School_Child.Biological_Child.No_FCDR.*,
+    School_Child.Biological_Child.Single_Rating.*,
+    School_Child.Step_Child.*,
+    School_Child.Step_Child.FCDR_outside_365_Days.*,
+    School_Child.Step_Child.FCDR_within_365_Days.*,
+    School_Child.Step_Child.No_FCDR.*,
+    School_Child.Step_Child.Single_Rating.*
+
+  }
+};
+
+ruletask RuleFlow#Child_With_No_Event_Date_Rule {
+  property ilog.rules.business_name = "RuleFlow>Child With No Event Date Rule";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Child_With_No_Event_Date_Rule.*
+  }
+};
+
+ruletask RuleFlow#Minor_To_School_Child {
+  property ilog.rules.business_name = "RuleFlow>Minor To School Child";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Minor_To_School_Child.*
+  }
+};
+
+ruletask RuleFlow#Determine_Award_Status {
+  property ilog.rules.business_name = "RuleFlow>Determine Award Status";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Determine_Award_Status.*
+  }
+};
+
+ruletask RuleFlow#Child_Validation_Rules {
+  property ilog.rules.business_name = "RuleFlow>Child Validation Rules";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  initialaction {
+    Award = new gov.va.vba.rbps.coreframework.xom.Award();
+    MinorSchoolChildAward = new gov.va.vba.rbps.coreframework.xom.Award();
+    Exceptions = new gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages();
+    PriorSchoolChild = new gov.va.vba.rbps.coreframework.xom.Award();
+    LogMessage = new gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages();
+    PriorSchoolTermStatus ="";
+    System.out.println("======================================= ");
+    System.out.println(  "Child18BirthDay : " + Child18BirthDay);
+    System.out.println(  "Child19BirthDay : " + Child19BrithDay);
+    System.out.println(  "ChildAgeOnDateOfClaim : " + ChildAgeOnDateOfClaim);
+    System.out.println(  "ChildAgeOnEffectiveDate : " + ChildAgeOnEffectiveDate);
+    System.out.println(  "DOBPlus1Year : " + DOBPlus1Year);
+    System.out.println(  "RatingPlus1Year : " + RatingPlus1Year);
+    System.out.println(  "RatingPlus1Year30Days : " + RatingPlus1Year30Days);
+    System.out.println(  "ClaimReceivedDate : " + Veteran.claimDate);
+    System.out.println("======================================= ");
+
+  };
+  body {
+    Initial_Rules.*,
+    Biological_Or_Step_Child.*,
+    Denials_Or_Adopted.*
+
+  }
+};
+
+ruletask RuleFlow#Finalize_Rules {
+  property ilog.rules.business_name = "RuleFlow>Finalize Rules";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Finalize_Rules.*
+  }
+};
+
+flowtask RuleFlow#PriorSchoolTerm$35$PriorSchoolTermValidation$35$PriorSchoolTermValidationFlow {
+  property ilog.rules.business_name = "RuleFlow>task_2";
+  property ilog.rules.package_name = "";
+  body {
+    PriorSchoolTerm.PriorSchoolTermValidation.PriorSchoolTermValidationFlow;
+  }
+};
+
+flowtask RuleFlow#PriorSchoolTerm$35$PriorSchoolTermProcessFlow {
+  property ilog.rules.business_name = "RuleFlow>task_3";
+  property ilog.rules.package_name = "";
+  body {
+    PriorSchoolTerm.PriorSchoolTermProcessFlow;
+  }
+};
+
+ruletask RuleFlow#CP0237__C$45$Prior_term_included_but_not_continous_with_current_ERROR {
+  property ilog.rules.business_name = "RuleFlow>CP0237  C-Prior term included but not continous with current ERROR";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    PriorSchoolTerm.CP0237__C$45$Prior_term_included_but_not_continous_with_current_ERROR
+  }
+};
+
+ruletask RuleFlow#CP0237_B_Current_and_Prior_Continous_term {
+  property ilog.rules.business_name = "RuleFlow>CP0237 B Current and Prior Continous term";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    PriorSchoolTerm.CP0237_B_Current_and_Prior_Continous_term
+  }
+};
+
+ruletask RuleFlow#CP0237_$45$A$45$_Last_term_in_Corp_and_Current_Continous {
+  property ilog.rules.business_name = "RuleFlow>CP0237 -A- Last term in Corp and Current Continous";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    PriorSchoolTerm.CP0237_$45$A$45$_Last_term_in_Corp_and_Current_Continous
+  }
+};
+
+ruletask RuleFlow#CP0237__C$45$_$45$A$45$Prior_term_included_but_not_continous_with_Minor_to_School_current_ERROR {
+  property ilog.rules.business_name = "RuleFlow>CP0237  C- -A-Prior term included but not continous with Minor to School current ERROR";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    PriorSchoolTerm.CP0237__C$45$_$45$A$45$Prior_term_included_but_not_continous_with_Minor_to_School_current_ERROR
+  }
+};
+
+ruletask RuleFlow#CP0237_B$45$A_Minor_to_School__Current_and_Prior_Continous_term {
+  property ilog.rules.business_name = "RuleFlow>CP0237 B-A Minor to School  Current and Prior Continous term";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    PriorSchoolTerm.CP0237_B$45$A_Minor_to_School__Current_and_Prior_Continous_term
+  }
+};
+
+ruletask RuleFlow#CP0237_$45$A$45$B$45$_Last_term_in_Corp_and_Minor_to_School__Current_Continous {
+  property ilog.rules.business_name = "RuleFlow>CP0237 -A-B- Last term in Corp and Minor to School  Current Continous";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    PriorSchoolTerm.CP0237_$45$A$45$B$45$_Last_term_in_Corp_and_Minor_to_School__Current_Continous
+  }
+};
+
+ruletask RuleFlow#CP0227$45$C$45$_Prior_term_Continous_with_Minor_Child {
+  property ilog.rules.business_name = "RuleFlow>CP0227-C- Prior term Continous with Minor Child";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    PriorSchoolTerm.CP0227$45$C$45$_Prior_term_Continous_with_Minor_Child
+  }
+};
+

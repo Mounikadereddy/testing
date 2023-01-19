@@ -1,0 +1,402 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2017-03-05T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>1999-03-05T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-02T16:47:15-06:00</decisionDate>
+                <dependencyDecisionID>16030213</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2017-03-05T00:00:00-06:00</eventDate>
+                <firstName>Seth</firstName>
+                <fullName>Seth Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-02T16:47:13-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779304</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>645706479</socialSecurityNumber>
+                <sortDate>2012-02-02T16:47:15-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>1999-03-05T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-02T16:47:14-06:00</decisionDate>
+                <dependencyDecisionID>16030212</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>Seth</firstName>
+                <fullName>Seth Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-02T16:47:13-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779304</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>645706479</socialSecurityNumber>
+                <sortDate>2012-02-02T16:47:14-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>1972-05-21T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-02T16:47:13-06:00</decisionDate>
+                <dependencyDecisionID>16030211</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>Stephan</firstName>
+                <fullName>Stephan Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-02T16:47:13-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779306</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>459378064</socialSecurityNumber>
+                <sortDate>2012-02-02T16:47:13-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>2006-06-12T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-02T16:47:16-06:00</decisionDate>
+                <dependencyDecisionID>16030214</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>Sadie</firstName>
+                <fullName>Sadie Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-02T16:47:13-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779305</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>487903764</socialSecurityNumber>
+                <sortDate>2012-02-02T16:47:16-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-02-21T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>1993-02-21T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-14T13:04:39-06:00</decisionDate>
+                <dependencyDecisionID>16030430</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2011-02-21T00:00:00-06:00</eventDate>
+                <firstName>Melissa</firstName>
+                <fullName>Melissa Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-14T13:04:36-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779452</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>427837373</socialSecurityNumber>
+                <sortDate>2012-02-14T13:04:39-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>1993-02-21T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-14T13:04:38-06:00</decisionDate>
+                <dependencyDecisionID>16030429</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>Melissa</firstName>
+                <fullName>Melissa Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-14T13:04:36-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779452</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>427837373</socialSecurityNumber>
+                <sortDate>2012-02-14T13:04:38-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2015-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>1993-02-21T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-14T13:04:37-06:00</decisionDate>
+                <dependencyDecisionID>16030428</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2015-05-20T00:00:00-05:00</eventDate>
+                <firstName>Melissa</firstName>
+                <fullName>Melissa Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-14T13:04:36-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779452</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>427837373</socialSecurityNumber>
+                <sortDate>2012-02-14T13:04:37-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2024-06-12T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>2006-06-12T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-02T16:47:17-06:00</decisionDate>
+                <dependencyDecisionID>16030215</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2024-06-12T00:00:00-05:00</eventDate>
+                <firstName>Sadie</firstName>
+                <fullName>Sadie Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-02T16:47:13-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779305</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>487903764</socialSecurityNumber>
+                <sortDate>2012-02-02T16:47:17-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2016-06-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>1994-01-05T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-09T15:56:22-06:00</decisionDate>
+                <dependencyDecisionID>16030339</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2016-05-15T00:00:00-05:00</eventDate>
+                <firstName>Elizabeth</firstName>
+                <fullName>Elizabeth Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>VHAISWTOOMER</modifiedBy>
+                <modifiedDate>2012-02-09T15:56:21-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779339</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>796780900</socialSecurityNumber>
+                <sortDate>2012-02-09T15:56:22-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-01-05T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>1994-01-05T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-09T15:56:21-06:00</decisionDate>
+                <dependencyDecisionID>16030338</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2012-01-05T00:00:00-06:00</eventDate>
+                <firstName>Elizabeth</firstName>
+                <fullName>Elizabeth Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>VHAISWTOOMER</modifiedBy>
+                <modifiedDate>2012-02-09T15:56:21-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779339</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>796780900</socialSecurityNumber>
+                <sortDate>2012-02-09T15:56:21-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-02-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>1993-02-21T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-14T13:04:36-06:00</decisionDate>
+                <dependencyDecisionID>16030427</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2012-01-10T00:00:00-06:00</eventDate>
+                <firstName>Melissa</firstName>
+                <fullName>Melissa Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-14T13:04:36-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779452</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>427837373</socialSecurityNumber>
+                <sortDate>2012-02-14T13:04:36-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-12-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>1994-01-05T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-02-09T15:56:23-06:00</decisionDate>
+                <dependencyDecisionID>16030340</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-11-11T00:00:00-06:00</eventDate>
+                <firstName>Elizabeth</firstName>
+                <fullName>Elizabeth Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>VHAISWTOOMER</modifiedBy>
+                <modifiedDate>2012-02-09T15:56:21-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779339</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>796780900</socialSecurityNumber>
+                <sortDate>2012-02-09T15:56:23-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-01-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>2000-10-15T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-05T10:33:13-06:00</decisionDate>
+                <dependencyDecisionID>16030272</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2010-12-01T00:00:00-06:00</eventDate>
+                <firstName>Mary</firstName>
+                <fullName>Mary Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-05T10:33:13-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779357</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>549018520</socialSecurityNumber>
+                <sortDate>2012-02-05T10:33:13-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2018-10-15T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777161</beneficiaryID>
+                <birthdayDate>2000-10-15T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-02-05T10:33:14-06:00</decisionDate>
+                <dependencyDecisionID>16030273</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2018-10-15T00:00:00-05:00</eventDate>
+                <firstName>Mary</firstName>
+                <fullName>Mary Ramirez</fullName>
+                <lastName>Ramirez</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-02-05T10:33:14-06:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779357</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>549018520</socialSecurityNumber>
+                <sortDate>2012-02-05T10:33:14-06:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777161</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+
+

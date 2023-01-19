@@ -1,0 +1,29 @@
+<ns2:findDependentsResponse xmlns:ns2='http://services.share.benefits.vba.va.gov/'>
+    <return>
+        <numberOfRecords> 1</numberOfRecords>
+        <persons>
+            <awardIndicator>N</awardIndicator>
+            <cityOfBirth/>
+            <currentRelateStatus/>
+            <dateOfBirth>05/01/1970</dateOfBirth>
+            <dateOfDeath/>
+            <deathReason/>
+            <emailAddress/>
+            <firstName>JAMES</firstName>
+            <gender/>
+            <lastName>RILEY</lastName>
+            <middleName/>
+            <proofOfDependency/>
+            <ptcpntId>9100778121</ptcpntId>
+            <relatedToVet>N</relatedToVet>
+            <relationship>Spouse</relationship>
+            <ssn>443507812</ssn>
+            <ssnVerifyStatus/>
+            <stateOfBirth/>
+        </persons>
+        <returnCode>SHAR 9999</returnCode>
+        <returnMessage>Records found.</returnMessage>
+    </return>
+</ns2:findDependentsResponse>
+
+

@@ -1,0 +1,27 @@
+<ns2:findPOAResponse xmlns:ns2='http://services.share.benefits.vba.va.gov/'>
+    <return>
+        <authznChangeClmantAddrsInd/>
+        <authznPoaAccessInd>Y</authznPoaAccessInd>
+        <beginDate>03/09/2013</beginDate>
+        <endDate/>
+        <eventDate/>
+        <healthcareProviderReleaseIndicator/>
+        <journalDate>03/09/2013</journalDate>
+        <journalLocationID>343</journalLocationID>
+        <journalObjectID>SHARE - CEST</journalObjectID>
+        <journalStatusTypeCode>I</journalStatusTypeCode>
+        <journalUserID>ADJGMONI</journalUserID>
+        <personOrOrganizationIndicator>O</personOrOrganizationIndicator>
+        <personOrgAttentionText/>
+        <personOrgName>044 - CALIFORNIA DEPARTMENT OF VETERANS AFFAIRS</personOrgName>
+        <personOrgPtcpntID>2452335</personOrgPtcpntID>
+        <personOrganizationCode/>
+        <personOrganizationName>POA State Organization</personOrganizationName>
+        <prepositionalPhraseName/>
+        <rateName/>
+        <relationshipName>Power of Attorney For</relationshipName>
+        <statusCode/>
+        <temporaryCustodianIndicator/>
+        <veteranPtcpntID>8213515</veteranPtcpntID>
+    </return>
+</ns2:findPOAResponse>

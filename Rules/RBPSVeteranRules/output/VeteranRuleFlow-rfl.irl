@@ -1,0 +1,38 @@
+import gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages;
+
+
+flowtask VeteranRuleFlow {
+  property mainflowtask = true;
+  property ilog.rules.business_name = "VeteranRuleFlow";
+  property ilog.rules.package_name = "";
+  initialaction {
+    Exceptions = new gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages();
+  };
+  body {
+    VeteranRuleFlow#Veteran_Rules;
+    if (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.currentMarriage)) {
+      VeteranRuleFlow#Veteran_Marriage_Rules;
+    }
+  }
+};
+
+ruletask VeteranRuleFlow#Veteran_Rules {
+  property ilog.rules.business_name = "VeteranRuleFlow>Veteran Rules";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Veteran_Rules.*
+  }
+};
+
+ruletask VeteranRuleFlow#Veteran_Marriage_Rules {
+  property ilog.rules.business_name = "VeteranRuleFlow>Veteran Marriage Rules";
+  property ilog.rules.package_name = "";
+  algorithm = default;
+  ordering = dynamic;
+  body {
+    Veteran_Marriage_Rules.*
+  }
+};
+

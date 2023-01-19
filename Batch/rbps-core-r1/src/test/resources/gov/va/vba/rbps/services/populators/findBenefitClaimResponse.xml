@@ -1,0 +1,65 @@
+<ns2:findBenefitClaimResponse xmlns:ns2='http://services.share.benefits.vba.va.gov/'>
+    <return>
+        <participantRecord>
+            <numberOfRecords>3</numberOfRecords>
+            <returnCode>SHAR 9999</returnCode>
+            <returnMessage>Records found.</returnMessage>
+            <selection>
+                <benefitClaimID>231728</benefitClaimID>
+                <claimReceiveDate>07/15/2011</claimReceiveDate>
+                <claimTypeCode>130DPNDCYAUT</claimTypeCode>
+                <claimTypeName>Automated Dependency 686c</claimTypeName>
+                <claimantFirstName>FOURSIXNINE</claimantFirstName>
+                <claimantLastName>TESTVETERAN</claimantLastName>
+                <claimantMiddleName/>
+                <claimantSuffix/>
+                <endProductTypeCode>130</endProductTypeCode>
+                <lastActionDate/>
+                <organizationName/>
+                <organizationTitleTypeName/>
+                <payeeTypeCode>00</payeeTypeCode>
+                <personOrOrganizationIndicator>P</personOrOrganizationIndicator>
+                <programTypeCode>CPL</programTypeCode>
+                <statusTypeCode>PEND</statusTypeCode>
+            </selection>
+            <selection>
+                <benefitClaimID>207551</benefitClaimID>
+                <claimReceiveDate>02/14/2010</claimReceiveDate>
+                <claimTypeCode>110LCOMP</claimTypeCode>
+                <claimTypeName>Initial Live Comp/Pension</claimTypeName>
+                <claimantFirstName>FOURSIXNINE</claimantFirstName>
+                <claimantLastName>TESTVETERAN</claimantLastName>
+                <claimantMiddleName/>
+                <claimantSuffix/>
+                <endProductTypeCode>110</endProductTypeCode>
+                <lastActionDate>03/11/2010</lastActionDate>
+                <organizationName/>
+                <organizationTitleTypeName/>
+                <payeeTypeCode>00</payeeTypeCode>
+                <personOrOrganizationIndicator>P</personOrOrganizationIndicator>
+                <programTypeCode>CPL</programTypeCode>
+                <statusTypeCode>CLR</statusTypeCode>
+            </selection>
+            <selection>
+                <benefitClaimID>213379</benefitClaimID>
+                <claimReceiveDate>09/01/2010</claimReceiveDate>
+                <claimTypeCode>890INHP10</claimTypeCode>
+                <claimTypeName>Informal New Herbicide Presumptive 2010</claimTypeName>
+                <claimantFirstName>FOURSIXNINE</claimantFirstName>
+                <claimantLastName>TESTVETERAN</claimantLastName>
+                <claimantMiddleName/>
+                <claimantSuffix/>
+                <endProductTypeCode>890</endProductTypeCode>
+                <lastActionDate>12/19/2011</lastActionDate>
+                <organizationName/>
+                <organizationTitleTypeName/>
+                <payeeTypeCode>00</payeeTypeCode>
+                <personOrOrganizationIndicator>P</personOrOrganizationIndicator>
+                <programTypeCode>CPL</programTypeCode>
+                <statusTypeCode>CAN</statusTypeCode>
+            </selection>
+        </participantRecord>
+        <returnCode>SHAR 9999</returnCode>
+        <returnMessage>Records found.</returnMessage>
+    </return>
+</ns2:findBenefitClaimResponse>

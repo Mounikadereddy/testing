@@ -1,0 +1,20 @@
+package School_Child_Verification {
+   use Completed;
+   rule CP0140_$45$_Part_Time_Validation {
+      property ilog.rules.business_name = "CP0140 - Part Time Validation";
+      property ilog.rules.package_name = "School Child Verification";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.currentTerm)
+         	&& (Child.currentTerm.educationType.equals(gov.va.vba.rbps.coreframework.xom.EducationType.PART_TIME)))
+         	&& ((Child.currentTerm.sessionsPerWeek < 3
+         	&& Child.currentTerm.hoursPerWeek < 3))));
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - Child : " + Child.lastName) + ", ") + Child.firstName) + " reported as attending school less than 3 sessions/hours per week. Please review."));
+      }
+   }
+}
+

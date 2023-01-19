@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0237 B-A Minor to School  Current and Prior Continous term</name>
+  <uuid>9db2a1df-3fb1-4267-bac8-cabc15bf28a6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+  	priorSchoolTermValid and 
+   	the current term of 'the Child' is not null and 
+   	the end date of 'PriorSchoolChild' is not null and
+   	the event date of 'the minorSchoolChildAward' is not null and
+  	the end date of 'PriorSchoolChild' plus 5 months 
+  	 is after or the same as  the event date of 'the minorSchoolChildAward' 
+ then 
+ set the event date of 'the minorSchoolChildAward'  to the course end date of the last term of 'the Child' ; 
+ set 'Condition Satisfied' to true ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

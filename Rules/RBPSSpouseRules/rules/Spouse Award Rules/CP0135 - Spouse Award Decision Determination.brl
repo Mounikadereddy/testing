@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0135 - Spouse Award Decision Determination</name>
+  <uuid>0c3483df-72e5-4a55-9152-d4aa2a5b9475</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	'the Spouse' is present 
+then 
+	set the dependency status type of 'the Award' to SPOUSE  ;
+	set the dependency decision type of 'the Award' to DEPENDENCY_ESTABLISHED ;]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

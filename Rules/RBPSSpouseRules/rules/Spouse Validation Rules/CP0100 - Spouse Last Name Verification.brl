@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0100 - Spouse Last Name Verification</name>
+  <uuid>8ca80642-8922-49df-afdb-3c10d215bc0d</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if 
+	 the last name of 'the Spouse' is not present 
+then 
+	add "Auto Dependency Processing Reject Reason - Spouse last name is not provided. Please review." to the list of Exceptions ; 
+	set 'exception generated' to true ;  ]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

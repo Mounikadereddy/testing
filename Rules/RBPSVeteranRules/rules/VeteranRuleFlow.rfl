@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>VeteranRuleFlow</name>
+  <uuid>9e741c42-166d-453a-8a0e-d06db7f01661</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+    <Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+      <Body>
+        <TaskList>
+          <StartTask Identifier="task_0">
+            <Actions Language="irl"><![CDATA[Exceptions = new gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages();]]></Actions>
+          </StartTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="Veteran Rules" Ordering="Default">
+            <RuleList>
+              <Package Name="Veteran Rules"/>
+            </RuleList>
+          </RuleTask>
+          <RuleTask ExecutionMode="RetePlus" ExitCriteria="None"
+            Identifier="Veteran Marriage Rules" Ordering="Default">
+            <RuleList>
+              <Package Name="Veteran Marriage Rules"/>
+            </RuleList>
+          </RuleTask>
+          <StopTask Identifier="task_1"/>
+        </TaskList>
+        <NodeList>
+          <TaskNode Identifier="node_0" Task="task_0"/>
+          <TaskNode Identifier="node_1" Task="task_1"/>
+          <TaskNode Identifier="node_2" Task="Veteran Rules"/>
+          <TaskNode Identifier="node_3" Task="Veteran Marriage Rules"/>
+        </NodeList>
+        <TransitionList>
+          <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+          <Transition Identifier="transition_1" Source="node_2" Target="node_3">
+            <Conditions Language="bal"><![CDATA[the current marriage of 'the Veteran' is present ]]></Conditions>
+          </Transition>
+          <Transition Identifier="transition_2" Source="node_3" Target="node_1"/>
+          <Transition Identifier="transition_3" Source="node_2" Target="node_1"/>
+        </TransitionList>
+      </Body>
+      <Resources>
+        <ResourceSet Locale="en_US">
+          <Data Name="node_3#height">68.103516</Data>
+          <Data Name="transition_1#label">If Current Marriage Is Present</Data>
+          <Data Name="node_0#height">21.0</Data>
+          <Data Name="node_2#height">53.402344</Data>
+          <Data Name="node_2#width">102.0</Data>
+          <Data Name="node_3#y">208.4541</Data>
+          <Data Name="node_3#width">102.0</Data>
+          <Data Name="node_1#name">node_2</Data>
+          <Data Name="node_3#x">51.0</Data>
+          <Data Name="node_0#y">10.5</Data>
+          <Data Name="node_0#x">51.0</Data>
+          <Data Name="node_1#x">51.0</Data>
+          <Data Name="node_1#width">21.000002</Data>
+          <Data Name="node_1#y">303.00586</Data>
+          <Data Name="node_1#height">21.000006</Data>
+          <Data Name="node_2#x">51.0</Data>
+          <Data Name="node_2#y">97.70117</Data>
+          <Data Name="node_0#width">21.0</Data>
+          <Data Name="node_0#name">node_0</Data>
+        </ResourceSet>
+      </Resources>
+      <Properties>
+        <imports><![CDATA[import gov.va.vba.rbps.coreframework.xom.RuleExceptionMessages;
+]]></imports>
+      </Properties>
+    </Ruleflow>
+</rfModel>
+  <mainFlowTask>true</mainFlowTask>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

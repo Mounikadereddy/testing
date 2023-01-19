@@ -1,0 +1,19 @@
+<ns3:processAwardDependent xmlns:ns3='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <AmendAwardDependencyInput>
+        <AwardType>CPL</AwardType>
+        <BeneficiaryID>13047891</BeneficiaryID>
+        <ClaimID>161417</ClaimID>
+        <DependencyList>
+            <birthdayDate>1992-02-02T00:00:00.000-06:00</birthdayDate>
+            <decisionEndDate>2016-06-15T00:00:00.000-05:00</decisionEndDate>
+            <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+            <dependencyStatusType>SCHCHD</dependencyStatusType>
+            <eventDate>2011-09-01T00:00:00.000-05:00</eventDate>
+            <firstName>SHANNON</firstName>
+            <lastName>MCGONIGLE</lastName>
+            <personID>13048478</personID>
+            <socialSecurityNumber>698703215</socialSecurityNumber>
+        </DependencyList>
+        <VeteranID>13047891</VeteranID>
+    </AmendAwardDependencyInput>
+</ns3:processAwardDependent>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Bilological Child</name>
+  <uuid>6e7bec95-32df-4510-b5f6-505e647558f1</uuid>
+</ilog.rules.studio.model.base:RulePackage>

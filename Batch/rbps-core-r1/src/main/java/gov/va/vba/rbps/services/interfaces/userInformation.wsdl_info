@@ -1,0 +1,584 @@
+ <definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://userInformationService.services.vonapp.vba.va.gov/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://userInformationService.services.vonapp.vba.va.gov/" name="UserInformationService">
+- <types>
+- <xsd:schema>
+  <xsd:import namespace="http://userInformationService.services.vonapp.vba.va.gov/" schemaLocation="http://bepdev.vba.va.gov:80/UserInformationWebServiceBean/UserInformationService?xsd=1" /> 
+  </xsd:schema>
+  </types>
+- <message name="findByDataSupplied">
+  <part name="parameters" element="tns:findByDataSupplied" /> 
+  </message>
+- <message name="findByDataSuppliedResponse">
+  <part name="parameters" element="tns:findByDataSuppliedResponse" /> 
+  </message>
+- <message name="MessageFaultException">
+  <part name="fault" element="tns:MessageFaultException" /> 
+  </message>
+- <message name="findAllAsArray">
+  <part name="parameters" element="tns:findAllAsArray" /> 
+  </message>
+- <message name="findAllAsArrayResponse">
+  <part name="parameters" element="tns:findAllAsArrayResponse" /> 
+  </message>
+- <message name="findByProcTypeAndState">
+  <part name="parameters" element="tns:findByProcTypeAndState" /> 
+  </message>
+- <message name="findByProcTypeAndStateResponse">
+  <part name="parameters" element="tns:findByProcTypeAndStateResponse" /> 
+  </message>
+- <message name="getClaimInfo">
+  <part name="parameters" element="tns:getClaimInfo" /> 
+  </message>
+- <message name="getClaimInfoResponse">
+  <part name="parameters" element="tns:getClaimInfoResponse" /> 
+  </message>
+- <portType name="UserInformationService">
+- <operation name="findByDataSupplied">
+  <input message="tns:findByDataSupplied" /> 
+  <output message="tns:findByDataSuppliedResponse" /> 
+  <fault message="tns:MessageFaultException" name="MessageFaultException" /> 
+  </operation>
+- <operation name="findAllAsArray">
+  <input message="tns:findAllAsArray" /> 
+  <output message="tns:findAllAsArrayResponse" /> 
+  <fault message="tns:MessageFaultException" name="MessageFaultException" /> 
+  </operation>
+- <operation name="findByProcTypeAndState">
+  <input message="tns:findByProcTypeAndState" /> 
+  <output message="tns:findByProcTypeAndStateResponse" /> 
+  <fault message="tns:MessageFaultException" name="MessageFaultException" /> 
+  </operation>
+- <operation name="getClaimInfo">
+  <input message="tns:getClaimInfo" /> 
+  <output message="tns:getClaimInfoResponse" /> 
+  <fault message="tns:MessageFaultException" name="MessageFaultException" /> 
+  </operation>
+  </portType>
+- <binding name="UserInformationServicePortBinding" type="tns:UserInformationService">
+  <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" /> 
+- <operation name="findByDataSupplied">
+  <soap:operation soapAction="" /> 
+- <input>
+  <soap:body use="literal" /> 
+  </input>
+- <output>
+  <soap:body use="literal" /> 
+  </output>
+- <fault name="MessageFaultException">
+  <soap:fault name="MessageFaultException" use="literal" /> 
+  </fault>
+  </operation>
+- <operation name="findAllAsArray">
+  <soap:operation soapAction="" /> 
+- <input>
+  <soap:body use="literal" /> 
+  </input>
+- <output>
+  <soap:body use="literal" /> 
+  </output>
+- <fault name="MessageFaultException">
+  <soap:fault name="MessageFaultException" use="literal" /> 
+  </fault>
+  </operation>
+- <operation name="findByProcTypeAndState">
+  <soap:operation soapAction="" /> 
+- <input>
+  <soap:body use="literal" /> 
+  </input>
+- <output>
+  <soap:body use="literal" /> 
+  </output>
+- <fault name="MessageFaultException">
+  <soap:fault name="MessageFaultException" use="literal" /> 
+  </fault>
+  </operation>
+- <operation name="getClaimInfo">
+  <soap:operation soapAction="" /> 
+- <input>
+  <soap:body use="literal" /> 
+  </input>
+- <output>
+  <soap:body use="literal" /> 
+  </output>
+- <fault name="MessageFaultException">
+  <soap:fault name="MessageFaultException" use="literal" /> 
+  </fault>
+  </operation>
+  </binding>
+- <service name="UserInformationService">
+- <port name="UserInformationServicePort" binding="tns:UserInformationServicePortBinding">
+  <soap:address location="http://bepdev.vba.va.gov:80/UserInformationWebServiceBean/UserInformationService" /> 
+  </port>
+  </service>
+  </definitions>
+  
+   <xs:schema xmlns:tns="http://userInformationService.services.vonapp.vba.va.gov/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://userInformationService.services.vonapp.vba.va.gov/">
+  <xs:element name="FaultException" nillable="true" type="xs:anyType" /> 
+- <xs:element name="MessageFaultException" nillable="true">
+- <xs:complexType>
+- <xs:sequence>
+- <xs:element name="faultExceptions" minOccurs="0" maxOccurs="unbounded">
+- <xs:complexType>
+- <xs:sequence>
+  <xs:element name="errorCode" type="xs:string" minOccurs="0" /> 
+  <xs:element name="errorMessage" type="xs:string" minOccurs="0" /> 
+  <xs:element name="variables" type="xs:string" minOccurs="0" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="findAllAsArray" type="tns:findAllAsArray" /> 
+  <xs:element name="findAllAsArrayResponse" type="tns:findAllAsArrayResponse" /> 
+  <xs:element name="findByDataSupplied" type="tns:findByDataSupplied" /> 
+  <xs:element name="findByDataSuppliedResponse" type="tns:findByDataSuppliedResponse" /> 
+  <xs:element name="findByProcTypeAndState" type="tns:findByProcTypeAndState" /> 
+  <xs:element name="findByProcTypeAndStateResponse" type="tns:findByProcTypeAndStateResponse" /> 
+  <xs:element name="getClaimInfo" type="tns:getClaimInfo" /> 
+  <xs:element name="getClaimInfoResponse" type="tns:getClaimInfoResponse" /> 
+- <xs:complexType name="getClaimInfo">
+- <xs:sequence>
+  <xs:element name="arg0" type="xs:string" minOccurs="0" /> 
+  <xs:element name="arg1" type="xs:long" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="getClaimInfoResponse">
+- <xs:sequence>
+  <xs:element name="return" type="tns:ClaimInfoDTO" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="ClaimInfoDTO">
+- <xs:sequence>
+  <xs:element name="reason" type="xs:string" minOccurs="0" /> 
+  <xs:element name="bnftClaimTypeCd" type="xs:string" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="findAllAsArray">
+- <xs:sequence>
+  <xs:element name="arg0" type="tns:userInformationInput" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="userInformationInput">
+- <xs:sequence>
+  <xs:element name="batchProcessorNbr" type="xs:long" minOccurs="0" /> 
+  <xs:element name="batchProcessorTotal" type="xs:long" minOccurs="0" /> 
+  <xs:element name="userIdentityType" type="xs:string" minOccurs="0" /> 
+  <xs:element name="userIdentityValue" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpProcId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpProcStateTypeCd" type="xs:string" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="findAllAsArrayResponse">
+- <xs:sequence>
+  <xs:element name="return" type="tns:userInformationDTO" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="userInformationDTO">
+- <xs:sequence>
+  <xs:element name="userInformation" type="tns:userInformation" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="userInformation">
+- <xs:sequence>
+  <xs:element name="addressData" type="tns:vnpPtcpntAddrs" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  <xs:element name="bnftClaim" type="tns:vnpBnftClaim" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  <xs:element name="childSchool" type="tns:vnpChildSchool" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  <xs:element name="childStudnt" type="tns:vnpChildStudnt" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  <xs:element name="participantData" type="tns:vnpPtcpnt" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  <xs:element name="personData" type="tns:vnpPerson" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  <xs:element name="procFormData" type="tns:vnpProcForm" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  <xs:element name="processData" type="tns:vnpProc" minOccurs="0" /> 
+  <xs:element name="processTempData" type="tns:vnpProcTempData" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  <xs:element name="vnpPtcpntPhoneData" type="tns:vnpPtcpntPhone" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  <xs:element name="vnpPtcpntRlnshp" type="tns:vnpPtcpntRlnshp" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  <xs:element name="vnpTempDataRfrnc" type="tns:vnpTempDataRfrnc" nillable="true" minOccurs="0" maxOccurs="unbounded" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpPtcpntAddrs">
+- <xs:sequence>
+  <xs:element name="addrsOneTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="addrsThreeTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="addrsTwoTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="badAddrsInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="cityNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="cntryNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="countyNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="efctvDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="eftWaiverTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="emailAddrsTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="endDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="fmsAddrsCodeTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="frgnPostalCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="group1VerifdTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="lctnNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="mltyPostOfficeTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="mltyPostalTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="postalCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prvncNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="ptcpntAddrsTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="sharedAddrsInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="trsuryAddrsFiveTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="trsuryAddrsFourTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="trsuryAddrsOneTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="trsuryAddrsSixTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="trsuryAddrsThreeTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="trsuryAddrsTwoTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="trsurySeqNbr" type="xs:int" minOccurs="0" /> 
+  <xs:element name="trtryNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpProcId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntAddrsId" type="xs:long" /> 
+  <xs:element name="vnpPtcpntId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="zipFirstSuffixNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="zipPrefixNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="zipSecondSuffixNbr" type="xs:string" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpBnftClaim">
+- <xs:sequence>
+  <xs:element name="applcnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="atchmsInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="bnftClaimId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="bnftClaimTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="claimJrsdtnLctnId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="claimRcvdDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="claimSuspnsDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="endPrdctTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="infrmlInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="intakeJrsdtnLctnId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="lastPaidDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="payeeTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="pgmTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="ptcpntClmantId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="ptcpntDpositAcntId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="ptcpntMailAddrsId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="ptcpntPymtAddrsId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="ptcpntVsrId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="rmksTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="statusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="svcTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="termnlDigitNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpBnftClaimId" type="xs:long" /> 
+  <xs:element name="vnpProcID" type="xs:long" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntVetId" type="xs:long" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpChildSchool">
+- <xs:sequence>
+  <xs:element name="courseNameTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntForgnPostalCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntHoursPerWkNum" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="curntMltyPostOfficeTypCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntMltyPostalTypCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntSchoolAddrsOneTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntSchoolAddrsThreeTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntSchoolAddrsTwoTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntSchoolAddrsZipNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntSchoolCityNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntSchoolCntryNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntSchoolNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntSchoolPostalCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="curntSessnsPerWkNum" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="currentEduInstnPtcpntId" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="fullTimeStudntTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="gradtnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="lastTermEndDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="lastTermEnrlmtInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="lastTermStartDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="partTimeSchoolSubjctTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevEduInstnPtcpntId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="prevFrgnPostalCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevHoursPerWkNum" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="prevMltyPostOfficeTypCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevMltyPostalTypCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevSchoolAddrsOneTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevSchoolAddrsThreeTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevSchoolAddrsTwoTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevSchoolAddrsZipNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevSchoolCityNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevSchoolCntryNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevSchoolNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevSchoolPostalCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prevSessnsPerWkNum" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="rmks" type="xs:string" minOccurs="0" /> 
+  <xs:element name="schoolActualExpctdStartDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="schoolTermStartDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="vnpChildSchoolId" type="xs:long" /> 
+  <xs:element name="vnpProcId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntId" type="xs:long" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpChildStudnt">
+- <xs:sequence>
+  <xs:element name="agencyPayingTuitnNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="govtPaidTuitnInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="govtPaidTuitnStartDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="marageDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="nextYearAnntyIncomeAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="nextYearEmplmtIncomeAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="nextYearOtherIncomeAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="nextYearSsaIncomeAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="otherAssetAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="realEstateAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="rmks" type="xs:string" minOccurs="0" /> 
+  <xs:element name="savingAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="stockBondAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="termYearAnntyIncomeAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="termYearEmplmtIncomeAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="termYearOtherIncomeAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="termYearSsaIncomeAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="vnpProcId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntId" type="xs:long" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpPtcpnt">
+- <xs:sequence>
+  <xs:element name="corpPtcpntId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="fraudInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="legacyPoaCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="miscVendorInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="ptcpntShortNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="ptcpntTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="taxIdfctnNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="tinWaiverReasonTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpProcId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntId" type="xs:long" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpPerson">
+- <xs:sequence>
+  <xs:element name="birthCityNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="birthCntryNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="birthStateCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="brthdyDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="cmptnyDecnTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="deathDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="depNbr" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="empInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="entlmtTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="ethnicTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="everMariedInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="fidDecnCategyTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="fileNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="firstNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="firstNmKey" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="frgnSvcNbr" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="genderCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="lastNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="lastNmKey" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="lgyEntlmtTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="martlStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="middleNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="middleNmKey" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="mltyPersonInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="monthsPresntEmplyrNbr" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="netWorthAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="noSsnReasonTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="ocptnTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="personDeathCauseTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="personTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="potntlDngrsInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="raceTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="sbstncAmt" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="serousEmplmtHndcapInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="slttnTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="spinaBifidaInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="spouseNum" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="ssnNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="ssnVrfctnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="suffixNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="suffixNmKey" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="taxAbtmntCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="termnlDigitNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="titleTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vetInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vetTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpProcId" type="xs:long" /> 
+  <xs:element name="vnpPtcpntId" type="xs:long" /> 
+  <xs:element name="vnpSchoolChildInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpSruslyDsabldInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="yearsPresntEmplyrNbr" type="xs:decimal" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpProcForm">
+- <xs:sequence>
+  <xs:element name="formTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpProcId" type="xs:long" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpProc">
+- <xs:sequence>
+  <xs:element name="creatdDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="lastModifdDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="submtdDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="vnpProcId" type="xs:long" /> 
+  <xs:element name="vnpProcStateTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpProcTypeCd" type="xs:string" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpProcTempData">
+- <xs:sequence>
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpChildSchool" type="xs:long" minOccurs="0" /> 
+  <xs:element name="vnpChildStudntPtcpntId" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="vnpProcId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntAddrsId" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntId" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntPhoneId" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntRlnshpId" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="vnpTempDataId" type="xs:long" /> 
+  <xs:element name="vnpTempDataRfrncCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpTempDataValueDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="vnpTempDataValueNum" type="xs:decimal" minOccurs="0" /> 
+  <xs:element name="vnpTempDataValueTxt" type="xs:string" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpPtcpntPhone">
+- <xs:sequence>
+  <xs:element name="areaNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="cntryNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="efctvDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="endDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="extnsnNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="frgnPhoneRfrncTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="phoneNbr" type="xs:string" minOccurs="0" /> 
+  <xs:element name="phoneTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpProcId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntPhoneId" type="xs:long" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpPtcpntRlnshp">
+- <xs:sequence>
+  <xs:element name="beginDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="childPrevlyMarriedInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="endDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="eventDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="familyRlnshpTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="fidAttntnTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="hlthcrPrvdrRlseInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="livesWithRelatdPersonInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="marageCityNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="marageCntryNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="marageStateCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="marageTrmntnCityNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="marageTrmntnCntryNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="marageTrmntnStateCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="marageTrmntnTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="mthlySupportFromVetAmt" type="xs:double" minOccurs="0" /> 
+  <xs:element name="poaAgencyNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="poaRepNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="poaRepTitleTxt" type="xs:string" minOccurs="0" /> 
+  <xs:element name="poaRepTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="poaSigntrVrfctnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="proofDepncyInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="prptnlPhraseTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="ptcpntRlnshpTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="rateTypeNm" type="xs:string" minOccurs="0" /> 
+  <xs:element name="reviewDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="statusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="tempCustdnInd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpProcId" type="xs:long" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntIdA" type="xs:long" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntIdB" type="xs:long" minOccurs="0" /> 
+  <xs:element name="vnpPtcpntRlnshpId" type="xs:long" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="vnpTempDataRfrnc">
+- <xs:sequence>
+  <xs:element name="dactvtDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnDt" type="xs:dateTime" minOccurs="0" /> 
+  <xs:element name="jrnLctnId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnObjId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnStatusTypeCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="jrnUserId" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpTempDataRfrncCd" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpTempDataRfrncDesc" type="xs:string" minOccurs="0" /> 
+  <xs:element name="vnpTempDataRfrncNm" type="xs:string" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="findByProcTypeAndState">
+- <xs:sequence>
+  <xs:element name="arg0" type="tns:userInformationInput" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="findByProcTypeAndStateResponse">
+- <xs:sequence>
+  <xs:element name="return" type="tns:userInformationDTO" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="findByDataSupplied">
+- <xs:sequence>
+  <xs:element name="arg0" type="tns:userInformationInput" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+- <xs:complexType name="findByDataSuppliedResponse">
+- <xs:sequence>
+  <xs:element name="return" type="tns:userInformationDTO" minOccurs="0" /> 
+  </xs:sequence>
+  </xs:complexType>
+  </xs:schema>
+  
+ namespace:     http://userInformationService.services.vonapp.vba.va.gov/
+endpoint:      http://bepdev.vba.va.gov/UserInformationWebServiceBean/UserInformationService
+
+soap actions
+========
+find_all_as_array
+find_by_data_supplied
+find_by_proc_type_and_state
+getClaimInfo
+

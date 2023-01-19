@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleapp-archive xsi:noNamespaceSchemaLocation="http://schemas.ilog.com/JRules/1.2/RuleAppArchive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ruleapp>
+    <ruleapp-display-name>RBPSRuleApp</ruleapp-display-name>
+    <ruleapp-name>RBPSRuleApp</ruleapp-name>
+    <ruleapp-version>1.0</ruleapp-version>
+    <creation-date>1318974182662</creation-date>
+    <ruleset>
+      <ruleset-display-name>RBPSChildRules</ruleset-display-name>
+      <ruleset-name>RBPSChildRules</ruleset-name>
+      <ruleset-version>1.0</ruleset-version>
+      <creation-date>1318974183693</creation-date>
+    </ruleset>
+    <ruleset>
+      <ruleset-display-name>RBPSVeteranRules</ruleset-display-name>
+      <ruleset-name>RBPSVeteranRules</ruleset-name>
+      <ruleset-version>1.0</ruleset-version>
+      <creation-date>1318974183943</creation-date>
+    </ruleset>
+    <ruleset>
+      <ruleset-display-name>RBPSSpouseRules</ruleset-display-name>
+      <ruleset-name>RBPSSpouseRules</ruleset-name>
+      <ruleset-version>1.0</ruleset-version>
+      <creation-date>1318974184225</creation-date>
+    </ruleset>
+  </ruleapp>
+</ruleapp-archive>

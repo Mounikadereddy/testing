@@ -1,0 +1,19 @@
+package Spouse_Award_Rules {
+   /**
+ * DOC <= (before/same) FCDR + 365 Days
+ * DOC <= (before/same) DOM + 365 Days
+ * DOM > RED
+ */
+rule CP0136$45$05 {
+      property ilog.rules.business_name = "CP0136-05";
+      property ilog.rules.package_name = "Spouse Award Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         evaluate (((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.firstChangedDateofRating)) && (!(Veteran.firstChangedDateofRating.equals(Veteran.ratingEffectiveDate))) && (Veteran.claimDate.compareTo(gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addDaysToDate(365, Veteran.firstChangedDateofRating)) <= 0) && (Veteran.marriageDate.compareTo(Veteran.firstChangedDateofRating) <= 0) && (Veteran.claimDate.compareTo(gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addDaysToDate(365, Veteran.marriageDate)) <= 0)));
+      } then {
+         Award.eventDate = Veteran.marriageDate;
+      }
+   }
+}
+

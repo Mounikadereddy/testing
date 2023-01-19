@@ -1,0 +1,1001 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="file://c:/dev/RBPS_RBPS-R1.4/doc/markdown.css" rel="stylesheet"/>
+</head>
+<h1 id="toc_0">Notes for RBPS</h1>
+
+<h2 id="toc_1">General</h2>
+
+<p>only go by the promulgation date because they don&#39;t store the notification letter date.</p>
+
+<h3 id="toc_2">Stuff to hand off</h3>
+
+<ol>
+<li>We&#39;re creating a branch so we can start coding for the first 2.0 release.
+This will give Karma and Raja more background on some of the bookkeeping
+tasks in Dimensions, including how to make a baseline.</li>
+<li>I have had Karma make some particular code changes and made him simulate
+the release process for those changes so that he sees what&#39;s involved in
+making a release in preparation for getting something deployed.</li>
+<li>We are moving to Win 7 so we are reviewing all of our tool setup.</li>
+<li>I will be reviewing a set of CQ items with Charlie, Karma, and Raja.
+I&#39;d prefer to include Pam/Sweta, but they are on other tasks right now
+because of funding.  This will let us cover the issues we&#39;ve been dealing
+with in the past few months to make sure they are aware of those issues
+and will be aware of &quot;how we got here&quot;.</li>
+<li>I want Raja to review all the CQ items that involve rules changes so
+that he can refresh himself on the rules and be aware of what is on
+Justin and Danielle&#39;s mind.</li>
+<li>We will be trying to meet with Linda to go over the 0% rating issue.
+So that we&#39;ll be able to code it.</li>
+<li>Karma and I have been reviewing the code base to take note of changes
+we&#39;d like to make to improve the maintainability of the code base, so
+he&#39;s fairly caught up on the java and rules code base.   He&#39;s aware of
+what I expect in terms of code quality.</li>
+<li>Karma has been involved in our push to increase our test coverage
+and how we can go about improving that.  He knows that we hope to make use of
+the new SHARE web services to create a veteran so that we can write integration
+and functional tests in the future.  But that will involve Cory answering questions
+so that we can figure out how to create a veteran, dependents, a claim, CEST it, etc.
+This testing we hope to automate can hopefully make RBPS more reliable.</li>
+<li>We had been doing some review of the 150/155 requirements so Karma is as familiar with that as I am.
+Charlie seems to be doing a good job with that and is very detail oriented, so I think that will work out.</li>
+<li>We&#39;ve been reviewing the Phase 1 System Design Document to compare what actually was implemented
+to the design, so Karma is familiar with that.</li>
+</ol>
+
+<h3 id="toc_3">To run the remote connection thingy</h3>
+
+<p>mstsc</p>
+
+<h3 id="toc_4">To run our unit tests</h3>
+
+<p><code>jruby -S buildr clean test junit:report emma:html 2&gt;&amp;1 | tee out</code></p>
+
+<h3 id="toc_5">How to compile just the client project</h3>
+
+<p><code>jruby -S buildr clean rbps:client:compile 2&gt;&amp;1 | tee out</code></p>
+
+<h3 id="toc_6">To run the build continuously</h3>
+
+<p><code>jruby -S buildr cc</code></p>
+
+<p>This should be run in a separate console window.  It will rerun the portions of the build
+that are affected when you save java files.  This is only a best guess, but it&#39;s a good
+start.</p>
+
+<h3 id="toc_7">How to run the ant build</h3>
+
+<ol>
+<li><code>cd rbps-build-and-deploy</code></li>
+<li><code>ant -f rbps-build.xml &amp;&amp; done -t build</code></li>
+</ol>
+
+<h3 id="toc_8">Junit notes</h3>
+
+<ul>
+<li>PoaPopulatorTest - should be converted to use a response.xml</li>
+<li>GeneratePdfTest  - should look at testing the generated html to make sure the stuff is there that
+should be there.</li>
+<li>EP130ClaimPostProcessorTest - need to mock out the claims processor helper</li>
+<li>RbpsValidatorTest - need to add more tests, was gutted.</li>
+</ul>
+
+<h3 id="toc_9">Interesting facts about omnibussing awards</h3>
+
+<ul>
+<li>SCHATTB is omnibussed except if it starts on the 18th birthday</li>
+<li>SCHATTT is omnibussed, but other termination dates aren&#39;t.</li>
+</ul>
+
+<h3 id="toc_10">Stuff to tell Ashok/Nain for the next release</h3>
+
+<ul>
+<li><p>Added properties</p></li>
+<li><p>Modified property</p></li>
+<li><p>Deleted property</p></li>
+<li><p>Now calling modified WS, must be installed in webtest</p></li>
+</ul>
+
+<h3 id="toc_11">good procids for devl</h3>
+
+<ul>
+<li>8744</li>
+<li>1141</li>
+<li>1241</li>
+<li>2222</li>
+<li>2341 - tests flexible SOJ</li>
+<li>1041 errors, but still useful.</li>
+</ul>
+
+<h3 id="toc_12">Environment variables</h3>
+
+<table id="box-table-a"><thead>
+<tr>
+<th>Var</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ANT_HOME</td>
+<td>C:\Documents and Settings\vafsccorbit\My Documents\codeDownloads\ant-1.6.5</td>
+</tr>
+<tr>
+<td>GROOVY_HOME</td>
+<td>H:\Groovy-1.8.0</td>
+</tr>
+<tr>
+<td>JAVA_HOME</td>
+<td>c:\dev\jdk1.6.0_23</td>
+</tr>
+<tr>
+<td>JRUBY_HOME</td>
+<td>c:\dev\jruby-1.6.4</td>
+</tr>
+<tr>
+<td>Prompt</td>
+<td>$P $_ $D $T $G $S</td>
+</tr>
+<tr>
+<td>RUBYLIB</td>
+<td>c:\dev\ruby\lib</td>
+</tr>
+<tr>
+<td>JRUBY_OPTS</td>
+<td>--1.9</td>
+</tr>
+</tbody></table>
+
+<h3 id="toc_13">Things to change in the code base</h3>
+
+<ul>
+<li>Get rid of the damn ClaimValidatorFactory</li>
+<li>FindDependencyDecisionByAwardPopulator needs to be split in two</li>
+<li>FindDependentOnAwardWSHandler doesn&#39;t seem to be used.</li>
+<li>DependentOnAward needs splitting</li>
+<li>Fix the filtering in the pre processor to accumulate errors.</li>
+<li>get the corporate id earlier - in th pre processor - cq 233</li>
+<li>get rid of the validation factory</li>
+<li>get rid of any unused interface</li>
+<li>Get the rest of the xom utils java code into java code and out of rules strings.</li>
+<li><del>in the client project, fix the packages so they don&#39;t confict with packages in other projects.</del></li>
+<li>The FindMailingAddressWSHandler doesn&#39;t seem to be used.</li>
+<li>Move the &quot;evaluateDepentOnAwardStatus&quot; call up higher and move the call to the child
+type filter back into the RbpsFilter.</li>
+<li>We have a lot of duplicate code that needs to be reviewed that deals with
+dependency decisions, denied/removed/onAward, etc.</li>
+<li>UpdateBenefitClaimDependentsWSHandler - don&#39;t send a request if there are
+no dependents to add.</li>
+</ul>
+
+<h3 id="toc_14">cut and paste in gvim on windows</h3>
+
+<p>If you happen to be using gvim for Windows and want to copy
+or cut into the Windows clipboard, press Ctrl+Insert
+to copy, or Shift+Delete to cut. To paste from the Windows
+clipboard, press Shift+Insert.</p>
+
+<h3 id="toc_15">JRuby gems to install</h3>
+
+<p>jruby -S gem install [gem names]</p>
+
+<ul>
+<li>active_support</li>
+<li>awesome_print</li>
+<li>buildr</li>
+<li>colorize</li>
+<li>flying_saucer</li>
+<li>hirb</li>
+<li>wirble</li>
+<li>redcarpet</li>
+<li>rspec</li>
+<li>savon</li>
+<li>slop</li>
+</ul>
+
+<h3 id="toc_16">Ruby gems to install</h3>
+
+<p>gem intall [gem names]</p>
+
+<ul>
+<li>active_support</li>
+<li>awesome_print</li>
+<li>buildr</li>
+<li>colorize</li>
+<li>hirb</li>
+<li>wirble</li>
+<li>redcarpet</li>
+<li>rspec</li>
+<li>ruby_gntp</li>
+<li>savon</li>
+<li>slop</li>
+<li>win32console</li>
+</ul>
+
+<h3 id="toc_17">bugs proposed to fix in next release</h3>
+
+<ul>
+<li>211 - child under 2 with no ssn</li>
+<li>232 - get num dependents in what we decided based on
+all on award.</li>
+<li>233 - get corporate id earlier</li>
+<li>235 - handle already on award/denied/CQ 266/674</li>
+</ul>
+
+<h3 id="toc_18">Contacts</h3>
+
+<table id="box-table-a"><thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Type</th>
+<th>Phone</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">Ashok Sahoo</td>
+<td align="left">Work</td>
+<td>708-681-6970</td>
+</tr>
+<tr>
+<td align="left">Danielle Gervallis</td>
+<td align="left">Work</td>
+<td>202-461-9077</td>
+</tr>
+<tr>
+<td align="left">Howard Moy</td>
+<td align="left">Office</td>
+<td>708-681-6995</td>
+</tr>
+<tr>
+<td align="left">Justin Holloway</td>
+<td align="left">Work</td>
+<td>202-461-1463</td>
+</tr>
+<tr>
+<td align="left">Kris</td>
+<td align="left">Blackberry</td>
+<td>512-820-7733</td>
+</tr>
+<tr>
+<td align="left">Kris</td>
+<td align="left">Cell</td>
+<td>512-663-8915</td>
+</tr>
+<tr>
+<td align="left">Linda Ciston</td>
+<td align="left">Work</td>
+<td>813-367-3382</td>
+</tr>
+<tr>
+<td align="left">Pam</td>
+<td align="left">Cell</td>
+<td>512-868-7002</td>
+</tr>
+<tr>
+<td align="left">SIO</td>
+<td align="left">VANTS</td>
+<td>18499</td>
+</tr>
+<tr>
+<td align="left">Tom Corbin</td>
+<td align="left">Work</td>
+<td>512-460-5637</td>
+</tr>
+</tbody></table>
+
+<h3 id="toc_19">Definitions</h3>
+
+<table id="box-table-a"><thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>A&amp;A</td>
+<td><strong>A</strong>id and <strong>A</strong>ttendance Benefits</td>
+</tr>
+<tr>
+<td>ALF</td>
+<td><strong>A</strong>ssisted <strong>L</strong>iving <strong>F</strong>acility</td>
+</tr>
+<tr>
+<td>BDN</td>
+<td><strong>B</strong>enefits <strong>D</strong>elivery <strong>N</strong>etwork - legacy system vetsnet is replacing</td>
+</tr>
+<tr>
+<td>CEST</td>
+<td><strong>C</strong>laims <strong>EST</strong>ablishment</td>
+</tr>
+<tr>
+<td>DEA</td>
+<td><strong>D</strong>ependents <strong>E</strong>ducation Assistance</td>
+</tr>
+<tr>
+<td>EP</td>
+<td><strong>E</strong>nd <strong>P</strong>roduct (code)</td>
+</tr>
+<tr>
+<td>EVR</td>
+<td><strong>E</strong>ligibility <strong>V</strong>erification <strong>R</strong>eport</td>
+</tr>
+<tr>
+<td>FNOD</td>
+<td><strong>F</strong>irst <strong>N</strong>otice <strong>O</strong>f <strong>D</strong>eath</td>
+</tr>
+<tr>
+<td>FTS</td>
+<td><strong>F</strong>older <strong>T</strong>ransfer <strong>S</strong>ystem - when folders need to be moved from one RO to another.  Sometimes that happens when one RO is very busy and another isn&#39;t.</td>
+</tr>
+<tr>
+<td>GAO</td>
+<td><strong>G</strong>enerate <strong>A</strong>ward <strong>O</strong>verride</td>
+</tr>
+<tr>
+<td>LGY</td>
+<td><strong>L</strong>oan <strong>G</strong>uarant<strong>ee</strong></td>
+</tr>
+<tr>
+<td>MAPR</td>
+<td><strong>M</strong>aximum <strong>A</strong>nnual <strong>P</strong>ension <strong>R</strong>ate</td>
+</tr>
+<tr>
+<td>MER</td>
+<td><strong>M</strong>edical <strong>E</strong>xpense <strong>R</strong>eport</td>
+</tr>
+<tr>
+<td>NH</td>
+<td><strong>N</strong>ursing <strong>H</strong>ome</td>
+</tr>
+<tr>
+<td>OFO</td>
+<td><strong>O</strong>ffice of <strong>F</strong>ield <strong>O</strong>perations</td>
+</tr>
+<tr>
+<td>PMAS</td>
+<td><strong>P</strong>rogram <strong>M</strong>anagement <strong>A</strong>ccountability <strong>S</strong>ystem</td>
+</tr>
+<tr>
+<td>RFAC</td>
+<td><strong>R</strong>equest <strong>f</strong>or <strong>A</strong>rchitecture <strong>C</strong>hange</td>
+</tr>
+<tr>
+<td>RO</td>
+<td><strong>R</strong>egional <strong>O</strong>ffice</td>
+</tr>
+<tr>
+<td>shrinqf</td>
+<td><strong>SH</strong>a<strong>R</strong>e <strong>INQ</strong>uiry f</td>
+</tr>
+<tr>
+<td>SOJ</td>
+<td><strong>S</strong>tation <strong>O</strong>f <strong>J</strong>urisdiction</td>
+</tr>
+<tr>
+<td>SMIB</td>
+<td><strong>S</strong>upplementary <strong>M</strong>edical <strong>I</strong>nsurance <strong>B</strong>enefit</td>
+</tr>
+<tr>
+<td>VBBGS</td>
+<td><strong>VB</strong>A <strong>B</strong>enefits <strong>G</strong>ateway <strong>S</strong>ervice</td>
+</tr>
+<tr>
+<td>VonAPP</td>
+<td><strong>V</strong>eteran&#39;s <strong>On</strong>line <strong>App</strong>lication for Benefits</td>
+</tr>
+<tr>
+<td>WEAMS</td>
+<td><strong>W</strong>eb <strong>E</strong>nabled <strong>A</strong>ccreditation <strong>M</strong>anagement <strong>S</strong>ystem</td>
+</tr>
+</tbody></table>
+
+<h3 id="toc_20">People</h3>
+
+<table id="box-table-a"><thead>
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Job</th>
+<th>Organization</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Ashok Sahoo</td>
+<td>Hines, IL</td>
+<td>Installs</td>
+<td></td>
+</tr>
+<tr>
+<td>Barbara Jones-Odell</td>
+<td></td>
+<td>Ashok, Nain&#39;s boss.</td>
+<td></td>
+</tr>
+<tr>
+<td>Cory Easley</td>
+<td>AITC</td>
+<td>Share GUI/Web Services</td>
+<td>Target Programming Team 4</td>
+</tr>
+<tr>
+<td>Danielle Gervallis</td>
+<td>D.C.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Jeff Ivy</td>
+<td>St. Pete</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>John Dell</td>
+<td></td>
+<td></td>
+<td>VETSNET Mapd</td>
+</tr>
+<tr>
+<td>John Maser</td>
+<td>St. Pete</td>
+<td>Helps Linda</td>
+<td>VETSNET Oracle Team</td>
+</tr>
+<tr>
+<td>Justin Holloway</td>
+<td>D.C.</td>
+<td>OBPI RBPS Project Lead</td>
+<td></td>
+</tr>
+<tr>
+<td>Kathy Hudson</td>
+<td></td>
+<td></td>
+<td>ORM</td>
+</tr>
+<tr>
+<td>Lance Lundquist</td>
+<td></td>
+<td></td>
+<td>VDC</td>
+</tr>
+<tr>
+<td>Linda Ciston</td>
+<td>St. Pete</td>
+<td></td>
+<td>VETSNET Oracle Team</td>
+</tr>
+<tr>
+<td>Linda Heusack</td>
+<td></td>
+<td>Product Development IT Specialist</td>
+<td>VETSNET Product Support Team 2</td>
+</tr>
+<tr>
+<td>Rob Benson</td>
+<td>AITC</td>
+<td>Share GUI/Web Services</td>
+<td>Target Programming Team 4</td>
+</tr>
+<tr>
+<td>Sara Wear</td>
+<td></td>
+<td></td>
+<td>OSP</td>
+</tr>
+</tbody></table>
+
+<h3 id="toc_21">Regional Offices</h3>
+
+<table id="box-table-a"><thead>
+<tr>
+<th>Station Id</th>
+<th>Name</th>
+<th>Station Id</th>
+<th>Name</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>301</td>
+<td>Boston, MA</td>
+<td>331</td>
+<td>St. Louis, MO</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Providence, RI</td>
+<td>333</td>
+<td>Des Moines, IA</td>
+</tr>
+<tr>
+<td>306</td>
+<td>New York, NY</td>
+<td>334</td>
+<td>Lincoln, NE</td>
+</tr>
+<tr>
+<td>307</td>
+<td>Buffalo, NY</td>
+<td>335</td>
+<td>St. Paul, MN</td>
+</tr>
+<tr>
+<td>308</td>
+<td>Hartford</td>
+<td>339</td>
+<td>Lakewood/Denver, CO</td>
+</tr>
+<tr>
+<td>309</td>
+<td>Newark, NJ</td>
+<td>340</td>
+<td>Albuquerque, NM</td>
+</tr>
+<tr>
+<td>311</td>
+<td>Pittsburgh, PA</td>
+<td>341</td>
+<td>Salt Lake City, UT</td>
+</tr>
+<tr>
+<td>313</td>
+<td>Baltimore, MD</td>
+<td>343</td>
+<td>Oakland/San Francisco, CA</td>
+</tr>
+<tr>
+<td>314</td>
+<td>Roanoke, VA</td>
+<td>344</td>
+<td>Los Angeles, CA</td>
+</tr>
+<tr>
+<td>315</td>
+<td>Huntington, WV</td>
+<td>345</td>
+<td>Phoenix, AZ</td>
+</tr>
+<tr>
+<td>316</td>
+<td>Atlanta, GA</td>
+<td>346</td>
+<td>Seattle, WA</td>
+</tr>
+<tr>
+<td>317</td>
+<td>St. Petersburg, FL</td>
+<td>347</td>
+<td>Boise, ID</td>
+</tr>
+<tr>
+<td>318</td>
+<td>Winston-Salem, NC</td>
+<td>348</td>
+<td>Portland, OR</td>
+</tr>
+<tr>
+<td>319</td>
+<td>Columbia, SE</td>
+<td>349</td>
+<td>Waco, TX</td>
+</tr>
+<tr>
+<td>320</td>
+<td>Nashville, TN</td>
+<td>350</td>
+<td>Little Rock, AR</td>
+</tr>
+<tr>
+<td>321</td>
+<td>New Orleans, LA</td>
+<td>351</td>
+<td>Muskogee, OK</td>
+</tr>
+<tr>
+<td>322</td>
+<td>Montgomery, Al</td>
+<td>354</td>
+<td>Reno, NV</td>
+</tr>
+<tr>
+<td>323</td>
+<td>Jackson, MS</td>
+<td>355</td>
+<td>Hoto Rey/San Juan, PR</td>
+</tr>
+<tr>
+<td>325</td>
+<td>Cleveland, OH</td>
+<td>358</td>
+<td>Manila, Philippines</td>
+</tr>
+<tr>
+<td>326</td>
+<td>Indianapolis, IN</td>
+<td>362</td>
+<td>Houston, TX</td>
+</tr>
+<tr>
+<td>327</td>
+<td>Louisville, KY</td>
+<td>372</td>
+<td>Washington, DC</td>
+</tr>
+<tr>
+<td>328</td>
+<td>Chicago, IL</td>
+<td>373</td>
+<td>Manchester, NH</td>
+</tr>
+<tr>
+<td>329</td>
+<td>Detroit, MI</td>
+<td>377</td>
+<td>San Diego, CA</td>
+</tr>
+<tr>
+<td>330</td>
+<td>Milwaukee, WI</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>REGIONAL OFFICE</td>
+<td>AND</td>
+<td>INSURANCE</td>
+<td>CENTER</td>
+</tr>
+<tr>
+<td>310</td>
+<td>Philadelphia, PA</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FOREIGN OFFICE</td>
+<td>OUTPATIENT</td>
+<td>CLINIC &amp; RO</td>
+<td></td>
+</tr>
+<tr>
+<td>358</td>
+<td>Manila, Philippines</td>
+<td>358</td>
+<td>Manila, Philippines</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>463</td>
+<td>Anchorage, AK</td>
+</tr>
+<tr>
+<td>REGIONAL OFFICE</td>
+<td>AND</td>
+<td>MEDICAL</td>
+<td>CENTERS</td>
+</tr>
+<tr>
+<td>402</td>
+<td>Togus, ME</td>
+<td>442</td>
+<td>Cheyenne, WY</td>
+</tr>
+<tr>
+<td>405</td>
+<td>White River Junction, VT</td>
+<td>452</td>
+<td>Wichita, KS</td>
+</tr>
+<tr>
+<td>436</td>
+<td>Fort Harrison, MT</td>
+<td>459</td>
+<td>Honolulu, HI</td>
+</tr>
+<tr>
+<td>437</td>
+<td>Fargo, ND</td>
+<td>460</td>
+<td>Wilmington, DE</td>
+</tr>
+<tr>
+<td>438</td>
+<td>Sioux Falls, SD</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h3 id="toc_22">Standalone 674 from share</h3>
+
+<p>is broken because the following is missing:
+SSN
+birthday
+spouse DOB</p>
+
+<h3 id="toc_23">Setting up eclipse for a new RBPS version/project</h3>
+
+<ol>
+<li>Open the &quot;Serena&quot; perspective.</li>
+<li>Open &quot;Eclipse Project Containers&quot;</li>
+<li>Find &quot;RBPS:RBPS-R1[rbps-r1]&quot;</li>
+<li>Open it</li>
+<li>RMB click on &quot;RBPS:RBPS-R1.3&quot;</li>
+<li>Choose &quot;add to workspace as&quot;</li>
+<li>Add as project</li>
+<li>In Package Explorer, open the new project&#39;s properties</li>
+<li>Convert to a faceted project (in the project facets part)</li>
+<li>It should choose for it to be a java project.</li>
+<li>In the java build path, add the source folders as in the screenshot</li>
+<li>In the java build path, add all the libraries from the ear sub project</li>
+<li>I added log4j-1.2.15.jar</li>
+<li>I added axis.jar and jaxrpc.jar from the rpc-client project to the jar files</li>
+</ol>
+
+<h3 id="toc_24">ITA process</h3>
+
+<ol>
+<li>goes to obipi</li>
+<li>assigns priority</li>
+<li>goes to tina edwards (BA)</li>
+<li>she does BA portion</li>
+<li>goes to scrumm meeting</li>
+<li>they do development and testing apportion points assignment</li>
+</ol>
+
+<p>shortest turnaround is 6 week sprint for service</p>
+
+<h2 id="toc_25">Release 1.2</h2>
+
+<h3 id="toc_26">Interesting sql for the signer&#39;s name</h3>
+
+<blockquote>
+<p>SELECT *<br/>
+FROM stn_prfil_detail d<br/>
+WHERE<br/>
+       d.letter_signtr_title_txt LIKE &#39;%Service Center%&#39;<br/>
+    OR d.letter_signtr_title_txt LIKE &#39;%SERVICE CENTER%&#39;<br/>
+    OR d.letter_signtr_title_txt LIKE &#39;%VSCM%&#39;;  </p>
+</blockquote>
+
+<h3 id="toc_27">Outstanding Questions</h3>
+
+<ol>
+<li><p>VDC putting COMP instead of CPL for pgm_type_cd  </p>
+
+<p>Sent to Lance Thursday@10am<br/>
+Again Monday@3:30pm<br/>
+It&#39;s hard coded, Justin&#39;s substitute will deal with it.</p></li>
+<li><p>Why isn&#39;t Fargo showing up in list of Regional Offices</p>
+
+<p>The web service has a bug, they are fixing it.</p></li>
+<li><p>findSignaturesByStationNumber appears to have been in webtest
+on Friday, but not this week.</p>
+
+<p>Sent to Ashok/Jerry Palma Mon@Noon<br/>
+They seem to be working on it.<br/>
+Fixed.</p></li>
+<li><p>Has the RTF to PDF license been installed?</p>
+
+<p>Yes.</p></li>
+</ol>
+
+<h2 id="toc_28">Phase 2</h2>
+
+<p>The project team needs updating!</p>
+
+<ul>
+<li>EP 150 - Medical Expenses (MER)</li>
+<li>EP 155 - EVR - Eligibility Verfication Report Processing (EVR)</li>
+<li>The St. Paul VARO serves nearly one-half million veterans in geographic
+Minnesota with over $500 million in VA benefits annually from compensation,
+pension, and vocational rehabilitation programs.</li>
+<li>One RO will get 30,000 EVR between Jan and Feb each year.</li>
+</ul>
+
+<h3 id="toc_29">In scope</h3>
+
+<ul>
+<li>Retrieving EP150 and EP155 claim types from the corporate database.</li>
+<li>Enhancing automated processing for EP150 and EP155 by applying a set of rules.</li>
+<li>Handling exceptions</li>
+<li>Making award determinations based on the following types of information.
+
+<ul>
+<li>Service-related Disability(ies) Information</li>
+<li>Non-Service Connected Pension Information</li>
+<li>Veterans Information</li>
+<li>Active Duty Service Information</li>
+<li>Marital and Dependency Information</li>
+<li>Dependent Child(ren) Information</li>
+<li>Other VA Benefits Information</li>
+<li>Military Retired/Severance Pay Information</li>
+<li>Wage and Income Information</li>
+<li>Net worth Information</li>
+<li>Medical, legal and other expenses Information</li>
+<li>Nursing Home/Medicaid Information</li>
+<li>Aid and Attendance/Housebound Information</li>
+<li>Award Information</li>
+<li>Apportionment Information</li>
+</ul></li>
+<li>Interfacing with Social Security Administration using current VBA interface to retrieve and verify SSI, SSDI, RSDI income for EVR. </li>
+<li>Intefacing with VBA Corporate Database Claim and Award tables</li>
+<li>Interfacing with VETSNET suite of applications (SHARE, eBenefits, VonApp, Virtual VA, MAP-D, EVR)</li>
+<li>Recording all claim outcomes and provide decision information to the Awards service.</li>
+<li>Generating correspondence for all actions requiring development or actions resulting in award or denial.</li>
+<li>Interfacing with Virtual VA document repository.</li>
+</ul>
+
+<h3 id="toc_30">Out of scope</h3>
+
+<ul>
+<li>Modifying the existing VBA source systems</li>
+</ul>
+
+<h3 id="toc_31">Constraints</h3>
+
+<ul>
+<li>VonApp cannot provide Medical Expense Types in standard electronic format</li>
+</ul>
+
+<h3 id="toc_32">Project Assumptions</h3>
+
+<ul>
+<li>VBA will be responsible for Certification &amp; Accreditation of the system.</li>
+<li>All information from eBenefits electronic submissions and SHARE will match paper claim data.</li>
+<li>VBA will review all business rules for adherence to applicable laws and guidance.</li>
+<li>VBA will conduct traceability on each business rule to applicable laws and guidance.</li>
+<li>VBA will provide the necessary technical specifications and resources.</li>
+<li>VBA will set up the development, testing, and production environments.</li>
+<li>VBA will have the necessary interfaces properly be in place (SHARE, VonApp, Awards, MAPD, SSA, EVR).</li>
+</ul>
+
+<h3 id="toc_33">System Assumptions</h3>
+
+<p>UC-10 - probably shouldn&#39;t metion Work List</p>
+
+<p>EP290 is fugitive felon match, social security prison match and BOP prison match</p>
+
+<h4 id="toc_34">Reused:</h4>
+
+<ul>
+<li>User info - not sure if there will be changes needed or not.</li>
+<li>Award state</li>
+<li>Find military pay</li>
+<li>Update benefit claim label</li>
+<li>Find benefit claim (to translate the vonapp claim id to a corporate claim id)</li>
+<li>VnpProcUpdate to set the claim status</li>
+<li>ClaimantWebService
+
+<ul>
+<li>findPoa?</li>
+<li>findFiduciary?</li>
+<li>findFlashes (to see if there is an attorney fee agreement)</li>
+<li>findDependents</li>
+</ul></li>
+<li>Mapd - to create a note</li>
+<li>StandardDataWebService
+
+<ul>
+<li>Find regional offices?</li>
+<li>Find signatures?</li>
+</ul></li>
+<li></li>
+</ul>
+
+<h3 id="toc_35">Questions</h3>
+
+<ol>
+<li>When would the claimant not be the veteran?</li>
+<li>Are we validating the SSN format?</li>
+<li>Why would we get an EP 154 to reject? Won&#39;t that be filtered by User Info? (EP 150 UC-01)</li>
+<li>What is EP600 for?</li>
+<li>Will we need to filter for EP290/600/155 or will User Info do it?</li>
+<li>Will User Info include the form 21-8416 info?</li>
+<li>Does User Info validate that the first/last name on the form match
+what&#39;s in corporate for the file number or will RBPS.</li>
+<li>What&#39;s an EVR diary?</li>
+<li>(150 UC-02) What if they chose &quot;member of household&quot; in eligible
+dropdown?  We&#39;ve not handled that before.</li>
+<li>(150 UC-03) What is the $90 medicaid rate and why is it only
+for some periods.</li>
+<li>(150 UC-03) What is a period of entitlement to compensation during the MER period?</li>
+<li>(150 UC-03) What is SMIB? SSA?</li>
+<li>(150 UC-03) Won&#39;t the mileage reimbursement change over time?  Is this something
+we can get from a web service?</li>
+<li>(150 UC-03) What is ALF, NH, A/A/HB?
+
+<ul>
+<li>ALF - Assisted Living Facility</li>
+<li>NH - Nursing Home</li>
+</ul></li>
+<li>(150 UC-03) EVR is apparently a year end thing, what about MER-28?
+what is meant by the previous calendar year (step 8).</li>
+<li>(150 UC-03) I&#39;d like to see the provider field UI, I&#39;m a bit confused
+about the general v. specific provider.  MER-29.</li>
+<li>(150 UC-03) MER-30: what does this mean: &quot;combine unreimbursed and current
+year&#39;s continuous amounts&quot;.  Why would these be combined?  Wouldn&#39;t some
+continuing expenses have been reimbursed?</li>
+<li>(150 UC-03) MER-31: How do we do the computation of the total amount
+of continuous MER that can be applied for the next calendar year?</li>
+<li>(150 UC-03) MER-31: What is the purpose field?</li>
+<li>(150 UC-03) MER-31: What is a max rate claimant?</li>
+<li>(150 UC-04) MER-34: What does this mean, &quot;Verify the
+SSA Interface file to the Corporate Data under the income
+screen for the dollar match&quot;?</li>
+<li>(150 UC-04) MER-35: What is PCLR EP mean?</li>
+<li>(150 UC-04) MER-35: What letter do we send in this situation?</li>
+<li>(150 UC-05) MER-39: Will AWARDS do the omnibus calc or will RBPS?</li>
+<li><p>(150 UC-05) MER-40: How does the SS COLA calc work?</p></li>
+<li><p>(UC-10) What do we do about benefit type being
+&quot;improved pension&quot; or &quot;compensation&quot;</p></li>
+<li><p>(EVR-13) What is &quot;EVR complete&quot;?</p></li>
+<li><p>(UC-12) Why are Medical Expenses related to deductions?</p></li>
+<li><p>(UC-12) What is the entitlement date?</p></li>
+<li><p>(MER-32) What if the Vet has a $10K increase and has already hit
+the max amount?</p></li>
+<li><p>(UC-12 TRule MER 10) why only check the spouse and not kids?</p></li>
+<li><p>(UC-12 TRule MER 26) Why is not paying a SMIB a reason for denial?</p></li>
+<li><p>(TRule MER 21 and TRule MER 24) These seem very similar except for the $90 thing
+and the Max Rate.  Is that intentional?  If so, what&#39;s the intent?</p></li>
+<li><p>(TRule MER 26 and TRule MER 27) These seem very similar.
+Is that intentional?  If so, what&#39;s the intent?</p></li>
+<li><p>(TRule MER 27 - and in a number of places) What is meant by PCLR EP?
+I assume it&#39;s &quot;pclear&quot; that I&#39;ve heard Pam and Sweta talk about, but
+what is the effect of that and how does RBPS do that?</p></li>
+<li><p>(TRule MER 29) What is meant by &quot;December line&quot;?
+If SS COLA will cause a decrease (why would an SS COLA cause a decrease?)
+on the 12/1 rate, do not apply until the January rate.
+If the rate is less that what was paid on the previous January
+send to exception.</p></li>
+<li><p>(TRule MER 30) What does it mean to find the provider name in the system?</p></li>
+<li><p>What is the EVR web service?  How do we find info on it?
+Is it really a separate application?</p></li>
+<li><p>(TRule EVR 01) What does &quot;EVR Reporting Period to current system date&quot;
+mean?</p></li>
+<li><p>Does AWARDS need to change for phase 2?</p></li>
+</ol>
+
+<h4 id="toc_36">Need to figure out how to get this info:</h4>
+
+<ol>
+<li>If there are other EP 150 claims pending.</li>
+<li>(UC-10) There are no EP290/EP600/EP155 claims pending.</li>
+<li>(UC-10) Is the veteran living?</li>
+<li>(UC-10) Is the veteran incarcerated in the last XX months? or institutionalized</li>
+<li>(UC-10) Active Live Improved Pension award is current and is not suspended or terminated</li>
+<li>(UC-10) Have Replace Gross Rate and Add to Gross rate been used on the corresponding current award.</li>
+<li>(UC-10) is Veteran and/or Dependents receiving SSI, SSDI, RSDI income types?</li>
+<li>(UC-10) active duty service info: when started, released, separation reaon, etc.</li>
+<li>(UC-10) Severance Pay info. (May be part of findMilitaryPay WS we already call)</li>
+<li>(UC-10) Income/Net Worth Info.  Form info?</li>
+<li>Is there an EVR Diary control</li>
+<li>(150 UC-03) is this an initial year issue?  Look at dates for medical expenses. Not sure
+what that means.</li>
+<li>(150 UC-03) is the Veteran receiving $90 Medicaid rate, and for what period?</li>
+<li>(150 UC-03) is the Veteran a max rate claimant?</li>
+<li>(150 UC-03) is there a period of entitlement to compensation during the MER period.</li>
+<li>(150 UC-03) is there SMIB paid with SSA, and how much?  This must come from the SSA so we can
+verify what&#39;s on the form.</li>
+<li>(150 UC-03) what are the valid expense types?  Or a list of all MER types?</li>
+<li>(150 UC-03) related to ALF/NH, is there a rated or admin decision for A/A?
+What is the decision?  What is the name of the facility (provider)?  In the corporate
+database?</li>
+<li>(150 UC-04) How do we find the income data for the veteran?</li>
+<li>(150 UC-05) MER-40 How do we find out what was paid the previous January?</li>
+<li>(150 UC-05) MER-38 How do we find out if the Veteran has hardship expenses?</li>
+<li>(UC-12) &quot;total medical expenses reported year&quot; increased by $10,000 from &quot;last year reported&quot;</li>
+<li>(UC-12 TRule MER 4) # months SMIB was paid</li>
+<li>(UC-12 TRule MER 5) whether continuous expenses are to be paid next year?</li>
+<li>(UC-12 TRule MER 9) is Veteran housebound or requires aid and assistance?</li>
+<li>(MER 12) if there is a period of compensation entitlement?</li>
+<li>(MER 13) the medical purpose? (part of UserInfo?)</li>
+<li>What is the value of the MAPR?  Needed to see if expenses are 5% of MAPR.</li>
+<li>(TRule MER 30) how do we find the provider name in the system?</li>
+<li>What is the EVR web service?  How do we find info on it?
+Is it really a separate application?</li>
+<li>What is the SSA web service?  How do we find info on it?</li>
+</ol>
+</html>

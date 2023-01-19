@@ -1,0 +1,17 @@
+package PriorSchoolTerm {
+   use ConditionSatisfied;
+   rule Prior_end_date_is_before_the_award_effective_end_date {
+      property ilog.rules.business_name = "Prior end date is before the award effective end date";
+      property ilog.rules.package_name = "PriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((Child.lastTermInCorpEndDate != null
+         	&& Child.lastTerm.courseEndDate.compareTo(Child.lastTermInCorpEndDate) <= 0));
+      } then {
+         ConditionSatisfied = true;
+         ?context.updateContext();
+      }
+   }
+}
+

@@ -1,0 +1,14 @@
+package PriorSchoolTerm.PriorSchoolTermValidation {
+   rule setPriorSchoolTermStatus {
+      property ilog.rules.business_name = "setPriorSchoolTermStatus";
+      property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+      } then {
+         Child.priorSchoolTermStatus = "ignore";
+         LogMessage.addException("last term  not valid");
+      }
+   }
+}
+

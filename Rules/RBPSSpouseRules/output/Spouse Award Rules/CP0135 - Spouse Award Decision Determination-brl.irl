@@ -1,0 +1,15 @@
+package Spouse_Award_Rules {
+   rule CP0135_$45$_Spouse_Award_Decision_Determination {
+      property ilog.rules.business_name = "CP0135 - Spouse Award Decision Determination";
+      property ilog.rules.package_name = "Spouse Award Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Spouse() from Spouse;
+         evaluate (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Spouse));
+      } then {
+         Award.dependencyStatusType = gov.va.vba.rbps.coreframework.xom.DependentStatusType.SPOUSE;
+         Award.dependencyDecisionType = gov.va.vba.rbps.coreframework.xom.DependentDecisionType.DEPENDENCY_ESTABLISHED;
+      }
+   }
+}
+

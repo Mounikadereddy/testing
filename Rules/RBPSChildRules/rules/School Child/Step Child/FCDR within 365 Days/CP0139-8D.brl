@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0139-8D</name>
+  <uuid>8096b6a9-a7a1-4b60-a635-65e09fcd5466</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    all of the following conditions are true :
+            - the child type of 'the Child' is STEPCHILD
+            - the FCDR of 'the Veteran' is present
+            - the marriage date of 'the Veteran' is present
+            - the FCDR of 'the Veteran' is not the rating effective date of 'the Veteran'
+            - 'the Veteran' claim received date is before or the same as the FCDR of 'the Veteran' plus 365 Days
+            - the current term of 'the Child' is present
+            - the course start date of ( the current term of 'the Child' ) is present
+             - the last term of 'the Child'  is present 
+            - priorSchoolTermValid
+            - 'the Veteran' claim received date is before or the same as the course start date of ( the current term of 'the Child' ) plus 365 Days
+            - the course start date of ( the current term of 'the Child' ) is before or the same as the course end date of ( the last term of 'the Child' ) plus 5 months
+            - 'the Veteran' claim received date is after the course end date of ( the last term of 'the Child' ) plus 365 Days
+            - the marriage date of 'the Veteran' is before or the same as the course start date of ( the current term of 'the Child' )
+then
+    set the event date of 'the Award' to the course start date of ( the current term of 'the Child' ) ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

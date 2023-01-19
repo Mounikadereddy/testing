@@ -1,0 +1,22 @@
+<ivysettings>	
+	<settings defaultResolver="chain-example" />
+	<credentials host="vaausappcrp890.aac.va.gov" realm="Sonatype Nexus Repository Manager"  
+		username="Team2b" passwd="Team2b_1"/>
+	<property name="nexus-central"
+		value="http://vaausappcrp890.aac.va.gov:8081/nexus/content/repositories/central" />
+	<property name="nexus-thirdparty"
+		value="http://vaausappcrp890.aac.va.gov:8081/nexus/content/repositories/thirdparty" />	
+	<property name="nexus-releases"
+		value="http://vaausappcrp890.aac.va.gov:8081/nexus/content/repositories/releases" />
+	<property name="nexus-snapshots"
+		value="http://vaausappcrp890.aac.va.gov:8081/nexus/content/repositories/snapshots" />				
+	<resolvers>
+	<chain name="chain-example">
+		<ibiblio name="central" m2compatible="true" root="${nexus-central}" />
+		<ibiblio name="thirdparty" m2compatible="true" root="${nexus-thirdparty}" />
+		<ibiblio name="releases" m2compatible="true" root="${nexus-releases}" />
+	</chain>
+	<ibiblio name="nexus-snapshots" m2compatible="true" root="${nexus-snapshots}" checkmodified="true" changingPattern="*-SNAPSHOT" />
+	<ibiblio name="nexus-releases" m2compatible="true" root="${nexus-releases}" checkmodified="true" />
+	</resolvers>	
+</ivysettings> 

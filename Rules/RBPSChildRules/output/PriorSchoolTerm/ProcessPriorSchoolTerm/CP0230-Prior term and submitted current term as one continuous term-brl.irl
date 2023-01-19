@@ -1,0 +1,17 @@
+package PriorSchoolTerm.ProcessPriorSchoolTerm {
+   rule CP0230$45$Prior_term_and_submitted_current_term_as_one_continuous_term {
+      property ilog.rules.business_name = "CP0230-Prior term and submitted current term as one continuous term";
+      property ilog.rules.package_name = "PriorSchoolTerm.ProcessPriorSchoolTerm";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         gov.va.vba.rbps.coreframework.xom.Award() from PriorSchoolChildAward;
+         evaluate (((Child.currentTerm.courseStudentStartDate != null
+         	&& Child.lastTerm.courseStudentStartDate != null)
+         	&& Child.currentTerm.courseStudentStartDate.compareTo(gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addMonthsToDate(5, PriorSchoolChildAward.endDate)) <= 0));
+      } then {
+         Award.eventDate = Child.lastTerm.courseEndDate;
+      }
+   }
+}
+

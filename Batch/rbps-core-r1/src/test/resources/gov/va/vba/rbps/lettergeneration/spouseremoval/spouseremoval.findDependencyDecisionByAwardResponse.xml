@@ -1,0 +1,144 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2007-12-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>8810114</beneficiaryID>
+                <birthdayDate>2001-03-19T00:00:00-06:00</birthdayDate>
+                <decisionDate>2008-06-22T00:00:01-05:00</decisionDate>
+                <dependencyDecisionID>1637772</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2007-12-01T00:00:00-06:00</eventDate>
+                <firstName>LILLIAN</firstName>
+                <fullName>LILLIAN PARROTT</fullName>
+                <lastName>PARROTT</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>s283rpa</modifiedBy>
+                <modifiedDate>2008-06-22T04:20:00-05:00</modifiedDate>
+                <modifiedLocation>HINS</modifiedLocation>
+                <modifiedProcess>CP_CONV</modifiedProcess>
+                <personID>18496047</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <sortDate>2008-06-22T00:00:01-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>8810114</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2020-07-03T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>8810114</beneficiaryID>
+                <birthdayDate>2002-07-03T00:00:00-05:00</birthdayDate>
+                <decisionDate>2008-06-22T00:00:12-05:00</decisionDate>
+                <dependencyDecisionID>1718672</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2020-07-03T00:00:00-05:00</eventDate>
+                <firstName>ALEXANDER</firstName>
+                <fullName>ALEXANDER PARROTT</fullName>
+                <lastName>PARROTT</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>s283rpa</modifiedBy>
+                <modifiedDate>2008-06-22T04:21:35-05:00</modifiedDate>
+                <modifiedLocation>HINS</modifiedLocation>
+                <modifiedProcess>CP_CONV</modifiedProcess>
+                <personID>18496048</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <sortDate>2008-06-22T00:00:12-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>8810114</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2019-03-19T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>8810114</beneficiaryID>
+                <birthdayDate>2001-03-19T00:00:00-06:00</birthdayDate>
+                <decisionDate>2008-06-22T00:00:11-05:00</decisionDate>
+                <dependencyDecisionID>1637773</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2019-03-19T00:00:00-05:00</eventDate>
+                <firstName>LILLIAN</firstName>
+                <fullName>LILLIAN PARROTT</fullName>
+                <lastName>PARROTT</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>s283rpa</modifiedBy>
+                <modifiedDate>2008-06-22T04:20:36-05:00</modifiedDate>
+                <modifiedLocation>HINS</modifiedLocation>
+                <modifiedProcess>CP_CONV</modifiedProcess>
+                <personID>18496047</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <sortDate>2008-06-22T00:00:11-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>8810114</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2007-12-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>8810114</beneficiaryID>
+                <birthdayDate>2002-07-03T00:00:00-05:00</birthdayDate>
+                <decisionDate>2008-06-22T00:00:02-05:00</decisionDate>
+                <dependencyDecisionID>1718671</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2007-12-01T00:00:00-06:00</eventDate>
+                <firstName>ALEXANDER</firstName>
+                <fullName>ALEXANDER PARROTT</fullName>
+                <lastName>PARROTT</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>s283rpa</modifiedBy>
+                <modifiedDate>2008-06-22T04:22:01-05:00</modifiedDate>
+                <modifiedLocation>HINS</modifiedLocation>
+                <modifiedProcess>CP_CONV</modifiedProcess>
+                <personID>18496048</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <sortDate>2008-06-22T00:00:02-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>8810114</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2007-12-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>8810114</beneficiaryID>
+                <birthdayDate>1979-07-06T00:00:00-05:00</birthdayDate>
+                <decisionDate>2008-06-22T00:00:05-05:00</decisionDate>
+                <dependencyDecisionID>1674110</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2007-12-01T00:00:00-06:00</eventDate>
+                <firstName>APRIL</firstName>
+                <fullName>APRIL PARROTT</fullName>
+                <lastName>PARROTT</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>s283rpa</modifiedBy>
+                <modifiedDate>2008-06-22T04:22:09-05:00</modifiedDate>
+                <modifiedLocation>HINS</modifiedLocation>
+                <modifiedProcess>CP_CONV</modifiedProcess>
+                <personID>18496050</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>218922718</socialSecurityNumber>
+                <sortDate>2008-06-22T00:00:05-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>8810114</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>

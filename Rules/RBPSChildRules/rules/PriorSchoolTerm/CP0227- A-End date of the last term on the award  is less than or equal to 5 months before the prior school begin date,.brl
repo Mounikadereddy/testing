@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0227- A-End date of the last term on the award  is less than or equal to 5 months before the prior school begin date,</name>
+  <uuid>0007b322-8549-4972-a738-139b5d115acb</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if  the last term in corp end date of 'the Child'is  not null and 
+	the last term in corp end date of 'the Child'  plus 5 months  is after or the same as 
+     the course start date of the last term of 'the Child' 
+  
+ then
+ set the event date of 'PriorSchoolChild'  to the last term in corp end date of 'the Child' ; 
+ set 'PriorConditionSatisfied' to true ; 
+     ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

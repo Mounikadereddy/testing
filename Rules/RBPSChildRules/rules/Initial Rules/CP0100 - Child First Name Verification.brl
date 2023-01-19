@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0100 - Child First Name Verification</name>
+  <uuid>f0c939b7-101e-4b6f-a66a-6cc31f0b200e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[
+if 
+	 the first name of 'the Child' is not present 
+then 
+	add "Auto Dependency Processing Reject Reason - Child First Name is not provided. Please review." to the list of Exceptions ;
+	set Completed  to true ; 
+	set the first name of 'the Child' to "First Name Not Provided" ;   
+	  ]]></definition>
+  <effectiveDate xsi:nil="true"/>
+  <expirationDate xsi:nil="true"/>
+</ilog.rules.studio.model.brl:ActionRule>

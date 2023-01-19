@@ -1,0 +1,234 @@
+<ns2:findDependencyDecisionByAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-04-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777898</beneficiaryID>
+                <birthdayDate>1985-08-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-03-14T17:33:20-05:00</decisionDate>
+                <dependencyDecisionID>16030580</dependencyDecisionID>
+                <dependencyDecisionType>RATNHEL</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Rated Not Helpless</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2012-03-10T00:00:00-06:00</eventDate>
+                <firstName>OLAY</firstName>
+                <fullName>OLAY ALLEN</fullName>
+                <lastName>ALLEN</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-03-14T17:33:15-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779781</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999445334</socialSecurityNumber>
+                <sortDate>2012-03-14T17:33:20-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777898</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-08-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777898</beneficiaryID>
+                <birthdayDate>2011-07-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-03-14T17:33:21-05:00</decisionDate>
+                <dependencyDecisionID>16030581</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-07-08T00:00:00-05:00</eventDate>
+                <firstName>MINNY</firstName>
+                <fullName>MINNY ALLEN</fullName>
+                <lastName>ALLEN</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-03-14T17:33:15-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779782</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999446234</socialSecurityNumber>
+                <sortDate>2012-03-14T17:33:21-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777898</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-02-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777898</beneficiaryID>
+                <birthdayDate>1970-01-01T00:00:00-06:00</birthdayDate>
+                <decisionDate>2012-03-14T17:33:15-05:00</decisionDate>
+                <dependencyDecisionID>16030575</dependencyDecisionID>
+                <dependencyDecisionType>DEPEST</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Dependency Established</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Spouse</dependencyStatusTypeDescription>
+                <eventDate>2011-02-01T00:00:00-06:00</eventDate>
+                <firstName>SONA</firstName>
+                <fullName>SONA ALLEN</fullName>
+                <lastName>ALLEN</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-03-14T17:33:15-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779779</personID>
+                <relationshipTypeDescription>Spouse</relationshipTypeDescription>
+                <socialSecurityNumber>999432334</socialSecurityNumber>
+                <sortDate>2012-03-14T17:33:15-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777898</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2013-07-01T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777898</beneficiaryID>
+                <birthdayDate>1993-05-05T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-03-14T17:33:19-05:00</decisionDate>
+                <dependencyDecisionID>16030579</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTT</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Terminates</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2013-06-01T00:00:00-05:00</eventDate>
+                <firstName>CAMERON</firstName>
+                <fullName>CAMERON ALLEN</fullName>
+                <lastName>ALLEN</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-03-14T17:33:15-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779780</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999442334</socialSecurityNumber>
+                <sortDate>2012-03-14T17:33:19-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777898</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2029-07-08T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777898</beneficiaryID>
+                <birthdayDate>2011-07-08T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-03-14T17:33:22-05:00</decisionDate>
+                <dependencyDecisionID>16030582</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2029-07-08T00:00:00-05:00</eventDate>
+                <firstName>MINNY</firstName>
+                <fullName>MINNY ALLEN</fullName>
+                <lastName>ALLEN</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-03-14T17:33:15-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779782</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999446234</socialSecurityNumber>
+                <sortDate>2012-03-14T17:33:22-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777898</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2012-03-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777898</beneficiaryID>
+                <birthdayDate>1993-05-05T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-03-14T17:33:18-05:00</decisionDate>
+                <dependencyDecisionID>16030578</dependencyDecisionID>
+                <dependencyDecisionType>SCHATTB</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>School Attendance Begins</dependencyDecisionTypeDescription>
+                <dependencyStatusType>SCHCHD</dependencyStatusType>
+                <dependencyStatusTypeDescription>School Child</dependencyStatusTypeDescription>
+                <eventDate>2012-02-15T00:00:00-06:00</eventDate>
+                <firstName>CAMERON</firstName>
+                <fullName>CAMERON ALLEN</fullName>
+                <lastName>ALLEN</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-03-14T17:33:15-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779780</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999442334</socialSecurityNumber>
+                <sortDate>2012-03-14T17:33:18-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777898</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-05-05T00:00:00-05:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777898</beneficiaryID>
+                <birthdayDate>1993-05-05T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-03-14T17:33:17-05:00</decisionDate>
+                <dependencyDecisionID>16030577</dependencyDecisionID>
+                <dependencyDecisionType>T18</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Turns 18</dependencyDecisionTypeDescription>
+                <dependencyStatusType>NAWDDEP</dependencyStatusType>
+                <dependencyStatusTypeDescription>Not an Award Dependent</dependencyStatusTypeDescription>
+                <eventDate>2011-05-05T00:00:00-05:00</eventDate>
+                <firstName>CAMERON</firstName>
+                <fullName>CAMERON ALLEN</fullName>
+                <lastName>ALLEN</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-03-14T17:33:15-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779780</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999442334</socialSecurityNumber>
+                <sortDate>2012-03-14T17:33:17-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777898</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+            <DependencyDecision>
+                <awardEffectiveDate>2011-02-01T00:00:00-06:00</awardEffectiveDate>
+                <awardType>CPL</awardType>
+                <beneficiaryID>9100777898</beneficiaryID>
+                <birthdayDate>1993-05-05T00:00:00-05:00</birthdayDate>
+                <decisionDate>2012-03-14T17:33:16-05:00</decisionDate>
+                <dependencyDecisionID>16030576</dependencyDecisionID>
+                <dependencyDecisionType>EMC</dependencyDecisionType>
+                <dependencyDecisionTypeDescription>Eligible Minor Child</dependencyDecisionTypeDescription>
+                <dependencyStatusType>MC</dependencyStatusType>
+                <dependencyStatusTypeDescription>Minor Child</dependencyStatusTypeDescription>
+                <eventDate>2011-02-01T00:00:00-06:00</eventDate>
+                <firstName>CAMERON</firstName>
+                <fullName>CAMERON ALLEN</fullName>
+                <lastName>ALLEN</lastName>
+                <modifiedAction>I</modifiedAction>
+                <modifiedBy>281RBPS</modifiedBy>
+                <modifiedDate>2012-03-14T17:33:15-05:00</modifiedDate>
+                <modifiedLocation>335</modifiedLocation>
+                <modifiedProcess>cp_dependdec_pkg.do_create</modifiedProcess>
+                <personID>9100779780</personID>
+                <relationshipTypeDescription>Child</relationshipTypeDescription>
+                <socialSecurityNumber>999442334</socialSecurityNumber>
+                <sortDate>2012-03-14T17:33:16-05:00</sortDate>
+                <sortOrderNumber>0</sortOrderNumber>
+                <veteranID>9100777898</veteranID>
+                <veteranIndicator>N</veteranIndicator>
+            </DependencyDecision>
+        </DependencyDecision>
+        <errorLevel>0</errorLevel>
+        <Errors/>
+    </return>
+</ns2:findDependencyDecisionByAwardResponse>
+
+

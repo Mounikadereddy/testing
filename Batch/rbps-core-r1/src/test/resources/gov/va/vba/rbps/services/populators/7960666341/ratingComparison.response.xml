@@ -1,0 +1,16 @@
+<ns3:compareByDateRangeResponse xmlns:ns2='http://gov.va.vba.benefits.awards/data' xmlns:ns3='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <errorLevel>0</errorLevel>
+        <anyRatingsWithinRangeFlag>N</anyRatingsWithinRangeFlag>
+        <differencesFound>N</differencesFound>
+        <multipleRatingsFlag>N</multipleRatingsFlag>
+        <PrfilDt>2012-03-01T14:02:23-06:00</PrfilDt>
+        <promulgationDt>2010-08-15T14:15:09-05:00</promulgationDt>
+        <ptcpntVetID>9100777117</ptcpntVetID>
+        <RatingDetails>
+            <errorLevel>0</errorLevel>
+            <EffectiveDt>2011-01-01T00:00:00-06:00</EffectiveDt>
+            <scPercent>30</scPercent>
+        </RatingDetails>
+    </return>
+</ns3:compareByDateRangeResponse>

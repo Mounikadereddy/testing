@@ -1,0 +1,25 @@
+<ns2:findPOAResponse xmlns:ns2='http://services.share.benefits.vba.va.gov/'>
+    <return>
+        <beginDate>02/28/2012</beginDate>
+        <endDate/>
+        <eventDate/>
+        <healthcareProviderReleaseIndicator/>
+        <journalDate>02/28/2012</journalDate>
+        <journalLocationID>335</journalLocationID>
+        <journalObjectID>SHARE - CEST</journalObjectID>
+        <journalStatusTypeCode>I</journalStatusTypeCode>
+        <journalUserID>VAFSCRANIS</journalUserID>
+        <personOrOrganizationIndicator>O</personOrOrganizationIndicator>
+        <personOrgAttentionText/>
+        <personOrgName>002 - MAINE DEPARTMENT OF VETERANS SERVICES</personOrgName>
+        <personOrgPtcpntID>10518</personOrgPtcpntID>
+        <personOrganizationCode/>
+        <personOrganizationName>POA State Organization</personOrganizationName>
+        <prepositionalPhraseName/>
+        <rateName/>
+        <relationshipName>Power of Attorney For</relationshipName>
+        <statusCode/>
+        <temporaryCustodianIndicator/>
+        <veteranPtcpntID>9100776493</veteranPtcpntID>
+    </return>
+</ns2:findPOAResponse>

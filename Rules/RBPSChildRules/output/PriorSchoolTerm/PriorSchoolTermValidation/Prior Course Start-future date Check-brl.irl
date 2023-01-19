@@ -1,0 +1,20 @@
+package PriorSchoolTerm.PriorSchoolTermValidation {
+   use Today;
+   use priorSchoolTermValid;
+   rule Prior_Course_Start$45$future_date_Check {
+      property ilog.rules.business_name = "Prior Course Start-future date Check";
+      property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Child.lastTerm.courseStudentStartDate)
+         	&& Child.lastTerm.courseStudentStartDate.compareTo(Today) > 0));
+      } then {
+         priorSchoolTermValid = false;
+         PriorSchoolTermStatus = "ignore";
+         ?context.updateContext();
+         LogMessage.addException("last term  not valid");
+      }
+   }
+}
+

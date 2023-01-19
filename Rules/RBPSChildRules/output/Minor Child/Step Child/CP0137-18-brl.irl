@@ -1,0 +1,22 @@
+package Minor_Child.Step_Child {
+   /**
+ * FCDR != RED
+ * DOC <=  FCDR + 365 Days
+ * DOM <= FCDR
+ * DOC  > DOB + 365 Days
+ * DOC <= DOM + 365 Days
+ */
+rule CP0137$45$18 {
+      property ilog.rules.business_name = "CP0137-18";
+      property ilog.rules.package_name = "Minor Child.Step Child";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         evaluate ((((Child.childType.equals(gov.va.vba.rbps.coreframework.xom.ChildType.STEPCHILD))) && (!(Child.onAwardAsMinorChild)) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.firstChangedDateofRating)) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.marriageDate)) && (!(Veteran.firstChangedDateofRating.equals(Veteran.ratingEffectiveDate))) && (Veteran.claimDate.compareTo(gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addDaysToDate(365, Veteran.firstChangedDateofRating)) <= 0) && (Child.birthDate.compareTo(Veteran.firstChangedDateofRating) <= 0) && (Veteran.claimDate.compareTo(gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addDaysToDate(365, Child.birthDate)) > 0) && (Veteran.marriageDate.compareTo(Veteran.firstChangedDateofRating) <= 0) && (Veteran.claimDate.compareTo(gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.addDaysToDate(365, Veteran.marriageDate)) <= 0)));
+      } then {
+         Award.eventDate = Veteran.marriageDate;
+      }
+   }
+}
+

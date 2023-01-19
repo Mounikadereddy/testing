@@ -1,0 +1,20 @@
+package Spouse_Validation_Rules {
+   use exceptionGenerated;
+   rule CP0106_$45$_Spouse_Marriage_Verification {
+      property ilog.rules.business_name = "CP0106 - Spouse Marriage Verification";
+      property ilog.rules.package_name = "Spouse Validation Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Spouse() from Spouse;
+         evaluate ((((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Spouse.currentMarriage)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Spouse.latestPreviousMarriage))
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Spouse.currentMarriage.endDate))
+         	&& Spouse.currentMarriage.startDate.compareTo(Spouse.latestPreviousMarriage.endDate) < 0));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - Submitted spouse's prior marriage date(s) do not terminate before date of current marriage. Please review.");
+         exceptionGenerated = true;
+         ?context.updateContext();
+      }
+   }
+}
+

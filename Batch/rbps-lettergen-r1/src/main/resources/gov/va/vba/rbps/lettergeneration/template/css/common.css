@@ -1,0 +1,150 @@
+@page :first {
+    @top-left {}
+    @top-center {}
+    @top-right {}
+}
+
+@page {
+    size: letter;
+    
+    @top-left {
+        content: "File # ${letterFields.fileNumber}";
+    }
+    @top-center {
+        content: counter(page);
+    }
+    @top-right {
+        #if( $!{letterFields.middleName} != "" )
+            content:      "${letterFields.lastName}, ${letterFields.firstName} ${letterFields.middleName}";
+        #else
+            content:      "${letterFields.lastName}, ${letterFields.firstName}";
+        #end
+    }
+}
+
+.document-header {
+    font-family:        Arial, "Trebuchet MS", Helvetica, sans-serif;
+    text-align:         center;
+    float:              middle;
+    font-size:          9pt;
+}
+
+.address-block {
+    font-family:        Arial, "Trebuchet MS", Helvetica, sans-serif;
+    float:              left;
+    font-size:          12pt;
+}
+
+.in-reply {
+    font-family:        "Times New Roman", serif;
+    font-size:          12pt;
+    float:              right;
+    text-align:         right;
+}
+
+.dept {
+    font-size:          12pt;
+}
+
+.section {
+    font-family:        Arial, "Trebuchet MS", Helvetica, sans-serif;
+    font-weight:        bold;
+    font-size  :        14pt;
+}
+
+.paragraph {
+    font-family:        "Times New Roman", serif;
+    font-size  :        12pt;
+}
+
+.signature {
+    font-family:        Textile, Sand, "Apple Chancery", "Comic Sans MS", "Brush Script MT", cursive;
+    font-size  :        5pt;
+}
+
+.subparagraph {
+    font-family:        "Times New Roman", serif;
+    width:              90%;
+    margin:             10px;
+    font-size  :        12pt;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.pagebreak {
+    page-break-before:      always;
+}
+
+.poa-address {
+    padding-left:           5em;          
+    text-align:             left;
+    page-break-before:      always;
+}
+
+.poa-address-center {
+    padding-left:           15em;          
+    text-align:             left;
+    page-break-before:      always;
+}
+
+.poa-address-center-vertical {
+    padding-left:           15em;
+    padding-top:            30em;
+    text-align:             left;
+    page-break-before:      always;
+}
+
+.table {
+    font-family:        "Times New Roman", serif;
+    width:              100%;
+    border-collapse:    collapse;
+    -fs-table-paginate: paginate;
+}
+
+.table td, .table th {
+    font-size:          12pt;
+    border:             1px solid black;
+    padding:            3px 7px 2px 7px;
+}
+
+
+.table th {
+    font-size:          12pt;
+    text-align:         left;
+    padding-top:        5px;
+    padding-bottom:     4px;
+}
+        
+
+.info {
+    font-family:        "Times New Roman", serif;
+    font-size:          12pt;
+    width:              90%;
+    margin:             10px;
+    border-width:       0 0 1px 1px;
+    border-collapse:    collapse;
+    border-spacing:     0;
+    border-style:       solid;
+    -fs-table-paginate: paginate;
+}
+
+
+.info th {
+    font-weight:        bold;
+    padding-top:        5px;
+    padding-bottom:     4px;
+}
+
+.info td, .info th {
+    border-width:       1px 1px 0 0;
+    border-style:       solid;
+    margin:             0px;
+    padding:            3px 10px 2px 10px;
+}
+
+.fontsignature {
+	font-family:       "Yesteryear";
+    font-size:         18pt;
+	}

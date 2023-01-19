@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0160 - Spouse Removal Award Decision Determination due to Death</name>
+  <uuid>c9b21453-992f-4de1-9893-52ab2fdb396e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	the termination type of the marriage of 'the Spouse' is DEATH 
+then 
+	set the event date of 'the Award' to the end date of the marriage of 'the Spouse' ;
+	set the dependency decision type of 'the Award' to DEATH ; 
+	set the dependency status type of 'the Award' to NOT_AN_AWARD_DEPENDENT  ; 
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,14 @@
+package Spouse_With_No_Event_Date_Rule {
+   rule CP0147_$45$_Spouse_With_No_Event_Date_Rule {
+      property ilog.rules.business_name = "CP0147 - Spouse With No Event Date Rule";
+      property ilog.rules.package_name = "Spouse With No Event Date Rule";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Award() from Award;
+         evaluate (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Award.eventDate));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - RBPS could not set the event date for spouse. Please review.");
+      }
+   }
+}
+

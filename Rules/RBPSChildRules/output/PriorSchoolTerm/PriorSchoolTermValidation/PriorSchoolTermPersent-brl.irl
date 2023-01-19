@@ -1,0 +1,21 @@
+package PriorSchoolTerm.PriorSchoolTermValidation {
+   use priorSchoolTermValid;
+   rule PriorSchoolTermPersent {
+      property ilog.rules.business_name = "PriorSchoolTermPersent";
+      property ilog.rules.package_name = "PriorSchoolTerm.PriorSchoolTermValidation";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         evaluate (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Child.lastTerm));
+      } then {
+         LogMessage.addException("last term not present");
+         priorSchoolTermValid = false;
+         ?context.updateContext();
+      } else {
+         LogMessage.addException("last term  present");
+         priorSchoolTermValid = true;
+         ?context.updateContext();
+      }
+   }
+}
+

@@ -1,0 +1,25 @@
+<ns2:findFiduciaryResponse xmlns:ns2='http://services.share.benefits.vba.va.gov/'>
+    <return>
+        <beginDate>06/18/2008</beginDate>
+        <endDate>07/16/2008</endDate>
+        <eventDate/>
+        <healthcareProviderReleaseIndicator/>
+        <journalDate>07/17/2008</journalDate>
+        <journalLocationID>317</journalLocationID>
+        <journalObjectID>cestcorp</journalObjectID>
+        <journalStatusTypeCode>I</journalStatusTypeCode>
+        <journalUserID>TESTUSR05</journalUserID>
+        <personOrOrganizationIndicator>P</personOrOrganizationIndicator>
+        <personOrgAttentionText/>
+        <personOrgName>RODENT               FIDU KEEPER</personOrgName>
+        <personOrgPtcpntID>13364263</personOrgPtcpntID>
+        <personOrganizationCode/>
+        <personOrganizationName/>
+        <prepositionalPhraseName>Custodian of</prepositionalPhraseName>
+        <rateName/>
+        <relationshipName>Legal Custodian</relationshipName>
+        <statusCode/>
+        <temporaryCustodianIndicator>N</temporaryCustodianIndicator>
+        <veteranPtcpntID>13351810</veteranPtcpntID>
+    </return>
+</ns2:findFiduciaryResponse>

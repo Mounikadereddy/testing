@@ -1,0 +1,15 @@
+package Veteran_Rules {
+   rule CP0016_$45$_Attorney_Fee_Agreement_Check {
+      property ilog.rules.business_name = "CP0016 - Attorney Fee Agreement Check";
+      property ilog.rules.package_name = "Veteran Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Veteran() from Veteran;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.awardStatus)
+         	&& Veteran.awardStatus.hasAttorneyFeeAgreement()));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - This is an attorney fee case. Please review.");
+      }
+   }
+}
+

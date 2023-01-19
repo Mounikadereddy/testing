@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0107 - Spouse Claim Date Verification</name>
+  <uuid>edb0e948-5223-4703-97f1-d398eb4d036e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	'the Veteran' claim received date is after '1 Year of rating date' and 
+	'the Veteran' claim received date is before or the same as '1 Year + 7 days of rating date'  
+then 
+	  add "Auto Dependency Processing Reject Reason - Date of Veteran's rating is between 366 and 372 days in the past. Please review date of notification letter to determine correct date to add spouse." to the list of Exceptions ;
+	  set 'exception generated' to true ;   ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,20 @@
+package Spouse_Award_Rules {
+   /**
+ * FCDR ==Rating Effctive Date
+ * DOC <= (before/same) FCDR + 365 Days
+ * DOC <= (before/same) DOM + 365 Days
+ * DOM > FCDR
+ */
+rule CP0136$45$04 {
+      property ilog.rules.business_name = "CP0136-04";
+      property ilog.rules.package_name = "Spouse Award Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         evaluate (((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.firstChangedDateofRating)) && ((Veteran.firstChangedDateofRating.equals(Veteran.ratingEffectiveDate))) && (Veteran.marriageDate.compareTo(Veteran.firstChangedDateofRating) <= 0)));
+      } then {
+         Award.eventDate = Veteran.firstChangedDateofRating;
+      }
+   }
+}
+

@@ -1,0 +1,12 @@
+package PriorSchoolTerm {
+   rule CP0237$45$_prior_term_included_but_not_continous_with_current_ERROR {
+      property ilog.rules.business_name = "CP0237- prior term included but not continous with current ERROR";
+      property ilog.rules.package_name = "PriorSchoolTerm";
+      property status = "new";
+      when {
+         IlrContext() from ?context;
+      } then {
+      }
+   }
+}
+

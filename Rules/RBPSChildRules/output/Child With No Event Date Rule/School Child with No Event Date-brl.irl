@@ -1,0 +1,14 @@
+package Child_With_No_Event_Date_Rule {
+   rule School_Child_with_No_Event_Date {
+      property ilog.rules.business_name = "School Child with No Event Date";
+      property ilog.rules.package_name = "Child With No Event Date Rule";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Award() from Award;
+         evaluate (((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award)) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Award.dependencyStatusType)) && ((Award.dependencyStatusType.equals(gov.va.vba.rbps.coreframework.xom.DependentStatusType.SCHOOL_CHILD))) && (gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Award.eventDate))));
+      } then {
+         Exceptions.addException((((("Auto Dependency Processing Reject Reason - RBPS could not set the event date for school child : " + Child.lastName) + ", ") + Child.firstName) + " Please review."));
+      }
+   }
+}
+

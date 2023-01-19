@@ -1,0 +1,14 @@
+<ns2:findStationAddressResponse xmlns:ns2='http://services.share.benefits.vba.va.gov/'>
+    <return>
+        <addressLine1>Regional Office</addressLine1>
+        <addressLine2>Federal Building</addressLine2>
+        <addressLine3>11000 Wilshire Blvd</addressLine3>
+        <city>Los Angeles</city>
+        <returnCode>SHAR00000</returnCode>
+        <returnMessage>Successful on Corporate.</returnMessage>
+        <state>CA</state>
+        <zipCode>90024</zipCode>
+        <zipPlus4>3602</zipPlus4>
+        <zipSecondSuffix/>
+    </return>
+</ns2:findStationAddressResponse>

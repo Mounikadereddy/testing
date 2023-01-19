@@ -1,0 +1,19 @@
+package Biological_Or_Step_Child {
+   use Completed;
+   rule CP0111_$45$_Evaluate_a_Stepchild {
+      property ilog.rules.business_name = "CP0111 - Evaluate a Stepchild";
+      property ilog.rules.package_name = "Biological Or Step Child";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Child() from Child;
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         evaluate (((Child.childType.equals(gov.va.vba.rbps.coreframework.xom.ChildType.STEPCHILD))
+         	&& !(gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.marriageDate))));
+      } then {
+         Completed = true;
+         ?context.updateContext();
+         Exceptions.addException("Auto Dependency Processing Reject Reason - Date of marriage of the Veteran was not provided for stepchild. Please review");
+      }
+   }
+}
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP235-Prior Term included  in award</name>
+  <uuid>da12e390-2aad-4ad5-ba57-06e1264d76ca</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	the last term in corp begin date of 'the Child'  is not null and 
+	the last term in corp end date of 'the Child'   is not null and 
+	the course start date of the last term of 'the Child'  is after or the same as  the last term in corp begin date of 'the Child' and 
+	the course end date of the last term of 'the Child'  is on the last term in corp end date of 'the Child' 
+then
+	 set priorSchoolTermValid to false ; 
+ 	add "RBPS ignoring prior term as it is inculded in current award for prior school child : "+ the last name of 'the Child' +", "+the first name of 'the Child' +" Please review." to the list of  'LogMessage' ; 
+   set PriorSchoolTermStatus to "ignore";
+ 	add "last term  not valid" to the list of 'LogMessage' ; 
+  
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

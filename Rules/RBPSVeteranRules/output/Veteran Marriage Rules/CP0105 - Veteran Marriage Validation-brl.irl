@@ -1,0 +1,16 @@
+package Veteran_Marriage_Rules {
+   rule CP0105_$45$_Veteran_Marriage_Validation {
+      property ilog.rules.business_name = "CP0105 - Veteran Marriage Validation";
+      property ilog.rules.package_name = "Veteran Marriage Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Veteran() from Veteran;
+         evaluate (((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.currentMarriage)
+         	&& gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isPresent(Veteran.latestPreviousMarriage))
+         	&& Veteran.currentMarriage.startDate.compareTo(Veteran.latestPreviousMarriage.endDate) < 0));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - Submitted Veteran's prior marriage date(s) do not terminate before date of current marriage. Please review.");
+      }
+   }
+}
+

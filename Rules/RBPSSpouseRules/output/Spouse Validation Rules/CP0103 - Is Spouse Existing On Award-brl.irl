@@ -1,0 +1,18 @@
+package Spouse_Validation_Rules {
+   use exceptionGenerated;
+   rule CP0103_$45$_Is_Spouse_Existing_On_Award {
+      property ilog.rules.business_name = "CP0103 - Is Spouse Existing On Award";
+      property ilog.rules.package_name = "Spouse Validation Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.Spouse() from Spouse;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Spouse.currentMarriage.endDate)
+         	&& Spouse.onCurrentAward));
+      } then {
+         Exceptions.addException("Auto Dependency Processing Reject Reason - Spouse is already existing on award. Please review.");
+         exceptionGenerated = true;
+         ?context.updateContext();
+      }
+   }
+}
+

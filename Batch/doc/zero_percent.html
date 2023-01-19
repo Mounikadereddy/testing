@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="file://c:/dev/RBPS_RBPS-R1.4/doc/markdown.css" rel="stylesheet"/>
+</head>
+<h1 id="toc_0">The 0% rejection fix algorithm</h1>
+
+<h2 id="toc_1">A typical response from the rating comparison web service</h2>
+
+<pre><code>    anyRatingsWithinRangeFlag                : String &gt;N&lt;
+    differencesFound                         : String &gt;N&lt;
+    multipleRatingsFlag                      : String &gt;N&lt;
+    prfilDt                                  : XMLGregorianCalendarImpl &gt;2012-03-01T14:02:23-06:00&lt;
+    promulgationDt                           : XMLGregorianCalendarImpl &gt;2010-08-15T14:15:09-05:00&lt;
+    ptcpntVetID                              : String &gt;9100777117&lt;
+    rejectReason                             : &gt;&lt;
+    ratingDetails                            : String &gt;
+        effective date                           : XMLGregorianCalendarImpl &gt;2011-01-01T00:00:00-06:00&lt;
+        service connected percent                : Integer &gt;30&lt;
+        ========================================&lt;
+</code></pre>
+
+<h2 id="toc_2">The proposed steps</h2>
+
+<ol>
+<li>Call rating comparison to get the changed data.</li>
+<li>Check for multiple promulgated ratings within one year by checking
+the multipleRatingsFlag.  If yes, reject</li>
+<li>Find the earliest rating less than or equal to 395 days before the claim date.
+This is the FCDR.</li>
+<li>Call the new RatingInformation web service to get more information.</li>
+<li>Look for smc, service connected, IU disabilities.</li>
+<li>Linda says to get ratingIssues.rbaIssueId to identify the any
+decisions that were changed by this rating (&quot;at issue&quot;)</li>
+<li>Once we have the ratingIssues identified, search for smcDecisions, etc.
+with a matching rbaIssueId</li>
+<li>Do something with percents and converted date (convBeginDt)
+I can&#39;t find any percentages in the xml response from the new
+web service.  Ah, ratingAwardDetails has a scPercent, which is
+what we&#39;re looking for, I think.  It looks like callId links
+the ratingsIssues and the smc stuff and the rating award stuff.
+Maybe, anyway.</li>
+</ol>
+</html>

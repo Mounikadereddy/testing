@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>Denials Or Adopted</name>
+  <uuid>2c91d13a-89bd-4f3c-b5b1-54d76b0067bb</uuid>
+</ilog.rules.studio.model.base:RulePackage>

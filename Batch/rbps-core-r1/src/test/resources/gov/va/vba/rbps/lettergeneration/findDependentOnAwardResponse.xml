@@ -1,0 +1,13 @@
+<ns2:findDependentOnAwardResponse xmlns:ns2='http://session.ejb.awards.benefits.vba.va.gov/'>
+    <return>
+        <errorLevel>0</errorLevel>
+        <awardType>CPL</awardType>
+        <beneficiaryID>32218612</beneficiaryID>
+        <dependentID>32218612</dependentID>
+        <DependentOnAwardService/>
+        <isDependentOnAward>N</isDependentOnAward>
+        <numberOfDependents>1</numberOfDependents>
+        <veteranID>32218612</veteranID>
+        <Errors/>
+    </return>
+</ns2:findDependentOnAwardResponse>

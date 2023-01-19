@@ -1,0 +1,19 @@
+package Spouse_Award_Rules {
+   use MarriagePlus1Year;
+   /**
+ * DOC <= (BEFORE/SAME)  DOM + 365 Days
+ */
+rule CP0136$45$01 {
+      property ilog.rules.business_name = "CP0136-01";
+      property ilog.rules.package_name = "Spouse Award Rules";
+      property status = "new";
+      when {
+         gov.va.vba.rbps.coreframework.xom.util.VeteranCommonDates() from Veteran;
+         evaluate ((gov.va.vba.rbps.coreframework.xom.util.RbpsXomUtil.isNotPresent(Veteran.firstChangedDateofRating)
+         	&& Veteran.claimDate.compareTo(MarriagePlus1Year) <= 0));
+      } then {
+         Award.eventDate = Veteran.marriageDate;
+      }
+   }
+}
+

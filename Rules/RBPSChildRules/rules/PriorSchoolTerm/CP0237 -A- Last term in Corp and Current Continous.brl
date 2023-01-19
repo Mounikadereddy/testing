@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>CP0237 -A- Last term in Corp and Current Continous</name>
+  <uuid>e3d8a141-4555-4d68-b4bc-86e821e8db95</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+   the last term in corp begin date of 'the Child' is not null and 
+   the last term in corp end date of 'the Child' is not null and
+   the current term of 'the Child' is not null and 
+   the event date of 'the Award' is not null and
+   getOmnibusedDate (the event date of 'the Award') is after
+   the last term in corp begin date of 'the Child' and
+   getOmnibusedDate (the event date of 'the Award') 
+  is before  the last term in corp end date of 'the Child' plus 5 months  
+ then 
+ set the event date of 'the Award' to the last term in corp end date of 'the Child' ; 
+ set 'Condition Satisfied' to true;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
